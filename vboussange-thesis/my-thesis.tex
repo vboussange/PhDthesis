@@ -86,17 +86,36 @@
 \cleanchapterquote{A picture is worth a thousand words. An interface is worth a thousand pictures.}{Ben Shneiderman}{(Professor for Computer Science)}
 
 \label{part:I}
-\input{content/diff_in_graphs/chapter-differentiation-in-graphs}   % INCLUDE: related work
+\begin{refsection}
+    \input{content/part_I/diff_in_graphs/chapter-differentiation-in-graphs}   % INCLUDE: related work
+\end{refsection}
+
+\begin{subappendices}
+    \begin{refsection}
+        \input{content/part_I/diff_in_graphs/SI}   % INCLUDE: related work
+    \end{refsection}
+\end{subappendices}
 
 \part{Scientific machine learning for eco-evolutionary modelling}
 \label{part:II}
-\input{content/chapter-nonlocalPDE}
-\input{content/chapter-highdimpde}
-\input{content/chapter-sciml}
+\begin{refsection}
+    \input{content/part_II/intro}
+\end{refsection}
+
+\begin{refsection}
+    \input{content/part_II/NonlocalPDE/chapter-nonlocalPDE}
+\end{refsection}
+
+\begin{refsection}
+    \input{content/part_II/chapter-highdimpde}
+\end{refsection}
+\begin{refsection}
+    \input{content/part_II/chapter-sciml}
+\end{refsection}
 
 \part{Briding eco-evolutionary models and data}
 \label{part:III}
-\input{content/chapter-econobiology}
+\input{content/part_III/econobiology/chapter-econobiology}
 
 \input{content/chapter-conclusion}  
 
@@ -115,17 +134,17 @@
 % }
 \cleardoublepage
 
-\listoffigures
-\cleardoublepage
+% \listoffigures
+% \cleardoublepage
 
-\listoftables
-\cleardoublepage
+% \listoftables
+% \cleardoublepage
 
-\lstlistoflistings
-\cleardoublepage
+% \lstlistoflistings
+% \cleardoublepage
 
-\appendix\cleardoublepage
-\input{content/chapter-appendix}       % INCLUDE: appendix
+% \appendix\cleardoublepage
+% \input{content/chapter-appendix}       % INCLUDE: appendix
 
 \cleardoublepage
 \input{content/colophon}

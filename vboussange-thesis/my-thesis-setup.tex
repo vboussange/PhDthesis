@@ -81,11 +81,11 @@
     bookmarksopen=true          %
 }
 % **************************************************
-% bibliograph (used at the end of each chapter)
+% bibliography (used at the end of each chapter)
 % **************************************************
 \usepackage[backend=bibtex,
     bibencoding=utf8,
-    refsegment=chapter,
+    % refsegment=chapter,
     style=numeric, 
     firstinits=true,
     isbn=false,
@@ -107,6 +107,9 @@
 \usepackage{bbm}
 \usepackage{nicefrac}
 \usepackage[capitalise]{cleveref}
+\usepackage{placeins}                       % for float barrier
+\usepackage{appendix}                       % for subappendices
+% \usepackage{enumerate}
 
 
 % **************************************************
@@ -116,9 +119,7 @@
 
 % shortcuts
 \newcommand{\Co}{\mathcal{C}}
-\newcommand{\Lip}{\mbox{Lip}}
 \newcommand{\Cov}{\mbox{Cov}}
-\newcommand{\Var}{\mbox{Var}}
 \newcommand{\adh}{\mbox{adh}}
 \newcommand{\supp}{\mbox{supp}}
 \newcommand{\rr}{\mathfrak{r}}
@@ -130,7 +131,6 @@
 \def\P{\mathbb{P}}
 \def\R{\mathbb{R}}
 \def\E{\mathbb{E}}
-\def\X{\mathcal{X}}
 \def\U{\mathcal{U}}
 \def\dSk{\mathbf{d}_{\mbox{{\scriptsize Sk}}}}
 \def\ind{{\mathchoice {\rm 1\mskip-4mu l} {\rm 1\mskip-4mu l}
@@ -141,7 +141,6 @@
 \def\etal{\textit{et al.} }
 
 \usepackage{sidecap}
-\usepackage{appendix}
 \usepackage{mathtools}
 \usepackage[most]{tcolorbox}
 \newcommand\rcirc{{\color{red}\bullet}\mathllap{\color{red}\circ}}
@@ -162,4 +161,114 @@
 % **************************************************
 % nonLocalPDE 
 % **************************************************
+% for intro
+\providecommand{\W}{{\ensuremath{\mathbb{W}}}}
+\newcommand{\NN}{{\ensuremath{N\!N}}}
+
+% for the following
+\usepackage{mathrsfs,amsthm}
 % TODO: there might be conflicts with \def and \newcommand above
+%%%% TIKZ for neural network
+% ARNULF architecture
+\usepackage{tikz}
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+\usetikzlibrary{shapes,arrows}
+\tikzset{
+  font={\fontsize{9pt}{12}\selectfont}}
+\usepackage{adjustbox}
+\def\layersep{3cm}
+
+%https://tex.stackexchange.com/questions/153957/drawing-neural-network-with-tikz
+\usepackage{etoolbox} % for \ifnumcomp
+\usepackage{listofitems} % for \readlist to create arrays
+\tikzset{>=latex} % for LaTeX arrow head
+\colorlet{myred}{red!80!black}
+\colorlet{myblue}{blue!80!black}
+\colorlet{mygreen}{green!60!black}
+\colorlet{mydarkred}{myred!40!black}
+\colorlet{mydarkblue}{myblue!40!black}
+\colorlet{mydarkgreen}{mygreen!40!black}
+\tikzstyle{node}=[very thick,circle,draw=myblue,minimum size=22,inner sep=0.5,outer sep=0.6]
+\tikzstyle{connect}=[->,thick,mydarkblue,shorten >=1]
+\tikzset{ % node styles, numbered for easy mapping with \nstyle
+  node 1/.style={node,mydarkgreen,draw=mygreen,fill=mygreen!25},
+  node 2/.style={node,mydarkblue,draw=myblue,fill=myblue!20},
+  node 3/.style={node,mydarkred,draw=myred,fill=myred!20},
+}
+\def\nstyle{int(\lay<\Nnodlen?min(2,\lay):3)} % map layer number onto 1, 2, or 3
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%% JULIA STYLE %%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% taken from https://github.com/m3g/jlcode_example/blob/master/example.tex
+
+% Code blocks definitions: Julia style
+% Using https://github.com/wg030/jlcode
+% Download the jlcode.sty from that repository 
+
+%% table
+\usepackage{multirow, makecell}
+
+%%%% EDITING
+\usepackage{soul,color}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{prop}[lemma]{Proposition}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{assumption}[lemma]{Assumption}
+\newtheorem{algo}[lemma]{Framework}
+\newtheorem{setting}[lemma]{Setting}
+
+\newcommand{\Hess}{\ensuremath{\operatorname{Hess}}}
+\newcommand{\Trace}{\ensuremath{\operatorname{Trace}}}
+\newcommand{\cost}{\ensuremath{\operatorname{Cost}}}
+\newcommand{\uniform}{\ensuremath{\mathcal{R}}}
+\newcommand{\sign}{\ensuremath{\operatorname{sign}}}
+\newcommand{\smallsum}{\textstyle\sum}
+\providecommand{\one}{{\ensuremath{\mathbbm{1}}}}
+\providecommand{\N}{{\ensuremath{\mathbb{N}}}}
+\providecommand{\Z}{{\ensuremath{\mathbb{Z}}}}
+\providecommand{\R}{{\ensuremath{\mathbb{R}}}}
+\providecommand{\B}{\mathcal{B}}
+\providecommand{\C}{\mathbb{C}}
+\renewcommand{\P}{\mathbbm{P}}
+\providecommand{\bG}{\mathbb{G}}
+\providecommand{\bS}{\mathbb{S}}
+\providecommand{\cR}{\mathcal{R}}
+\renewcommand{\S}{\mathcal{S}}
+\providecommand{\sS}{S}
+\providecommand{\D}{D}
+\providecommand{\dD}{\mathbbm{D}}
+\providecommand{\E}{{\ensuremath{\mathbbm{E}}}}
+\newcommand{\Var}{{\ensuremath{\operatorname{Var}}}}
+\providecommand{\N}{{\ensuremath{\mathbbm{N}}}}
+\providecommand{\bV}{{\ensuremath{\mathbb{V}}}}
+\providecommand{\bX}{{\ensuremath{\mathbbm{X}}}}
+\providecommand{\Z}{{\ensuremath{\mathbbm{Z}}}}
+\providecommand{\R}{{\ensuremath{\mathbbm{R}}}}
+\providecommand{\C}{\mathbbm{C}}
+\providecommand{\Q}{{\ensuremath{\mathbbm{Q}}}}
+\providecommand{\E}{{\ensuremath{\mathbb{E}}}}
+\newcommand{\F}{{\ensuremath{\mathcal{F}}}}
+\newcommand{\bF}{{\ensuremath{\mathbb{F}}}}
+\newcommand{\Lip}{{\ensuremath{\operatorname{Lip}}}}
+\newcommand{\funcF}{F}
+\newcommand{\LipConst}{L}
+\newcommand{\cL}{{\ensuremath{\mathcal{L}}}}
+\newcommand{\cN}{{\ensuremath{\mathcal{N}}}}
+% \newcommand{\G}{{\ensuremath{\mathcal{G}}}}
+\newcommand{\A}{{\ensuremath{\mathcal{A}}}}
+% \newcommand{\U}{{\ensuremath{\mathcal{U}}}}
+\newcommand{\V}{{\ensuremath{\mathcal{V}}}}
+\newcommand{\X}{{\ensuremath{\mathcal{X}}}}
+\newcommand{\Y}{{\ensuremath{\mathcal{Y}}}}
+\newcommand{\cZ}{{\ensuremath{\mathcal{Z}}}}
+\newcommand{\norm}[1]{ \left\| #1 \right\| }
+\newcommand{\Zz}{{\ensuremath{Z}}}
+\newcommand{\Rr}{{\ensuremath{\mathcal{V}}}}
+\renewcommand{\d}{ \mathrm{d}}
