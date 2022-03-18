@@ -1,0 +1,116 @@
+% !TEX root = ../my-thesis.tex
+%
+\chapter{Introduction}
+\label{sec:intro}
+
+\cleanchapterquote{Le bout du monde et le fond du jardin contiennent la même quantité de merveilles}{Christian Bobin}{(French poet)}
+
+\section{History of modelling}
+\label{sec:intro:history}
+Nature has been fascinating since the beginning of humankind. Human's curiosity lead us to propose models capturing our belief on how things work. More than three centuries ago, Isaac Newton became the revered founder of modern Mechanics due to his intuition, gathered by empirical evidence, about a possible mathematical formalization for the law of universal gravitation. \cite{Equations2021}
+
+\section{Complex adaptive systems}
+\label{sec:intro:cas}
+Complex Systems (CS) are generally defined as a category of dynamical systems composed of many individual entities, be they biological, socio-cultural or economic, spatially organised and interacting locally in a nonlinear way. The adjective Adaptive is used to define CS which are subjected to evolutionary mechanisms (Levin [2002]). These include the biosphere, socio- cultural systems and economical systems. The agents adapt to local conditions and are subjected to selection processes acting at a macro level.
+
+\section{Biological systems}
+
+\section{Economic systems}
+
+\section{Models}
+
+\begin{outline}
+    \1 Agent Based model: hard to scale up
+    \1 PDE: hard to scale up
+    \1 Machine learning: scale up
+\end{outline}
+
+
+
+% \section{Results}
+% \label{sec:intro:results}
+
+% \Blindtext[1][2]
+
+% \subsection{Some References}
+% \label{sec:intro:results:refs}
+
+% \cite{WEB:GNU:GPL:2010,WEB:Miede:2011}
+% \Blindtext[1][1]
+
+% \subsubsection{Methodology}
+% \label{sec:intro:results:refs:method}
+
+% \Blindtext[1][2]
+
+% \paragraph{Strategy 1}
+% \Blindtext[1][1]
+
+% \begin{lstlisting}[language=Python, caption={This simple helloworld.py file prints Hello World.}\label{lst:pyhelloworld}]
+% #!/usr/bin/env python
+% print "Hello World"
+% \end{lstlisting}
+
+% \paragraph{Strategy 2}
+% \Blindtext[1][1]
+
+% \begin{lstlisting}[language=Python, caption={This is a bubble sort function.}\label{lst:pybubblesort}]
+% #!/usr/bin/env python
+% def bubble_sort(list):
+%     for num in range(len(list)-1,0,-1):
+%         for i in range(num):
+%             if list[i]>list[i+1]:
+%                 tmp = list[i]
+%                 list[i] = list[i+1]
+%                 list[i+1] = tmp
+
+% alist = [34,67,2,4,65,16,17,95,20,31]
+% bubble_sort(list)
+% print(list)
+% \end{lstlisting}
+
+\section{Thesis Structure}
+\label{sec:intro:structure}
+
+\textbf{Part \ref{part:I}\\
+An eco-evolutionary model on spatial graphs} \\[0.2em]
+It is not clear how landscape connectivity and habitat heterogeneity influence differentiation in biological populations. 
+%
+To obtain a mechanistic understanding of underlying processes, we construct an individual-based model that accounts for eco-evolutionary and spatial dynamics over graphs. 
+%
+Individuals possess both neutral and adaptive traits, whose co-evolution results in differentiation at the population level.
+%
+In agreement with empirical studies, we show that characteristic length, heterogeneity in degree and habitat assortativity drive differentiation.
+%
+By using analytical tools that permit a macroscopic description of the dynamics, we further link differentiation patterns to the mechanisms that generate them.
+%
+This part provides support for a mechanistic understanding of how landscape features affect diversification.
+
+\textbf{Part \ref{part:II}\\
+Scientific machine learning for eco-evolutionary modelling} \\[0.2em]
+% Mechanistic models crystallise hypothesis into a synthetic framework that allows for a description of mechanisms driving the dynamics of complex adaptive systems.
+%
+It is a daunting task to obtain an agreement between mechanistic models and real world systems. In particular, there is a need to account for the dimensionality of the evolutionary and spatial structures over which agents interact and evolve. Furthermore, the calibration of such models is difficult.
+% given that direct measurements to estimate quantities of interest are in general not possible, and only a small set of undirect observations are available.
+%
+To adress the difficulties that arise due to the dimensionality of models, we develop two numerical methods to solve high-dimensional non-local nonlinear PDES that arise in eco-evolutionary models. We implement those methods in a software, \texttt{HighDimPDE.jl}, that integrates within an open source ecosystem for Scientific Machine Learning in the Julia programming language.
+%
+We further present a scheme to estimate the parameters of a mechanistic model from empirical data sets. We show with analytical arguments that the use of different shallow time series allows for a better estimation than a unique, possibly deeper time series.
+%
+This part provides ready-to-use modeling tools to adress the intrinsic complexity of complex adaptive systems.
+
+\textbf{Part \ref{part:III}\\
+Briding eco-evolutionary models and data} \\[0.2em]
+Despite evidences that alike biological systems, economic systems are complex adaptive systems that continuously adapt and experience evolutionary processes, economists have discarded biological models and have rather relied on mechanistic models inspired from physics.
+%
+Building upon an analogy between economic sectors and biological functional groups, we use a biological model to quantitatively investigate whether eco-evolutionary processes characterise the dynamics of economic sectors.
+%
+Overall, we find that interactions across economic sectors, evolution of new economic sectors, and international transfers play a major role in the dynamics of economic sectors at the national level. 
+%
+The significance and the strength of such processes strongly vary across countries and correlate with standard macroeconomic indices such as the Economic Complexity Index.
+%
+We relate such patterns to documented patterns in ecology and evolution.
+%
+This part provides a new perspective on the understanding of the dynamics of economic systems.
+% 
+% The mechanistic framework is inspired from theoreteical biology that is general enough to encompass forces and processes in both economics systems and ecological systems

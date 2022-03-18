@@ -1,0 +1,165 @@
+% !TEX root = my-thesis.tex
+
+
+% **************************************************
+% Files' Character Encoding
+% **************************************************
+\PassOptionsToPackage{utf8}{inputenc}
+\usepackage{inputenc}
+
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{{\color{ctcolortitle} Eco-evolutionary dynamics in complex adaptive systems} \\
+{\small Bridging theory and data}}
+\newcommand{\thesisName}{Victor Boussange}
+% \newcommand{\thesisSubject}{Documentation}
+\newcommand{\thesisDate}{\today}
+\newcommand{\thesisVersion}{0.0.1}
+
+\newcommand{\thesisFirstReviewer}{Didier Sornette}
+\newcommand{\thesisFirstReviewerUniversity}{\protect{ETH Zürich}}
+\newcommand{\thesisFirstReviewerDepartment}{Department of Enviromental Sciences}
+
+\newcommand{\thesisSecondReviewer}{Samir Suweis}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{University of Padova}}
+\newcommand{\thesisSecondReviewerDepartment}{Physics and Astronomoy Department}
+
+\newcommand{\thesisThirdReviewer}{Arnulf Jentzen}
+\newcommand{\thesisThirdReviewerUniversity}{\protect{University of Münster}}
+\newcommand{\thesisThirdReviewerDepartment}{Institute for Analysis and Numerics}
+
+\newcommand{\thesisFirstSupervisor}{Loïc Pellissier}
+% \newcommand{\thesisSecondSupervisor}{John Smith}
+
+\newcommand{\thesisUniversity}{\protect{ETH Zürich}}
+\newcommand{\thesisUniversityDepartment}{Department of Environemtal Sciences}
+\newcommand{\thesisUniversityInstitute}{Institute of Terrestrial Ecosystems}
+\newcommand{\thesisUniversityGroup}{Ecology Landscape and Evolution}
+\newcommand{\thesisUniversityCity}{Zürich}
+\newcommand{\thesisUniversityStreetAddress}{Universitätstrasse 18}
+\newcommand{\thesisUniversityPostalCode}{8055}
+
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[english]{babel} % babel system, adjust the language of the content
+\PassOptionsToPackage{% setup clean thesis style
+    figuresep=colon,%
+    hangfigurecaption=false,%
+    hangsection=true,%
+    hangsubsection=true,%
+    sansserif=false,%
+    configurelistings=true,%
+    colorize=full,%
+    colortheme=bluemagenta,%
+    configurebiblatex=false,%
+    % bibsys=biber,%
+    % bibfile=bib-refs,%
+    % bibstyle=alphabetic,%
+    % bibsorting=nty,%
+}{cleanthesis}
+\usepackage{cleanthesis}
+
+\hypersetup{% setup the hyperref-package options
+    pdftitle={\thesisTitle},    %   - title (PDF meta)
+    % pdfsubject={\thesisSubject},%   - subject (PDF meta)
+    pdfauthor={\thesisName},    %   - author (PDF meta)
+    plainpages=false,           %   -
+    colorlinks=false,           %   - colorize links?
+    pdfborder={0 0 0},          %   -
+    breaklinks=true,            %   - allow line break inside links
+    bookmarksnumbered=true,     %
+    bookmarksopen=true          %
+}
+% **************************************************
+% bibliograph (used at the end of each chapter)
+% **************************************************
+\usepackage[backend=bibtex,
+    bibencoding=utf8,
+    refsegment=chapter,
+    style=numeric, 
+    firstinits=true,
+    isbn=false,
+    doi=true,
+    url=false,
+    clearlang=true,
+    defernumbers=true,
+]{biblatex}
+\addbibresource{./content/diff_in_graphs/bib.bib}
+
+% **************************************************
+% Other Packages
+% **************************************************
+\usepackage{scrhack}
+\usepackage{ETHthesis}
+\usepackage{outlines}
+% for maths
+\usepackage{amsmath,amssymb,euscript}
+\usepackage{bbm}
+\usepackage{nicefrac}
+\usepackage[capitalise]{cleveref}
+
+
+% **************************************************
+% differnetiation in graphs
+% **************************************************
+
+
+% shortcuts
+\newcommand{\Co}{\mathcal{C}}
+\newcommand{\Lip}{\mbox{Lip}}
+\newcommand{\Cov}{\mbox{Cov}}
+\newcommand{\Var}{\mbox{Var}}
+\newcommand{\adh}{\mbox{adh}}
+\newcommand{\supp}{\mbox{supp}}
+\newcommand{\rr}{\mathfrak{r}}
+%
+\def\D{\mathbb{D}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\P{\mathbb{P}}
+\def\R{\mathbb{R}}
+\def\E{\mathbb{E}}
+\def\X{\mathcal{X}}
+\def\U{\mathcal{U}}
+\def\dSk{\mathbf{d}_{\mbox{{\scriptsize Sk}}}}
+\def\ind{{\mathchoice {\rm 1\mskip-4mu l} {\rm 1\mskip-4mu l}
+{\rm 1\mskip-4.5mu l} {\rm 1\mskip-5mu l}}}
+\def\eg{\textit{e.g.} }
+\def\ie{\textit{i.e.} }
+\def\rv{\textit{r.v.} }
+\def\etal{\textit{et al.} }
+
+\usepackage{sidecap}
+\usepackage{appendix}
+\usepackage{mathtools}
+\usepackage[most]{tcolorbox}
+\newcommand\rcirc{{\color{red}\bullet}\mathllap{\color{red}\circ}}
+\newcommand\bcirc{{\color{blue}\bullet}\mathllap{\color{blue}\circ}}
+\newcommand{\normf}[1]{ \langle #1 \rangle }
+\usepackage{booktabs} % To thicken table lines
+\usepackage{hhline} % To cut out corners in tables
+\def\l{\langle l \rangle} % average path length
+\usepackage{blindtext}
+\graphicspath{{assets/}}
+\usepackage{subfiles} % Best loaded last in the preamble
+% \AtBeginEnvironment{appendices}{\crefalias{section}{Supplementary methods}}
+\usepackage{nameref}
+% \AtBeginEnvironment{appendices}{\crefalias{equation}{SI Equation}}
+% \AtBeginEnvironment{appendices}{\crefalias{section}{SI Equation}}
+\usepackage{chngcntr}
+
+% **************************************************
+% nonLocalPDE 
+% **************************************************
+% TODO: there might be conflicts with \def and \newcommand above

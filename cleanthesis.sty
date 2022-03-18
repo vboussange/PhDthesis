@@ -119,7 +119,7 @@
 \ProcessOptionsX[ct]<cthesis>
 
 % Checks if bib file exists, if not we throw an error
-\IfFileExists{\cthesis@bibfile.bib}{}{\PackageError{cleanthesis}{Unable to find BibTeX file \cthesis@bibfile.bib!}{Please provide the name of your BibTeX file to the cleanthesis package parameter bibfile.}}
+% \IfFileExists{\cthesis@bibfile.bib}{}{\PackageError{cleanthesis}{Unable to find BibTeX file \cthesis@bibfile.bib!}{Please provide the name of your BibTeX file to the cleanthesis package parameter bibfile.}}
 
 % **************************************************
 % Color Definitions
@@ -306,6 +306,7 @@
 		url=false,						% 	- don't show url tags
 		doi=false,						% 	- don't show doi tags
 		urldate=long,					% 	- display type for dates
+		refsegment=chapter,				% 	- add bib at each end of chapter
 		maxnames=3,%
 		minnames=1,%
 		maxbibnames=5,%
@@ -314,7 +315,7 @@
 		mincitenames=1,%,
 		sorting=\cthesis@bibsorting%
 	]{biblatex}
-	\bibliography{\cthesis@bibfile}
+	% \bibliography{\cthesis@bibfile}
 	\DefineBibliographyStrings{ngerman}{%
 		andothers = {{et\,al\adddot}}, % 'et al.' instead of 'u.a.'
 		backrefpage = {{zitiert auf Seite}},%
