@@ -11,8 +11,8 @@
 % **************************************************
 % Information and Commands for Reuse
 % **************************************************
-\newcommand{\thesisTitle}{{\color{ctcolortitle} Eco-evolutionary dynamics in complex adaptive systems} \\
-{\small Bridging theory and data}}
+\newcommand{\thesisTitle}{{\color{ctcolortitle} Eco-evolutionary processes in ecological and economic systems} \\
+{\small Confronting dynamical models and data}}
 \newcommand{\thesisName}{Victor Boussange}
 % \newcommand{\thesisSubject}{Documentation}
 \newcommand{\thesisDate}{\today}
@@ -66,8 +66,8 @@
     % bibfile=bib-refs,%
     % bibstyle=alphabetic,%
     % bibsorting=nty,%
-}{cleanthesis}
-\usepackage{cleanthesis}
+}{cleanthesis_vb}
+\usepackage{../cleanthesis_vb}
 
 \hypersetup{% setup the hyperref-package options
     pdftitle={\thesisTitle},    %   - title (PDF meta)
@@ -94,7 +94,7 @@
     clearlang=true,
     defernumbers=true,
 ]{biblatex}
-\addbibresource{./content/diff_in_graphs/bib.bib}
+\addbibresource{./content/bib.bib}
 
 % **************************************************
 % Other Packages
@@ -110,7 +110,7 @@
 \usepackage{placeins}                       % for float barrier
 \usepackage{appendix}                       % for subappendices
 % \usepackage{enumerate}
-
+\usepackage{todonotes}
 
 % **************************************************
 % differnetiation in graphs
