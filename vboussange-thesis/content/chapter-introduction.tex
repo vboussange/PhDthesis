@@ -18,6 +18,7 @@
                 \4 why is it that we better understand the motion of planets, or the surface of the moon, than e.g. the mechanisms that drive our fingers? (REF)
                 \4 biological world poses obstacles in finding laws: nonlinear processes and complexity of processes and spatial and time scales
         \2 The mathematicalisation of soft science was driven by inspiration from physics
+            \3 From the 1700s on, nature has been increas-ingly described by mathematical equations,with differential or difference equationsforming the basic framework for describingdynamics. The use of mathematical equationsfor ecological systems came much later, pio-neered by Lotka and Volterra, who showedthat population cycles might be described interms of simple coupled nonlinear differentialequations. It took decades for Lotka–Volterra-type models to become established, but thedevelopment of appropriate differential equa-tions is now routine in modeling ecologicaldynamics. There is no question that the in-jection of mathematical equations, by forcing“clarity and precision into conjecture”(2), hasled to increased understanding of populationand community dynamics. As in sciencein general, in ecology equations are a keymethod of communication and of framinghypotheses. These equations serve as compactrepresentations of an enormous amount ofempirical data and can be analyzed by thepowerful methods of mathematics \cite{DeAngelis2015}.
         \2 AI era
         \2 Scientific revolution of Darwin thinking, by Kuhn's definition (Dawkins 2010)
         \2 Universal Darwninism
@@ -31,6 +32,14 @@
 \label{sec:intro:cas}
 \begin{outline}
     \1 Ecological and economic systems are complex adaptive systems (CAS): they are systems that are composed of many entities with heterogeneous characteristics, which interact and experience selection processes. Those processes act at the individual level, but are key in determining the macroscopic behaviour at the system level, a feature that make those systems unique.
+    \1 Complex interconnected systems pose a major challeng to scientific study in ecology and economics \cite{Ye2016} (and references therin).
+        \2 the common approach of reducing these systems to linearly independent components overlooks important interactions for the sake of computational tractability 
+        \2 statistical frameworks (e.g., PCA, GLM, multivariate autoregressive models), assume that caysal factors do not interact with each other and have independent or additive effects on a response variable,
+            \3 simplification leads to probelms in identifying associations (refs 5-6 of \cite{Ye2016})
+            \3 cannot predict out-of sample behaviour
+        \2 complex equation-based modeol explicitly accounting for each interaction have great intuitive appeal 
+            \3 but those models suffer from their many parameters to be precisely determined given the available data (curse of dimensionality (ref 9 \cite{Ye2016}))
+            \3 problem is amplified because in biological fields the relevant units may not behave according to the fundamental equations.
 \end{outline}
 \subsubsection{Biological systems}
 \begin{outline}
@@ -80,6 +89,12 @@
 \end{outline}
 
 \missingfigure{Here you could add a coneptual figure, similar to Florian Patout (see evernote), that shows the interplay between selection and variation.}
+
+\section{Machine learning : opportuntities}
+\begin{outline}
+    \1 State of the art machine learning techniques have yielded transformative results across divers scientific disciplines [REF], but rely on a large amount of data [REF], while environmental sciences rely in a small data regime where those techniques are typically not suited \cite{Raissi2019a}. Recently, physics informed machine learning has emerged as a tool to constrain fully parametric methods with scientific knowledge, for data efficiency and extrapolation \cite{Raissi2019a}. The key idea is to refine the learning with scientific knowledge by adding additional constraints in the objective function, given by ODEs/ PDEs models.
+    \1 \cite{Karpatne2017}
+\end{outline}
 
 \section{Learning from models}
 \begin{outline}
