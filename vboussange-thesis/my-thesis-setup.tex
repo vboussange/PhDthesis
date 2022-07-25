@@ -94,7 +94,8 @@
     clearlang=true,
     defernumbers=true,
 ]{biblatex}
-\addbibresource{./content/bib.bib}
+\addbibresource{./content/part_I/diff_in_graphs/bib.bib}
+\addbibresource{./content/part_II/NonLocalPDE/bibfile.bib}
 
 % **************************************************
 % Other Packages
@@ -109,7 +110,7 @@
 \usepackage[capitalise]{cleveref}
 \usepackage{placeins}                       % for float barrier
 \usepackage{appendix}                       % for subappendices
-% \usepackage{enumerate}
+\usepackage[inline,shortlabels]{enumitem}
 \usepackage{todonotes}
 
 % **************************************************
@@ -167,6 +168,7 @@
 
 % for the following
 \usepackage{mathrsfs,amsthm}
+% \usepackage[]{enumitem}
 % TODO: there might be conflicts with \def and \newcommand above
 %%%% TIKZ for neural network
 % ARNULF architecture
@@ -230,6 +232,8 @@
 \newcommand{\uniform}{\ensuremath{\mathcal{R}}}
 \newcommand{\sign}{\ensuremath{\operatorname{sign}}}
 \newcommand{\smallsum}{\textstyle\sum}
+\DeclareMathOperator*{\smallsuml}{\textstyle\sum}
+\DeclareMathOperator*{\smallprodl}{\textstyle\prod}
 \providecommand{\one}{{\ensuremath{\mathbbm{1}}}}
 \providecommand{\N}{{\ensuremath{\mathbb{N}}}}
 \providecommand{\Z}{{\ensuremath{\mathbb{Z}}}}
@@ -268,7 +272,71 @@
 \newcommand{\X}{{\ensuremath{\mathcal{X}}}}
 \newcommand{\Y}{{\ensuremath{\mathcal{Y}}}}
 \newcommand{\cZ}{{\ensuremath{\mathcal{Z}}}}
-\newcommand{\norm}[1]{ \left\| #1 \right\| }
+% \newcommand{\norm}[1]{ \left\| #1 \right\| }
 \newcommand{\Zz}{{\ensuremath{Z}}}
 \newcommand{\Rr}{{\ensuremath{\mathcal{V}}}}
 \renewcommand{\d}{ \mathrm{d}}
+\newcommand{\diff}{\mathrm{d}}
+
+
+\newcommand{\bcup}{\bigcup}
+
+\newcommand{\Borel}{\mathcal{B}}
+
+\newenvironment{approxtabular}{
+	\tabular{|r|c|c|c|c|c|c|c|c|}
+		\hline
+		\multirowcell{4}{$d$}
+		& \multirowcell{4}{$T$}
+		& \multirowcell{4}{$N$}
+		& \multirowcell{4}{Mean\\ of the\\ approx.\\ method } 
+		& \multirowcell{4}{Standard\\ deviation of \\ the approx.\\ method } 
+		& \multirowcell{4}{Reference \\ value } 
+		& \multirowcell{4}{Relative\\$L^1$-approx.\\ error } 
+		& \multirowcell{4}{Standard\\ deviation \\ of the \\ error } 
+		& \multirowcell{4}{Average\\ runtime \\ in \\ seconds } \\
+		&&&&&&&&\\
+		&&&&&&&&\\
+		&&&&&&&&\\
+		\hline
+}{
+	\hline
+	\endtabular
+}
+
+
+% DELIMITERS
+
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter{\pr}()
+\DeclarePairedDelimiter{\br}[]
+\DeclarePairedDelimiter{\cu}\{\}
+\DeclarePairedDelimiter{\abs}\lvert\rvert
+\DeclarePairedDelimiter{\norm}\lVert\rVert
+\DeclarePairedDelimiter{\ang}\langle\rangle
+
+\newcommand{\bpr}[1]{\pr[\big]{#1}}
+\newcommand{\bbpr}[1]{\pr[\Big]{#1}}
+\newcommand{\bbbpr}[1]{\pr[\bigg]{#1}}
+\newcommand{\bbbbpr}[1]{\pr[\Bigg]{#1}}
+\newcommand{\bbr}[1]{\br[\big]{#1}}
+\newcommand{\bbbr}[1]{\br[\Big]{#1}}
+\newcommand{\bbbbr}[1]{\br[\bigg]{#1}}
+\newcommand{\bbbbbr}[1]{\br[\Bigg]{#1}}
+\newcommand{\bcu}[1]{\cu[\big]{#1}}
+\newcommand{\bbcu}[1]{\cu[\Big]{#1}}
+\newcommand{\bbbcu}[1]{\cu[\bigg]{#1}}
+\newcommand{\bbbbcu}[1]{\cu[\Bigg]{#1}}
+\newcommand{\babs}[1]{\abs[\big]{#1}}
+\newcommand{\bbabs}[1]{\abs[\Big]{#1}}
+\newcommand{\bbbabs}[1]{\abs[\bigg]{#1}}
+\newcommand{\bbbbabs}[1]{\abs[\Bigg]{#1}}
+\newcommand{\bnorm}[1]{\norm[\big]{#1}}
+\newcommand{\bbnorm}[1]{\norm[\Big]{#1}}
+\newcommand{\bbbnorm}[1]{\norm[\bigg]{#1}}
+\newcommand{\bbbbnorm}[1]{\norm[\Bigg]{#1}}
+\newcommand{\bang}[1]{\ang[\big]{#1}}
+\newcommand{\bbang}[1]{\ang[\Big]{#1}}
+\newcommand{\bbbang}[1]{\ang[\bigg]{#1}}
+\newcommand{\bbbbang}[1]{\ang[\Bigg]{#1}}
