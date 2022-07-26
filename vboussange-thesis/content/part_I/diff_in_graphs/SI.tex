@@ -7,10 +7,11 @@
 \setcounter{figure}{0}
 \setcounter{table}{0}
 % \setcounter{page}{1}
-\makeatletter
+\makeatletter % changes the catcode of @ to 11
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\theequation}{S\arabic{equation}}
 \renewcommand{\thefigure}{S\arabic{figure}}
+\makeatother % changes the catcode of @ back to 12
 
 \section{Supplementary Note}
     \label{secSI:supmat}
