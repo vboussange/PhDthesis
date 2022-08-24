@@ -59,10 +59,10 @@ setwd("~/ETHZ/PhD_thesis")
 # Data Loading and Converting
 ```{r Data loading, warning=FALSE}
 
-myfile <- ("figures/biblio/savedrecs.bib")
+myfile <- ("figures/biblio/savedrecs.txt")
 
 # Converting the loaded files into a R bibliographic dataframe
-M <- convert2df(file=myfile, dbsource="wos",format="bibtex")
+M <- convert2df(file=myfile, dbsource="wos",format="plaintext")
 ```
 
 # Section 1: Descriptive Analysis
