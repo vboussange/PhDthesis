@@ -1,26 +1,16 @@
-# Thesis structure
+# Thesis intro
 
 <!-- in this file we propose different structure to compile the documents -->
+## Preface
 
-## Version 1 : Chronological
-Structured in chapters ? 
+## Complexity
 
-- Differentiation in graphs
-- Scientific machine learning
-  - HighDimPDE.jl
-- Econobio
+## Eco-evolutionary processes
 
-## Version 2 : methods / applications
-Structured in parts ? 
+## Modelling approaches
 
-- scientific machine learning for confronting models to data
-- eco evolutionary processes in cas
+## Machine learning and data
 
-## Version 3: Loic
-Structured in chapters?
+## Combining models and data
 
-- differentiation in graphs: all the theoretical tool panels
-- scientific machine learning for ODE : simple models to be calibrated against data
-- econobio : applications
-- going further: highly dimensional pdes as complex models for representing structured populations
-- 
+## In this thesis
