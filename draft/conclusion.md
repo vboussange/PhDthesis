@@ -30,10 +30,16 @@ mentioned earlier are also models, not scientific facts, strictly speaking. This
 - The DeepSplitting scheme is not yet appropriate to tackle applied problems in evolutionary biology, in parts because the handling of the nonlocal term is not perfect.
 - Instead, moment closure solutions, developped e.g. for plankton models in \cite{LeGland2020}, more generally detailed in \cite{Nordbotten2020}. Also, theoretical framework to model the eco-evolutionary dynamics of polymorphic class- structured populations, with morphs \cite{Lion2022}.
 
+## MiniBatchInference
+- Local minimum
+- choice for batch length is upon intuition, and this choice can affect the model selection procedure
+- 
+
 ## Perspectives
 ### Differentiation in graphs
 - Apply MiniBatchInference.jl to the eco-evolutionary model on graphs to understand the cause of biodiversity on earth.
   - relate to the work of skeels, and hagen
+- Investigate whether the metrics found are correlated with biodiversity patterns
 
 ### Highly dimensional PDEs
 - include into the loss function a term for inference of paramters. 
@@ -55,3 +61,6 @@ mentioned earlier are also models, not scientific facts, strictly speaking. This
 
 - Better detection of noise, and know how to 
   - Levin: In the metaphor of Ralph Gomory [21], the central problem is to develop an appropriate statistical mechanics that allows one to sepa- rate the knowable unknown from the truly unknowable.
+
+### Applications of MiniBatchInference.jl
+- calibration of model and prediction of response to climate change \cite{Feng2018}

@@ -208,8 +208,14 @@ Complex
 - automated processes for distilling this data into knowledge in the form of analytical natural laws have not kept pace -- > Need for scientific data mining \cite{King2004}
 
 ## Inverse modelling: combining models and data
+- scientific computing and machine learning have been opposed
+  - machine learning : data driven
+  - scientific computing: technical numerically intensive differential equations that mirror physical processes
 - For centuries, science has consisted in using intuition to identify the laws that underlie phenomena in nature \cite{Schmidt2009}.
 - Advances in machine learning are recently shaking this tedious process, which might be automated. \cite{Schmidt2009}
+- How machine learning is helping scientific computing
+  - surrogate modelling: simulations can be accelerated by having machine learning models approximate the input-output relation.
+  - more interesting to us: Inverse problems: For many parameterized scientific simulations, one can ask "what parameters would make my model best fit the data?" This inverse problem is pervasive yet difficult because it requires the ability to efficiently compute the gradient of a large existing simulation.
 - Recent advances in interpretable machine learning are enabling the generation of theories to be automated: machines have identified mathematical laws in physical and biological systems that took many years for scientists to solve manually
 - opportunities: tackling climate change with machine learning \cite{Rolnick2023}
 - Method for automatically generate symbolic equations for nonlinear coupled dymamical systems directly from time series data \cite{WOS:000247363000007} --> Symbolic regression. Cons: this method is "model-free", and is rather more relevant in engineering. It generates equation from a bank of polynomials, but is not suited for testing a bunch of different models. It also handle model with simple dynamics, while real-world systems often show chaotic dynamics. Identifying only the useful analytical relations that are related to the system dynamics. still faced with the challenge of justifying and giving words to their meaning. One difficulty is that we cannot know with cer- tainty the units of bulk constants in the law ex- pressions (for example, combinations of masses, lengths, etc. embodied in the system). Second, the equation may model something that is in- herently difficult to observe directly, such as total energy. Requiring equations to maintain consist- ent physical units still leaves room for ambiguity. \cite{Schmidt2009} \cite{Mangan2017}
@@ -220,28 +226,74 @@ Complex
 computer involvement in science is the concept of a robot scientist (6 in \cite{Schmidt2009}).
 - Bayesian inference methods with Markov Chain Monte Carlo present the main advantage of inferring the full probability distribution of the unknown parameters, but those methods generally require a global exploration of the parameter space to evaluate the posterior probability which makes them computationally expensive and prone to the curse of dimensionality \cite{Gosh2021}.
 - On the other hand, variational methods such as gradient descent-based exploit the model sensitivity to the parameters to explore the parameter space in an informed manner, but those methods are likely to converge to local minima close to the initial guess of the parameters \cite{Bocquet2019} and do not quantify the parameters uncertainty.
+- application of deep learning to scientific computing
+  - \cite{Kurth2018}: 2018 Gordon Bell prize (ommonly referred to as the Nobel Prize of Supercomputing), awarded for the largest high-performance scientific computing application, applied deep learning to climate analytics at exascale
+
+- application of ML to ecosystem 
+  - analysis oflarge-scale simulations can illuminate the evolution ofecosystems across potential climate futures
 
 ## Programming languages
 - Computation is at the core of complexity science
-- - number of pre-built tools available for complex systems modeling and
+- speed is crucial in deep learning applications
+- number of pre-built tools available for complex systems modeling and
 simulation, including NetLogo [13], Repast [14], MASON [15], Golly [16], and so on. You could also build your own model by using general-purpose computer programming lan- guages, including C, C++, Java, Python, R, Mathematica, MATLAB
+- what is important is modularity!, to be modified to suite needs
 - 2 language problem:
-  - productivity languages (Python, Matlab, R) for easy development 
-  - performance languages (C, C++, Fortran) for speed and a predictable mapping to hardware \cite{Bezanson2018}.
+  - productivity languages (high level languages, dynamic) (Python, Matlab, R) for easy development 
+  - performance languages (low level, compiled languages)(C, C++, Fortran) for speed and a predictable mapping to hardware \cite{Bezanson2018}.
 - Programming language critically affects the productivity and advances of science, and great attention must be paid
   - it is also a way to generalise work and let it accessible to many people
 - Features of productivity languages, such as dynamic typing or garbage collection, make exploratory and iterative development simple --> scientific applications often begin their lives in a productivity language. In
   - converting an existing application (or some subset thereof) to a different language requires significant programmer involvement; features previously handled by the language (e.g. memory management) now have to be emulated by hand. As a result, porting software from a high level to a low level language is often a daunting task.
+- the Climate Modeling Alliance is building an entirely new climate model that learns continuously from data and from high-resolution simulations, in julia, in contrast to C++/Fortran : At the cost of a daunting translation workload, they aim to build a model that is more accessible to new developers and more compatible with ML libraries. \cite{Tapio}
+
 - Julia, high performance programming language \cite{Bezanson2017,Bezanson2018}
   - decrease the gap between productivity and performance languages. On one hand, it provides productivity features like dynamic typing, garbage collection, and multiple dispatch. On the other, it has a type-specializing just-in-time compiler and lets programmers control the layout of data structure in memory. J
   - essential to science: can combine analytical tools with machine learning.
   - community of modellers: collective intelligence. 
     - compare to python, general collection of repositories,
     - Nb on 
+    - Julia lang Discourse
+  - Julia characterisitics
+    - built in multithreading and parallellism
+    - abstraction for generalized array format --> user is required to tranfrom equation into a vector of equation
+  - Automatic differentiation: take gradients of programs making Automatic Differentiation a first class language feature
+  - How julia works: extensive use of 
+    - multiple dispatch : allows a function to compile to different outputs dependent on the types of the inputs, effectively allowing choices of input types to trigger forms of code generation. --> This e.g. allows automatic differentiation with Dual numbers (see e.g. ForwardDiff.jl)
+    - metaprogramming
+    - This makes it easy for user to use and easy for compiler to understand.
+- Interoperability: combination of Flux.jl and Turing.jl (probabilistic programming) to construct probabilistic variants of traditional machine learning models.
+- ODE solvers in the literature:
+  - Shampine's ODE suite for MATLAB, Hairer's Fprtran codes, and the sundials CVODE solvers
+  - programs are interfaced via a scripting language where looping is not optimized and where vectorized code provides the most efficient solution --> temporary allocations and lack compiler optimizations which require type inference.
 - Julia achievements
+  - start prototypes in Julia, but also solve their large-scale models within the same language, instead of resorting to two language solutions when performance is needed.
   - Experimental design \cite{Strouwen2022}
+  - DifferentialEquations.jl \cite{Rackauckas2017}
+    - through extensive use of multiple dispatch, metaprogramming, and call overloading, DifferentialEquations.jl offers a unified user interface to solve and analyze various form of DE while not sacrificing features and performance.
+  - Optim.jl \cite{KMogensen2018}
+  - StructuralIdentifiability.jl
+  - Zygote.jl \cite{Innes2019}
 - SciML: a library of softwares for machine learning \cite{Rackauckas2020a}
 - Currently, Julia is missing highdimensional pde solvers, only archaic version are implemented in NeuralPDE.jl
+- Automatic differentiation and julia https://www.stochasticlifestyle.com/engineering-trade-offs-in-automatic-differentiation-from-tensorflow-and-pytorch-to-jax-and-julia/
+- Julia's unique features make it easy to make packages which are type-generic and parallel (https://www.stochasticlifestyle.com/like-julia-scales-productive-insights-julia-developer/)
+  - julia is really convenient for developing packages
+  - scipy, Panda --> written in C (c bindings)
+  - ability to implement custom types = intrinsic type in C (https://www.stochasticlifestyle.com/like-julia-scales-productive-insights-julia-developer/)
+    - allows automatic parallelization to GPU (with GPUArray)
+    - easy parallelism and multithreading
+- conclusion: No other languages makes it so easy to make a function which is performant yet doesn't care what number types you use! And being allowed to use the whole language "correctly" means that your code is much easier to understand and grow. If you're looking to publish a package along with your algorithm, Julia is definitely the right place to be. 
+- , since Julia packages are written in Julia, a Julia user is qualified to write, debug, and contribute to packages. I myself never saw myself becoming a package dev until about a year ago, and this transition only was because Julia makes the change so easy (it wasn't any different than the Julia development I was already doing!).
+- Julia observer to get some number for commits https://juliaobserver.com/packages
+- autodifferentiation: forward-mode autodifferentiation without any modifications, including the Base library. This means there's almost no reason to use numerical differentiation of any pure-Julia code! Reverse-mode autodifferentiation exists as well. backward mode available with Zygote (\cref{XXX})
+- bundling together packages as distributions: SciML: organizations
+- programming language speed builds productivity https://www.stochasticlifestyle.com/the-nonlinear-effect-of-code-speed-on-productivity/
+- other stuff to read:
+  -  https://www.stochasticlifestyle.com/when-do-micro-optimizations-matter-in-scientific-computing/
+  - https://www.stochasticlifestyle.com/the-essential-tools-of-scientific-machine-learning-scientific-ml/
+  - https://www.stochasticlifestyle.com/generalized-physics-informed-learning-through-language-wide-differentiable-programming-video/
+  - https://www.stochasticlifestyle.com/the-essential-tools-of-scientific-machine-learning-scientific-ml/ --> this one is the most important
 
 ## In this thesis
 The topics addressed in this thesis are quite different from a chapter to another, with
