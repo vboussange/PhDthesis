@@ -65,6 +65,14 @@ Complex
   - May, and the literature on stability diversity and resilience, has focused on broad scales features, while forces act that the individual level
   - feedback between the emergence of networks of interaction and individual behaviors.
 
+- despite the great complexity of complex adaptive systems, regular empirical patterns are observed
+  - patterns of biodiversity: \cite{Gaston2000}
+  - patterns in interaction networks \cite{Bascompte} and \cite{Scheffer}
+    - in particular, diversity hostspots in mountain regions \cite{Rahbek}
+  - diversification of economies: \cite{Hidalgo}
+  - fat tails in financial economics
+- *Those patterns are unique opportunities to learn the fundamental processes that have generated it. The interplay between ecological and evolutionary processes have recently been majorly proposed to explain those processes*
+
 ## Eco-evolutionary processes
 - Basic rules of systems
   - a gene is taken to mean a variable unit that codes for a specific trait (such as eye colour), and different variants of the gene (coding in this example for different eye colours) are called alleles. Changes in allele frequency can occur as a consequence of three processes. First, there is reproduction, in which offspring organisms acquire copies of alleles from their parents. Secondly, in the copying process, random mutations can occur which may change one allele to another, or create a completely new allele. Finally, for whatever reason, organisms carrying one allele may end up having more offspring than another: this is selection.
@@ -179,8 +187,12 @@ Complex
 - on the importance of space \cite{Bascompte1995}: 
   - stabilizing (cf gravel2016)
 ## Machine learning and data
-- LeCun: advances in artificial intelligence
+- collection of data in economics 
+- collection of data in biology
+- LeCun: advances in artificial intelligence \cite{LeCun2015}
   - computers can learn to predcit the future using vast datasets, too large for humans to grasp \cite{Brummitt2020}
+  - image recognition, and natural language processing.
+  - natural language processing
 - Philosophy: learn the underlying structure from the data
 - Problem: the structure learnt is inscrutable for humans, and accuracy, not insight, is often the goal.
 - 
@@ -210,12 +222,27 @@ computer involvement in science is the concept of a robot scientist (6 in \cite{
 - On the other hand, variational methods such as gradient descent-based exploit the model sensitivity to the parameters to explore the parameter space in an informed manner, but those methods are likely to converge to local minima close to the initial guess of the parameters \cite{Bocquet2019} and do not quantify the parameters uncertainty.
 
 ## Programming languages
-- There are a number of pre-built tools available for complex systems modeling and
+- Computation is at the core of complexity science
+- - number of pre-built tools available for complex systems modeling and
 simulation, including NetLogo [13], Repast [14], MASON [15], Golly [16], and so on. You could also build your own model by using general-purpose computer programming lan- guages, including C, C++, Java, Python, R, Mathematica, MATLAB
-- Julia: programming language accessible for anyone
+- 2 language problem:
+  - productivity languages (Python, Matlab, R) for easy development 
+  - performance languages (C, C++, Fortran) for speed and a predictable mapping to hardware \cite{Bezanson2018}.
+- Programming language critically affects the productivity and advances of science, and great attention must be paid
+  - it is also a way to generalise work and let it accessible to many people
+- Features of productivity languages, such as dynamic typing or garbage collection, make exploratory and iterative development simple --> scientific applications often begin their lives in a productivity language. In
+  - converting an existing application (or some subset thereof) to a different language requires significant programmer involvement; features previously handled by the language (e.g. memory management) now have to be emulated by hand. As a result, porting software from a high level to a low level language is often a daunting task.
+- Julia, high performance programming language \cite{Bezanson2017,Bezanson2018}
+  - decrease the gap between productivity and performance languages. On one hand, it provides productivity features like dynamic typing, garbage collection, and multiple dispatch. On the other, it has a type-specializing just-in-time compiler and lets programmers control the layout of data structure in memory. J
   - essential to science: can combine analytical tools with machine learning.
-  - community of modellers: collective intelligence.
-  - 
+  - community of modellers: collective intelligence. 
+    - compare to python, general collection of repositories,
+    - Nb on 
+- Julia achievements
+  - Experimental design \cite{Strouwen2022}
+- SciML: a library of softwares for machine learning \cite{Rackauckas2020a}
+- Currently, Julia is missing highdimensional pde solvers, only archaic version are implemented in NeuralPDE.jl
+
 ## In this thesis
 The topics addressed in this thesis are quite different from a chapter to another, with
 

@@ -6,7 +6,9 @@
   - Connected the fields of spatial networks, mathematical eco-evolutionary modelling, and long standing empirical questions in biodiversity science.
   - Connected applied mathematical work to the field of evolutionary biology, with potential to build more complex models with more accuracy
   - Automate the process of discovery, to improve the laws driving economic systems
-  - 
+  - Connected evolutionary biodiversity and complexity economics.
+- Three softwares in the Julia programming language
+
 
 ## Limits
 
