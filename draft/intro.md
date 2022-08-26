@@ -16,6 +16,8 @@
   - This is the difference between Kepler (Kinematics, descriptive modelling) and Netwon (dynamics, law of motion). The scientific effort is to tie those 
 
 ## Complex adaptive systems
+**The dynamics of ecosystems and economic systems is the result of the interaction of heterogeneous entities structured at different levels of organizations. Those entities interact in nonlinear ways and experience evolutionary processes. The effect of such forces, acting upon individual entities at the microscopic level, are propagated at the macroscopic level, and fed back to the microscopic level. These interactions across scales make those systems difficult to understand and predict.** 
+
 - Complexity in physics and statistical mechanics
   - Weaver distinguises "problem of disorganized complexity (p3 of \cite{Sayama}) and "problems of simplicity", where the components are tightly coupled. Complex systems are somewhere in between, "problem of organized compleixty" (Weaver).
 
@@ -66,11 +68,26 @@ Complex
   - feedback between the emergence of networks of interaction and individual behaviors.
 
 - despite the great complexity of complex adaptive systems, regular empirical patterns are observed
-  - patterns of biodiversity: \cite{Gaston2000}
-  - patterns in interaction networks \cite{Bascompte} and \cite{Scheffer}
+  - biology
+    - average densities and body sizes of species in an area decrease as energy availability increases \cite{gaston2000pattern}
+    - Latitudinal gradients in species richness: \cite{Gaston2000}
+    - Species–energy relationships
+    - Relationships between local and regional richness
+    - patterns in interaction networks \cite{Bascompte} and \cite{Scheffer}
     - in particular, diversity hostspots in mountain regions \cite{Rahbek}
-  - diversification of economies: \cite{Hidalgo}
-  - fat tails in financial economics
+    - species abundance relationship, where most species are rare \cite{preston1948commonness}
+    - structured networks: \cite{Bascompte2003}
+  - economic systems
+    - Economic activities such as innovation and industry concentrate disproportionately in large cities. The ten most innovative cities in the United States account for 23% of the national population, but for 48% of its patents and 33% of its gross domestic product \cite{Nicholas2008}. 
+    - diversification of economies: \cite{Hidalgo}
+      - may be similar to differential regional growth pattern
+    - fat tails in financial economics
+    - Zipf distribution characterises firm sizes, a result holding for data from multiple years and for various definitions of firm size \cite{Axtell2001}
+    - Zipf laws for cities \cite{gabaix1999zipf}
+    - economic networks that are structured \cite{C.A.HidalgoB.Klinger,Bustos2012,Saavedra2009a,Schweitzer2009,Giuliani2007}
+    - A review of Zipf laws \cite{Gabaix2009}
+- Successful story: George West, theory of metabolic rates and the scaling of cities etc.
+- Gothendick: sometimes it is better to abstract the problem, in order to find the solution
 - *Those patterns are unique opportunities to learn the fundamental processes that have generated it. The interplay between ecological and evolutionary processes have recently been majorly proposed to explain those processes*
 
 ## Eco-evolutionary processes
@@ -81,6 +98,8 @@ Complex
 - Evolution: modification of living species through reproduction, mutation and natural selection
 - Eco evolution: interaction between ecology and evolution \cite{Hendry+2016}. 
   - Recognized that evolution can be rapid and occur on similar time scales as ecology \cite{Hairston2005}
+  - the effect of ecological change on evolution has long been a focus of scientific research. The reverse effect gas only recently captured our attention \cite{Schoener2011} --> this is eco-evolutionary dynamics
+  - evolution might have shaped ecological networks --> \cite{Bastolla2009}
   - review on eco-evo: \cite{Pelletier2009}
 - Empirical evidences of eco-evolutionary dynamics (in p14 if \cite{Govaert2019a}):
   - spatial variation in biotic interactions (geographic mosaic of coevolution; Thompson, 2005),
@@ -92,7 +111,7 @@ Complex
 
 - Ecology is of course involved in in natural selection process,
 
-
+- few studies that have demonstrated empirically the equal importance of ecology and evolution on population dynamics: \cite{Ezard2009}
 - Separation between Volterra's work and that of the mathematicla development of evolutionary theory, pioneered by Fisher, Wright and Haldane, although similar period. For Volterra, evolution was too slow to be important, for the thoerists of evolutionary change interpseicif dynamics were also seen to be on a different scale and largely ignored.
 
 - Fisher, Wright, Hubbel, Gould? : different theories to explain evolution (neutral and adaptive)
@@ -126,16 +145,31 @@ Complex
   - Are patterns (which?) determined by local conditions, or are they historically and spatially contingent?
   - how does evolution shape ecosystem properties?
   - What are the relationship between ecosystem structure and functioning?
+- ‘nothing in biology makes sense except in the light of evolution’ (Dobzhansky 1964), we therefore suggest that nothing in evolution or ecology makes sense except in the light of the other. \cite{Pelletier2009}
+- highlighted in \cite{Pelletier2009} are keysteps for future research
+  - develop a general theoretical framwework for eco-evolutionary dynamics and then to quantify these dynamics in natural populations.
 
 - *Our understanding of the evolution of quantitative traits in nature is still limited by the challenge of including realistic trait distributions in the context of frequency-dependent selection and ecological feedbacks \cite{Lion2022}*.
 
 - *The undersanding of eco-evolutionary feedbacks and their effect macroscopic properties remain to be understood*
 
 ## An urgent need for better models of complex adaptive systems.
+- Increasing rates of species extinction \cite{Barnosky2011}
+- \cite{Chen2011}: shifts of species : higher elevations at a median rate of 11.0 meters per decade, higher latitudes at a median rate of 16.9 kilometers per decade. \cite{Descombes2020}
+- \cite{Midgley2019}: prediction based on habitat models on the basis of mid-range climate-warming scenarios for 2050 that 15– 37% of species would be ‘committed to extinction
+- Important assumptions that may be not justified: \cite{Pearson2003} 
+  - three main critics
+    - biotic interactions
+    - evolutioanry change: e.g. two species of bush cricket were show to have increased fractions of longer-winged (more disper- sive) individuals in recently founded populations, whilst two butterfly species ( Hesperia comma and Aricia agestis ) have increased the variety of habitat types that they can colonize. \cite{Thomas2001}
+    - species dispersal: Bioclimate envelope models do not account for species dispersal, but instead aim to predict the potential range of organisms under changed climate
+- meta analysis of \cite{fischlin2007ecosystems}: 20–30% of plant and animal species would be at increasingly high risk of extinction as global mean temperatures exceed a warming of 2–3 8C above preindustrial levels.
+- novel biotic interactions represent a neglected but major driver of ecosystem modifications under climate change
 - The plausibility of a planetary-scale ‘tipping point’ highlights the need to improve biological forecasting by detecting early warning signs of critical transitions on global as well as local scales, and by detecting feedbacks that promote such transitions. It is also necessary to address root causes of how humans are forcing biological changes.
 - Developing sustainable approaches to system use implies understanding what maintains resilience and how human intervention might affect it \cite{Levin1998}. The key to resilience in any complex adaptive system is in the maintenance of heterogeneity \cite{Levin1998} --> first chapter
 - The modelling of coupled phenomena is identified as a major frontier in 21st century science \cite{Strogatz2001a}.
 - mathematical symmetries and inveariants underlie laws in nature, suggesting that the search for meany natural laws is inseparably a search for conserved quantities and invariant equations \cite{Anderson1972}.
+- \cite{Mooney2009}:
+- In one recent example an annual plant, Brassica rapa exhibited very rapid microevolutionary change in response to a climate fluctuation that led to a multiyear drought [70]. There are likely to be important limits to the rates of climate warming that natural systems can adapt to and these should be deducible from both limits to evolutionary change and limits to the rates that species can move across the landscape tracking climate change.
 
 
 ## Forward modelling
