@@ -28,7 +28,7 @@ In v2, we only keep relevant bullet points, and make nice sentences
 ## Preface
 
 ## Complex adaptive systems
-**The dynamics of ecosystems and economic systems is the result of the interaction of heterogeneous entities structured at different levels of organizations. Those entities interact in nonlinear ways and experience evolutionary processes. Interactions and evolutionary processes may act upon individual entities at the microscopic level, but its effects are propagated at the macroscopic level, and feed back to influence the microscopic level. The interdependencies across scales make those systems difficult to understand and predict.**
+**What are the similarities between biological and economic systems? Both are composed of heterogeneous entities, that interact in nonlinear ways, experience evolutionary processes, and are structured at different levels of organizations \cite{Levin}. The processes of interactions and evolution operate at the entity level, but their effects are propagated in complex ways at the macroscopic level, and feed back to influence the individual entities. This interdependency across scales make those systems difficult to understand and predict \cite{Mitchell}, and has led scientists to refer to those systems as complex adaptive systems.**
 
 - In biology is of particular interest the effects of reproduction, selection and mutation of traits, that act at the level of individual organisms but influence the populations level.
   - This is the topic of population genetics \cite{MR0274068} and quantitative genetics \cite{falconer1996introduction}. 
