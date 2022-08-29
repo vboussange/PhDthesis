@@ -63,7 +63,7 @@
 \input{content/abstract}		% INCLUDE: the abstracts (english and german)
 \cleardoublepage
 %
-\input{content/acknowledgement} % INCLUDE: acknowledgement
+% \input{content/acknowledgement} % INCLUDE: acknowledgement
 \cleardoublepage
 %
 \currentpdfbookmark{\contentsname}{toc}
@@ -82,62 +82,46 @@
 %% to add part sections
 \input{content/chapter-introduction}
 
-% \part{An eco-evolutionary model on spatial graphs}
-% \cleanchapterquote{A picture is worth a thousand words. An interface is worth a thousand pictures.}{Ben Shneiderman}{(Professor for Computer Science)}
-
-% \label{part:I}
-\begin{refsection}
-    \input{content/chap1_diff_in_graphs/chapter-differentiation-in-graphs}   % INCLUDE: related work
-\end{refsection}
-
-\begin{subappendices}
-    \begin{refsection}
-        \input{content/chap1_diff_in_graphs/SI}   % INCLUDE: related work
-    \end{refsection}
-\end{subappendices}
-
-% \part{Scientific machine learning for eco-evolutionary modelling}
-% \label{part:II}
 % \begin{refsection}
-%     \input{content/intro}
+%     \input{content/chap1_diff_in_graphs/chapter-differentiation-in-graphs}   % INCLUDE: related work
 % \end{refsection}
 
-\begin{refsection}
-    \input{content/chap2_NonlocalPDE/chapter-nonlocalPDE}
-\end{refsection}
+% \begin{subappendices}
+%     \begin{refsection}
+%         \input{content/chap1_diff_in_graphs/SI}   % INCLUDE: related work
+%     \end{refsection}
+% \end{subappendices}
 
 % \begin{refsection}
-%     \input{content/chapter-highdimpde}
+%     \input{content/chap2_NonlocalPDE/chapter-nonlocalPDE}
 % \end{refsection}
 
-\begin{refsection}
-    \input{content/chap3_mini-batching/chapter-mini-batching_ecological_data}
-\end{refsection}
+% \begin{refsection}
+%     \input{content/chap3_mini-batching/chapter-mini-batching_ecological_data}
+% \end{refsection}
 
-\begin{subappendices}
-    \begin{refsection}
-        \input{content/chap3_mini-batching/chapter-mini-batching_ecological_data_SI}   % INCLUDE: related work
-    \end{refsection}
-\end{subappendices}
+% \begin{subappendices}
+%     \begin{refsection}
+%         \input{content/chap3_mini-batching/chapter-mini-batching_ecological_data_SI}   % INCLUDE: related work
+%     \end{refsection}
+% \end{subappendices}
 
-% \part{Briding eco-evolutionary models and data}
-% \label{part:III}
-\begin{refsection}
-\input{content/chap4_econobiology/chapter-econobiology}
-\end{refsection}
+% \begin{refsection}
+% \input{content/chap4_econobiology/chapter-econobiology}
+% \end{refsection}
 
-\begin{subappendices}
-    \begin{refsection}
-        \input{content/chap4_econobiology/chapter-econobiology_SI}   % INCLUDE: related work
-    \end{refsection}
-\end{subappendices}
+% \begin{subappendices}
+%     \begin{refsection}
+%         \input{content/chap4_econobiology/chapter-econobiology_SI}   % INCLUDE: related work
+%     \end{refsection}
+% \end{subappendices}
 
-\input{content/chapter-conclusion}  
+% \input{content/chapter-conclusion}  
 
 \chapter{Curriculum vitae}
-% NOTES: You can include the pdf, but make sure that you use the same color 
-% for the thesis and the CV, and remove page numbers on CV
-\includepdf[pages=-]{content/CV_vboussange.pdf}
+\input{content/chapter-CV}
+
+% \includepdf[pages=-]{content/CV_vboussange.pdf}
 
 % --------------------------
 % Back matter

@@ -730,5 +730,66 @@
 % Clean signs around word origins in definitions
 %\newcommand{\cthesisorigin}[1]{\textsf{\textlangle}#1\textsf{\textrangle}}
 
+% ******************************************
+% For CV
+% ******************************************
+% Define the 'experiences' environment
+\RequirePackage{longtable}
+\newcommand{\sociallink}[3]{\mbox{\link{#2}{#3}\hspace{1em}}}
+\newcommand*{\github}[1]{\sociallink{}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
+% \newcommand{\githubSymbol}{\faGithub}
+\newcommand\link[2]{\color{ctcoloraccessory}\href{#1}{#2}\color{Black} }
+\newcommand*{\website}[2]{\sociallink{}{#1}{#2}}
+
+\newcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=black!70,rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.3ex,text depth=.25ex]{#1};
+}
+\newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
+
+%New length definition
+\newlength{\leftcolumn}
+\setlength{\leftcolumn}{0.1\textwidth}
+\newlength{\rightcolumnlength}
+\setlength{\rightcolumnlength}{0.9\textwidth}
+\newcolumntype{E}{>{\raggedright\arraybackslash}p{\rightcolumnlength}}
+% Setup Array : new column type
+\newcolumntype{R}[1]{>{\hfill}m{#1}}
 
 
+%% EXPERIENCES
+\newenvironment{experiences}{%
+  \begin{longtable}{R{\leftcolumn}|E}
+}{%
+  \end{longtable}
+}
+
+% Render an experience in the experiences environment
+% Usage: 
+% \experience
+%  {<End date>}      {<Title>}{<Enterprise>}{<Country>}
+%  {<Start date}     {
+%                      <Experience description (Could be a list)>
+%                    }
+%                    {<Technology list>}
+\newcommand\experience[7]{
+  \textbf{#1}    & \textbf{#2, #3, #4}   								\\*
+  \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
+  					         #6
+                   \end{minipage}										\\
+  }
+%% SOFTWARES
+% Define the 'projects' environment
+\newenvironment{projects}{%
+  \begin{longtable}{l}
+}{%
+  \end{longtable}
+}
+
+\newcommand\project[5]{
+  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+    \textbf{#1} \hfill #2 \smallskip\\
+    #3\\
+    #4\smallskip\\
+  \end{minipage}
+  \\*
+}

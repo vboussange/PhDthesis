@@ -1,18 +1,52 @@
 % !TEX root = ../my-thesis.tex
+\graphicspath{{../cover/}}
+% \makeatletter\typeout{\Ginput@path}\makeatother
 %
 % ------------------------------------  --> cover title page
 \begin{titlepage}
 	\pdfbookmark[0]{Cover}{Cover}
-	\flushright
-	\hfill
-	\vfill
-	{\LARGE\thesisTitle \par}
-	\rule[5pt]{\textwidth}{.4pt} \par
-	{\Large\thesisName}
-	\vfill
-	\textit{\large\thesisDate} \\
-	Version: \thesisVersion
+	\begin{tikzpicture}[remember picture,overlay]  
+        % Background image     
+        % Title & Subtitle 
+		\node[above right,inner sep=0pt] at (current page.south west) (trees) {\includegraphics[height=0.5\paperheight]{AdobeStock_231608971.jpeg}};      
+		\node[above =0cm of trees,inner sep=0pt]{\includegraphics[height=0.5\paperheight]{luca-bravo-A-fubu9QJxE-unsplash.jpg}};     
+       
+		\node [
+            %   below=0.5cm,     
+              align=center,     
+              fill=white,     
+              opacity=0.6,
+              text opacity=1,
+              rounded corners,     
+              inner xsep=15pt,     
+              inner ysep=15pt,      
+            %   minimum width=0.7\textwidth, 
+            %   minimum height=0.7\paperheight,
+            %   text width=0.6\textwidth,
+              ] (title) at (current page.center) {
+                \begin{minipage}[b]{\textwidth}
+					\flushright
+					\hfill
+					\vfill
+					{\LARGE\thesisTitle \par}
+					\rule[5pt]{\textwidth}{.4pt} \par
+					{\Large\thesisName}
+					\vfill
+					\textit{\large\thesisDate} \\
+					Version: \thesisVersion
+                  \end{minipage}
+              };  
+		 
+
+        % % Author  
+        % \node[ below=0.5cm] (author) at (title.south){LaTeX-beamer.com};  
+        % % Date 
+        % \node[below=0.5cm] (date) at (author.south){\large \today};  
+        % Logo
+        %  \node [  below right =0.25cm and 0.5cm ] at (current page.north west) {\includegraphics[width=3.5cm]{Beamer-Logo.png} };  
+    \end{tikzpicture}
 \end{titlepage}
+
 
 
 % ------------------------------------  --> main title page
