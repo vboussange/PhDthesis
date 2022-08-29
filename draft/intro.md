@@ -135,12 +135,6 @@ Complex
 
 - population genetics \cite{MR0274068}
 
-- quantitative genetics: When many loci are involved, however, as is the case for the predominance of traits of ecological importance, a fundamentally different approach is needed, cognizant of the particulate basis of inheritance, but tailored to deal with a virtual continuum of phenotypic outcomes \cite{falconer1996introduction}. Seminal work of Land: XXX. A major limitation of current quantitative genetics theory is the reliance on simplified ecological scenarios that are not representative ofthe complexityofeco-evolutionary feedbacks innature \cite{Lion2022}. Lead to the development of adaptive dynamics
-- adaptive dynamics: fitness landscape, and analysis of invasion, introduce in \cite{Metz1995}. Provides a mathematical framework to study the interplay between ecological and evolutioanry processes
-  - major contribution: diversification due to evolutionary branching sheds a new light on the fundamental quesetion of the origin of species. Before, allopatric speciation. 
-  - controverse relative to the biological hypotheses
-  - while adaptive dynamics has been successful in taking into account environmental feedbacks and the emergence of polymorphism under frequency- dependent disruptive selection, it does so by assuming strong constraints on the mutation process and standing variation in the population \cite{Lion2022}
-
 - Questions, as raised by Levin \cite{Levin1998}, about complex adaptive systems
   - Are patterns (which?) determined by local conditions, or are they historically and spatially contingent?
   - how does evolution shape ecosystem properties?
@@ -154,25 +148,26 @@ Complex
 - *The undersanding of eco-evolutionary feedbacks and their effect macroscopic properties remain to be understood*
 
 ## An urgent need for better models of complex adaptive systems.
-- Increasing rates of species extinction \cite{Barnosky2011}
-- \cite{Chen2011}: shifts of species : higher elevations at a median rate of 11.0 meters per decade, higher latitudes at a median rate of 16.9 kilometers per decade. \cite{Descombes2020}
+- Increasing rates of species extinction \cite{Barnosky2011}.
 - \cite{Midgley2019}: prediction based on habitat models on the basis of mid-range climate-warming scenarios for 2050 that 15– 37% of species would be ‘committed to extinction
-- Important assumptions that may be not justified: \cite{Pearson2003} 
+- meta analysis of \cite{fischlin2007ecosystems}: 20–30% of plant and animal species would be at increasingly high risk of extinction as global mean temperatures exceed a warming of 2–3 8C above preindustrial levels.
+- \cite{Chen2011}: shifts of species : higher elevations at a median rate of 11.0 meters per decade, higher latitudes at a median rate of 16.9 kilometers per decade. \cite{Descombes2020}
+- The plausibility of a planetary-scale ‘tipping point’ highlights the need to improve biological forecasting by detecting early warning signs of critical transitions on global as well as local scales, and by detecting feedbacks that promote such transitions. It is also necessary to address root causes of how humans are forcing biological changes.
+- Developing sustainable approaches to system use implies understanding what maintains resilience and how human intervention might affect it \cite{Levin1998}.
+- Current modelling approach are based on spatial distribution models, which learn the ecological niches of species are reproject it given environmental predictors. This entails important assumptions that may be not justified: \cite{Pearson2003} 
   - three main critics
-    - biotic interactions
+    - biotic interactions: novel biotic interactions represent a neglected but major driver of ecosystem modifications under climate change
     - evolutioanry change: e.g. two species of bush cricket were show to have increased fractions of longer-winged (more disper- sive) individuals in recently founded populations, whilst two butterfly species ( Hesperia comma and Aricia agestis ) have increased the variety of habitat types that they can colonize. \cite{Thomas2001}
     - species dispersal: Bioclimate envelope models do not account for species dispersal, but instead aim to predict the potential range of organisms under changed climate
-- meta analysis of \cite{fischlin2007ecosystems}: 20–30% of plant and animal species would be at increasingly high risk of extinction as global mean temperatures exceed a warming of 2–3 8C above preindustrial levels.
-- novel biotic interactions represent a neglected but major driver of ecosystem modifications under climate change
-- The plausibility of a planetary-scale ‘tipping point’ highlights the need to improve biological forecasting by detecting early warning signs of critical transitions on global as well as local scales, and by detecting feedbacks that promote such transitions. It is also necessary to address root causes of how humans are forcing biological changes.
-- Developing sustainable approaches to system use implies understanding what maintains resilience and how human intervention might affect it \cite{Levin1998}. The key to resilience in any complex adaptive system is in the maintenance of heterogeneity \cite{Levin1998} --> first chapter
-- The modelling of coupled phenomena is identified as a major frontier in 21st century science \cite{Strogatz2001a}.
-- mathematical symmetries and inveariants underlie laws in nature, suggesting that the search for meany natural laws is inseparably a search for conserved quantities and invariant equations \cite{Anderson1972}.
-- \cite{Mooney2009}:
-- In one recent example an annual plant, Brassica rapa exhibited very rapid microevolutionary change in response to a climate fluctuation that led to a multiyear drought [70]. There are likely to be important limits to the rates of climate warming that natural systems can adapt to and these should be deducible from both limits to evolutionary change and limits to the rates that species can move across the landscape tracking climate change.
+
 
 
 ## Forward modelling
+- quantitative genetics: When many loci are involved, however, as is the case for the predominance of traits of ecological importance, a fundamentally different approach is needed, cognizant of the particulate basis of inheritance, but tailored to deal with a virtual continuum of phenotypic outcomes \cite{falconer1996introduction}. Seminal work of Land: XXX. A major limitation of current quantitative genetics theory is the reliance on simplified ecological scenarios that are not representative ofthe complexityofeco-evolutionary feedbacks innature \cite{Lion2022}. Lead to the development of adaptive dynamics
+- adaptive dynamics: fitness landscape, and analysis of invasion, introduce in \cite{Metz1995}. Provides a mathematical framework to study the interplay between ecological and evolutioanry processes
+  - major contribution: diversification due to evolutionary branching sheds a new light on the fundamental quesetion of the origin of species. Before, allopatric speciation. 
+  - controverse relative to the biological hypotheses
+  - while adaptive dynamics has been successful in taking into account environmental feedbacks and the emergence of polymorphism under frequency- dependent disruptive selection, it does so by assuming strong constraints on the mutation process and standing variation in the population \cite{Lion2022}
 - Scientists, generate new theories using intuition or derive them incrementally from existing models \cite{Brummitt2020}
 - Classical ODEs (lotka volterra)
   - mechanisms underlying the observed fluctuations in the Adriatic fishers. Volterra demonstrated that his equations would have a natural tendency to oscillate.
@@ -286,8 +281,7 @@ simulation, including NetLogo [13], Repast [14], MASON [15], Golly [16], and so 
   - essential to science: can combine analytical tools with machine learning.
   - community of modellers: collective intelligence. 
     - compare to python, general collection of repositories,
-    - Nb on 
-    - Julia lang Discourse
+    - Nb on Julia lang Discourse
   - Julia characterisitics
     - built in multithreading and parallellism
     - abstraction for generalized array format --> user is required to tranfrom equation into a vector of equation
@@ -324,7 +318,7 @@ simulation, including NetLogo [13], Repast [14], MASON [15], Golly [16], and so 
 - bundling together packages as distributions: SciML: organizations
 - programming language speed builds productivity https://www.stochasticlifestyle.com/the-nonlinear-effect-of-code-speed-on-productivity/
 - other stuff to read:
-  -  https://www.stochasticlifestyle.com/when-do-micro-optimizations-matter-in-scientific-computing/
+  - https://www.stochasticlifestyle.com/when-do-micro-optimizations-matter-in-scientific-computing/
   - https://www.stochasticlifestyle.com/the-essential-tools-of-scientific-machine-learning-scientific-ml/
   - https://www.stochasticlifestyle.com/generalized-physics-informed-learning-through-language-wide-differentiable-programming-video/
   - https://www.stochasticlifestyle.com/the-essential-tools-of-scientific-machine-learning-scientific-ml/ --> this one is the most important
