@@ -766,45 +766,64 @@
 \setlength{\leftcolumn}{0.1\textwidth}
 \newlength{\rightcolumnlength}
 \setlength{\rightcolumnlength}{0.9\textwidth}
+% Define a new column type for the XX environment
 \newcolumntype{E}{>{\raggedright\arraybackslash}p{\rightcolumnlength}}
-% Setup Array : new column type
+% Define a new column type for the scholarship environment
 \newcolumntype{R}[1]{>{\hfill}m{#1}}
-
+% Define a new column type for the XX environment
+\newcolumntype{Y}{>{\raggedleft}p{\leftcolumn}}
 
 %% EXPERIENCES
 \newenvironment{experiences}{%
-  \begin{longtable}{R{\leftcolumn}|E}
+  \begin{longtable}{Y p{\rightcolumnlength}}
 }{%
   \end{longtable}
 }
 
-% Render an experience in the experiences environment
-% Usage: 
-% \experience
-%  {<End date>}      {<Title>}{<Enterprise>}{<Country>}
-%  {<Start date}     {
-%                      <Experience description (Could be a list)>
-%                    }
-%                    {<Technology list>}
 \newcommand\experience[7]{
-  \textbf{#1}    & \textbf{#2, #3, #4}   								\\*
-  \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
-  					         #6
-                   \end{minipage}										\\
+  #1 \newline #5  & \textbf{#2,} #3, #4	\\
+      &  #6 \\
   }
+\newcommand\experienceshort[6]{
+  #1 \newline #5  & \textbf{#2,} #3, #4	\\
+  }
+\newcommand\experienceveryshort[2]{
+#1 & \textbf{#2} \\
+}
+\newcommand\experienceshortbis[6]{
+	#1 & \textbf{#2,} #3, #4	\\
+	#5 &  #6 \\
+}
 %% SOFTWARES
 % Define the 'projects' environment
 \newenvironment{projects}{%
-  \begin{longtable}{l}
+\begin{longtable}{Y p{0.8\rightcolumnlength} r}
 }{%
   \end{longtable}
 }
 
 \newcommand\project[5]{
-  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
-    \textbf{#1} \hfill #2 \smallskip\\
-    #3\\
-    #4\smallskip\\
-  \end{minipage}
-  \\*
+#2 & \textbf{#1} & #5\\
+& #3 & \\
+&  #4 &  \\
+}
+
+\newcommand\projectmy[6]{
+#3 & \textbf{#1} & #6\\
+#2 & #4 & \\
+&  #5 &  \\
+}
+
+% TALKS
+% Define the 'scholarship' environment
+\newenvironment{scholarship}{%
+  \begin{tabular}{Y p{\rightcolumnlength}}
+}{%
+  \end{tabular}
+}
+
+% Render a scholarshipentry in the scolarship environment
+% Usage: \scholarshipentry{<date>}{<description>}
+\newcommand\scholarshipentry[3]{
+  #1    &  \textbf{#2, } #3 \\
 }

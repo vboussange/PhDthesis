@@ -8,34 +8,47 @@
 	\begin{tikzpicture}[remember picture,overlay]  
         % Background image     
         % Title & Subtitle 
-		\node[above right,inner sep=0pt] at (current page.south west) (trees) {\includegraphics[height=0.5\paperheight]{AdobeStock_231608971.jpeg}};      
-		\node[above =0cm of trees,inner sep=0pt]{\includegraphics[height=0.5\paperheight]{luca-bravo-A-fubu9QJxE-unsplash.jpg}};     
+		\node[above right,inner sep=0pt, yshift=0.25cm] at (current page.south west) (trees) {\includegraphics[height=0.5\paperheight]{AdobeStock_231608971.jpeg}};      
+		\node[above = of trees,inner sep=0pt, yshift=-0.25cm]{\includegraphics[height=0.5\paperheight]{luca-bravo-A-fubu9QJxE-unsplash.jpg}};     
        
 		\node [
             %   below=0.5cm,     
               align=center,     
               fill=white,     
-              opacity=0.6,
+              opacity=1,
               text opacity=1,
-              rounded corners,     
+            %   rounded corners,     
               inner xsep=15pt,     
-              inner ysep=15pt,      
+              inner ysep=15pt,
+			  yshift = 0.6cm,    
             %   minimum width=0.7\textwidth, 
             %   minimum height=0.7\paperheight,
             %   text width=0.6\textwidth,
               ] (title) at (current page.center) {
                 \begin{minipage}[b]{\textwidth}
-					\flushright
-					\hfill
-					\vfill
-					{\LARGE\thesisTitle \par}
-					\rule[5pt]{\textwidth}{.4pt} \par
-					{\Large\thesisName}
-					\vfill
-					\textit{\large\thesisDate} \\
-					Version: \thesisVersion
+					% \hfill
+					% \vfill
+					\centering{
+					% {\LARGE \color{ctcolortitle}\textbf{\thesisTitle} \\[5mm]}
+					{\LARGE\color{ctcolortitle}
+					\textbf{Forward and inverse modelling of\\
+					eco-evolutionary dynamics}}\\
+					\large{in biological and economic systems
+					\\[5mm]}
+					% \rule[8pt]{0.8\textwidth}{.4pt} \par
+					}
+					% \flushright
+					% {\large Victor \textbf{BOUSSANGE}}
+					% \vfill
+					% \textit{\large\thesisDate} \\
+					% Version: \thesisVersion
                   \end{minipage}
               };  
+			\node[yshift = 1cm, 
+				xshift = -3cm, 
+				fill=white, 
+				% rounded corners
+				] at (current page.south east) (trees) {{\large Victor \color{ctcolortitle}\textbf{BOUSSANGE}}};      
 		 
 
         % % Author  
@@ -126,12 +139,13 @@
 	\textit{\thesisTitle} \\
 	% \thesisSubject, 
 	\thesisDate \\
-	Reviewers: \thesisFirstReviewer\, \thesisSecondReviewer and \thesisThirdReviewer\\
-	Supervisors: \thesisFirstSupervisor\ \\[1.5em]
-	\textbf{\thesisUniversity} \\
-	\textit{\thesisUniversityGroup} \\
-	\thesisUniversityInstitute \\
-	\thesisUniversityDepartment \\
-	\thesisUniversityStreetAddress \\
-	\thesisUniversityPostalCode\ and \thesisUniversityCity
+	Version: \thesisVersion
+	% Reviewers: \thesisFirstReviewer\, \thesisSecondReviewer and \thesisThirdReviewer\\
+	% Supervisors: \thesisFirstSupervisor\ \\[1.5em]
+	% \textbf{\thesisUniversity} \\
+	% \textit{\thesisUniversityGroup} \\
+	% \thesisUniversityInstitute \\
+	% \thesisUniversityDepartment \\
+	% \thesisUniversityStreetAddress \\
+	% \thesisUniversityPostalCode\ and \thesisUniversityCity
 }
