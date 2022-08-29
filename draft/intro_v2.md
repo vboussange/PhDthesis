@@ -1,3 +1,22 @@
+---
+title: ""
+# author: John Doe
+# date: Zürich, \today{}
+geometry: margin=2.5cm
+output: pdf_document
+header-includes:
+# - \usepackage{tcolorbox}
+# - \newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
+# - \renewenvironment{quote}{\color{red}}
+- \usepackage{framed}
+- \usepackage{quoting}
+- \definecolor{bgcolor}{HTML}{DADADA} # for grey color
+- \definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+- \colorlet{shadecolor}{aliceblue}
+- \newenvironment{shadedquotation}{\begin{shaded*}\quoting[leftmargin=1em, rightmargin=0pt, vskip=0pt, font=itshape]}{\endquoting\end{shaded*}}
+- \def\quote{\shadedquotation}
+- \def\endquote{\endshadedquotation}
+---
 <!-- 
 In v2, we only keep relevant bullet points, and make nice sentences
 
@@ -10,6 +29,7 @@ In v2, we only keep relevant bullet points, and make nice sentences
 
 ## Complex adaptive systems
 **The dynamics of ecosystems and economic systems is the result of the interaction of heterogeneous entities structured at different levels of organizations. Those entities interact in nonlinear ways and experience evolutionary processes. Interactions and evolutionary processes may act upon individual entities at the microscopic level, but its effects are propagated at the macroscopic level, and feed back to influence the microscopic level. The interdependencies across scales make those systems difficult to understand and predict.**
+
 - In biology is of particular interest the effects of reproduction, selection and mutation of traits, that act at the level of individual organisms but influence the populations level.
   - This is the topic of population genetics \cite{MR0274068} and quantitative genetics \cite{falconer1996introduction}. 
 - Similar is the effect of replication, selection and variations of population characteristics, acting at the population level, onto ecosystems properties.
@@ -45,6 +65,7 @@ In v2, we only keep relevant bullet points, and make nice sentences
 
 ## Eco-evolutionary processes
 **For many years, biologists have separated the time scale of ecology and evolution. Recently, empirical and theoretical evidences were found that ecological and evolutionary processes may feedback on each other, with major consequences on our understanding of the processes driving their dynamics \cite{{Pelletier}}.**
+
 - Since Darwin, biology has been divived into two distinct branches
   - Ecology: study of interactions between idividuals and biotic and abiotic environment
   - Evolution: modification of living species through reproduction, mutation and natural selection
@@ -63,7 +84,8 @@ In v2, we only keep relevant bullet points, and make nice sentences
 - *The undersanding of eco-evolutionary feedbacks and their effect macroscopic properties remain to be understood, and is more important than ever in a rapidly changing world \cite{Govaert2019a}*
 
 ## An urgent need for better models of complex adaptive systems.
-- **The effect of anthropogenic pressure on ecosystems, together with climate change, is stressing their functioning. Ecosystems may approach criticla shift state, which in turn may greatly affect economic systems. It is more than urgent to better understand the fundamental processes in order mitigate the consequences.**
+**The effect of anthropogenic pressure on ecosystems, together with climate change, is stressing their functioning. Ecosystems may approach criticla shift state, which in turn may greatly affect economic systems. It is more than urgent to better understand the fundamental processes in order mitigate the consequences.**
+
 - Increasing rates of species extinction \cite{Barnosky2011}.
 - \cite{Midgley2019}: prediction based on habitat models on the basis of mid-range climate-warming scenarios for 2050 that 15– 37% of species would be ‘committed to extinction
 - meta analysis of \cite{fischlin2007ecosystems}: 20–30% of plant and animal species would be at increasingly high risk of extinction as global mean temperatures exceed a warming of 2–3 8C above preindustrial levels.
@@ -78,7 +100,9 @@ In v2, we only keep relevant bullet points, and make nice sentences
 - *The understanding of the key mechanisms that affect ecosystem properties is of utmost importance to anticipate ecosystem shifts.*
 - 
 ## Forward modelling of complex systems
+
 **Scientists have traditionally generated theories about laws underlying phenomena in nature using intuition, which predictions are validated against empirical data \cite{Sayama} \cite{Brummitt2020} \cite{Schmidt2009} --> Deduction process. The key difficulty has been to derive predictions from assumptions, leading to simplifications that has prevented the investigation of the effect of eco-evolutionary processes**.
+
 - model idea: experience of thought,to understand the cause and consequences of miscroscopic rules and laws
   - Simple mathematical models to investigate some long standing questions in ecology
     - \cite{Bascompte1995}: theoretical has focused on the spatio temporal dynamics generated by simple ecological models - simple rules are able to produce complex spatio teporal patterns. This is improving oru understanding of a bunch of problems.
@@ -110,7 +134,9 @@ In v2, we only keep relevant bullet points, and make nice sentences
 - *Implications on the prediction and understanding of ecosystems has remained limited, because prediction vs mechanistic modelling is different. But prediction is the final step of the scientific method!*
 
 ## Machine learning, and scientific machine learning
+
 **Machine learning has made enormous progresses in the recent years, computers learn abstraction of mechanisms from data to make predictions about the world --> induction process.**
+
 - Short review on ML
   - LeCun: advances in artificial intelligence \cite{LeCun2015}
     - computers can learn to predcit the future using vast datasets, too large for humans to grasp \cite{Brummitt2020}
@@ -140,7 +166,9 @@ In v2, we only keep relevant bullet points, and make nice sentences
 
 
 ## Programming languages
+
 **Computational tools critically affects the productivity and advances of science. Scientific Machine Learning requires highly performant computational environment, which is interoperable, i.e. where the machine learning and scientific computing tools can communicate. The pressing challenges to better understand the fundamental processes shaping the dynamics of complex adaptive systems also requires the cooperation of other non-computer scientists coming from different fields.**
+
 - 2 language problem:
   - productivity languages (high level languages, dynamic) (Python, Matlab, R) for easy development 
     - Features of productivity languages, such as dynamic typing or garbage collection, make exploratory and iterative development simple --> scientific applications often begin their lives in a productivity language. 
@@ -178,8 +206,10 @@ In v2, we only keep relevant bullet points, and make nice sentences
   - SciML: a library of softwares for machine learning \cite{Rackauckas2020a}
   - the Climate Modeling Alliance is building an entirely new climate model that learns continuously from data and from high-resolution simulations, in julia, in contrast to C++/Fortran : At the cost of a daunting translation workload, they aim to build a model that is more accessible to new developers and more compatible with ML libraries. \cite{Tapio}
 - *Julia's unique features make it the right platform for developing computational tools, that can readily be used by the scientific community, and that are composable, making the sum more than its parts. This has direct benefits to the community, accelerating research.*
+
 ## Thesis outline
-- **In this thesis, I develop novel forward and inverse modelling approaches that account for the interplay between eco-evolutionary processes, and utilise them to shed light on fundamental mechanisms that influence the dynamics of biological and economic systems.**
+
+**In this thesis, I develop novel forward and inverse modelling approaches that account for the interplay between eco-evolutionary processes, and utilise them to shed light on fundamental mechanisms that influence the dynamics of biological and economic systems.**
 
 - We adress the following questions:
   - Can we gain a quantitative understanding of the implications and effects of microscopic processes acting on non random structures (Chap1)
