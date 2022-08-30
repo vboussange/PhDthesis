@@ -5,19 +5,122 @@
 
 % \cleanchapterquote{Le bout du monde et le fond du jardin contiennent la même quantité de merveilles.}{Christian Bobin}{(French poet)}
 
-\section{Biological and economic systems are complex adaptive systems}
+\subsubsection*{Biological and economic systems as complex adaptive systems}
+%% definition of complex adaptive system
+What are the similarities between biological and economic systems? Both are complex adaptive systems (CAS): they are composed of heterogeneous entities structured at different levels of organizations, that interact in nonlinear ways and experience evolutionary processes \cite{Levin}. The processes of interaction and evolution operate at one organizational level and result in emergent properties at a higher organisational level. In other words, they result in non-trivial properties that cannot be anticipated from the sole observation of individual entities.
+% Example : biology
+For example, in biological systems, the disproportionately high biodiversity (i.e., number of species) observed in mountane regions \cite{Rahbek2019} -- at the continental level -- arises from key dynamical processes operating at the population level \cite{Rangel2018}.
+%% Example: economics
+In economic systems, the biomodal distribution of international income levels -- at the world level -- is partly explained by structures of interactions across economic activities at the regional level \cite{C.A.HidalgoB.Klinger}.
+%% limitations of the current understanding
+The understanding of the coupling between processes operating at different organizational level is identified as a major frontier in the 21st century science \cite{Strogatz2001a}. A major concern in this direction is to comprehend the necessary set of constraints, with respect to how individual entitities interact and evolve, determining emergent properties. 
+% conclusion
+The close interplay between ecological and evolutionary processes plays a fundamental role in the emergence of patterns in biological systems \cite{Pelletier2009}, and may influence the dynamics of economic systems \cite{Hodgson2019}.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[
+        node distance=2cm,
+        on grid,
+        very thick]
+    \tikzstyle{node_cust}=[draw, minimum height=0.7cm, minimum width=3.5cm]
+
+    % biological systems
+    \node[node_cust, align=center] (genes) {Genes / genomes};
+    \node[node_cust, below=of genes] (phen) {Phenotypes};
+    \node[node_cust, below=of phen] (pop) {Populations};
+    \node[node_cust, below=of pop] (com) {Communities};
+    \node[node_cust, below=of com] (ecos) {Ecosystems};
+    % biological systems
+    \node[node_cust,right=4.5cm of genes] (orga) {Organizational routines};
+    \node[node_cust,below=of orga] (Firms) {Firms};
+    \node[node_cust,below=of Firms] (ecoa) {Economic activities};
+    \node[node_cust,below=of ecoa] (nateco) {National economies};
+    \node[node_cust,below=of nateco] (weco) {World economy};
+\end{tikzpicture}
+\caption{Schematic diagram of proposed organisational levels in biological and economic systems. \textbf{A} is inspired from \cite{Hendry+2016}}
+\end{figure}
+
+
+
+\subsubsection*{Eco-evolutionary feedbacks}
+% 
+% History of the understanding of forces in ecology and evolution
+The interplay between ecological and evolutionary processes critically affects the dynamics of biological systems \cite{Pelletier2009}.
+% 
+%% specific focus on ecology and evolution
+Since Darwin, it is genuinely acknowledged that natural selection, as the result of biotic and abiotic interactions, determines the survival of phenotypes, and therefore that ecological change affects evolutionary response \cite{Ezard2009}.
+% 
+For instance, Darwin realised that the finches in the Galapagos island evolved varied beaks because of the variations in ecological opportunities across the islands \cite{darwin2004origin}.
+% 
+%% Recent realisation of eco-evolutionary dynamics
+Nonetheless, a time scale separation between the ecological and evolutionary processes has traditionally been assumed \cite{slobodkin1980growth}, so that the fact that ecological processes, such as population growth, may be affected by evolutionary processes has only be recently investigated. Empirical studies have now demonstrated that evolution can be rapid and occur on similar time scales as ecology \cite{Hairston2005} and have quantifiable effect on ecological dynamics \cite{Ezard2009}, leading to eco-evolutionary feedbacks. 
+% 
+% Example of eco-evolutionary dynamics
+Eco-evolutionary feedbacks involve situations where an ecological property influences evolutionary change, which then feeds back to an ecological property, or vice versa \cite{Govaert2019a}. For instance, \cite{Dieckmann1999} shows that feedbacks between population density and trait evolution are sufficient to explain speciation via evolutionary branching.
+% 
+% Empirically, \cite{XXX} shows that in the population of XX, XX happened.
+% 
+%% Conclusion
+Eco-evolutionary feedbacks must be accounted for in order to understand the mechanisms driving the dynamics of ecosystems \cite{Govaert2019a}. Because they are affected by analogous processes, this realisation should also apply to economic systems.
+
+\subsubsection*{An urgent need for better ecosystem models}
+The effect of direct anthropogenic pressure, together with climate change, is rapidly affecting ecosystems \cite{Ellis2011,Midgley2019}. Ecosystems are approaching state shifts \cite{Barnosky2012}, which in turn will greatly affect human societies \cite{Mooney2009}.
+%
+%% Constatation of system state shift
+Current extinction rates are higher than would be expected from the fossil record \cite{Barnosky2011}. Based on habitat models, \cite{Midgley2019} predicts on the basis of mid-range climate-warming scenarios for 2050 that 15\% to 37\% of species would be committed to extinction. 
+% 
+%%
+While there is a general agreement that anthropogenic pressure and climate change will have a negative effect on the biosphere \cite{fischlin2007ecosystems}, their precise effect on ecosytem dynamics is unclear. For instance, with global warming, species are likey to shift towards higher elevations and higher latitudes \cite{Chen2011}. Because the speed of range shifts differ between different ecological groups, climate change is expected to modify the current organization of trophic interactions \cite{Descombes2020}, affecting ecosystem functioning.
+%
 %% 
-What are the similarities between biological and economic systems? Both are composed of heterogeneous entities, that interact in nonlinear ways, experience evolutionary processes, and are structured at different levels of organizations \cite{Levin}. The processes of interactions and evolution operate at the entity level, but their effects are propagated in complex ways at the macroscopic level, and feed back to influence the individual entities. This interdependency across scales make those systems difficult to understand and predict \cite{Mitchell}, and has led scientists to refer to those systems as complex adaptive systems.
+Current forecasts of ecosystem states are based on habitat models, where species habitats are learnt from species occurence data, and are reprojected it given environmental predictors.
 % 
-For example, in biological systems, the trait of individual organisms - i.e. their quantitative characteristics such as, e.g., body size - are subject to the fundamental processes of natural selection and variation \cite{mayr1999systematics}. Natural selection may happen through competition between individual organisms, and its effect is propagated at the population, as it influences e.g. the evolution of the mean body size of the population \cite{XXX}.
+Such approaches miss the processes of ecological interactions, evolutionary change and species dispersal \cite{Pearson2003}, that are expected to play a critical role in the evolution of the biosphere in the coming decades \cite{Norberg2012}.
 % 
-Competition can further operate at the population level between different populations \cite{XXX}. The macroscopic level of the previous organizational level becomes the microscopic level of the higher organizational level, and the processses of variations and natural selection affect the evolution of ecosystems.
-%%
-In economic systems, \cite{nelson1985evolutionary} suggests that habits, customs, and organizational routine of firms are replicated and are subject to natural selection. These forces, acting at the level of firms, influences the evolution of economic activities \cite{Hodgson2019}. Economic activites are themselves subject to natural selection among pools of economic activities, affecting the economic dynamics at the scale of a country.
-%%
-The understanding of the coupling between processes operating at different organizational level is identified as a major frontier in the 21st century science \cite{Strogatz2001a}. It may require a blending of insights from different fields investigating different scales, such as population biology and ecosystems science \cite{Levin1998}. The close interplay between ecological and evolutionary processes has recently been majorly proposed to explain those processes.
+In order to mitigate the consequences of human development, it is of utmost urgency to better understand the mechanisms influencing the biosphere \cite{Rahbek2019}, and utilize this knowledge to provide forecasts to designing adequate management of future ecosystem services \cite{Clark2001,Norberg2012}.
+
+% \subsubsection*{Endogenous forces in economic systems}
+% Traditional approaches to economics assume the rationality of economic agents \cite{XXX}. Economic dynamics
+% % 
+% In contrast, evolutionary economics 
+
+\subsubsection*{Forward modelling of eco-evolutionary processes}
+Eco-evolutionary processes are difficult to observe in biological systems, and conducting controlled experiments to quantify their roles is usually not possible \cite{Pontarp2019}. As such, a deductive method relying on forward modelling has traditionally been used to investigate the effect of eco-evolutionary processes \cite{Brummitt2020}. Along this approach, hypotheses are embedded in a model -- so called mechanistic model \cite{XXX} --, wich forward integration generates predictions. The resulting qualitative dynamics and/or quantitative predictions are validated against common intuition and empirical data, and further refined to elaborate a theory \cite{Sayama,Brummitt2020,Schmidt2009}.
+% 
+%% early mathematical models
+In the early 1930s to 1940s, by formulating tractable mathematical models, the work of Fisher, Wright and Haldane has greatly contributed to the modern synthesis \cite{huxley1942evolution}, generally accepted as the pillar of our current understanding of evolutionary dynamics. Nonetheless, the requirement of tractable mathematical models has involved strong assumptions, such as simplified ecological scenarios, that are not representative of the complexity of eco-evolutionary feedbacks in nature \cite{Govaert2019a}.
+% 
+%% computers
+With the increase in computational capacity, novel approaches to forward modelling have appeared, heavily relying on individual based models (IBMs) \cite{XXX}. IBMs allow the forward integration of complex hypothesis while requiring very little simplifying assumptions \cite{XXX}. While offering the possibility to investigate more realistic scenarios, their lack of analytical traceability may occult the mechanisms generating the emergent properties.
+% 
+%% computers and analytical framework
+Adaptive dynamics theory \cite{Metz1995}, together with recent mathematical techniques \cite{Meleard,Nordobtten,Lion}, are providing tools for the analytical underpinning to IBM simulations under simplified scenarios \cite{XXX}. 
+% 
+% They allow to derive analytical expressions for the population macroscopic properties (e.g., population size and trait variance) from individual-based assumptions. 
+% 
+Analogous to renormalisation group analysis developed in quantum and statistical physics, they provide -- in combination with numerical simulations -- the appropriate modelling framework to obtain a general understanding of the mechanisms generated by eco-evolutionary dynamics \cite{Levin2002,Govaert2019a}.
+% 
+This combination of numerical simulations and analytical insights has successfully shed new lights, for instance, on the effect of environmental feedbacks and on the emergence of polymorphism under frequency-dependent disruptive selection \cite{Dieckmann1999,Doebeli2003}.
+% 
+While we have a good understanding on the effect of eco-evolutionary processes on population dynamics in simple landscapes \cref{Mirrahimi}, it is however unclear whether such results hold under complex landscapes, such as those observed in mountains \cref{Rahbek2019}.
+% 
+Furthermore, the predictive ability of mechanistic modesl has remained poor \cite{DeAngelis2015}, due to a low pervasion of observation data in mechanistic models \cite{XXX}.
+% This understanding uses matrices or networks to create representations of complex systems that do not ignore the identity of the elements involved or their interactions. These ideas, which are now prevalent in fields such as machine learning and physics, have begun to make their way into economics under the umbrella of economic complexity
+
+\subsubsection*{Machine learning, inverse modelling and scientific machine learning}
 
 
+\subsubsection*{Programming languages}
+
+
+\subsubsection*{Thesis outline}
+
+
+
+\newpage
+
+remains to be understood, and is more important than ever in a rapidly changing world.
 
 \section{Complex adaptive systems}
 \label{sec:intro:cas}
@@ -151,3 +254,5 @@ This part provides a new perspective on the understanding of the dynamics of eco
 \begin{comment}
     The text of this thesis/dissertation contains reprints of the material as it appears in journals.
 \end{comment}
+
+\printbibliography[heading=subbibliography]

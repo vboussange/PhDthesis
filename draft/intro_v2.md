@@ -91,8 +91,10 @@ In v2, we only keep relevant bullet points, and make nice sentences
 - meta analysis of \cite{fischlin2007ecosystems}: 20–30% of plant and animal species would be at increasingly high risk of extinction as global mean temperatures exceed a warming of 2–3 8C above preindustrial levels.
 - \cite{Chen2011}: shifts of species : higher elevations at a median rate of 11.0 meters per decade, higher latitudes at a median rate of 16.9 kilometers per decade. \cite{Descombes2020}
 - The plausibility of a planetary-scale ‘tipping point’ highlights the need to improve biological forecasting by detecting early warning signs of critical transitions on global as well as local scales, and by detecting feedbacks that promote such transitions. It is also necessary to address root causes of how humans are forcing biological changes.
+- \cite{Rahbek2019}: Process-based models at fine spatial scales, explicitly incorpo- rating microclimate variation within similar ele- vational bands and movement between isolated habitat patches, are urgently needed to predict the future ofmountain species under conditions of global environmental change.
+REFERENCES
 - Developing sustainable approaches to system use implies understanding what maintains resilience and how human intervention might affect it \cite{Levin1998}.
-- Current modelling approach are based on spatial distribution models, which learn the ecological niches of species are reproject it given environmental predictors. This entails important assumptions that may be not justified: \cite{Pearson2003} 
+- Current modelling approach  This entailare based on spatial distribution models, which learn the ecological niches of species are reproject it given environmental predictors.s important assumptions that may be not justified: \cite{Pearson2003} 
   - three main critics
     - biotic interactions: novel biotic interactions represent a neglected but major driver of ecosystem modifications under climate change
     - evolutioanry change: e.g. two species of bush cricket were show to have increased fractions of longer-winged (more disper- sive) individuals in recently founded populations, whilst two butterfly species ( Hesperia comma and Aricia agestis ) have increased the variety of habitat types that they can colonize. \cite{Thomas2001}
