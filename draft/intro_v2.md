@@ -27,8 +27,8 @@ In v2, we only keep relevant bullet points, and make nice sentences
 
 ## Preface
 
-## Complex adaptive systems
-**What are the similarities between biological and economic systems? Both are composed of heterogeneous entities, that interact in nonlinear ways, experience evolutionary processes, and are structured at different levels of organizations \cite{Levin}. The processes of interactions and evolution operate at the entity level, but their effects are propagated in complex ways at the macroscopic level, and feed back to influence the individual entities. This interdependency across scales make those systems difficult to understand and predict \cite{Mitchell}, and has led scientists to refer to those systems as complex adaptive systems.**
+## Biological and economic systems as complex adaptive systems
+**What are the similarities between biological and economic systems? Both are complex adaptive systems (CAS): they are composed of heterogeneous entities structured at different levels of organizations, that interact in nonlinear ways and experience evolutionary processes \cite{Levin}. The processes of interaction and evolution operate at one organizational level and result in emergent properties at a higher organisational level. In other words, they result in non-trivial properties that cannot be anticipated from the sole observation of individual entities.**
 
 - In biology is of particular interest the effects of reproduction, selection and mutation of traits, that act at the level of individual organisms but influence the populations level.
   - This is the topic of population genetics \cite{MR0274068} and quantitative genetics \cite{falconer1996introduction}. 
@@ -60,11 +60,11 @@ In v2, we only keep relevant bullet points, and make nice sentences
     - economic networks that are structured \cite{C.A.HidalgoB.Klinger,Bustos2012,Saavedra2009a,Schweitzer2009,Giuliani2007}
     - A review of Zipf laws \cite{Gabaix2009}
 - The modelling of coupled phenomena is identified as a major frontier in 21st century science \cite{Strogatz2001a}.
-- *Those patterns are unique opportunities to learn the fundamental mechanisms that have generated it. The close interplay between ecological and evolutionary processes has recently been majorly proposed to explain those processes*
+- *The close interplay between ecological and evolutionary processes plays a fundamental role in the emergence of patterns in biological systems \cite{Pelletier2009}, and may influence the dynamics of economic systems \cite{Hodgson2019}.*
 
 
-## Eco-evolutionary processes
-**For many years, biologists have separated the time scale of ecology and evolution. Recently, empirical and theoretical evidences were found that ecological and evolutionary processes may feedback on each other, with major consequences on our understanding of the processes driving their dynamics \cite{{Pelletier}}.**
+## Eco-evolutionary feedbacks
+**The interplay between ecological and evolutionary processes critically affects the dynamics of biological systems \cite{Pelletier2009}.**
 
 - Since Darwin, biology has been divived into two distinct branches
   - Ecology: study of interactions between idividuals and biotic and abiotic environment
@@ -81,7 +81,7 @@ In v2, we only keep relevant bullet points, and make nice sentences
   - \cite{Mooney2009}:
     - In one recent example an annual plant, Brassica rapa exhibited very rapid microevolutionary change in response to a climate fluctuation that led to a multiyear drought [70]. There are likely to be important limits to the rates of climate warming that natural systems can adapt to and these should be deducible from both limits to evolutionary change and limits to the rates that species can move across the landscape tracking climate change.
 - Talk about evolutionary rescue and link it with your work on spatial graphs.
-- *The undersanding of eco-evolutionary feedbacks and their effect macroscopic properties remain to be understood, and is more important than ever in a rapidly changing world \cite{Govaert2019a}*
+- *Eco-evolutionary feedbacks must be accounted for in order to understand the mechanisms driving the dynamics of ecosystems \cite{Govaert2019a}. Because they are affected by analogous processes, this realisation should also apply to economic systems.*
 
 ## An urgent need for better models of complex adaptive systems.
 **The effect of anthropogenic pressure on ecosystems, together with climate change, is stressing their functioning. Ecosystems may approach criticla shift state, which in turn may greatly affect economic systems. It is more than urgent to better understand the fundamental processes in order mitigate the consequences.**
@@ -100,10 +100,12 @@ REFERENCES
     - evolutioanry change: e.g. two species of bush cricket were show to have increased fractions of longer-winged (more disper- sive) individuals in recently founded populations, whilst two butterfly species ( Hesperia comma and Aricia agestis ) have increased the variety of habitat types that they can colonize. \cite{Thomas2001}
     - species dispersal: Bioclimate envelope models do not account for species dispersal, but instead aim to predict the potential range of organisms under changed climate
 - *The understanding of the key mechanisms that affect ecosystem properties is of utmost importance to anticipate ecosystem shifts.*
-- 
-## Forward modelling of complex systems
 
-**Scientists have traditionally generated theories about laws underlying phenomena in nature using intuition, which predictions are validated against empirical data \cite{Sayama} \cite{Brummitt2020} \cite{Schmidt2009} --> Deduction process. The key difficulty has been to derive predictions from assumptions, leading to simplifications that has prevented the investigation of the effect of eco-evolutionary processes**.
+## Endogenous forces in economic systems
+
+## Forward modelling of eco-evolutionary processes
+
+**Eco-evolutionary processes are difficult to observe in biological systems, and conducting controlled experiments to quantify their roles is usually not possible \cite{Pontarp2019}. As such, a deductive method relying on forward modelling has traditionally been used to investigate the effect of eco-evolutionary processes \cite{Brummitt2020}. Along this approach, hypotheses are embedded in a model -- so called mechanistic model \cite{XXX} --, wich forward integration generates predictions. The resulting qualitative dynamics and/or quantitative predictions are validated against common intuition and empirical data, and further refined to elaborate a theory \cite{Sayama,Brummitt2020,Schmidt2009}.**
 
 - model idea: experience of thought,to understand the cause and consequences of miscroscopic rules and laws
   - Simple mathematical models to investigate some long standing questions in ecology
@@ -132,8 +134,7 @@ REFERENCES
   - \cite{Levin2002} argues that it is the only way to find out the appropriate equations
   - This work provides powerful mathematical objects and techniques to simulate complex adaptive systems, from a rule-based modelling perspective
 - This paradigm could be used to understand how population charactersitics emerge from the interplay between complex spatial structure and eco-evolutionary processes.
-- *Our understanding of the evolution of quantitative traits in nature is still limited by the challenge of including realistic trait distributions in the context of frequency-dependent selection and ecological feedbacks \cite{Lion2022}*
-- *Implications on the prediction and understanding of ecosystems has remained limited, because prediction vs mechanistic modelling is different. But prediction is the final step of the scientific method!*
+- *Furthermore, the predictive ability of mechanistic modesl has remained poor \cite{DeAngelis2015}, due to a low pervasion of observation data in mechanistic models \cite{XXX}.*
 
 ## Machine learning, and scientific machine learning
 
