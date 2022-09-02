@@ -1,4 +1,7 @@
-# Conclusion
+# General discussion
+
+## Towards a better understanding of eco-evolutionary feedback in CAS
+Here, we summarise the challenges, and the goal of the PhD.
 
 ## Contributions
 
@@ -15,6 +18,9 @@
   - effects of global change on the maintenance of biodiversity
 
 - Three softwares in the Julia programming language
+  
+### Chapter 3
+Our goal was not to construct a better model of financial markets, but rather to show how ideas from ecology can be used to interpret market phenomena and predict market behavior.
 
 
 ## Limitations
@@ -87,3 +93,5 @@ mentioned earlier are also models, not scientific facts, strictly speaking. This
 
 ### Applications of MiniBatchInference.jl
 - calibration of model and prediction of response to climate change \cite{Feng2018}
+
+## Concluding remarks
