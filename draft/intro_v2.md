@@ -30,6 +30,10 @@ In v2, we only keep relevant bullet points, and make nice sentences
 ## Complex adaptive systems
 **What are the similarities between biological and economic systems? Both are composed of heterogeneous entities, that interact in nonlinear ways, experience evolutionary processes, and are structured at different levels of organizations \cite{Levin}. The processes of interactions and evolution operate at the entity level, but their effects are propagated in complex ways at the macroscopic level, and feed back to influence the individual entities. This interdependency across scales make those systems difficult to understand and predict \cite{Mitchell}, and has led scientists to refer to those systems as complex adaptive systems.**
 
+
+XXX 
+
+
 - In biology is of particular interest the effects of reproduction, selection and mutation of traits, that act at the level of individual organisms but influence the populations level.
   - This is the topic of population genetics \cite{MR0274068} and quantitative genetics \cite{falconer1996introduction}. 
 - Similar is the effect of replication, selection and variations of population characteristics, acting at the population level, onto ecosystems properties.
@@ -38,6 +42,8 @@ In v2, we only keep relevant bullet points, and make nice sentences
   - patterns of nutrient flux 
  - Elucidating these interactions across scales is fundamental to resolving the issue of biodiversity and ecosystem functioning, and requires a blending of insights from different fields investigating different scales, such as population biology and ecosystems science \cite{Levin1998}.
 - In economic systems is of recent interest the effect of replication, selection and variations of habits, customs, and organizational routines \cite{Hodgson2019}, acting at the level of firms, influencing the evolution of economic activities.
+- 
+
   - XXX
 - Similar is the effect replication, selection and variations of economic activity characteristics onto economic systems characteristics, at the scale of a country
 - Despite the great complexity of ecosystems, regular patterns are empirically observed. 
@@ -82,6 +88,9 @@ In v2, we only keep relevant bullet points, and make nice sentences
     - In one recent example an annual plant, Brassica rapa exhibited very rapid microevolutionary change in response to a climate fluctuation that led to a multiyear drought [70]. There are likely to be important limits to the rates of climate warming that natural systems can adapt to and these should be deducible from both limits to evolutionary change and limits to the rates that species can move across the landscape tracking climate change.
 - Talk about evolutionary rescue and link it with your work on spatial graphs.
 - *The undersanding of eco-evolutionary feedbacks and their effect macroscopic properties remain to be understood, and is more important than ever in a rapidly changing world \cite{Govaert2019a}*
+
+Economic system as complex system alike to biology
+
 
 ## An urgent need for better models of complex adaptive systems.
 **The effect of anthropogenic pressure on ecosystems, together with climate change, is stressing their functioning. Ecosystems may approach criticla shift state, which in turn may greatly affect economic systems. It is more than urgent to better understand the fundamental processes in order mitigate the consequences.**
