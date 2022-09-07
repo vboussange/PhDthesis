@@ -61,6 +61,9 @@ The investigation of the interplay between ecological and evolutionary processes
   - Need for fundamental undersanding of processes, and provide predictability
   - Laboratory experiments to investigate particular processes and calibrate models are infeasible, due to spatial and time scales
   - inverse modelling is appropriate
+  - processes may leave imprint on emergent patterns. This information can be used to recover processes
+  - In particular, in chapter 2 and 3, we showed that interactions between functional groups, as well as spatial transfers, could be recovered from temporal dynamics
+  - Nevertheless, the information is particularly difficult to extract, in parts du to the nonlinearities of the underlying processes
 
 <!-- parameter estimation -->
 - A variety of inverse modelling methods have been used to estimate the parameters of dynamical ecosystem models, mostly relying on Bayesian inference methods with Markov Chain Monte Carlo \cite{XXX} and variational methods \cite{XXX}.
@@ -85,33 +88,35 @@ The investigation of the interplay between ecological and evolutionary processes
 **Overall, the method in proposed \cref{chap2} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concret case examples in \cref{chap2, chap3} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \cite{Urban2016}.**
 
 ### Fundamental understanding
-#### Interplay between spatial structure and eco-evolutionary mechanisms
 
-- **Our understanding of the interplay between realistic population structure and eco-evolutionary dynamics is limited**
-  - Review of quantitative genetics 
-  - 
-    - The majority of population genetic studies to date focused on the single interplay between genetic drift and dispersal \cite{Orsini2013}, which resulting mechanisms is called "isolation by distance" \cite{Kimura1964}.
-    - Recent studies considered more realistic population structure and used graph metrics, resistance distance, to summarize the effect of landscape on population structure \cite{McRae2006,McRae2007}
-    - While it is generally acknowledged that populations and habitat structures affect population differentiation \cite{XXX} and may have shaped biodiversity patterns \cite{XXX}, the mechanisms involved in real landscapes are still unclear.
-    - Neglecting eco-evolutionary feedbacks or spatial structures, previous studies highlighted that connectivity \cite{XXX} and habitat heterogeneity \cite{XXX} affect phenotypic differentiation.
-- **In \cref{chap:diff-in-graphs}, we investigated how the processes of competition and migration in complex landscapes, together with the co-evolution of neutral and adaptive traits, affect population dynamics and population differentiation.**
-  - our contribution
-    - In line with previous theoretical work \cite{XXX}, we showed that landscape connectivity enhances phenotypic differentiation.
-    - The inclusion of eco-evolutionary processes and spatial complexity through spatial graphs allowed to confirm previous insights obtained under simplified scenarios, and further highlighted other mechanisms that are likely to contribute to differentiation.
-      - heterogeneity in connectivity can reinforce differentiation patterns through the creation of unbalanced migration fluxes which affect ecological equilibrium.
-      - habitat assortativity will systematically enhance phenotypic differentiation for a selected trait, but may positively or negatively affect non-selected traits, depending on the migration regime. This effect arises frorm feedbacks between ecological processes (spatial transfers and local foraging) and evolutionary processes (mutations and genetic hitchiking)
-    - Detailing the mechanisms underlying population dynamics and phenotypic structure in complex landscapes, we further proposed landscape properties, that can be easily computed, and may contribute to detail some of the mechanisms by which species richness varies through space \cite{Liu2018,Dias2014,Rahbek2001,Kreft2007a,Davies2007,Veech2007,Guegan1998,Stein2014} 
-- How it may be used to better understand empiricla mechanisms, and how it can be used in in predictive models
-- We have contributed to the urgent need of better understanding feedbacks to anticipate large shifts
-  - effects of global change on the maintenance of biodiversity
-
-
-- In the context of global change, these resuts raise interesting questions
-  - Are differentiated populations more likely to do XXX?
-  - 
-- Overall, our results point to topology metrics that can connect spatial biodiversity patterns to the generating eco-evolutionary and spatial processes.
+- **\chap1 contributed to advance our understanding on how the interplay between population structure and eco-evolutionary dynamics affects population differentiation**
+  - Population structure and differentiation 
+    - the sole interplay between genetic drift and dispersal results in "isolation by distance" \cite{Wright1943}, where the limitation of the dispersal ability of organisms triggers an increase in differentiation among populations with increasing geographic distance. This mechanism can occur in subdivided metapopulations, or within continuous populations. 
+    - In complex landscape, where multiple pathways can link populations, connectivity, a measure integrating all possible pathways connecting populations, shapes differentiation \cite{McRae2006,McRae2007}
+    - In \chap1, I demonstrate that the consideration of competition for resources, one of the most fundamental process regualting population dynamics \cite{x}, considerably affects population differentiation by limiting the dispersal of individuals.
+    - hetero- geneity in connectivity can reinforce differentiation patterns through the creation of unbalanced migration fluxes which affect ecological equilibrium.
+    - In complex landscapes where connectivity is heterogeneous, highly connected geographical areas (demes?) can behave as bottlenecks, where migrants are less likely to survive, and gene flow is reduced. Through the accumulation of incompatibilities over time \cite{Dobhsanski}, this mechanism could lead to speciation over time, and contribute to the high diversification in mountain regions \cite{Rahbek}.
+  - habitat heterogeneity and adaptive differentiation
+    - When landscapes present heterogeneous habitats, local adaptation can occur, where a population evolves traits that support higher fitness in its home environment relative to populations from foreign environments \cite{Kawecki2004}. 
+    - density dependence operating independently in different demes favours rare allels that improve fitness in a habitat.
+    - This process is hindered by gene flow, confounded by genetic drift, opposed by natural selection due to tempoeral envionrmental variability, and constrained by loack of genetic variation of by the genetic architecture of underlying traits. \cite{Kawecki2004}
+    - when selection is stronger than gene flow and mutation, adaptation can occur.
+    - Environmental heterogeneity is regarded as one of the most important factors govening species richness gradients
+    - In particular, \cite{Mirrahimi2020} presents the relationship between gene flow and the possibility for adaptation, $m < 2s\theta^2$ where $s$ the selection strength and $\theta$ is the habitat heterogeneity, in a simplistic landscape
+    - landscapes can be patchy and it is unrealistic to assume regularity \cite{Dale2010}.
+    - in \chap1, I show the relationship between habitat spatial distribution, habitat heterogeneity and selection strength, which corrects the relationship as $$ where r_\theta denotes habitat assortativity must be regarded as a measure of habitat spatial auto-correlation based on the dispersal range of a species \cite{Richardson2014}. 
+    - Our results predict that in landscapes with heterogeneous habitats and where selection is strong, populations structured over assortative habitats are larger, support higher adaptive differentiation, and can be locally well-adapted even in the case where migration rates are high.
+- traits under selection and neutral traits are co-evolving through linkages. Along the mechanism of isolation by adaptation, habitat heterogeneity leads to more isolation by, which further reduces gene flow \cite{Richardson2014} and therefore increases neutral differentiation \cite{nosil2008}. 
+  - Closing the loop on the effect of habitat heterogeneity on differentiation, I highlight that habitat assortativity tends to reduce gene flow, therefore decreasing IBD, but antagonistically promotes IBA. This results in an overall ambiguous effect on neutral differentiation. while , 
+  - this effect must be considered in population genetics studies that use such patterns to infer processes.
+- **\chap1 underpins novel fundamental mechanisms linking population differentiation to eco-evolutionary feedbacks and complex population structures**
+- habitat assortativity will systematically enhance phenotypic differentiation for a selected trait, but may positively or negatively affect non-selected traits, depending on the migration regime. This effect arises frorm feedbacks between ecological processes (spatial transfers and local foraging) and evolutionary processes (mutations and genetic hitchiking)
+- Detailing the mechanisms underlying population dynamics and phenotypic structure in complex landscapes, we further proposed landscape properties, that can be easily computed, and may contribute to detail some of the mechanisms by which species richness varies through space \cite{Liu2018,Dias2014,Rahbek2001,Kreft2007a,Davies2007,Veech2007,Guegan1998,Stein2014} 
 
 #### Fudamental understanding in economic systems
+- **\chap4 provided a novel lens to understand endogenous forces shaping the dynamics of economic systems.**
+- mainstream economics explains economic change by exogenous drivers, such as technological change and economic institutions
+- evolutionary eonomic is rather concerned with 
 - In \cref{econobio}, we have investigated long standing question in evolutionary economics
 - Our work fosters a biologically inspired approach to understand the mechanisms shaping the long-term dynamics of economic systems.
 
@@ -194,6 +199,20 @@ The investigation of the interplay between ecological and evolutionary processes
 
 ### Fundamental understanding
 #### Gaining more fundamental knowledge of eco-evolutionary processes in realistic scenarios
+
+<!-- - **In \cref{chap:diff-in-graphs}, we investigated how the processes of competition and migration in complex landscapes, together with the co-evolution of neutral and adaptive traits, affect population dynamics and population differentiation.**
+  - our contribution
+      - How it may be used to better understand empiricla mechanisms, and how it can be used in in predictive models
+
+- We have contributed to the urgent need of better understanding feedbacks to anticipate large shifts
+  - effects of global change on the maintenance of biodiversity 
+  - 
+- In the context of global change, these resuts raise interesting questions
+  - Are differentiated populations more likely to do XXX?
+  - 
+- Overall, our results point to topology metrics that can connect spatial biodiversity patterns to the generating eco-evolutionary and spatial processes.
+
+  - -->
 - To further our understanding of the origin of spatial biodiversity patterns, the contribution of landscape properties to discrepancies in population differentiation could be investigated at large scales by (i) using techniques to project real landscapes on graphs (see \cref{figSI:graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data.
 
 - Effect of genotype / phenotype map on adaptation
