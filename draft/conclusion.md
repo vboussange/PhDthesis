@@ -7,21 +7,20 @@
   - (ii) a fundamental undersanding of the role of eco-evolutionary processes in shaping the dynamics of biological populations structured in complex landscapes \cite{chap1}
   - (iii) the quantification of the effect of eco-evolutionary processes in economic systems \cref{chap3}
 
-In the following, I discuss the chapters of my thesis collectively within the broader context of the modelling of eco-evolutionary processes and the understanding of the resulting mechanisms and patterns in biological and economic systems.
+In the following, I discuss the chapters of my thesis collectively within the broader context of the modelling of eco-evolutionary processes  in biological and economic systems, and the understanding of the associated mechanisms.
 
 
 ### Methodological advances
 The investigation of the interplay between ecological and evolutionary processes
 #### Advances in the modelling of realistic spatial and phenotypic structures
-**In \cref{chap1,chap4}, we have provided new tools to better understand mechanisms resulting from the interplay between eco-evolutionary processes and spatial and phenotypic structures.**
-  - Why this is important
-    - landscape complexity \cite{xxx} and phenotype complexity \cite{xxx}, and the interaction between phenotypes \cite{xxx} may critically affect eco-evolutionary dynamics
+**landscape complexity \cite{xxx} and phenotype complexity \cite{xxx}, and the interaction between phenotypes \cite{xxx} may critically affect eco-evolutionary dynamics. \cref{chap1,chap4} provide new tools to better understand mechanisms resulting from ecological and evolutionary processes, and their interplay, in the context of realistic spatial and phenotypic structures.**    
   - Review of spatially explicit modelling studies 
     - Classical modelling work investigating the dynamics of structured populations have focused on scenarios that are poorly representative of the complexity of eco-evolutionary feedbacks \cite{Govaert2019a}, and in particular that omit frequency-dependent selection.
       - for instance, \cite{Burger2000,Kimura1964,Lande1991,Nagylaki1994} assumed constant population sizes , and as such did not consider frequency-dependence.
     - On the other hand, recent works accounting for eco-evolutionary feedbacks \cite{xxx} did not adress the effect of the role of the spatial complexity of landscapes.
       - For instance, \cite{Slatkin1973,Slatkin1978,Kirkpatrick1997,Polechova2015,Polechova2018,AndradeRestrepo2019,Doebeli2003,Meszena1997,Yeaman2011,Debarre2013,Mirrahimi2020} consider regular spatial structures, missing the effect of the complexity of spatial structures on population differentiation.
     - Graphs have been used to capture the effect of complex structures on evolutionary dynamics \cite{Nowak}, but the underlying processes were fairly simple (simple birth death dynamics without the accumulation of phenotypic variations), and in particular did not account for the continuous evolution of heritable characteristics.
+  - **Models that include frequency dependence together with realistic population structures are missing.**
   - Review of high dimensional models 
     - While a vast majory of the work on eco-evolutionary feedbacks has focused on the evolution of scalar phenotypes \cite{Doebeli2011}, in most organisms many phenotypic properties combine in complicated wasy to determin ecological interactions, and hence frequency-dependent selection \cite{Doebeli2014}.
       - In particular, \cite{Doebeli2011} shows that the consideration of multiple traits with complex interactions relaxes the unrealistic conditions of strong frequency dependence required to generate diversity in one dimensional phenotype spaces, calling for a better understanding of evolutionary dynamics in high dimensioanl spaces.
@@ -30,8 +29,9 @@ The investigation of the interplay between ecological and evolutionary processes
       - The consideration of continuous geographical space also increases the dimensionality of the problems, embedding axis corresponding to geographical dimensions. Geographical space is usually a bounded liveable domain, which organisms cannot cross. In mathematical terms, those correspond to Neumann boundary conditions.
   - contribution of our work
     - consideration of complexity in discrete space
-      - **In particular, in \cref{chap1}, we have developed a novel modelling framework to capture the effect of eco-evolutionary processes on biological populations structured in complex landscapes.**
-      - using spatial graphs as convenitnt mathematical representation of landscapes, we derived in \cref{chap1} a general individual based model that can capture landscape complexity and eco-evolutionary processes, where individuals are characterised by many traits. 
+      - **\cref{chap1} develops a novel modelling framework to capture the effect of eco-evolutionary processes on biological populations structured in complex landscapes.**
+      - The IBM presented involves the combination of graphs and continuous spaces to model population structures. Graphs are convenient mathematical representation of landscapes, but can also account for genetic and spatial structure.
+      - as convenitnt mathematical representation of landscapes, we derived in \cref{chap1} a general individual based model that can capture landscape complexity and eco-evolutionary processes, where individuals are characterised by many traits. 
       - We could further derive a deterministic approximation of the IBM, which allowed, together with adaptive dynamics theory and numerical simulations, to obtain analytical insights on how structural properties affect macroscopic population. 
       - This approach, coupling stochastic simulations and analytical insights, can elucidate how macroscopic properties emerge from microscopic processes while accounting for the complexity of spatial structures. 
       - While the graph investigated aimed at representing a geographical landscape, the eco-evolutionary model on graph could be generalized to account for any complex spatio-evolutionary structure, such as, e.g., a genetic structure. The associated Julia library **Evoid.jl** implements de facto a more general version of the model. 
@@ -51,7 +51,6 @@ The investigation of the interplay between ecological and evolutionary processes
       - The package aim at hosting any solver algorithms that break down the curse of dimensionality, and is currently receiving contributions to implement the DeepBSDE scheme \cite{Han2018}
       - The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
       - It can solve intial conditions or terminal problems, with free or neumann boundary conditions
-
 
 
 #### Advances in inference methods for the investigation of eco-evolutionary processes
@@ -115,23 +114,55 @@ The investigation of the interplay between ecological and evolutionary processes
 
 #### Fudamental understanding in economic systems
 - **\chap4 provided a novel lens to understand endogenous forces shaping the dynamics of economic systems.**
-- mainstream economics explains economic change by exogenous drivers, such as technological change and economic institutions
-- evolutionary eonomic is rather concerned with 
-- In \cref{econobio}, we have investigated long standing question in evolutionary economics
-- Our work fosters a biologically inspired approach to understand the mechanisms shaping the long-term dynamics of economic systems.
-
-
-- The application of eco-evolutionary models for structured populations, such as the one investigated in \cref{chap:diff-in-graphs}, together with inverse modelling techniques \cref{chap:mini-batching}, could provide statistical evidence for the coupling of the dynamics of economic activities, through endogenous processes.
-
-
--  Evolutionary economics suggests that interactions between firms and economic activities, and evolutionary processes acting upon them, are major processes contributing to economic change \cite{Hodgson2019}.
-   - Our work suggests, that at the national level, economic sectors positively interact and transfer capital at the world level. 
-   - Similarly, we find strong strength of evidence that spatial transfers play an important role in the development of economic systems. 
-
-
+- mainstream economics explains economic change by exogenous drivers, such as technological change \cite{XXX} and economic institutions \cite{XXX}
+- evolutionary eonomics is rather concerned with explaining economic change by endogenous forces,
+- For instance, it suggests that interactions between firms and economic activities, and evolutionary processes acting upon them, are major processes contributing to economic change \cite{Hodgson2019}
+-  but has relied on traditional statistical approaches to test hypothesis
+- complexity economics adopts a novel set of tools to variations in national income, relying on dimensionality reduction technique.
+- one of the major contribution of complexity economics is to provide evidences for the diffusion of countries through the product space, explaining technological lock out.
+- It acknowledges the interdependency of economic activities through the existence of capabilities,
+- it does not disentangle the drivers.
+- importantly, it does not consider frequency-dependence, differences in growth rates and saturation, and acceleration of production
+- this topic is relatively well covered in evolutionary biology, and \chap3 connects economics with useful tools to understand transient dynamics.
+- This connection is all the more satisfactory as evolutionary enomics justifies deeper analogies, such as the common existence of interactors and replicators, common interaction structures \cite{XXX}, similar strategies
+- The first major contribution of \chap3 is to show that population dynamic models, such as the one investigated in \cref{chap:diff-in-graphs}, are well suited for modelling the transient dynamics of economic systems, 
+  - this opens up the possibility for connecting the modelling literatures
+  - inverse modelling methode of \chap2 is in fact particularly adapted to economic systems, since growth rates is very high (may be compare in terms of energy outputs? --> processes can be witnessed in a human life) and data is very good \cite{May}?
+- and to evidence that this dynamics is considerably affected by positive interactions and spatial transfers.
+- Overall, \chap3 fosters a biologically inspired approach to understand the frequency-dependent processes and resulting mechanisms shaping the long-term dynamics of economic systems.
 - As highlighted in \cite{Scholl}, our work does not aim at building better models of economic development, but rather at enriching our understanding of economic systems by adequately borrowing insights and concepts from evolutionary biology.
-
+<!-- TODO: read bochma and other review synthesis on evolutionary economics and geogrpahy economics, pour broder -->
 ## Limitations
+
+### TOC
+<!-- Attention: be generic, and not specific to you work -->
+- **differentiation in graphs**
+  - no underpinning of the genetic structure
+  - sex
+  - in contrast to classical models, frequency dependence require ABC inference (Billard)
+  - unclear how to define the geographical distance of a deme.
+  - lack of an analytical underpinning of neutral differentiation processes
+  - + specificity of the model
+  - no investigation of the mutation rate, in contrast to Mirrahimi
+  - limitation of the model to a qualitative understanding of patterns of neutral differentation
+- **Problems of inference**
+  - which parameters should be held constant? how things should be aggregated ? (rosenbaum)
+    - with mini-batch size?
+  - no consideration of multiple hypotheses (bayesian approach)
+  - the fallacy of local minima
+  - the consideration of complexity of dynamical behavior, instead of number of parameters
+  - the quality of data --> estimation of ICs cause overfitting. For instance, we encountered problems in estimating unconstrained data in econobio. Also, we could not mix up complicated models
+  - *synthetic data is a must do*
+- Econobio
+  - no real insights up to now
+  - expectation: explanation of variation in income
+- PDE
+  - no application of the method to real case scenarios
+  - time and resource consuming
+  - single point with MLP
+  - only a few dimensions required
+  - difficulty to find meta parameters, such as the kernel for nonlocal integration
+  - moment closure approximations may be more adapted for now
 
 ### Methodological advances
 
