@@ -9,83 +9,6 @@
 
 In the following, I discuss the chapters of my thesis collectively within the broader context of the modelling of eco-evolutionary processes  in biological and economic systems, and the understanding of the associated mechanisms.
 
-
-### Methodological advances
-The investigation of the interplay between ecological and evolutionary processes
-#### Advances in the modelling of realistic spatial and phenotypic structures
-**landscape complexity \cite{xxx} and phenotype complexity \cite{xxx}, and the interaction between phenotypes \cite{xxx} may critically affect eco-evolutionary dynamics. \cref{chap1,chap4} provide new tools to better understand mechanisms resulting from ecological and evolutionary processes, and their interplay, in the context of realistic spatial and phenotypic structures.**    
-  - Review of spatially explicit modelling studies 
-    - Classical modelling work investigating the dynamics of structured populations have focused on scenarios that are poorly representative of the complexity of eco-evolutionary feedbacks \cite{Govaert2019a}, and in particular that omit frequency-dependent selection.
-      - for instance, \cite{Burger2000,Kimura1964,Lande1991,Nagylaki1994} assumed constant population sizes , and as such did not consider frequency-dependence.
-    - On the other hand, recent works accounting for eco-evolutionary feedbacks \cite{xxx} did not adress the effect of the role of the spatial complexity of landscapes.
-      - For instance, \cite{Slatkin1973,Slatkin1978,Kirkpatrick1997,Polechova2015,Polechova2018,AndradeRestrepo2019,Doebeli2003,Meszena1997,Yeaman2011,Debarre2013,Mirrahimi2020} consider regular spatial structures, missing the effect of the complexity of spatial structures on population differentiation.
-    - Graphs have been used to capture the effect of complex structures on evolutionary dynamics \cite{Nowak}, but the underlying processes were fairly simple (simple birth death dynamics without the accumulation of phenotypic variations), and in particular did not account for the continuous evolution of heritable characteristics.
-  - **Models that include frequency dependence together with realistic population structures are missing.**
-  - Review of high dimensional models 
-    - While a vast majory of the work on eco-evolutionary feedbacks has focused on the evolution of scalar phenotypes \cite{Doebeli2011}, in most organisms many phenotypic properties combine in complicated wasy to determin ecological interactions, and hence frequency-dependent selection \cite{Doebeli2014}.
-      - In particular, \cite{Doebeli2011} shows that the consideration of multiple traits with complex interactions relaxes the unrealistic conditions of strong frequency dependence required to generate diversity in one dimensional phenotype spaces, calling for a better understanding of evolutionary dynamics in high dimensioanl spaces.
-      - Also, \cref{chap1} demonstrates that the co-evolution of traits proved to have genuine consequences on differentiation, pointing towards the inclusion of multiple traits to understand the dynamics of ecological interactions.
-      - The co-evolution of phenotypes is particularly important to understand the effect of global change on ecosystems, since many environemtal factors are likely to be impacted \cite{LeGland}
-      - The consideration of continuous geographical space also increases the dimensionality of the problems, embedding axis corresponding to geographical dimensions. Geographical space is usually a bounded liveable domain, which organisms cannot cross. In mathematical terms, those correspond to Neumann boundary conditions.
-  - contribution of our work
-    - consideration of complexity in discrete space
-      - **\cref{chap1} develops a novel modelling framework to capture the effect of eco-evolutionary processes on biological populations structured in complex landscapes.**
-      - The IBM presented involves the combination of graphs and continuous spaces to model population structures. Graphs are convenient mathematical representation of landscapes, but can also account for genetic and spatial structure.
-      - as convenitnt mathematical representation of landscapes, we derived in \cref{chap1} a general individual based model that can capture landscape complexity and eco-evolutionary processes, where individuals are characterised by many traits. 
-      - We could further derive a deterministic approximation of the IBM, which allowed, together with adaptive dynamics theory and numerical simulations, to obtain analytical insights on how structural properties affect macroscopic population. 
-      - This approach, coupling stochastic simulations and analytical insights, can elucidate how macroscopic properties emerge from microscopic processes while accounting for the complexity of spatial structures. 
-      - While the graph investigated aimed at representing a geographical landscape, the eco-evolutionary model on graph could be generalized to account for any complex spatio-evolutionary structure, such as, e.g., a genetic structure. The associated Julia library **Evoid.jl** implements de facto a more general version of the model. 
-      - As such, the proposed model together with the approch consist in a generic framework for studying complex adaptive systems. It can help formalize fundamental links between macroscopic properties and microscopic processes acting upon agents structured over complex spatio-evolutionary structures \cite{Levin}.
-    - consideration of complexity in continuous space
-      - **In \cref{chap4}, we provided two novel numerical methods to simulate eco-evolutinoary models where populations are structured over high-dimensional phenotypic and geographic spaces.**
-      - PDE models for CAS critically involve non-local terms, which capture non-local interactions between microscopic agents.
-      - In \cref{chap:highdimpde}, we have presented two methods that can solve generic high dimensional eco-evolutionary PDE models. Both methods extend previous numerical methods, and can solve general non-local nonlinear PDE problems with boundary conditions.
-      - With numerical simulations, we showed that the proposed methods could simulate with accuracy high dimensional models in up to 10 dimensions. 
-      - such methods would as such prove useful to investigate the role of different traits, such as body size \cite{Kisdi1999} and temperature affinity \cite{Waldock2019}, together with continuous spatial structures and environmental factors, in affecting population dynamics (PDE problem in diension 4).
-      - multi trait phytoplankton model, with traits such as
-        - half saturation for nutrient uptake
-        - temperature affinity
-        - optimal irradiance
-        - and the effect of different forcings
-      - The methods have been implemented in the Julia library **HighDimPDE.jl**, a new registerd Julia package, belonging to the SciML organisation, implementing the proposed algorithms.
-      - The package aim at hosting any solver algorithms that break down the curse of dimensionality, and is currently receiving contributions to implement the DeepBSDE scheme \cite{Han2018}
-      - The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
-      - It can solve intial conditions or terminal problems, with free or neumann boundary conditions
-
-
-#### Advances in inference methods for the investigation of eco-evolutionary processes
-**In \cref{chap2,chap3}, we have developped an inverse modelling method to estimate the parameters of complex eco-evolutionary models and infer mechanisms from observation data, and demonstrated its efficiency**.
-- Why is this important
-  - We are far away from a mechanistic understanding of biological and economic systems.
-  - Need for fundamental undersanding of processes, and provide predictability
-  - Laboratory experiments to investigate particular processes and calibrate models are infeasible, due to spatial and time scales
-  - inverse modelling is appropriate
-  - processes may leave imprint on emergent patterns. This information can be used to recover processes
-  - In particular, in chapter 2 and 3, we showed that interactions between functional groups, as well as spatial transfers, could be recovered from temporal dynamics
-  - Nevertheless, the information is particularly difficult to extract, in parts du to the nonlinearities of the underlying processes
-
-<!-- parameter estimation -->
-- A variety of inverse modelling methods have been used to estimate the parameters of dynamical ecosystem models, mostly relying on Bayesian inference methods with Markov Chain Monte Carlo \cite{XXX} and variational methods \cite{XXX}.
-- While the former are computationally expensive and cannot be readily used for models with large number of parameters, the latter rely on the model adjoint, which is difficult to obtain in practice, and are prone to converge to local minima, especially with complex models \cite{XXX}
-- In \cref{chap4}, the method makes use of recent development in ML, including AD \cite{Rackauckas2020a} and variational optimizers \cite{Kingma2014}, and implements a learning strategy based on a mini-batch method, in order to circumvent the drawbacks of variational methods and adapt to the specificities of eco-evolutionary models. 
-- The proposed method is particularly relevant for the paramterization of models incorporating complex eco-evlutionary processes \cite{Urban2016}, and integrates the practical constraints of datasets \cite{Dornelas2018} including short time series with partial, noisy, shallow and independent observations. 
-- The ease of use of AD enables the continuous development of the models
-
-<!-- mechanisms inference -->
-- Thanks to its efficiency, we showed that the proposed method can not ontly estimate parameters, but also link eco-evolutionary theory and data by prodiving support to the most likely models \cref{chap3,chap4}
-- Only a few studies used inference methods to perform model selection with mechanistic models.
-- While \cite{Skeels, XXX} use approximate bayesian inference to infer mechanisms from data, such studies do not consider temporal data, which nonetheless contain useful information on the underlying processes.
-- While the work of \cite{Yazdani} can also estimate parameters from temporal data, its use for model selection is rendered difficult by involving the choice a neural network and a "goodness of fit" parameter, which choice seems arbitrary while surely affecting the model selection procedure
-- in contrast, the proposed method involves only a few meta parameters (including minibatch size and learning parameter) and provide 
-- We showed that the efficiency of the method allows to recover mechanisms from noisy \cref{chap2,chap4} and incomplete \cref{chap3} datasets, adapting the reality of datasets and succesfully elucidating mechanistic pathways by contrasting complex hypotheses embedded in model variants
-- The ML framework is implemented in the multi-purpose Julia package **MiniBatchInference.jl**, readily available to the scientific community. It builds upon the differential equation solver **DiffenretialEqautiosn.jl** and the deep learning library **Flux.jl**, requiring little effort to efficiently use it.
-<!-- - proposed method -->
-<!-- - parameter inference, and how it can adapt to reality of ecological datasets -->
-<!-- - parameter inference, and how it can adapt to reality of ecological datasets -->
-<!-- - workhorse for model selection -->
-
-**Overall, the method in proposed \cref{chap2} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concret case examples in \cref{chap2, chap3} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \cite{Urban2016}.**
-
 ### Fundamental understanding
 
 - **\chap1 contributed to advance our understanding on how the interplay between population structure and eco-evolutionary dynamics affects population differentiation**
@@ -132,6 +55,83 @@ The investigation of the interplay between ecological and evolutionary processes
 - Overall, \chap3 fosters a biologically inspired approach to understand the frequency-dependent processes and resulting mechanisms shaping the long-term dynamics of economic systems.
 - As highlighted in \cite{Scholl}, our work does not aim at building better models of economic development, but rather at enriching our understanding of economic systems by adequately borrowing insights and concepts from evolutionary biology.
 <!-- TODO: read bochma and other review synthesis on evolutionary economics and geogrpahy economics, pour broder -->
+
+### Methodological advances
+The investigation of the interplay between ecological and evolutionary processes
+#### Advances in the modelling of realistic spatial and phenotypic structures
+**landscape complexity \cite{xxx} and phenotype complexity \cite{xxx}, and the interaction between phenotypes \cite{xxx} may critically affect eco-evolutionary dynamics. \cref{chap1,chap4} provide new tools to better understand mechanisms resulting from ecological and evolutionary processes, and their interplay, in the context of realistic spatial and phenotypic structures.**    
+  - Review of spatially explicit modelling studies 
+    - Classical modelling work investigating the dynamics of structured populations have focused on scenarios that are poorly representative of the complexity of eco-evolutionary feedbacks \cite{Govaert2019a}, and in particular that omit frequency-dependent selection.
+      - for instance, \cite{Burger2000,Kimura1964,Lande1991,Nagylaki1994} assumed constant population sizes , and as such did not consider frequency-dependence.
+    - On the other hand, recent works accounting for eco-evolutionary feedbacks \cite{xxx} did not adress the effect of the role of the spatial complexity of landscapes.
+      - For instance, \cite{Slatkin1973,Slatkin1978,Kirkpatrick1997,Polechova2015,Polechova2018,AndradeRestrepo2019,Doebeli2003,Meszena1997,Yeaman2011,Debarre2013,Mirrahimi2020} consider regular spatial structures, missing the effect of the complexity of spatial structures on population differentiation.
+    - Graphs have been used to capture the effect of complex structures on evolutionary dynamics \cite{Nowak}, but the underlying processes were fairly simple (simple birth death dynamics without the accumulation of phenotypic variations), and in particular did not account for frequency dependence and the continuous evolution of heritable characteristics.
+  - **Models that include frequency dependence together with realistic population structures are missing.**
+  - Review of high dimensional models 
+    - While a vast majory of the work on eco-evolutionary feedbacks has focused on the evolution of scalar phenotypes \cite{Doebeli2011}, in most organisms many phenotypic properties combine in complicated wasy to determin ecological interactions, and hence frequency-dependent selection \cite{Doebeli2014}.
+      - In particular, \cite{Doebeli2011} shows that the consideration of multiple traits with complex interactions relaxes the unrealistic conditions of strong frequency dependence required to generate diversity in one dimensional phenotype spaces, calling for a better understanding of evolutionary dynamics in high dimensioanl spaces.
+      - Also, \cref{chap1} demonstrates that the co-evolution of traits proved to have genuine consequences on differentiation, pointing towards the inclusion of multiple traits to understand the dynamics of ecological interactions.
+      - The co-evolution of phenotypes is particularly important to understand the effect of global change on ecosystems, since many environemtal factors are likely to be impacted \cite{LeGland}
+      - The consideration of continuous geographical space also increases the dimensionality of the problems, embedding axis corresponding to geographical dimensions. Geographical space is usually a bounded liveable domain, which organisms cannot cross. In mathematical terms, those correspond to Neumann boundary conditions.
+    - **Models that consider the co-evolution of traits have been limited to stochastic IBM, which hardly scale.**
+  - contribution of our work
+      - **\cref{chap1} develops a generic modelling framework to capture the effect of eco-evolutionary processes on biological populations structured in complex landscapes, and \cref{chap4} provides a way to enhance the simulation time.**
+      - The IBM presented involves the combination of graphs and continuous spaces to model population structures. Graphs are convenient mathematical representation of landscapes \cite{XXX}, but can also account for genetic and spatial structure \cite{XXX}. The associated Julia library **Evoid.jl** implements de facto a more general version of the model. 
+      - It further involves stochasticity which is inherent to ecological \cite{XXX} and evolutionary processes \cite{XXX}
+      - involves frequency dependence of eco-evolutionary processes, where individuals are characterised by many traits. 
+      - therefore provides a generic framework to investigate long standing questions such as the evolution of dispersal \cite{XXX}, diversification \cite{XXX}, and \cite{XXX}.
+      - the IBM involves strong assumptions such as clonal reproduction \cite{XXX}. Nonetheless, it comes with mathematical tractability, and in particular can be approximated by a deterministic PDE.
+      - together with adaptive dynamics theory and numerical simulations, the PDE approximation allows to obtain analytical insights on how structural properties affect macroscopic population. 
+      - This approach, coupling stochastic simulations and analytical insights, can elucidate how macroscopic properties emerge from microscopic processes while accounting for the complexity of spatial structures. 
+      - As such, the proposed model together with the approch can help formalize fundamental links between macroscopic properties and microscopic processes acting upon agents structured over complex spatio-evolutionary structures \cite{Levin}.
+      - **the PDE approximation, coupled with the methods in \chap4, allow to efficiently simulate the eco-evolutionary models where populations are structured over high-dimensional continuous phenotypic and geographic spaces.**
+      - methods for simulating high dimensional PDEs have almost exclusively been used for financial applications.
+      - PDE models for CAS critically involve non-local terms, which capture non-local interactions between microscopic agents.
+      - In \cref{chap:highdimpde}, we have presented two methods that can solve generic high dimensional eco-evolutionary PDE models. Both methods extend previous numerical methods, and can solve general non-local nonlinear PDE problems with boundary conditions.
+      - With numerical simulations, we showed that the proposed methods could simulate with accuracy high dimensional models in up to 10 dimensions. 
+      - such methods would as such prove useful to investigate the role of different traits, such as body size \cite{Kisdi1999} and temperature affinity \cite{Waldock2019}, together with continuous spatial structures and environmental factors, in affecting population dynamics (PDE problem in diension 4).
+      - multi trait phytoplankton model, with traits such as
+        - half saturation for nutrient uptake
+        - temperature affinity
+        - optimal irradiance
+        - and the effect of different forcings
+      - The methods have been implemented in the Julia library **HighDimPDE.jl**, a new registerd Julia package, belonging to the SciML organisation, implementing the proposed algorithms.
+      - The package aim at hosting any solver algorithms that break down the curse of dimensionality, and is currently receiving contributions to implement the DeepBSDE scheme \cite{Han2018}
+      - The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
+      - It can solve intial conditions or terminal problems, with free or neumann boundary conditions
+- **Overall, \cref{chap1,chap4} provide novel tools to anchor eco-evolutionary dynamics in more realistic settings, and use consider such processes to understand resolve empirical patterns and provide predictions.**
+
+#### Advances in inference methods for the investigation of eco-evolutionary processes
+**\cref{chap2,chap3} develop and test a novel inverse modelling method that can critically infer complex dynamical eco-evolutionary processes from observation data, opening new venues in our understanding and prediction of frequency-dependence dynamics in biological and economic systems.**
+<!-- - Why is this important
+  - We are far away from a mechanistic understanding of biological and economic systems.
+  - Need for fundamental undersanding of processes, and provide predictability
+  - Laboratory experiments to investigate particular processes and calibrate models are infeasible, due to spatial and time scales
+  - inverse modelling is appropriate
+  - processes may leave imprint on emergent patterns. This information can be used to recover processes
+  - In particular, in chapter 2 and 3, we showed that interactions between functional groups, as well as spatial transfers, could be recovered from temporal dynamics
+  - Nevertheless, the information is particularly difficult to extract, in parts du to the nonlinearities of the underlying processes -->
+
+<!-- parameter estimation -->
+- A variety of inverse modelling methods have been used to estimate the parameters of dynamical ecosystem models, mostly relying on Bayesian inference methods with Markov Chain Monte Carlo \cite{XXX} and variational methods \cite{XXX}.
+- While the former are computationally expensive and cannot be readily used for models with large number of parameters, the latter rely on the model adjoint, which is difficult to obtain in practice, and are prone to converge to local minima, especially with complex models \cite{XXX}
+- as a result, only a few studies used inference methods to perform model selection with mechanistic models.
+- While \cite{Skeels, XXX} use approximate bayesian inference to infer mechanisms from data, such studies do not consider temporal data, which nonetheless contain useful information on the underlying processes.
+- The method developed in \chap2 makes use of recent development in ML, including AD \cite{Rackauckas2020a} and variational optimizers \cite{Kingma2014}, and implements a learning strategy based on a mini-batch method, in order to circumvent the drawbacks of variational methods and adapt to the specificities of eco-evolutionary models. 
+- The proposed method is particularly relevant for the paramterization of models incorporating complex eco-evlutionary processes \cite{Urban2016}, and integrates the practical constraints of datasets \cite{Dornelas2018} including short time series with partial, noisy, shallow and independent observations. 
+- This work is part of an ongoing effort to blend ML and traditional models to gain scientific understanding and extrapolability \cite{XXX}. 
+- The ease of use of AD enables the continuous development of the models
+- 
+
+<!-- mechanisms inference -->
+- Thanks to its efficiency, we showed that the proposed method can not ontly estimate parameters, but also link eco-evolutionary theory and data by prodiving support to the most likely models \cref{chap3,chap4}
+<!-- - in contrast, the proposed method involves only a few meta parameters (including minibatch size and learning parameter) and provide  -->
+- We showed that the efficiency of the method allows to recover mechanisms from noisy \cref{chap2,chap4} and incomplete \cref{chap3} datasets, adapting the reality of datasets and succesfully elucidating mechanistic pathways by contrasting complex hypotheses embedded in model variants
+- other scientific fields have benefitted a lot from ML, such as climate modelling \cite{XXX}, but biological and economic system may have even more to gain, since in contrast to such fields, much of the mathematical formulation of the processes in yet to be formulated.
+- The ML framework is implemented in the multi-purpose Julia package **MiniBatchInference.jl**, readily available to the scientific community. It builds upon the differential equation solver **DiffenretialEqautiosn.jl** and the deep learning library **Flux.jl**, requiring little effort to efficiently use it.
+- \cite{Frank2022} provides an interesting analogy between the evolution of life and the evolution of a theory, through the use of AD.
+**Overall, the method in proposed \cref{chap2} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concret case examples in \cref{chap2, chap3} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \cite{Urban2016}.**
+
 ## Limitations
 
 ### TOC
