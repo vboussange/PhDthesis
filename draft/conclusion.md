@@ -34,24 +34,27 @@ frequency depdence
 spatial transfers
  -->
 - **\chap4 provided a novel lens to understand endogenous frequency-dependent forces shaping the dynamics of economic systems.**
-- mainstream economics explains economic change by exogenous drivers, such as technological change \cite{XXX} and economic institutions \cite{XXX}
+- mainstream economics explains economic change by exogenous drivers, such as technological change \cite{XXX} and economic institutions \cite{XXX}, and production costs \cite{Boschma2005a}
 - evolutionary eonomics is rather concerned with explaining economic change by endogenous forces,
 - For instance, it suggests that interactions between firms and economic activities, and evolutionary processes acting upon them, are major processes contributing to economic growth \cite{Hodgson2019,Metcalfe2006}
-- it particulary focuses on the relationships between the dynamics of output, employment and productivity
--  but has relied on traditional statistical approaches to test hypothesis
-- complexity economics adopts a novel set of tools to variations in national income, relying on dimensionality reduction technique and abstracting the relationships between economic variables to obtain XXX \cite{Taschella}
+- it particulary focuses on the relationships between the dynamics of economic variables that are output, employment and productivity. It is mainly based on formal, deductive modelling, which unites evolutionary and neoclassical scholars \cite{Boschma2005a}:  
+- complexity economics adopts a novel set of tools to explain to variations in national income, relying on dimensionality reduction technique and abstracting the relationships between economic variables to obtain XXX \cite{Taschella}
 - one of the major contribution of complexity economics is to provide evidences for the diffusion of countries through the product space, explaining technological lock out.
 - In such sense, economic complexity considers economic activities as autonomous entities that evolve through structure linkages, and acknowledges their interdependency through the existence of capabilities
 - importantly, it does not consider frequency-dependence, variations in growth rates, and the underlying forces
-- this topic is relatively well covered in evolutionary biology, and \chap3 connects economics with useful tools to understand transient dynamics.
-- This connection is all the more satisfactory as evolutionary enomics justifies deeper analogies, such as the common existence of interactors and replicators, common interaction structures \cite{XXX}, similar strategies
+- this topic is relatively well covered in evolutionary biology, and \chap3 connects complexity economics thinking with useful tools to understand transient dynamics.
 - One of the major contribution of \chap3 is to show that population dynamic models, such as the one investigated in \cref{chap:diff-in-graphs}, are well suited for modelling the transient dynamics of economic systems, opening venues to bridge the modelling literatures
+- our approach is agnostic to the concepts of outputs and labour, and the productivity that links both, and institutions, but rather considers exports as proxies for capital size. In this sense, it is similar to complexity economics in that it extracts the forces and relationship from the data, without making strong assumptions about what these factors may be \cite{Hidalgo2021}
+- This connection is all the more satisfactory as evolutionary enomics justifies deeper analogies, such as the common existence of interactors and replicators, common microscopic processes such as birth and death of firms and economic activities \cite{Boschma2005a} common interaction structures \cite{XXX}, similar strategies, which may define in turn the characteristics of economic activities \cite{Boschma2005a}
   <!-- - inverse modelling methode of \chap2 is in fact particularly adapted to economic systems, since growth rates is very high (may be compare in terms of energy outputs? processes can be witnessed in a human life) and data is very good \cite{May}? -->
-- Specifically, we show that the economic interdependency translates in positive interactions have a considerable effect on the temporal dynamics of economic activities.
+- Specifically, \chap3 shows that the economic interdependency translates in positive interactions have a considerable effect on the temporal dynamics of economic activities.
   - This may be the first inverse modelling approach in economic theory, that confirms that value comes from the complementarity of inputs, as the main assumption of most model of economic growth \cite{Hidalgo2018}, without assuming any particular structure
-  - \cite{Metcalfe2006}: adaptive economic growth
-- Second, biological models evidence the role of spatial interdependency on temporal dynamics of eocnomic activities, a topic well discuss in geography economics.
-- the traditional perspective of economic transfers is that, but our approach considers economic activities with the endogenous propensity to disperse trough space, similar to biological populations. This perspective introduce novel perspective on economic growth, and may contribute to our understanding of with the role geographical and cultural distance, which may impede colonization similar to geographical or habitat barriers (e.g. mountains ) have played a major on the evolution of biodiversity on life \cite{Rangel}
+- \chap3 also evidences the role of spatial interdependency on temporal dynamics of eocnomic activities, a topic well discussed in evolutionary geography economics \cite{Boschma2005a}.
+  - This evidence be the cause of international knowledge spillovers (imitation, spin-offs, social networks, labour mobility, collaborative networking) \cite{Boschma2005a,Bode2019}
+  - our approach considers economic activities with the endogenous propensity to disperse trough space, similar to biological populations. 
+  - the main factors reflecting dispersal ability in ecology and evolution is due to the intrinsic ability of species to disperse, and due to geographical and environmental barriers
+  - might reflect the connectivity of certain countries to the world economy, and the facility with which economic activities can be replicated. Refinement may highlight differences in connectivity, possibly due to some sort of proximity
+- biology acknowledges path-dependence, which is an intrinsic property of population dynamic models.
 - **Overall, \chap3 fosters a biologically inspired approach to understand the frequency-dependent processes and resulting mechanisms shaping the long-term dynamics of economic systems.**
 <!-- - As highlighted in \cite{Scholl}, our work does not aim at building better models of economic development, but rather at enriching our understanding of economic systems by adequately borrowing insights and concepts from evolutionary biology. -->
 <!-- TODO: read bochma and other review synthesis on evolutionary economics and geogrpahy economics, pour broder -->
@@ -121,8 +124,6 @@ The investigation of the interplay between ecological and evolutionary processes
 - The proposed method is particularly relevant for the paramterization of models incorporating complex eco-evlutionary processes \cite{Urban2016}, and integrates the practical constraints of datasets \cite{Dornelas2018} including short time series with partial, noisy, shallow and independent observations. 
 - This work is part of an ongoing effort to blend ML and traditional models to gain scientific understanding and extrapolability \cite{XXX}. 
 - The ease of use of AD enables the continuous development of the models
-- 
-
 <!-- mechanisms inference -->
 - Thanks to its efficiency, we showed that the proposed method can not ontly estimate parameters, but also link eco-evolutionary theory and data by prodiving support to the most likely models \cref{chap3,chap4}
 <!-- - in contrast, the proposed method involves only a few meta parameters (including minibatch size and learning parameter) and provide  -->
@@ -153,10 +154,11 @@ The investigation of the interplay between ecological and evolutionary processes
   - the consideration of complexity of dynamical behavior, instead of number of parameters
   - the quality of data --> estimation of ICs cause overfitting. For instance, we encountered problems in estimating unconstrained data in econobio. Also, we could not mix up complicated models
   - *synthetic data is a must do*
-- Econobio
+- **Econobio**
   - no real insights up to now
   - expectation: explanation of variation in income
-- PDE
+  - What do export quantify?
+- **PDE**
   - no application of the method to real case scenarios
   - time and resource consuming
   - single point with MLP
@@ -198,6 +200,10 @@ The investigation of the interplay between ecological and evolutionary processes
 
 
 ## Perspectives
+### TOC
+- Econobiology
+  - Inclusion of more geographical or other types of proximity
+    - This perspective may contribute to an understanding of the role geographical and cultural distance, which may impede colonization similar to geographical or habitat barriers (e.g. mountains ) have played a major on the evolution of biodiversity on life \cite{Rangel}
 ### Methodological advances
 #### Blending our methodological advances together
 - Apply MiniBatchInference.jl to the eco-evolutionary model on graphs to understand the cause of biodiversity on earth.
@@ -271,19 +277,22 @@ A better undersanding of eco-evolutionary processes and their couplings, togethe
   - This could enlighten the role of governments (. Government has for example a big role in innovation, as it takes risk investing in research and education to promote economic growth (contrary to the standard view of capitalism). This can be seen through e.g. subsidies to public universities, which benefits the industry providing highly skilled workers (one of the resources needed for the firms to thrive). Governments can also directly subsidize firms, which has been the case of US government (trough the Pentagon) in Silicon Valley, where it provided massive investment supporting the semi-conductor industry, especially during the Cold War. Equally, the Japanese government during the country’s reconstruction after World War II has widely supported its industry, copying the occidental industry, with opening towards west and providing massive investment in technology. By doing so, Japan managed to protect its local industry and attracts now 49% of world capitalization.)
 
 ## Concluding remarks
-- In light of the results, XXX.
+- This thesis contributed to a better understanding of eco-evolutionary processes in economic and biological systems, by connecting discplines together.
+- In light of the results from \cref{chap1,chap3}, I believe that the paradigm of eco-evolutionary dynamics, in combination with network to capture realistic structures and interactions, is appropriate for better understanding the mechanisms shaping biological and ecological systems.
+- In biological systems, I expect that it can provide a better understanding of species richness distribution, environmental filtering, structuration patterns, productivity
+- In economic systems, I expect that it can advance our understanding on diversification processes, xxx,
+- ML can leverage the advances, by accelerating the improvement of models and by directly testing theories (Automate the process of discovery), as well as providing a way to assimilate data into models.
+- We are far from understanding biodiversity at a planetary scale comparable to how we understand Earth’s climate. Yet, what is at stake for human societies around the world, is at a minimum comparable to those derived from climate change.
+- The new paradigm proposed to comprehend economic change, econobio, could further help us understand deeper organizational principles, such as xxx.
+- It could provide a better understand of economic development, and may suggest biologically inspired economic policies to overcome fundamental issues arising from misappropriate regulations. We could surely get insights from biological systems, that have survived major environmental crisis for more that 3.5 billion years.
 
-- We expect XXX.
+<!-- - While recent studies have underlined the need to account for XXX, we XX. -->
 
-- Consequently, this thesis contributed to a better understanding of XXX.
-
-- While recent studies have underlined the need to account for XXX, we XX.
-
-- Contributions to research fields in general
-  - In many aspect, we have connected the dots between disciplines, to further our undersanding of complex adaptive systems and developing new tools to investigate them --> commonalities between disciplines, connections, dicton about connecting sciences
+<!-- - Contributions to research fields in general
+  - In many aspect, we have connected the dots between disciplines, to further our undersanding of complex adaptive systems and developing new tools to investigate them = commonalities between disciplines, connections, dicton about connecting sciences
     - Connected the fields of spatial networks, mathematical eco-evolutionary modelling, and long standing empirical questions in biodiversity science.
     - Connected applied mathematical work to the field of evolutionary biology, with potential to build more complex models with more accuracy
     - Automate the process of discovery, to improve the laws driving economic systems
     - Connected evolutionary biodiversity and complexity economics: our results have shown that the dynamics of economic activities can be well characterized by biological models
       - opens up a new connection between biology and economics, which
-      - --> may be important for better understanding economic dynamcis, and opens up new questions (see limitations)
+      - may be important for better understanding economic dynamcis, and opens up new questions (see limitations) -->
