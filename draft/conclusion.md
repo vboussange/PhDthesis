@@ -1,5 +1,5 @@
 # General discussion
-
+<!-- TODO: look at the article "The power of analogies" in evernote -->
 ## Contributions
 
 - My work aimed at advancing our quantitative understanding of how ecological and evolutionary processes, and their interplay, shape the dynamics of biological and economic systems. In particular, this thesis contributed to 
