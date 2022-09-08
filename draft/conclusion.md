@@ -11,49 +11,49 @@ In the following, I discuss the chapters of my thesis collectively within the br
 
 ### Fundamental understanding
 
-- **\chap1 contributed to advance our understanding on how the interplay between population structure and eco-evolutionary dynamics affects population differentiation**
+- **\chap1 contributed to advance our understanding on how eco-evolutionary processes and population structure influence emergent properties in biological systems.**
   - Population structure and differentiation 
-    - the sole interplay between genetic drift and dispersal results in "isolation by distance" \cite{Wright1943}, where the limitation of the dispersal ability of organisms triggers an increase in differentiation among populations with increasing geographic distance. This mechanism can occur in subdivided metapopulations, or within continuous populations. 
-    - In complex landscape, where multiple pathways can link populations, connectivity, a measure integrating all possible pathways connecting populations, shapes differentiation \cite{McRae2006,McRae2007}
-    - In \chap1, I demonstrate that the consideration of competition for resources, one of the most fundamental process regualting population dynamics \cite{x}, considerably affects population differentiation by limiting the dispersal of individuals.
-    - hetero- geneity in connectivity can reinforce differentiation patterns through the creation of unbalanced migration fluxes which affect ecological equilibrium.
-    - In complex landscapes where connectivity is heterogeneous, highly connected geographical areas (demes?) can behave as bottlenecks, where migrants are less likely to survive, and gene flow is reduced. Through the accumulation of incompatibilities over time \cite{Dobhsanski}, this mechanism could lead to speciation over time, and contribute to the high diversification in mountain regions \cite{Rahbek}.
-  - habitat heterogeneity and adaptive differentiation
-    - When landscapes present heterogeneous habitats, local adaptation can occur, where a population evolves traits that support higher fitness in its home environment relative to populations from foreign environments \cite{Kawecki2004}. 
-    - density dependence operating independently in different demes favours rare allels that improve fitness in a habitat.
-    - This process is hindered by gene flow, confounded by genetic drift, opposed by natural selection due to tempoeral envionrmental variability, and constrained by loack of genetic variation of by the genetic architecture of underlying traits. \cite{Kawecki2004}
-    - when selection is stronger than gene flow and mutation, adaptation can occur.
-    - Environmental heterogeneity is regarded as one of the most important factors govening species richness gradients
-    - In particular, \cite{Mirrahimi2020} presents the relationship between gene flow and the possibility for adaptation, $m < 2s\theta^2$ where $s$ the selection strength and $\theta$ is the habitat heterogeneity, in a simplistic landscape
-    - landscapes can be patchy and it is unrealistic to assume regularity \cite{Dale2010}.
-    - in \chap1, I show the relationship between habitat spatial distribution, habitat heterogeneity and selection strength, which corrects the relationship as $$ where r_\theta denotes habitat assortativity must be regarded as a measure of habitat spatial auto-correlation based on the dispersal range of a species \cite{Richardson2014}. 
-    - Our results predict that in landscapes with heterogeneous habitats and where selection is strong, populations structured over assortative habitats are larger, support higher adaptive differentiation, and can be locally well-adapted even in the case where migration rates are high.
-- traits under selection and neutral traits are co-evolving through linkages. Along the mechanism of isolation by adaptation, habitat heterogeneity leads to more isolation by, which further reduces gene flow \cite{Richardson2014} and therefore increases neutral differentiation \cite{nosil2008}. 
-  - Closing the loop on the effect of habitat heterogeneity on differentiation, I highlight that habitat assortativity tends to reduce gene flow, therefore decreasing IBD, but antagonistically promotes IBA. This results in an overall ambiguous effect on neutral differentiation. while , 
-  - this effect must be considered in population genetics studies that use such patterns to infer processes.
-- **\chap1 underpins novel fundamental mechanisms linking population differentiation to eco-evolutionary feedbacks and complex population structures**
-- habitat assortativity will systematically enhance phenotypic differentiation for a selected trait, but may positively or negatively affect non-selected traits, depending on the migration regime. This effect arises frorm feedbacks between ecological processes (spatial transfers and local foraging) and evolutionary processes (mutations and genetic hitchiking)
+    - the interplay between genetic drift and dispersal results in "isolation by distance" \cite{Wright1943} or "isolation by resistance" \cite{McRae2006,McRae2007}, where landscape connectivity affects the dispersal ability of organisms, which results in variations of population differentiation among populations.
+    - When landscapes present heterogeneous habitats, adaptive differentiation can occur, where a population evolves traits that support higher fitness in its home environment relative to populations from foreign environments \cite{Kawecki2004}. This is regarded as one of the most important factors govening species richness gradients.
+    - This process is hindered by gene flow, confounded by genetic drift, opposed by natural selection due to tempoeral envionrmental variability, and constrained by loack of genetic variation of by the genetic architecture of underlying traits \cite{Kawecki2004}. In particular, \cite{Mirrahimi2020} presents the relationship between gene flow and the possibility for adaptation, $m < 2s\theta^2$ where $s$ the selection strength and $\theta$ is the habitat heterogeneity, in a simplistic landscape
+    - traits under selection and neutral traits are co-evolving through linkages. Along the mechanism of isolation by adaptation, habitat heterogeneity leads to more isolation by, which further reduces gene flow \cite{Richardson2014} and therefore increases neutral differentiation \cite{nosil2008}. 
+- In \chap1, 
+  - I demonstrate that the consideration of competition for resources, one of the most fundamental process regualting population dynamics \cite{x}, considerably affects population differentiation by limiting the dispersal of individuals. heterogeneity in connectivity can reinforce differentiation patterns through the creation of unbalanced migration fluxes which affect ecological equilibrium and reduce gene flow. Through the accumulation of incompatibilities over time \cite{Dobhsanski}, this mechanism could lead to speciation over time, and contribute to the high diversification in mountain regions \cite{Rahbek}.
+  - landscapes can be patchy and it is unrealistic to assume regularity \cite{Dale2010}, and in \chap1, I show the relationship between habitat spatial distribution, habitat heterogeneity and selection strength, which corrects the relationship as $$ where r_\theta denotes habitat assortativity must be regarded as a measure of habitat spatial auto-correlation based on the dispersal range of a species \cite{Richardson2014}. This predicts that in landscapes with heterogeneous habitats and where selection is strong, populations structured over assortative habitats are larger, support higher adaptive differentiation, and can be locally well-adapted even in the case where migration rates are high.
+  - Closing the loop on the effect of habitat heterogeneity on differentiation, I highlight that habitat assortativity tends to reduce gene flow, therefore decreasing IBD, but antagonistically promotes IBA. This results in an overall ambiguous effect on neutral differentiation, which must be considered in population genetics studies that use such patterns to infer processes.
 - Detailing the mechanisms underlying population dynamics and phenotypic structure in complex landscapes, we further proposed landscape properties, that can be easily computed, and may contribute to detail some of the mechanisms by which species richness varies through space \cite{Liu2018,Dias2014,Rahbek2001,Kreft2007a,Davies2007,Veech2007,Guegan1998,Stein2014} 
+- **\chap1 underpins novel fundamental mechanisms linking population differentiation to eco-evolutionary feedbacks and complex population structures. It extends on recent work including the interplay between ecological and evolutionary processes, and frequency dependence, hihglighting non-trivial emergent properties with large consequences on emergent patterns, and providing means to tests the predictions.**
+
+
 
 #### Fudamental understanding in economic systems
-- **\chap4 provided a novel lens to understand endogenous forces shaping the dynamics of economic systems.**
+<!-- To better explain
+Insights from evolutionary economics
+Traditional tools from evolutionar economcics
+frequency depdence
+spatial transfers
+ -->
+- **\chap4 provided a novel lens to understand endogenous frequency-dependent forces shaping the dynamics of economic systems.**
 - mainstream economics explains economic change by exogenous drivers, such as technological change \cite{XXX} and economic institutions \cite{XXX}
 - evolutionary eonomics is rather concerned with explaining economic change by endogenous forces,
-- For instance, it suggests that interactions between firms and economic activities, and evolutionary processes acting upon them, are major processes contributing to economic change \cite{Hodgson2019}
+- For instance, it suggests that interactions between firms and economic activities, and evolutionary processes acting upon them, are major processes contributing to economic growth \cite{Hodgson2019,Metcalfe2006}
+- it particulary focuses on the relationships between the dynamics of output, employment and productivity
 -  but has relied on traditional statistical approaches to test hypothesis
-- complexity economics adopts a novel set of tools to variations in national income, relying on dimensionality reduction technique.
+- complexity economics adopts a novel set of tools to variations in national income, relying on dimensionality reduction technique and abstracting the relationships between economic variables to obtain XXX \cite{Taschella}
 - one of the major contribution of complexity economics is to provide evidences for the diffusion of countries through the product space, explaining technological lock out.
-- It acknowledges the interdependency of economic activities through the existence of capabilities,
-- it does not disentangle the drivers.
-- importantly, it does not consider frequency-dependence, differences in growth rates and saturation, and acceleration of production
+- In such sense, economic complexity considers economic activities as autonomous entities that evolve through structure linkages, and acknowledges their interdependency through the existence of capabilities
+- importantly, it does not consider frequency-dependence, variations in growth rates, and the underlying forces
 - this topic is relatively well covered in evolutionary biology, and \chap3 connects economics with useful tools to understand transient dynamics.
 - This connection is all the more satisfactory as evolutionary enomics justifies deeper analogies, such as the common existence of interactors and replicators, common interaction structures \cite{XXX}, similar strategies
-- The first major contribution of \chap3 is to show that population dynamic models, such as the one investigated in \cref{chap:diff-in-graphs}, are well suited for modelling the transient dynamics of economic systems, 
-  - this opens up the possibility for connecting the modelling literatures
-  - inverse modelling methode of \chap2 is in fact particularly adapted to economic systems, since growth rates is very high (may be compare in terms of energy outputs? --> processes can be witnessed in a human life) and data is very good \cite{May}?
-- and to evidence that this dynamics is considerably affected by positive interactions and spatial transfers.
-- Overall, \chap3 fosters a biologically inspired approach to understand the frequency-dependent processes and resulting mechanisms shaping the long-term dynamics of economic systems.
-- As highlighted in \cite{Scholl}, our work does not aim at building better models of economic development, but rather at enriching our understanding of economic systems by adequately borrowing insights and concepts from evolutionary biology.
+- One of the major contribution of \chap3 is to show that population dynamic models, such as the one investigated in \cref{chap:diff-in-graphs}, are well suited for modelling the transient dynamics of economic systems, opening venues to bridge the modelling literatures
+  <!-- - inverse modelling methode of \chap2 is in fact particularly adapted to economic systems, since growth rates is very high (may be compare in terms of energy outputs? processes can be witnessed in a human life) and data is very good \cite{May}? -->
+- Specifically, we show that the economic interdependency translates in positive interactions have a considerable effect on the temporal dynamics of economic activities.
+  - This may be the first inverse modelling approach in economic theory, that confirms that value comes from the complementarity of inputs, as the main assumption of most model of economic growth \cite{Hidalgo2018}, without assuming any particular structure
+  - \cite{Metcalfe2006}: adaptive economic growth
+- Second, biological models evidence the role of spatial interdependency on temporal dynamics of eocnomic activities, a topic well discuss in geography economics.
+- the traditional perspective of economic transfers is that, but our approach considers economic activities with the endogenous propensity to disperse trough space, similar to biological populations. This perspective introduce novel perspective on economic growth, and may contribute to our understanding of with the role geographical and cultural distance, which may impede colonization similar to geographical or habitat barriers (e.g. mountains ) have played a major on the evolution of biodiversity on life \cite{Rangel}
+- **Overall, \chap3 fosters a biologically inspired approach to understand the frequency-dependent processes and resulting mechanisms shaping the long-term dynamics of economic systems.**
+<!-- - As highlighted in \cite{Scholl}, our work does not aim at building better models of economic development, but rather at enriching our understanding of economic systems by adequately borrowing insights and concepts from evolutionary biology. -->
 <!-- TODO: read bochma and other review synthesis on evolutionary economics and geogrpahy economics, pour broder -->
 
 ### Methodological advances
