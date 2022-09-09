@@ -9,6 +9,7 @@
 
 % \cleanchapterquote{Le bout du monde et le fond du jardin contiennent la même quantité de merveilles.}{Christian Bobin}{(French poet)}
 
+% TODO : investigate the difference between frequency dependence, density dependence, and the likes , cf \cite{Lion2022}
 \subsubsection*{Biological and economic systems as complex adaptive systems}
 %% definition of complex adaptive system
 What are the similarities between biological and economic systems? Both are complex adaptive systems (CAS) \cite{Levin2002}: they are composed of heterogeneous entities structured at different levels of organizations, that interact in nonlinear ways and experience evolutionary processes. The processes of interaction and evolution operate at one organizational level and result in emergent properties at a higher organisational level \cite{Levin1998}. The variety of processes involved and their couplings -- operating at different organizational level -- make those systems difficult to comprehend \cite{Strogatz2001a}, but do not necessarily lead to unpredictable, chaotic, or erratic structures and dynamics \cite{Olff2009}. Instead, emergent structural properties and behavior often arise \cite{mitchell2009complexity}.
@@ -23,7 +24,7 @@ Similarly, in economic systems, the distribution of international incomes is bim
 A key direction on the research agenda concerning the study of CAS is to comprehend the set of necessary and sufficient processes, together with the associated mechanisms, determining e.g. variations in species richness and income inequality \cite{Vellend2010a}.
 % 
 % conclusion
-Pointing at an underlying common "semantics" of system organization, it has been suggested that feedbacks between ecological and evolutionary processes play a fundamental role in the emergence of patterns in biological systems \cite{Pelletier2009}, and may substantially affect the dynamics of economic systems \cite{Hodgson2019}.
+Feedbacks between ecological and evolutionary processes have received an increasing interest in the recent years to understand emergent patterns in biological systems \cite{Pelletier2009}, and similar forces may substantially affect the dynamics of economic systems \cite{Hodgson2019}.
 
 %% Figure parallels
 \begin{figure}
@@ -74,11 +75,11 @@ Nonetheless, a time scale separation between the ecological and evolutionary pro
 % 
 % Example of eco-evolutionary dynamics
 Eco-evolutionary feedbacks involve situations where an ecological property influences evolutionary change, which then feeds back to an ecological property, or vice versa \cite{Govaert2019a}. Examples are feedbacks between population density (ecological property) and trait evolution (evolutionary change), which can lead to evolutionary branching through the effect of competition \cite{Doebeli1999}.
-% 
+% TODO: mention density dependence
 % Empirically, \cite{XXX} shows that in the population of XX, XX happened.
 % 
 %% Conclusion
-While eco-evolutionary feedbacks may greatly influence the mechanisms driving the dynamics of ecosystems \cite{Urban2016}, our quantitative understanding is limited by the lack of realism in current mechanistic studies \cite{Lion2022}. Beyond raising questions of sheer scientific interest, gaining such an understanding is a pressing need to mitigate the effect of global change on ecosystems.
+While eco-evolutionary feedbacks may greatly influence the mechanisms driving the dynamics of ecosystems \cite{Urban2016}, our quantitative understanding of their modality is limited \cite{Lion2022}. Beyond raising questions of sheer scientific interest, gaining such an understanding is a pressing need to mitigate the effect of global change.
 
 \subsubsection*{An urgent need for better understanding and model eco-evolutionary dynamics}
 The effect of direct anthropogenic pressure, together with climate change, is rapidly affecting ecosystems \cite{Ellis2011,Midgley2019}. Ecosystems are approaching state shifts \cite{Barnosky2011,Barnosky2012,Midgley2019}, which in turn will greatly affect human societies \cite{Mooney2009}.
@@ -128,17 +129,19 @@ However, those studies did not seek to understand how these processes may affect
 
 \subsubsection*{Forward modelling of eco-evolutionary processes}
 
-Eco-evolutionary processes are difficult to observe in biological systems, and conducting controlled experiments to quantify their roles is usually not possible \cite{Pontarp2019}. As such, a deductive method, relying on forward modelling, has traditionally been used to investigate the effect of candidate processes \cite{Brummitt2020}. Along this approach, hypotheses about causal processes are embedded in a mechanistic model, wich forward integration generates predictions about their effects. % The resulting qualitative dynamics and/or quantitative predictions are validated against common intuition and empirical data, and further refined to elaborate a theory \cite{Sayama,Brummitt2020,Schmidt2009}.
+The complex interplay between ecological and evolutionary processes, acting at different scales of time and space and organization, can hardly be studied with experimental approaches \cite{Pontarp2019,Hagen2022}. 
+% TODO: cite \cite{May2004}
+As such, a deductive approach, relying on forward modelling, has traditionally been put forward to investigate the effect of candidate processes \cite{Brummitt2020}. Along this approach, hypotheses about causal processes are embedded in a model, wich forward integration generates emergent properties. Such emergent behavior may be seen as predictions from the consideration of the causal processes \cite{May2004}. The role of the modeller is to point at the mechanisms by which the properties emerge, disentangling the underlying interplay between the processes. % The resulting qualitative dynamics and/or quantitative predictions are validated against common intuition and empirical data, and further refined to elaborate a theory \cite{Sayama,Brummitt2020,Schmidt2009}.
 % 
 %% early mathematical models
-For instance, in the early 1930s to 1940s, by formulating tractable mathematical models, the work of Fisher, Wright and Haldane has greatly contributed to the modern synthesis of evolutionary biology \cite{huxley1942evolution}, generally accepted as the basis of our current understanding of evolutionary dynamics. 
+In the early 1930s to 1940s, by formulating tractable mathematical models implementing the processes of reproduction, dispersal and mutations, the work of Fisher, Wright and Haldane has greatly contributed to the modern synthesis of evolutionary biology \cite{huxley1942evolution}, generally accepted as the basis of our current understanding of evolutionary dynamics. 
 % 
-The mechanistic models commonly take the form of differential equations (DE), and express how the processes under investigation affect the rate of change of a biological quantity of interest. 
+The mechanistic models commonly take the form of differential equations (DE), and express how the processes under investigation affect the rate of change of the population characteristics, such as the proportion of a given allele. 
 % 
 However, the requirement of tractable mathematical models (DEs that yield analytical solutions) has involved strong assumptions on the processes investigated, that are poorly representative of the complexity of eco-evolutionary feedbacks in nature \cite{Govaert2019a}. In particular, ecological scenarios have been strongly simplified, and did not take into account how evolution could affect population dynamics \cite{Lion2022}.
 
 %% computers
-With the increase in computational capacity, novel modelling approaches relying on individual based models (IBMs) have appeared \cite{deangelis2005individual}. IBMs allow to capture processes acting at the individual level, requiring less simplifying assumptions than traditional mathematical models \cite{deangelis2005individual}. Capturing more realistic scenarios by allowing the forward integration of complex hypothesis, the lack of analytical tractability of IBMs may nonetheless occult the mechanisms underlying emergent properties \cite{Lion2016}.
+With the increase in computational capacity, novel modelling approaches relying on individual based models (IBMs) have appeared \cite{deangelis2005individual}. IBMs allow to capture processes acting at the individual level, requiring less simplifying assumptions than traditional mathematical models \cite{deangelis2005individual}. Capturing more realistic scenarios by allowing the forward integration of complex hypothesis, the lack of analytical tractability of IBMs may nonetheless occult the mechanisms underlying emergent properties \cite{Lion2016,May2004}.
 % 
 %% computers and analytical framework
 The recent development of mathematical techniques, such moment closure approximations \cite{law1999moment,Gandhi2000,Nordbotten2020,Lion2016}, adaptive dynamics theory \cite{Metz1995}, and probability theory \cite{Champagnat2006}, are generating novel pathways by filling the gap between IBMs and mathematical models. 
@@ -152,11 +155,16 @@ The combination of numerical simulations and, e.g., adaptive dynamics theory, ha
 %
 An other example is the work of \cite{Meszena1997,Debarre2013a, Mirrahimi2020}, that has provided new insights on the effect of habitat heterogenity on population dynamics. 
 % 
-However, our current understanding of eco-evolutionary feedbacks has been limited to simplistic scenarios, and research should now focus on investigating more complexity, such as considering the coevolution of traits \cite{Debarre2014,Falster2017,Doebeli2011} and more realistic spatial structures \cite{XXX}.
+However, our current understanding of eco-evolutionary feedbacks omits potentially significant factors, such as the structuration of populations over complex spatial structures \cite{XX} and highly dimensional phenotypic space \cite{XXX}.
+
 % 
 % For instance, the spatial scenario investigated in \cite{Gandon, Mirrahimi2016} merely involves two habitats, and it is unclear how their results would apply to more complex landscapes, such as mountains \cite{Rahbek2019}.
 % 
-The added complexity raises nonetheless challenging methodological issues. In particular, considering the coevolution of traits in DE models would lead an increase in the dimensionality of problem, which in turn would lead to an exponential increase in computational cost \cite{XXX}.
+The consideration of such details is important to advance our understadning, but raises challenging methodological issues. 
+% 
+In particular, complex models may hinder the fundament mechanisms underlying the emergence of a pattern.
+% 
+Also, the consideration of multiple traits leads to an increase in the dimensionality of the associated DE problem, which in turn leads to an exponential increase in computational cost \cite{XXX}.
 % 
 In order to better understand eco-evolutionary feedbacks, we need to investigate more realistic scenarios, which will, in turn, require the development of novel numerical methods that can cope with the extra computational cost.
 % 
@@ -164,7 +172,7 @@ In order to better understand eco-evolutionary feedbacks, we need to investigate
 
 \subsubsection*{Inverse modelling}
 %% inverse modelling
-Diametrically opposed to forward modelling, inverse modelling consists in using observation data to infer causal processes \cite{Peng2011}. Inverse modelling has recently seen an increased attention, thanks to the increased computational power and availability of datasets.
+Diametrically opposed to forward modelling, inverse modelling consists in using observation data to infer causal processes \cite{Peng2011}. Inverse modelling has recently seen an increased attention, thanks to the increased computational power and availability of datasets \cite{Csillery2010}.
 % 
 %% Parameter estimation
 It involves the use of inference methods to estimate model parameters, such as bayesian or maximum likelihood inference methods \cite{Schartau2017}. Those methods proceed by defining a distance between the model simulation and the observation data, which relates to the probability of the parameters given the model and the data \cite{Schartau2017}. The most likely parameters are associated with the minimum distance, obtained using ad-hoc algorithms.
