@@ -138,14 +138,19 @@ The investigation of the interplay between ecological and evolutionary processes
 
 ### main limitations: 
 
-- **Alternatives for the forward and inverse modelling of evolutionary dynamics may be considered**
-  - Although PDEs are computationally more efficient than IBMs, they remain demanding in terms of computation power. 
-    - While \chap4 provides efficient methods to approximately compute the evolution of the entire distribution, only the first three moments are usually of interest for the investigation of eco-evolutionary dynamics. 
-    - Further, spatial graphs may be more adapted to model population geographical landscape \cite{XXX}, and we are far away from the consideration of more than 2 to 3 traits \cite{Chiara,GuillaumeLeGland} 
-    - Also, the MLP can only provide one point at a time, which is of limited use for practical purposes
+- **Alternatives to the methods presented in \cref{chap1,chap4} may be considered for the forward modelling of eco-evolutionary dynamics**
+  - PDEs are useful mathematical objects that allow an analytical underpinning to IBMs and demand less computational power, as soon as the number of individual becomes large.
+  - Nevertheless, they become dramatically cosly in high dimensions, because they track the evolution of the entire population distribution
+  - \chap4 provided efficient methods to approximately compute the PDE solution, but suffer from drawbacks which may prevent their practical use for the forward modelling of eco-evolutionary dynamics. 
+
+    - In particular, the MLP can only provide one point at a time, which is of limited use for practical purposes
     - On the other hand, the ML based approach requires intensive use of GPU, and the tuning of meta parameters, inluding the choice of a kernel for the integration of the nonlocal term
       - It is also not adequate for deep time, since it involves the training of a neural network at each time step
       - \cite{Akesson2021} : PDE methods are probably not as adapted as trait based ODEs. Those simpler models can already address important questions regarding climate change.
+    - only the first three moments are usually of interest for the investigation of eco-evolutionary dynamics
+    - Further, spatial graphs may be more adapted to model population geographical landscape \cite{XXX}, and we are far away from the consideration of more than 2 to 3 traits \cite{Chiara,GuillaumeLeGland} 
+
+
   - Alternatives to the direct simulation of PDEs have been proposed, including moment closure approximation \cite{Wickman2021,Lion2022,Nordbotten2020}. 
     - Those approaches consist in approximate the solution to the PDE with a gaussian distribution, which allows to transform the PDE problem into a sytem of coupled differential equations
     - Both approaches approximate the solution to the PDE with a gaussian distribution, resulting in modelling the time evolution of the population size, the mean trait value in each dimension (d), and the variance-covariance matrix (d^2), resulting in overall d(d+1) + 1 variables to simulate, as such scaling only polynomially in the number of dimension
@@ -172,9 +177,12 @@ The investigation of the interplay between ecological and evolutionary processes
     - This allows the use integration of stochasticity, genetic structure, sex
     - allows to account for different parameters that may correspond to the single picture
     - May not as efficiently use the information of temporal data, but could be used in combination with time aggregated statistics, such as proposed by Schneider
+      - Instead of directly comparing simulated and observed data, matching time-averaged statistics between observations and simulations (e.g. means and covariances) could further yield an improved assimilation of observations from diverse data sources, such as global observations of productivity from satellites and local surveys, as proposed for climate models \cite{Schneider2017}.
   - The major downside of classifier methods is that they cannot as such provide predictions
   - Use of bayesian methods are an other alternative, which could be combined with minibatching
 
+<!-- to summarize the interplay between processes acting at a microscopic level and resulting in emergent propoerties at the macroscopic level. 
+  - Specifically, they -->
 
 <!-- OLD
 ### TOC
@@ -245,86 +253,79 @@ The investigation of the interplay between ecological and evolutionary processes
  -->
 
 ## Perspectives
-<!-- TODO: Victor, you stopped here -->
-### TOC
-- **Inverse modelling**
-  - refinement of mini-batch technique
+
+- **Methods presented in \cref{chap2,chap4} could be further developed and extended, to leverage forward modelling.**
+  - **refinement of mini-batch technique**
+    - the mini-batch inference method is relevant beyond variational methods could be extended to a fully bayesian setting
+      - but the problem of computational cost matters
+      - Automatic Differentiation Variation Inference: Allows to estimate the uncertainty in estimation, and localize different equally likely region in the parameter space that are likely.
+      - For now, the BIC criterion is based on very strong assumptions about the shape of the likelihood function
+        - the function is assumed to be a dirac at the maximum likelihood estimate,
+        - This could be improved by integrating the Hessian, as in \cite{Daniels2015}. extension of model selection, that takes into account the hessian in the BIC criterion.
+        - It could be further improved with ADVI, to take into account in the model selection process the possibility of multimodality of the likelihood function.
+      - An other possibility would be to use Bayesian Learning via Stochastic Gradient Langevin Dynamics \cite{Welling2011BayesianLV}. This method builds upon recent advances in Bayesian Deep Learning \cite{Wilson2020} and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, and can provide good estimates of uncertainty errors for complex models.
     - theoretical underpinning of batch size
-    - the mini-batch inference method could be extended to a fully bayesian setting
+      - iterative training can be performed, where the learning is initiated by a short batch length $K^{(s)}$ to identify the region with the most probable parameters, and in subsequent iterations the batch length is increased to improve the precision of the inference. 
+    - stochasticity could further be introduced within the ML framework to prevent the convergence to local minima, where only a subset of mini-batches are fitted at each epoch \cite{bottou2012stochastic} : this may allow to prevent the overfitting related to mini-batches
   - **PDE**
     - calibration of high dimensional pdes
-      - include into the loss function a term for inference of paramters. 
+      - include into the loss function a term for inference of parameters. 
+      - cite the work of Beck
+  - **Inclusion of information of various monitoring technologies, through parametrisation of parameters and bayesian priors**
+    - molecular tools that detect feeding interactions
+    - environmental DNA \cite{Ruppert2019}
+    - remote sensing \cite{Jetz2019}
+    - bioaccoustics \cite{Aide2013}
+    - citizen observations \cite{GBIF}
 
 
-- **differentiation in graphs**
+- **The eco-evolutionary model on spatial graphs presented in \chap1, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth**
+  - Questions that may be adressed
+    - environmental filtering?
+    - What are the roles of distinct processes shaping biodiversity?
+      - Competition vs environmental filtering in shaping community assembly, and spatial distribution of life \cite{Hagen2022}
+      - 
   - Validation of prediction with diff in graphs --> limitation: how to determine patch size
-  - usage of PDE approximation to understand deep time dynamics and predict outcomes of climate change
-  - Apply MiniBatchInference.jl to the eco-evolutionary model on graphs to understand the cause of biodiversity on earth.
-    - relate to the work of skeels, and hagen
+    - Investigate whether the metrics found are correlated with biodiversity patterns
+    - (i) using techniques to project real landscapes on graphs (see \cref{figSI:graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data.
+  - Interesting further questions: 
+    - effects of global change on the maintenance of biodiversity (Tackling climate change)
+      - A better undersanding of eco-evolutionary processes and their couplings, together with appropriate methods, could provide more reliable forecasts of ecosystem dynamics. This in turn should help desiging appropriate ecosystem management strategies.
+      - Are differentiated populations more likely to do XXX?
+      - consider different species affected by eco-evolutionary processes and understand consequences at the ecosystem scale. A possible venue for that is the framework of Nordbotten with gaussian approximations.
+  - usage of PDE approximation to understand 
+    - deep time dynamics 
+      - Apply MiniBatchInference.jl to the eco-evolutionary model on graphs to understand the cause of biodiversity on earth.
+      - relate to the work of skeels, and hagen
+    - predict outcomes of climate change
+  - of use for inference methods which try to estimate ecological (population size), spatial and evolutionary processes of real populations from genetic observation data, from e.g. measures of differentiation (\cite{Lepers2021}, ask Theophile?)
+    - This approach might improve current inferential techniques based on models that do not account for competition nor heterogeneous selection (see e.g. \cite{Petkova2015}).
+  - Investigate the effect of genotype / phenotype map on adaptation
 
-- **Econobiology**
-  - Inclusion of more geographical or other types of proximity
-    - This perspective may contribute to an understanding of the role geographical and cultural distance, which may impede colonization similar to geographical or habitat barriers (e.g. mountains ) have played a major on the evolution of biodiversity on life \cite{Rangel}
+
+- **Econobiology offers a new lens to advance our understanding of the drivers of economic systems.**
+  - Econobiology may adress the following questions
+    - Are the processes we found conserved at different organization levels
+    - How economic activity proximity leverages they interactions? Are their directionalities? (larger economic activites have larger effects on smaller ones)
+    - How country proximity leverages their spatial intercations, and their directionalities?
+    - How the strength of those processes, mediated by proximities, affects economic diversification, and development?
+    - Biodiversity loss leads to productivity loss \cite{Duffy2017a}. Does the diversification of an economy leads to more economic development?
+    - Are there other eco-evolutionary processes that may affect and predict the diversification of an economy?
+    - Are there common organizational principles underlying economic systems and biological systems? (Loreau)
+  - Those questions may be adressed by complexification of the model
+    - Testing of the model at SITC with 2 (xxx economic activities) and or 4 digits (xxx economic activities)
+    - Inclusion of more geographical or other types of proximity
+        - This perspective may contribute to an understanding of the role geographical and cultural distance, which may impede colonization similar to geographical or habitat barriers (e.g. mountains ) have played a major on the evolution of biodiversity on life \cite{Rangel}
+    - Use of occurence data at the global scale to constrain the strength of interactions
+    - The consideration of the above points may provide more consistent supports, and may imply relationships between strength of evidence and macro-economic indidcators, such as GDP, GNI, HDI, and GINI
 
 ### Methodological advances
-#### Blending our methodological advances together
-
-  - Investigate whether the metrics found are correlated with biodiversity patterns
-  - the proposed eco-evolutionary model on spatial graphs could be combined with approximate bayesian computation to estimate ecological, spatial and evolutionary processes of real populations from observation data, similarly to \cite{Lepers2021}. This approach might improve current inferential techniques based on models that do not account for competition nor heterogeneous selection (see e.g. \cite{Petkova2015}).
-- Use HighDimPDE.jl for inverse modelling
-  - cite the work of Beck
-
-#### Future work on scientific machine learning 
-- including information from various monitoring technologies:
-  - molecular tools that detect feeding interactions
-- Automatic Differentiation Variation Inference: Allows to estimate the uncertainty in estimation, and localize different equally likely region in the parameter space that are likely.
-  - For now, the BIC criterion is based on very strong assumptions about the shape of the likelihood function
-    - the function is assumed to be a dirac at the maximum likelihood estimate,
-    - This could be improved by integrating the Hessian, as in \cite{Daniels2015}. extension of model selection, that takes into account the hessian in the BIC criterion.
-    - It could be further improved with ADVI, to take into account in the model selection process the possibility of multimodality of the likelihood function.
-  - An other possibility would be to use Bayesian Learning via Stochastic Gradient Langevin Dynamics \cite{Welling2011BayesianLV}. This method builds upon recent advances in Bayesian Deep Learning \cite{Wilson2020} and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, and can provide good estimates of uncertainty errors for complex models.
-- Instead of directly comparing simulated and observed data, matching time-averaged statistics between observations and simulations (e.g. means and covariances) could further yield an improved assimilation of observations from diverse data sources, such as global observations of productivity from satellites and local surveys, as proposed for climate models \cite{Schneider2017}.
-- Better detection of noise, and know how to 
-  - Levin: In the metaphor of Ralph Gomory [21], the central problem is to develop an appropriate statistical mechanics that allows one to sepa- rate the knowable unknown from the truly unknowable.
-- Given the increasing number of ecological datasets following the development of monitoring technologies such as environmental DNA \cite{Ruppert2019}, remote sensing \cite{Jetz2019}, bioaccoustics \cite{Aide2013}, and citizen observations \cite{GBIF}, the proposed ML framework opens up new opportunities for the quantitative investigation of current ecosystem functions \cite{Curtsdotter2019} and the prediction of ecosystem responses to increasing disruptions \cite{Urban2016}.
-
-- The mini-batch method is also relevant beyond variational methods and applies to any inferential method navigating the posterior landscape, such as evolutionary algorithms \cite{wilke2001evolution,Rodriguez-Fernandez2006} or Markov Chain Monte Carlo methods \cite{Lignell2013,Higgins2010,Xu2006,Fiechter2013,Rosenbaum2019}.
-- iterative training can be performed, where the learning is initiated by a short batch length $K^{(s)}$ to identify the region with the most probable parameters, and in subsequent iterations the batch length is increased to improve the precision of the inference. 
--  stochasticity could further be introduced within the ML framework to prevent the convergence to local minima, where only a subset of mini-batches are fitted at each epoch \cite{bottou2012stochastic}.
-
-
-### Fundamental understanding
-#### Gaining more fundamental knowledge of eco-evolutionary processes in realistic scenarios
-
-<!-- - **In \cref{chap:diff-in-graphs}, we investigated how the processes of competition and migration in complex landscapes, together with the co-evolution of neutral and adaptive traits, affect population dynamics and population differentiation.**
-  - our contribution
-      - How it may be used to better understand empiricla mechanisms, and how it can be used in in predictive models
-
-- We have contributed to the urgent need of better understanding feedbacks to anticipate large shifts
-  - effects of global change on the maintenance of biodiversity 
-  - 
-- In the context of global change, these resuts raise interesting questions
-  - Are differentiated populations more likely to do XXX?
-  - 
-- Overall, our results point to topology metrics that can connect spatial biodiversity patterns to the generating eco-evolutionary and spatial processes.
-
-  - -->
-- To further our understanding of the origin of spatial biodiversity patterns, the contribution of landscape properties to discrepancies in population differentiation could be investigated at large scales by (i) using techniques to project real landscapes on graphs (see \cref{figSI:graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data.
-
-- Effect of genotype / phenotype map on adaptation
-
-#### Econobiology
-- In particular, the mean field assumptions that economic activities similarly interact, proceed to spatial transfers and transfer capital between each other with equal rates, are strong.
- - interactions, spatial transfers and economic activity transformations may be directed
- - the investigation of more complex models may nevertheless require more detailed and richer time series, in order to extract the extra information required to constrain the additional parameters.
 
 ### Predictions
 #### Tackling climate change
-A better undersanding of eco-evolutionary processes and their couplings, together with appropriate methods, could provide more reliable forecasts of ecosystem dynamics. This in turn should help desiging appropriate ecosystem management strategies.
+
 - Predictions and applications in the face of climate change
-- consider different species affected by eco-evolutionary processes and understand consequences at the ecosystem scale. A possible venue for that is the framework of Nordbotten with gaussian approximations.
 - calibration of model and prediction of response to climate change \cite{Feng2018}
-- use of data : Local ecosystem surveys, such as marine trawling surveys or local terrestrial surveys (\cite{Pinsky2013,Dornelas2018,Burrows2019} and references therein), provide time series that are generally shallow in time but composed of many replicates \cite{Hsieh2008,Clark2015}, in part due to the practical difficulties of long-term monitoring \cite{Ye2016}. 
 
 
 #### Econobiology for engineering a sustainable economy
@@ -342,6 +343,7 @@ A better undersanding of eco-evolutionary processes and their couplings, togethe
 - In economic systems, I expect that it can advance our understanding on diversification processes, xxx,
 - ML can leverage the advances, by accelerating the improvement of models and by directly testing theories (Automate the process of discovery), as well as providing a way to assimilate data into models.
 - We are far from understanding biodiversity at a planetary scale comparable to how we understand Earth’s climate. Yet, what is at stake for human societies around the world, is at a minimum comparable to those derived from climate change.
+- It is unlikely that we will find, as Einstein did more 100 years ago, the fundamental laws that rule biological systems. Is is also unlikely that, as XX said, big data and ML will sort out by itself the rules. The vision of Kant is surely more appropriate to understand fundamental biological rules, and we believe that ML can realy help fuse concepts and precetps.
 - The new paradigm proposed to comprehend economic change, econobio, could further help us understand deeper organizational principles, such as xxx.
 - It could provide a better understand of economic development, and may suggest biologically inspired economic policies to overcome fundamental issues arising from misappropriate regulations. We could surely get insights from biological systems, that have survived major environmental crisis for more that 3.5 billion years.
 
