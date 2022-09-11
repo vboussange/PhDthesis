@@ -3,26 +3,26 @@
 ## Contributions
 
 - My work aimed at advancing our quantitative understanding of how ecological and evolutionary processes, and their interplay, shape the dynamics of biological and economic systems. In particular, this thesis contributed to 
-  - (i) methodological advances in the forward and inverse modelling of eco-evolutionary dynamics in biological and economic systems \cref{chap1,chap2,chap4}
-  - (ii) a fundamental undersanding of the role of eco-evolutionary processes in shaping the dynamics of biological populations structured in complex landscapes \cite{chap1}
-  - (iii) the quantification of the effect of eco-evolutionary processes in economic systems \cref{chap3}
+  - (i) methodological advances in the forward and inverse modelling of eco-evolutionary dynamics in biological and economic systems \cref{chapi,chapii,chapiv}
+  - (ii) a fundamental undersanding of the role of eco-evolutionary processes in shaping the dynamics of biological populations structured in complex landscapes \cite{chapi}
+  - (iii) the quantification of the effect of eco-evolutionary processes in economic systems \cref{chapiii}
 
 In the following, I discuss the chapters of my thesis collectively within the broader context of the modelling of eco-evolutionary processes  in biological and economic systems, and the understanding of the associated mechanisms.
 
 ### Fundamental understanding
 
-- **\chap1 contributed to advance our understanding on how eco-evolutionary processes and population structure influence emergent properties in biological systems.**
+- **\chapi contributed to advance our understanding on how eco-evolutionary processes and population structure influence emergent properties in biological systems.**
   - Population structure and differentiation 
     - the interplay between genetic drift and dispersal results in "isolation by distance" \cite{Wright1943} or "isolation by resistance" \cite{McRae2006,McRae2007}, where landscape connectivity affects the dispersal ability of organisms, which results in variations of population differentiation among populations.
     - When landscapes present heterogeneous habitats, adaptive differentiation can occur, where a population evolves traits that support higher fitness in its home environment relative to populations from foreign environments \cite{Kawecki2004}. This is regarded as one of the most important factors govening species richness gradients.
     - This process is hindered by gene flow, confounded by genetic drift, opposed by natural selection due to tempoeral envionrmental variability, and constrained by loack of genetic variation of by the genetic architecture of underlying traits \cite{Kawecki2004}. In particular, \cite{Mirrahimi2020} presents the relationship between gene flow and the possibility for adaptation, $m < 2s\theta^2$ where $s$ the selection strength and $\theta$ is the habitat heterogeneity, in a simplistic landscape
     - traits under selection and neutral traits are co-evolving through linkages. Along the mechanism of isolation by adaptation, habitat heterogeneity leads to more isolation by, which further reduces gene flow \cite{Richardson2014} and therefore increases neutral differentiation \cite{nosil2008}. 
-- In \chap1, 
+- In \chapi, 
   - I demonstrate that the consideration of competition for resources, one of the most fundamental process regualting population dynamics \cite{x}, considerably affects population differentiation by limiting the dispersal of individuals. heterogeneity in connectivity can reinforce differentiation patterns through the creation of unbalanced migration fluxes which affect ecological equilibrium and reduce gene flow. Through the accumulation of incompatibilities over time \cite{Dobhsanski}, this mechanism could lead to speciation over time, and contribute to the high diversification in mountain regions \cite{Rahbek}.
-  - landscapes can be patchy and it is unrealistic to assume regularity \cite{Dale2010}, and in \chap1, I show the relationship between habitat spatial distribution, habitat heterogeneity and selection strength, which corrects the relationship as $$ where r_\theta denotes habitat assortativity must be regarded as a measure of habitat spatial auto-correlation based on the dispersal range of a species \cite{Richardson2014}. This predicts that in landscapes with heterogeneous habitats and where selection is strong, populations structured over assortative habitats are larger, support higher adaptive differentiation, and can be locally well-adapted even in the case where migration rates are high.
+  - landscapes can be patchy and it is unrealistic to assume regularity \cite{Dale2010}, and in \chapi, I show the relationship between habitat spatial distribution, habitat heterogeneity and selection strength, which corrects the relationship as $$ where r_\theta denotes habitat assortativity must be regarded as a measure of habitat spatial auto-correlation based on the dispersal range of a species \cite{Richardson2014}. This predicts that in landscapes with heterogeneous habitats and where selection is strong, populations structured over assortative habitats are larger, support higher adaptive differentiation, and can be locally well-adapted even in the case where migration rates are high.
   - Closing the loop on the effect of habitat heterogeneity on differentiation, I highlight that habitat assortativity tends to reduce gene flow, therefore decreasing IBD, but antagonistically promotes IBA. This results in an overall ambiguous effect on neutral differentiation, which must be considered in population genetics studies that use such patterns to infer processes.
 - Detailing the mechanisms underlying population dynamics and phenotypic structure in complex landscapes, we further proposed landscape properties, that can be easily computed, and may contribute to detail some of the mechanisms by which species richness varies through space \cite{Liu2018,Dias2014,Rahbek2001,Kreft2007a,Davies2007,Veech2007,Guegan1998,Stein2014} 
-- **\chap1 underpins novel fundamental mechanisms linking population differentiation to eco-evolutionary feedbacks and complex population structures. It extends on recent work including the interplay between ecological and evolutionary processes, and frequency dependence, hihglighting non-trivial emergent properties with large consequences on emergent patterns, and providing means to tests the predictions.**
+- **\chapi underpins novel fundamental mechanisms linking population differentiation to eco-evolutionary feedbacks and complex population structures. It extends on recent work including the interplay between ecological and evolutionary processes, and frequency dependence, hihglighting non-trivial emergent properties with large consequences on emergent patterns, and providing means to tests the predictions.**
 
 
 
@@ -33,7 +33,7 @@ Traditional tools from evolutionar economcics
 frequency depdence
 spatial transfers
  -->
-- **\chap4 provided a novel lens to understand endogenous frequency-dependent forces shaping the dynamics of economic systems.**
+- **\chapiv provided a novel lens to understand endogenous frequency-dependent forces shaping the dynamics of economic systems.**
 - mainstream economics explains economic change by exogenous drivers, such as technological change \cite{XXX} and economic institutions \cite{XXX}, and production costs \cite{Boschma2005a}
 - evolutionary eonomics is rather concerned with explaining economic change by endogenous forces,
 - For instance, it suggests that interactions between firms and economic activities, and evolutionary processes acting upon them, are major processes contributing to economic growth \cite{Hodgson2019,Metcalfe2006}
@@ -42,29 +42,29 @@ spatial transfers
 - one of the major contribution of complexity economics is to provide evidences for the diffusion of countries through the product space, explaining technological lock out.
 - In such sense, economic complexity considers economic activities as autonomous entities that evolve through structure linkages, and acknowledges their interdependency through the existence of capabilities
 - importantly, it does not consider frequency-dependence, variations in growth rates, and the underlying forces
-- this topic is relatively well covered in evolutionary biology \cite{XXX}, and \chap3 connects complexity economics thinking with useful tools to understand transient dynamics.
+- this topic is relatively well covered in evolutionary biology \cite{XXX}, and \chapiii connects complexity economics thinking with useful tools to understand transient dynamics.
 - In particular, evolutionary biology is now unravelling the mechanisms by which biodiversity has emerged, following a fully mechanistic approach \cite{Hagen2022}
 - The dynamics of economic activities contains signals from the many complex processes that underpin them
-- One of the major contribution of \chap3 is to show that population dynamic models, such as the one investigated in \cref{chap:diff-in-graphs}, are well suited for modelling the transient dynamics of economic systems, opening venues to bridge the modelling literatures
+- One of the major contribution of \chapiii is to show that population dynamic models, such as the one investigated in \cref{chap:diff-in-graphs}, are well suited for modelling the transient dynamics of economic systems, opening venues to bridge the modelling literatures
 - our approach is agnostic to the concepts of outputs and labour, and the productivity that links both, and institutions, but rather considers exports as proxies for capital size. In this sense, it is similar to complexity economics in that it extracts the forces and relationship from the data, without making strong assumptions about what these factors may be \cite{Hidalgo2021}
 - This connection is all the more satisfactory as evolutionary enomics justifies deeper analogies, such as the common existence of interactors and replicators, common microscopic processes such as birth and death of firms and economic activities \cite{Boschma2005a} common interaction structures \cite{XXX}, similar strategies, which may define in turn the characteristics of economic activities \cite{Boschma2005a}
-  <!-- - inverse modelling methode of \chap2 is in fact particularly adapted to economic systems, since growth rates is very high (may be compare in terms of energy outputs? processes can be witnessed in a human life) and data is very good \cite{May}? -->
-- Specifically, \chap3 shows that the economic interdependency translates in positive interactions have a considerable effect on the temporal dynamics of economic activities.
+  <!-- - inverse modelling methode of \chapii is in fact particularly adapted to economic systems, since growth rates is very high (may be compare in terms of energy outputs? processes can be witnessed in a human life) and data is very good \cite{May}? -->
+- Specifically, \chapiii shows that the economic interdependency translates in positive interactions have a considerable effect on the temporal dynamics of economic activities.
   - This may be the first inverse modelling approach in economic theory, that confirms that value comes from the complementarity of inputs, as the main assumption of most model of economic growth \cite{Hidalgo2018}, without assuming any particular structure
-- \chap3 also evidences the role of spatial interdependency on temporal dynamics of eocnomic activities, a topic well discussed in evolutionary geography economics \cite{Boschma2005a}.
+- \chapiii also evidences the role of spatial interdependency on temporal dynamics of eocnomic activities, a topic well discussed in evolutionary geography economics \cite{Boschma2005a}.
   - This evidence be the cause of international knowledge spillovers (imitation, spin-offs, social networks, labour mobility, collaborative networking) \cite{Boschma2005a,Bode2019}
   - our approach considers economic activities with the endogenous propensity to disperse trough space, similar to biological populations. 
   - the main factors reflecting dispersal ability in ecology and evolution is due to the intrinsic ability of species to disperse, and due to geographical and environmental barriers
   - might reflect the connectivity of certain countries to the world economy, and the facility with which economic activities can be replicated. Refinement may highlight differences in connectivity, possibly due to some sort of proximity
 - biology acknowledges path-dependence, which is an intrinsic property of population dynamic models.
-- **Overall, \chap3 fosters a biologically inspired approach to understand the frequency-dependent processes and resulting mechanisms shaping the long-term dynamics of economic systems.**
+- **Overall, \chapiii fosters a biologically inspired approach to understand the frequency-dependent processes and resulting mechanisms shaping the long-term dynamics of economic systems.**
 <!-- - As highlighted in \cite{Scholl}, our work does not aim at building better models of economic development, but rather at enriching our understanding of economic systems by adequately borrowing insights and concepts from evolutionary biology. -->
 <!-- TODO: read bochma and other review synthesis on evolutionary economics and geogrpahy economics, pour broder -->
 
 ### Methodological advances
 The investigation of the interplay between ecological and evolutionary processes
 #### Advances in the modelling of realistic spatial and phenotypic structures
-**landscape complexity \cite{xxx} and phenotype complexity \cite{xxx}, and the interaction between phenotypes \cite{xxx} may critically affect eco-evolutionary dynamics. \cref{chap1,chap4} provide new tools to better understand mechanisms resulting from ecological and evolutionary processes, and their interplay, in the context of realistic spatial and phenotypic structures.**    
+**landscape complexity \cite{xxx} and phenotype complexity \cite{xxx}, and the interaction between phenotypes \cite{xxx} may critically affect eco-evolutionary dynamics. \cref{chapi,chapiv} provide new tools to better understand mechanisms resulting from ecological and evolutionary processes, and their interplay, in the context of realistic spatial and phenotypic structures.**    
   - Review of spatially explicit modelling studies 
     - Classical modelling work investigating the dynamics of structured populations have focused on scenarios that are poorly representative of the complexity of eco-evolutionary feedbacks \cite{Govaert2019a}, and in particular that omit frequency-dependent selection.
       - for instance, \cite{Burger2000,Kimura1964,Lande1991,Nagylaki1994} assumed constant population sizes , and as such did not consider frequency-dependence.
@@ -75,13 +75,13 @@ The investigation of the interplay between ecological and evolutionary processes
   - Review of high dimensional models 
     - While a vast majory of the work on eco-evolutionary feedbacks has focused on the evolution of scalar phenotypes \cite{Doebeli2011}, in most organisms many phenotypic properties combine in complicated wasy to determin ecological interactions, and hence frequency-dependent selection \cite{Doebeli2014}.
       - In particular, \cite{Doebeli2011} shows that the consideration of multiple traits with complex interactions relaxes the unrealistic conditions of strong frequency dependence required to generate diversity in one dimensional phenotype spaces, calling for a better understanding of evolutionary dynamics in high dimensioanl spaces.
-      - Also, \cref{chap1} demonstrates that the co-evolution of traits proved to have genuine consequences on differentiation, pointing towards the inclusion of multiple traits to understand the dynamics of ecological interactions.
+      - Also, \cref{chapi} demonstrates that the co-evolution of traits proved to have genuine consequences on differentiation, pointing towards the inclusion of multiple traits to understand the dynamics of ecological interactions.
       - The co-evolution of phenotypes is particularly important to understand the effect of global change on ecosystems, since many environemtal factors are likely to be impacted \cite{LeGland}
       - The consideration of continuous geographical space also increases the dimensionality of the problems, embedding axis corresponding to geographical dimensions. Geographical space is usually a bounded liveable domain, which organisms cannot cross. In mathematical terms, those correspond to Neumann boundary conditions.
       - newtorks are also helpful for the modelling of economic dynamics \cite{Schweitzer2009}
     - **Models that consider the co-evolution of traits have been limited to stochastic IBM, which hardly scale.**
   - contribution of our work
-      - **\cref{chap1} develops a generic modelling framework to capture the effect of eco-evolutionary processes on biological populations structured in complex landscapes, and \cref{chap4} provides a way to enhance the simulation time.**
+      - **\cref{chapi} develops a generic modelling framework to capture the effect of eco-evolutionary processes on biological populations structured in complex landscapes, and \cref{chapiv} provides a way to enhance the simulation time.**
       - The IBM presented involves the combination of graphs and continuous spaces to model population structures. Graphs are convenient mathematical representation of landscapes \cite{XXX}, but can also account for genetic and spatial structure \cite{XXX}. The associated Julia library **Evoid.jl** implements de facto a more general version of the model. 
       - It further involves stochasticity which is inherent to ecological \cite{XXX} and evolutionary processes \cite{XXX}
       - involves frequency dependence of eco-evolutionary processes, where individuals are characterised by many traits. 
@@ -90,7 +90,7 @@ The investigation of the interplay between ecological and evolutionary processes
       - together with adaptive dynamics theory and numerical simulations, the PDE approximation allows to obtain analytical insights on how structural properties affect macroscopic population. 
       - This approach, coupling stochastic simulations and analytical insights, can elucidate how macroscopic properties emerge from microscopic processes while accounting for the complexity of spatial structures. 
       - As such, the proposed model together with the approch can help formalize fundamental links between macroscopic properties and microscopic processes acting upon agents structured over complex spatio-evolutionary structures \cite{Levin}.
-      - **the PDE approximation, coupled with the methods in \chap4, allow to efficiently simulate the eco-evolutionary models where populations are structured over high-dimensional continuous phenotypic and geographic spaces.**
+      - **the PDE approximation, coupled with the methods in \chapiv, allow to efficiently simulate the eco-evolutionary models where populations are structured over high-dimensional continuous phenotypic and geographic spaces.**
       - methods for simulating high dimensional PDEs have almost exclusively been used for financial applications.
       - PDE models for CAS critically involve non-local terms, which capture non-local interactions between microscopic agents.
       - In \cref{chap:highdimpde}, we have presented two methods that can solve generic high dimensional eco-evolutionary PDE models. Both methods extend previous numerical methods, and can solve general non-local nonlinear PDE problems with boundary conditions.
@@ -105,10 +105,10 @@ The investigation of the interplay between ecological and evolutionary processes
       - The package aim at hosting any solver algorithms that break down the curse of dimensionality, and is currently receiving contributions to implement the DeepBSDE scheme \cite{Han2018}
       - The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
       - It can solve intial conditions or terminal problems, with free or neumann boundary conditions
-- **Overall, \cref{chap1,chap4} provide novel tools to anchor eco-evolutionary dynamics in more realistic settings, and use consider such processes to understand resolve empirical patterns and provide predictions.**
+- **Overall, \cref{chapi,chapiv} provide novel tools to anchor eco-evolutionary dynamics in more realistic settings, and use consider such processes to understand resolve empirical patterns and provide predictions.**
 
 #### Advances in inference methods for the investigation of eco-evolutionary processes
-**\cref{chap2,chap3} develop and test a novel inverse modelling method that can critically infer complex dynamical eco-evolutionary processes from observation data, opening new venues in our understanding and prediction of frequency-dependence dynamics in biological and economic systems.**
+**\cref{chapii,chapiii} develop and test a novel inverse modelling method that can critically infer complex dynamical eco-evolutionary processes from observation data, opening new venues in our understanding and prediction of frequency-dependence dynamics in biological and economic systems.**
 <!-- - Why is this important
   - We are far away from a mechanistic understanding of biological and economic systems.
   - Need for fundamental undersanding of processes, and provide predictability
@@ -123,27 +123,27 @@ The investigation of the interplay between ecological and evolutionary processes
 - While the former are computationally expensive and cannot be readily used for models with large number of parameters, the latter rely on the model adjoint, which is difficult to obtain in practice, and are prone to converge to local minima, especially with complex models \cite{XXX}
 - as a result, only a few studies used inference methods to perform model selection with mechanistic models.
 - While \cite{Skeels, XXX} use approximate bayesian inference to infer mechanisms from data, such studies do not consider temporal data, which nonetheless contain useful information on the underlying processes.
-- The method developed in \chap2 makes use of recent development in ML, including AD \cite{Rackauckas2020a} and variational optimizers \cite{Kingma2014}, and implements a learning strategy based on a mini-batch method, in order to circumvent the drawbacks of variational methods and adapt to the specificities of eco-evolutionary models. 
+- The method developed in \chapii makes use of recent development in ML, including AD \cite{Rackauckas2020a} and variational optimizers \cite{Kingma2014}, and implements a learning strategy based on a mini-batch method, in order to circumvent the drawbacks of variational methods and adapt to the specificities of eco-evolutionary models. 
 - The proposed method is particularly relevant for the paramterization of models incorporating complex eco-evlutionary processes \cite{Urban2016}, and integrates the practical constraints of datasets \cite{Dornelas2018} including short time series with partial, noisy, shallow and independent observations. 
 - This work is part of an ongoing effort to blend ML and traditional models to gain scientific understanding and extrapolability \cite{XXX}. 
 - The ease of use of AD enables the continuous development of the models
 <!-- mechanisms inference -->
-- Thanks to its efficiency, we showed that the proposed method can not ontly estimate parameters, but also link eco-evolutionary theory and data by prodiving support to the most likely models \cref{chap3,chap4}
+- Thanks to its efficiency, we showed that the proposed method can not ontly estimate parameters, but also link eco-evolutionary theory and data by prodiving support to the most likely models \cref{chapiii,chapiv}
 <!-- - in contrast, the proposed method involves only a few meta parameters (including minibatch size and learning parameter) and provide  -->
-- We showed that the efficiency of the method allows to recover mechanisms from noisy \cref{chap2,chap4} and incomplete \cref{chap3} datasets, adapting the reality of datasets and succesfully elucidating mechanistic pathways by contrasting complex hypotheses embedded in model variants
+- We showed that the efficiency of the method allows to recover mechanisms from noisy \cref{chapii,chapiv} and incomplete \cref{chapiii} datasets, adapting the reality of datasets and succesfully elucidating mechanistic pathways by contrasting complex hypotheses embedded in model variants
 - other scientific fields have benefitted a lot from ML, such as climate modelling \cite{XXX}, but biological and economic system may have even more to gain, since in contrast to such fields, much of the mathematical formulation of the processes in yet to be formulated.
 - The ML framework is implemented in the multi-purpose Julia package **MiniBatchInference.jl**, readily available to the scientific community. It builds upon the differential equation solver **DiffenretialEqautiosn.jl** and the deep learning library **Flux.jl**, requiring little effort to efficiently use it.
 - \cite{Frank2022} provides an interesting analogy between the evolution of life and the evolution of a theory, through the use of AD.
-**Overall, the method in proposed \cref{chap2} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concret case examples in \cref{chap2, chap3} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \cite{Urban2016}.**
+**Overall, the method in proposed \cref{chapii} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concret case examples in \cref{chapii, chapiii} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \cite{Urban2016}.**
 
 ## Limitations
 
 ### main limitations: 
 
-- **Alternatives to the methods presented in \cref{chap1,chap4} may be considered for the forward modelling of eco-evolutionary dynamics**
+- **Alternatives to the methods presented in \cref{chapi,chapiv} may be considered for the forward modelling of eco-evolutionary dynamics**
   - PDEs are useful mathematical objects that allow an analytical underpinning to IBMs and demand less computational power, as soon as the number of individual becomes large.
   - Nevertheless, they become dramatically cosly in high dimensions, because they track the evolution of the entire population distribution
-  - \chap4 provided efficient methods to approximately compute the PDE solution, but suffer from drawbacks which may prevent their practical use for the forward modelling of eco-evolutionary dynamics. 
+  - \chapiv provided efficient methods to approximately compute the PDE solution, but suffer from drawbacks which may prevent their practical use for the forward modelling of eco-evolutionary dynamics. 
 
     - In particular, the MLP can only provide one point at a time, which is of limited use for practical purposes
     - On the other hand, the ML based approach requires intensive use of GPU, and the tuning of meta parameters, inluding the choice of a kernel for the integration of the nonlocal term
@@ -158,18 +158,18 @@ The investigation of the interplay between ecological and evolutionary processes
     - Both approaches approximate the solution to the PDE with a gaussian distribution, resulting in modelling the time evolution of the population size, the mean trait value in each dimension (d), and the variance-covariance matrix (d^2), resulting in overall d(d+1) + 1 variables to simulate, as such scaling only polynomially in the number of dimension
       - This approach is used in Urban etc \cite{XXX}
       - This approach is also used in \cite{LeGland} for a multi-trait plankton model
-  - Moment closure approximations may be used for an underpinning of neutral differentiation, which is crucially missing in \chap1
+  - Moment closure approximations may be used for an underpinning of neutral differentiation, which is crucially missing in \chapi
   - We highlight than an analytical insights for neutral differentiation is missing but in reach, 
     - may help for inverse modelling
 
-- **Alternative approaches to the method proposed and used in \cref{chap2,chap3} could be considerd for the inverse modelling of eco-evolutionary dynamics.**
+- **Alternative approaches to the method proposed and used in \cref{chapii,chapiii} could be considerd for the inverse modelling of eco-evolutionary dynamics.**
   - The minibatch method requires the choice of minibatch size, and the determination of this parameter is, as of now, left arbitrarily to the intuition of the modeler
   - Nonetheless, when the data is not generated by the model to fit, the choice of the batch size may lead to spurious results
-  - For instance, in \chap3, the oscillations in the data (\cref{fig:aggregatexxx}) may be captured by the model if the batch size is reduced
+  - For instance, in \chapiii, the oscillations in the data (\cref{fig:aggregatexxx}) may be captured by the model if the batch size is reduced
     - Is this realistic? this would lead to consider that the dynamics forgets its initial condition
     - at the same time, it could simply correspond to overfitting, and further questionning and development will be required in this direction
   - Also, missing data does not constrain enough the model leading the inconcsistencies, and too much noise may lead to inconsistency 
-    -  For instance we could not mix up complicated models in \chap3, to try e.g. whether the model with spatial transfers and positive interactions is more appropriate than the indepdendent models
+    -  For instance we could not mix up complicated models in \chapiii, to try e.g. whether the model with spatial transfers and positive interactions is more appropriate than the indepdendent models
  - We further think that the BIC criterion may not be the most appropriate, 
    - requires the consideration of complexity of dynamical behavior, instead of number of parameters
   - Last but not least, the mini-batch method requires a differentiable model, and temporal dynamics to ensure the convergence toward a global minimum
@@ -260,7 +260,7 @@ The investigation of the interplay between ecological and evolutionary processes
 
 ## Perspectives
 
-- **Methods presented in \cref{chap2,chap4} could be further developed and extended, to leverage forward modelling.**
+- **Methods presented in \cref{chapii,chapiv} could be further developed and extended, to leverage forward modelling.**
   - **refinement of mini-batch technique**
     - the mini-batch inference method is relevant beyond variational methods could be extended to a fully bayesian setting
       - but the problem of computational cost matters
@@ -285,7 +285,7 @@ The investigation of the interplay between ecological and evolutionary processes
     - citizen observations \cite{GBIF}
 
 
-- **The eco-evolutionary model on spatial graphs presented in \chap1, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth, and contribute to a formalization of the theory, to provide forecasts**
+- **The eco-evolutionary model on spatial graphs presented in \chapi, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth, and contribute to a formalization of the theory, to provide forecasts**
   - Validation of prediction with diff in graphs --> limitation: how to determine patch size
     - Investigate whether the metrics found are correlated with biodiversity patterns
     - (i) using techniques to project real landscapes on graphs (see \cref{figSI:graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data.
@@ -346,14 +346,14 @@ The investigation of the interplay between ecological and evolutionary processes
 
 ## Concluding remarks
 - This thesis contributed to a better understanding of eco-evolutionary processes in economic and biological systems, by connecting discplines together.
-- In light of the results from \cref{chap1,chap3}, I believe that the paradigm of eco-evolutionary dynamics, in combination with network to capture realistic structures and interactions, is appropriate for better understanding the mechanisms shaping biological and ecological systems.
+- In light of the results from \cref{chapi,chapiii}, I believe that the paradigm of eco-evolutionary dynamics, in combination with network to capture realistic structures and interactions, is appropriate for better understanding the mechanisms shaping biological and ecological systems.
 - In biological systems, I expect that it can provide a better understanding of species richness distribution, environmental filtering, structuration patterns, productivity
 - In economic systems, I expect that it can advance our understanding on diversification processes, xxx,
 - ML can leverage the advances, by accelerating the improvement of models and by directly testing theories (Automate the process of discovery), as well as providing a way to assimilate data into models.
 - We are far from understanding biodiversity at a planetary scale comparable to how we understand Earth’s climate. Yet, what is at stake for human societies around the world, is at a minimum comparable to those derived from climate change.
 - It is unlikely that we will find, as Einstein did more 100 years ago, the fundamental laws that rule biological systems. Is is also unlikely that, as XX said, big data and ML will sort out by itself the rules. The vision of Kant is surely more appropriate to understand fundamental biological rules, and we believe that ML can realy help fuse concepts and precetps.
 - Mathematics may provide keys to deep connections between concepts: 
-  - What are the connections between stochastic trajectories used in \chap4, and the stochastic dynamics of individuals in IBM in \chap1?
+  - What are the connections between stochastic trajectories used in \chapiv, and the stochastic dynamics of individuals in IBM in \chapi?
   - Variational methods to shape our theorizing
 - Bayesian approach is may be the right approach for ML \cite{gelman1995bayesian}
 - The new paradigm proposed to comprehend economic change, econobio, could further help us understand deeper organizational principles, such as xxx.
