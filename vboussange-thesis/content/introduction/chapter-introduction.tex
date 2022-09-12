@@ -1,4 +1,4 @@
-% !TEX root = ../my-thesis.tex
+% !TEX root = ../../my-thesis.tex
 %
 \graphicspath{{./content/introduction/figures/}}
 
@@ -42,25 +42,7 @@ In economic systems, we still do not exactly understand the nature of those proc
 %% Figure parallels
 \begin{figure}
     \centering
-    \begin{tikzpicture}[
-        node distance=2cm,
-        on grid,
-        very thick]
-    \tikzstyle{node_cust}=[draw, minimum height=0.7cm, minimum width=3.5cm]
-
-    % biological systems
-    \node[node_cust, align=center] (genes) {Genes / genomes};
-    \node[node_cust, below=of genes] (phen) {Phenotypes};
-    \node[node_cust, below=of phen] (pop) {Populations};
-    \node[node_cust, below=of pop] (com) {Communities};
-    \node[node_cust, below=of com] (ecos) {Ecosystems};
-    % biological systems
-    \node[node_cust,right=4.5cm of genes] (orga) {Organizational routines};
-    \node[node_cust,below=of orga] (Firms) {Firms};
-    \node[node_cust,below=of Firms] (ecoa) {Economic activities};
-    \node[node_cust,below=of ecoa] (nateco) {National economies};
-    \node[node_cust,below=of nateco] (weco) {World economy};
-\end{tikzpicture}
+    \includegraphics{organizational_complexity.pdf}
 \caption{Schematic diagram of proposed organisational levels in biological and economic systems. \textbf{A} is inspired from \cite{Hendry+2016}}
 \label{fig:organisational_levels}
 \end{figure}
@@ -188,7 +170,7 @@ In order to better understand eco-evolutionary feedbacks, we need to investigate
 \begin{figure}[t]
     \centering
     \includegraphics{proc_mech_patt.pdf}
-    \caption{}
+    \caption{Forward and inverse modelling approaches for the understanding of CAS. A forward modelling approach starts with assuming a set of processes, and seeks to understand how their interplay transforms in mechanisms that are associated with macroscopic patterns. An inverse modelling approach starts from empirical patterns (or observations) to deduce the underlying mechanisms and associated processes.}
 \end{figure}
 
 \subsubsection*{Inverse modelling}
