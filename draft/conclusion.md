@@ -122,13 +122,14 @@ The investigation of the interplay between ecological and evolutionary processes
 <!-- parameter estimation -->
 - A variety of inverse modelling methods have been used to estimate the parameters of dynamical ecosystem models, mostly relying on Bayesian inference methods with Markov Chain Monte Carlo \cite{XXX} and variational methods \cite{XXX}.
 - While the former are computationally expensive and cannot be readily used for models with large number of parameters, the latter rely on the model adjoint, which is difficult to obtain in practice, and are prone to converge to local minima, especially with complex models \cite{XXX}
+
+<!-- mechanisms inference -->
 - as a result, only a few studies used inference methods to perform model selection with mechanistic models.
 - While \cite{Skeels, XXX} use approximate bayesian inference to infer mechanisms from data, such studies do not consider temporal data, which nonetheless contain useful information on the underlying processes.
 - The method developed in \chapii makes use of recent development in ML, including AD \cite{Rackauckas2020a} and variational optimizers \cite{Kingma2014}, and implements a learning strategy based on a mini-batch method, in order to circumvent the drawbacks of variational methods and adapt to the specificities of eco-evolutionary models. 
 - The proposed method is particularly relevant for the paramterization of models incorporating complex eco-evlutionary processes \cite{Urban2016}, and integrates the practical constraints of datasets \cite{Dornelas2018} including short time series with partial, noisy, shallow and independent observations. 
 - This work is part of an ongoing effort to blend ML and traditional models to gain scientific understanding and extrapolability \cite{XXX}. 
 - The ease of use of AD enables the continuous development of the models
-<!-- mechanisms inference -->
 - Thanks to its efficiency, we showed that the proposed method can not ontly estimate parameters, but also link eco-evolutionary theory and data by prodiving support to the most likely models \cref{chapiii,chapiv}
 <!-- - in contrast, the proposed method involves only a few meta parameters (including minibatch size and learning parameter) and provide  -->
 - We showed that the efficiency of the method allows to recover mechanisms from noisy \cref{chapii,chapiv} and incomplete \cref{chapiii} datasets, adapting the reality of datasets and succesfully elucidating mechanistic pathways by contrasting complex hypotheses embedded in model variants

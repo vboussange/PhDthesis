@@ -1,4 +1,4 @@
-% !TEX root = ../my-thesis.tex
+% !TEX root = ../../my-thesis.tex
 %
 \newcommand{\chapi}{\cref{diff-in-graphs}}
 \newcommand{\chapii}{\cref{diff-in-graphs}}
@@ -179,11 +179,43 @@ The user interface respects standards from the SciML organisation, meaning that 
 The package aim at hosting any solver algorithms that break down the curse of dimensionality, and is currently receiving contributions to implement the DeepBSDE scheme \cite{Han2018}.
 
 %% Conclusion
-The combination of analytical insights and numerical simulations can help to elucidate the links between macroscopic properties and microscopic processes \cite{Levin}.
+The combination of analytical insights and numerical simulations can help to elucidate the links between microscopic processes and macroscopic properties \cite{Levin}.
 % 
-\cref{chapi,chapiv} provide novel analytical and numerical tools to link the interplay between eco-evolutionary processes and complex spatio-evolutionary structures to resulting mechanisms and patterns.
+\cref{chapi,chapiv} provide novel analytical and numerical tools to link the interplay between eco-evolutionary processes and complex spatio-evolutionary structures to the resulting mechanisms and patterns.
 
 
+\subsubsection{Advances in inference methods for the investigation of eco-evoluationary processes}
+
+\cref{chapii,chapiii} develop and test a novel inverse modelling method that allows to infer highly nonlinear dynamical processes from observation data. The method opens up new venues to further our understanding of the dynamics of biological and economic systems, and to provide predictions.
+% 
+The most developed inference methods in current use for inverse modelling are Bayesian inference methods with Markov Chain Monte Carlo \xxx and variational methods \xxx.
+% 
+% Bayesian inference methods with Markov Chain Monte Carlo \xxx and variational methods \xxx have been used since the past 20 years to calibrate dynamic ecosystem models \cite{Schartau2017}.
+% 
+Bayesian inference methods require a large number of forward model integrations \cite{Schneider2017}, and are highly affected by the number of model parameters \cite{Csillery2010}.
+% 
+Variational methods require the model sensitivity to its parameters \xxx and are prone to converge to local minima, especially with complex models \cite{XXX}.
+% 
+Those central issues likely explain the very poor number of studies that have used inverse modelling to further our knowledge on eco-evolutionary dynamics \xxx. 
+% 
+
+%
+%% Our method
+\chapii presents a novel inference framework that can handle with high computational efficiency dynamic eco-evolutionary models.
+% 
+The framework is based on a simple variational method, but relies on recent development in ML, including AD \cite{Rackauckas2020a} and state-of-the-art optimizers \cite{Kingma2014}, and implements a learning strategy based on a mini-batch method, in order to circumvent the drawbacks of variational methods and adapt to the specificities of eco-evolutionary models. 
+% 
+The use of AD simply eliminates the effort required to obtain the model sensitivity to its parameters, and the state-of-the-art optimizers, together with the mini-batch method, ensure the efficiency and reliably of the method in handling highly nonlinear models.
+% 
+By contrasting competing hypotheses embedded in alternative models, \cref{chapii,chapiv} provide concrete examples, both with synthetic and empirical data, that the ML framework can succesfully elucidate eco-evolutionary mechanistic pathways.
+% 
+This work is part of an ongoing effort to blend ML and traditional models to gain scientific understanding and extrapolability \cite{XXX}. Importantly, in contrast to physical systems such as ocean and atmospheric systems \xxx, invariant laws are yet to be formulated (if they exist). While ML is mostly used to improve model forecast skill in weather and climate modelling \xxx, the fields of Biology and Economic can gain scientific knowledge through model selection. 
+% 
+Nevertheless, the proposed method is also relevant for improving the forecast of predictive eco-evolutionary model \cite{Urban2016}, and integrates the practical constraints of datasets including short time series with partial, noisy, shallow and independent observations \cite{Dornelas2018}.
+
+The ML framework is implemented in the multi-purpose Julia package \textbf{MiniBatchInference.jl} \cite{MiniBatchInference}, readily available to the scientific community. \textbf{MiniBatchInference.jl} is built around the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}. As such, the use of \textbf{MiniBatchInference.jl} requires very limited efforts to any user familiar with those libraries.
+
+Overall, the method proposed in \cref{chapii} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concret case examples in \cref{chapii, chapiii} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \cite{Urban2016}.
 
 
 \printbibliography[heading=subbibliography]
