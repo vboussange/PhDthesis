@@ -292,7 +292,7 @@ The investigation of the interplay between ecological and evolutionary processes
 game theory is formulated in terms of phe- notypes, thereby ignoring the complexity of the genotype-phenotype mapping. More
   - Validation of prediction with diff in graphs --> limitation: how to determine patch size
     - Investigate whether the metrics found are correlated with biodiversity patterns
-    - (i) using techniques to project real landscapes on graphs (see \cref{figSI:graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data.
+    - (i) using techniques to project real landscapes on graphs (see \cref{graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data.
   - Questions for our fundamental understanding, that may be adressed --> hindcasts are the most appropriate
     - environmental filtering?
     - What are the roles of distinct processes shaping biodiversity?

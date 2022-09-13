@@ -3,15 +3,10 @@
 % replace assets/ by ""
 \graphicspath{{./content/chap1_diff_in_graphs/figures/}}
 
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-\setcounter{table}{0}
-% \setcounter{page}{1}
-\makeatletter % changes the catcode of @ to 11
-\renewcommand{\thetable}{S\arabic{table}}
-\renewcommand{\theequation}{S\arabic{equation}}
-\renewcommand{\thefigure}{S\arabic{figure}}
-\makeatother % changes the catcode of @ back to 12
+% \setcounter{equation}{0}
+% \setcounter{figure}{0}
+% \setcounter{table}{0}
+% % \setcounter{page}{1}
 
 \section{Supplementary Note}
     \label{secSI:supmat}
@@ -73,7 +68,7 @@
     \begin{equation}\label{eqSI:sett1_popdyn_simple}
       \partial_t N_t^{(i)} = N_t^{(i)} \left[ b(1-m) - \frac{N_t^{(i)}}{K} \right] +  m b \sum_{j\neq i}\frac{a_{i,j}}{d_j}  N_t^{(j)} .
     \end{equation}
-    Competition stabilises the population size dynamics, which behaves deterministically. This is supported by \cref{figSI:pde-vs-IBM-trans-setting1_localpop}a, which shows how \cref{eqSI:sett1_popdyn_simple} accurately describes the population size for varying migration regimes. Nonetheless, stochastic fluctuations drive the dynamics of the neutral trait distribution. Attempting to characterise the neutral trait distribution with the same strategy, this time setting $\phi(n^{(i)}_t) = n^{(i)}_t(u)$, yields
+    Competition stabilises the population size dynamics, which behaves deterministically. This is supported by \cref{pde-vs-IBM-trans-setting1_localpop}a, which shows how \cref{eqSI:sett1_popdyn_simple} accurately describes the population size for varying migration regimes. Nonetheless, stochastic fluctuations drive the dynamics of the neutral trait distribution. Attempting to characterise the neutral trait distribution with the same strategy, this time setting $\phi(n^{(i)}_t) = n^{(i)}_t(u)$, yields
     %
     \begin{equation}\label{eqSI:detern_approx_infgen_sett1}
     \begin{split}
@@ -84,9 +79,9 @@
   \end{split}
 \end{equation}
 %
-Solving for \cref{eqSI:detern_approx_infgen_sett1}, one can show that the variance of $n_t^{(i)}$ continuously grows in time (see \cref{figSI:pde-vs-IBM-trans-setting1_localpop}) and tends to infinity as time goes to infinity, which is an unrealistic behaviour considering finite populations. Intuitively, this reflects the fact that no stabilising force acts on the neutral trait distribution, such that random fluctuations play a major role in driving the dynamics of the stochastic process.
+Solving for \cref{eqSI:detern_approx_infgen_sett1}, one can show that the variance of $n_t^{(i)}$ continuously grows in time (see \cref{pde-vs-IBM-trans-setting1_localpop}) and tends to infinity as time goes to infinity, which is an unrealistic behaviour considering finite populations. Intuitively, this reflects the fact that no stabilising force acts on the neutral trait distribution, such that random fluctuations play a major role in driving the dynamics of the stochastic process.
 %
-\Cref{figSI:pde-vs-IBM-trans-setting1_localpop} shows how IBM trajectories significantly differ from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{figSI:pde-vs-IBM-mresponse-setting1} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} do not match those obtained from simulations of the IBM.
+\Cref{pde-vs-IBM-trans-setting1_localpop} shows how IBM trajectories significantly differ from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{pde-vs-IBM-mresponse-setting1} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} do not match those obtained from simulations of the IBM.
 
 \subsubsection{Setting with heterogeneous selection}\label{sec:anal_sett_2}
 In contrast to the neutral trait dynamics, the adaptive distribution can successfully be approximated by a deterministic description because selection pressure acts as a stabilising force and stabilises the populations' adaptive trait, dampening the stochastic fluctuations.
@@ -134,7 +129,7 @@ Setting $m = 0$ \citep{Mirrahimi2020} shows that \cref{eqSI:PDE_adapt} admits a 
 %
 Therefore, the variance of the adaptive trait distribution stabilises to a finite value. Intuitively, this reflects the fact that the random fluctuations of the adaptive trait distribution are dampened by the stabilising force of selection. Provided that the selection strength $p$ is large enough, \cref{eqSI:PDE_adapt} is a good approximation of the adaptive trait distribution obtained from the stochastic process.
 %
-\Cref{figSI:pde-vs-IBM-trans-setting2_localpop} shows how IBM trajectories are similar to the ones obtained from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{figSI:pde-vs-IBM-mresponse-setting2} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} match those obtained from simulations of the IBM.
+\Cref{pde-vs-IBM-trans-setting2_localpop} shows how IBM trajectories are similar to the ones obtained from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{pde-vs-IBM-mresponse-setting2} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} match those obtained from simulations of the IBM.
 
 
 \subsection{Trait-dependent competition}\label{secSI:trait-dep-comp}
@@ -259,26 +254,23 @@ The mean field approximation involves the assumption that all vertices with simi
       \includegraphics[width=0.8\textwidth]{SI/setting1_neutr_M=9.pdf} 
   }
   \caption{Effect of $\l$ and $h_d$ on average population size $\bar{N}$ and neutral differentiation $Q_{ST,u}$ under the setting with no selection, analogous to \cref{fig:setting1_neutr_M=7} but for 1126 of the 261,080 undirected connected graphs with $M=9$ vertices.}
-  \label{figSI:setting1_neutr_M=9}
+  \label[SI]{setting1_neutr_M=9}
 \end{figure}
-\FloatBarrier
 
 
 \begin{figure}[t]
   \centering
     \includegraphics[width=\textwidth]{SI/betau_vs_K.pdf}
-    \caption{Effect of the carrying capacity $K$ on $Q_{ST,u}$, $Q_{ST,s}$ and metapopulation size $N$ for the line graph with $M=7$ vertices for $m=0.1$. Decreasing $K$ increases $Q_{ST,u}$ as it favours drift, but it does not influence $Q_{ST,s}$. Each boxplot is based on 5 replicate simulations of the IBM, and fade dots represent single values for each replicate.}\label{figSI:betau_vs_K}
+    \caption{Effect of the carrying capacity $K$ on $Q_{ST,u}$, $Q_{ST,s}$ and metapopulation size $N$ for the line graph with $M=7$ vertices for $m=0.1$. Decreasing $K$ increases $Q_{ST,u}$ as it favours drift, but it does not influence $Q_{ST,s}$. Each boxplot is based on 5 replicate simulations of the IBM, and fade dots represent single values for each replicate.}\label[SI]{betau_vs_K}
 \end{figure}
 
-\FloatBarrier
 
 \begin{figure}[t]
   \centerline{
       \includegraphics[width=\textwidth,trim= 0 0cm 0cm 0cm]{SI/pde-vs-IBM-trans-setting2_localpop.pdf}}
     \caption{ Comparison of the adaptive trait density on one vertex obtained from \cref{eqSI:PDE_adapt} (left) and from the IBM simulations (right) in the setting with heterogeneous selection, for the star graph with $M=7$ vertices. The densities obtained from \cref{eqSI:PDE_adapt} and from the IBM are qualitatively similar.}
-    \label{figSI:pde-vs-IBM-trans-setting2_localpop}
+    \label[SI]{pde-vs-IBM-trans-setting2_localpop}
 \end{figure}
-\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%PDE vs IBM diversity %%%%%%%%%%%%%
@@ -288,9 +280,8 @@ The mean field approximation involves the assumption that all vertices with simi
   \centering
       \includegraphics[width=0.8\textwidth,trim= 0 0cm 0cm 0cm]{SI/pde-vs-IBM-mresponse-setting2.pdf}
     \caption{ Comparison of $Q_{ST,s}$ and $N$ obtained from the deterministic approximation \cref{eqSI:PDE_adapt} and from IBM simulations in the setting with heterogeneous selection, on the star graph with $M=7$ vertices. $Q_{ST,s}$ and population size obtained from \cref{eqSI:PDE_adapt} closely match the IBM simulations. Each plain dot represents average results from 5 replicate simulations of the IBM, bars represent one standard deviation, and each fade dot represents a single replicate value.}
-    \label{figSI:pde-vs-IBM-mresponse-setting2}
+    \label[SI]{pde-vs-IBM-mresponse-setting2}
 \end{figure}
-\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%r_theta %%%%%%%%%%%%%
@@ -300,9 +291,8 @@ The mean field approximation involves the assumption that all vertices with simi
       \includegraphics[width=\textwidth]{SI/r_theta_for_different_graphs.pdf} 
   }
   \caption{Graphs with spatial distribution of habitat types corresponding to different habitat assortativity $r_\Theta$. Graphs (a–d) can be described exactly with a mean field approach, as blue and red vertices have an equivalent position on the graph.}
-  \label{figSI:graph_rtheta}
+  \label[SI]{graph_rtheta}
 \end{figure}
-\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%   PDE m=0.3  %%%%%
@@ -312,7 +302,7 @@ The mean field approximation involves the assumption that all vertices with simi
       \includegraphics[width=\textwidth]{SI/sett2_adapt_IBM_horizontal_0.5.pdf} 
   }
   \caption{Effects of habitat heterogeneity $r_\Theta$ on $Q_{ST,s}$ and average population size $\bar{N}$ for all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$, obtained for similar simulations to those in \cref{fig:sett2_adapt_IBM_horizontal_0.1} with $m = 0.5$. In (a) and (b), each dot represents average results from 5 replicate simulations of the IBM, the colour scale corresponds to the proportion of the graph with similar $x$ and $y$ axis values (graph density), and the blue lines correspond to results obtained from the mean field, deterministic approximation \cref{eq:PDE_adapt_rtheta}. Deviations from the mean field, deterministic approximation \cref{eq:PDE_adapt_rtheta} can be explained by differences in $\l$ and $h_d$ between the graphs.}
-  \label{figSI:sett2_adapt_IBM_horizontal_0.5}
+  \label[SI]{sett2_adapt_IBM_horizontal_0.5}
 \end{figure}
 \FloatBarrier
 
@@ -323,7 +313,7 @@ The mean field approximation involves the assumption that all vertices with simi
   }
   \caption{Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,s}$ and $Q_{ST,u}$ obtained from multivariate regression models independently fitted for low and high migration regimes on average results from 5 replicate simulations of the IBM, analogous \cref{fig:setting2_4plots_M=7}c--d but for 1126 of the 261,080 undirected connected graphs with $M=9$ vertices and varying $r_\Theta$ (see \nameref{sec:methods} for details). Error bars show 95\% confidence intervals.
 }
-  \label{figSI:setting2_2plots_M=9}
+  \label[SI]{setting2_2plots_M=9}
 \end{figure}
 \FloatBarrier
 
@@ -340,7 +330,7 @@ The mean field approximation involves the assumption that all vertices with simi
   %
   (b) Grassland coverage for the considered region. Blue lines correspond to rivers and dashed grey lines correspond to country borders. Red crosses indicate the locations of the 83 graphs sampled for the simulations used in (c--d).
   (c--d) Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,s}$ and $Q_{ST,u}$ obtained from multivariate regression models independently fitted for low and high migration regimes to average results from 5 replicate simulations of the IBM on the 83 graphs which location is illustrated in (c) (see \cref{tableSI:coefficients_realgraphs} for simulation details). Error bars show 95\% confidence intervals.}
-  \label{figSI:graph_real_land}
+  \label[SI]{graph_real_land}
 \end{figure}
 \FloatBarrier
 
@@ -348,7 +338,7 @@ The mean field approximation involves the assumption that all vertices with simi
 \begin{figure}[t]
   \centering
     \includegraphics[width=0.9\textwidth]{SI/time_effect_QST_u_QST_s.png}
-    \caption{Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,u}$ in the setting with no selection and in the setting with heterogeneous selection for the time horizons $t=1000$ and $t=2000$, obtained from multivariate regression models independently fitted for low and high migration regimes to average results from 5 replicate simulations of the IBM on all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$ (see \nameref{sec:methods} for details). (a--c) illustrate that the effects of the topology metrics on $Q_{ST,u}$ and  $Q_{ST,s}$ remain constant for $t > 1000$ in both the settings without selection and with heterogeneous selection. Error bars show 95\% confidence intervals. }\label{figSI:time_effect_Q_ST_u}
+    \caption{Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,u}$ in the setting with no selection and in the setting with heterogeneous selection for the time horizons $t=1000$ and $t=2000$, obtained from multivariate regression models independently fitted for low and high migration regimes to average results from 5 replicate simulations of the IBM on all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$ (see \nameref{sec:methods} for details). (a--c) illustrate that the effects of the topology metrics on $Q_{ST,u}$ and  $Q_{ST,s}$ remain constant for $t > 1000$ in both the settings without selection and with heterogeneous selection. Error bars show 95\% confidence intervals. }\label[SI]{time_effect_Q_ST_u}
 \end{figure}
 
 \FloatBarrier
@@ -357,11 +347,8 @@ The mean field approximation involves the assumption that all vertices with simi
   \centering
       \includegraphics[width=\textwidth]{SI/pde-vs-IBM-trans-setting1_localpop.pdf}
     \caption{ Comparison of the neutral trait density on one vertex obtained from \cref{eqSI:detern_approx_infgen_sett1} (left) and from the IBM simulations (right) in the setting with no selection, for the chain graph. The densities obtained from \cref{eqSI:detern_approx_infgen_sett1} and from the IBM are dissimilar.}
-    \label{figSI:pde-vs-IBM-trans-setting1_localpop}
+    \label[SI]{pde-vs-IBM-trans-setting1_localpop}
   \end{figure}
-\FloatBarrier
-
-
 \FloatBarrier
 
 \begin{figure}[t]
@@ -369,7 +356,7 @@ The mean field approximation involves the assumption that all vertices with simi
     \includegraphics[width=0.8\textwidth]{SI/pde-vs-IBM-mresponse-setting1.pdf} 
     \caption{Comparison of results obtained from the deterministic approximations \cref{eqSI:detern_approx_infgen_sett1,eqSI:sett1_popdyn_simple} and from IBM simulations in the setting with no selection, on the star graph with $M=7$ vertices. While \cref{eqSI:sett1_popdyn_simple} can capture population size, \cref{eqSI:detern_approx_infgen_sett1} is not able to capture $Q_{ST,u}$. Each plain dot represents average results from 5 replicate simulations, bars represent one standard deviation, and each fade dot represents a single replicate value.
     }
-    \label{figSI:pde-vs-IBM-mresponse-setting1}
+    \label[SI]{pde-vs-IBM-mresponse-setting1}
 \end{figure}
 \clearpage
 
@@ -377,7 +364,7 @@ The mean field approximation involves the assumption that all vertices with simi
 %%%%%%%%%%tables %%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Tables}
-\FloatBarrier
+% \FloatBarrier
 
 \begin{table}  
   \caption{Linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ in the setting with no selection, based on all graphs with $M=7$ vertices. *** $P < 0.001$}
@@ -404,7 +391,7 @@ $R^2$          &                    0.546 &                    0.760 &          
     % }
   \label{tableSI:sett1_1var}
 \end{table}
-\FloatBarrier
+
 
 \begin{table}
   \caption{ Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ in the setting with no selection. *** $P < 0.001$}
@@ -432,7 +419,7 @@ Number of sim.  &                      853 &                      853 &         
     % }
     \label{tableSI:coefficients_set1}
 \end{table}
-\FloatBarrier
+
 
 \begin{table}
   \caption{ Multivariate linear regression model coefficients for the effect of the topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ in the setting with heterogeneous selection. *** $P < 0.001$}
@@ -462,7 +449,7 @@ $m$                & \multicolumn{1}{c}{0.01} &  \multicolumn{1}{c}{0.50} & \mul
     }
     \label{tableSI:coefficients_set2}
 \end{table}
-\FloatBarrier
+
 
 \begin{table}
   \caption{Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ on real graphs with $M=49$ vertices in the setting with heterogeneous selection. * $P < 0.05$,  ** $P < 0.01$, *** $P < 0.001$}
@@ -491,7 +478,6 @@ $R^2$       &                   0.313 &                    0.675 &              
   % }
 \label{tableSI:coefficients_realgraphs}
 \end{table}
-\FloatBarrier
 
 
 \begin{table}

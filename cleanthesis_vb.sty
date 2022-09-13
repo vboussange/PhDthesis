@@ -751,6 +751,28 @@
 	\newpage
 }
 
+\newcommand{\fancyabstractQuote}[4]{
+	\clearpage
+	\vspace*{\fill}
+	\cleanchapterquote{#1}{#2}{#3}
+	\topskip0pt
+	\vspace*{\fill}
+	\begin{quote} %150/150 words
+	\small{#4}
+	\end{quote}
+	\vspace*{\fill}
+	\newpage
+}
+
+\newenvironment{SI}{
+	% for adding an S to figures
+	\makeatletter % changes the catcode of @ to 11
+	\renewcommand{\thetable}{S\arabic{chapter}.\arabic{table}}
+	\renewcommand{\theequation}{S\arabic{chapter}.\arabic{equation}}
+	\renewcommand{\thefigure}{S\arabic{chapter}.\arabic{figure}}
+	\makeatother % changes the catcode of @ back to 12
+	}
+	{}
 
 % ******************************************
 % For CV

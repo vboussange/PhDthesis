@@ -6,15 +6,15 @@
 
 \graphicspath{{./content/chap3_mini-batching/}}
 
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-\setcounter{table}{0}
-% \setcounter{page}{1}
-\makeatletter % changes the catcode of @ to 11
-\renewcommand{\thetable}{S\arabic{table}}
-\renewcommand{\theequation}{S\arabic{equation}}
-\renewcommand{\thefigure}{S\arabic{figure}}
-\makeatother % changes the catcode of @ back to 12
+% \setcounter{equation}{0}
+% \setcounter{figure}{0}
+% \setcounter{table}{0}
+% % \setcounter{page}{1}
+% \makeatletter % changes the catcode of @ to 11
+% \renewcommand{\thetable}{S\arabic{table}}
+% \renewcommand{\theequation}{S\arabic{equation}}
+% \renewcommand{\thefigure}{S\arabic{figure}}
+% \makeatother % changes the catcode of @ back to 12
 
 \section{Supplementary Information}
 \label{secSI:supmat}
@@ -56,7 +56,7 @@ Considering the observation function $h$, it follows that
 	&\|h(x(t)) - h(x_{\delta x_0}(t))\| \sim \|h\left(\mathcal{R}_1\right) - h\left(\mathcal{R}_2\right) \| \text{    for }t\gg \frac{1}{\lambda}
 \end{aligned}
 \end{equation}
-(see \cref{figSI:perturbed_ICs} for an illustration of the divergence behaviour over time).
+(see \cref{perturbed_ICs} for an illustration of the divergence behaviour over time).
 
 
 \subsubsection{Perturbed model parameters}
@@ -91,7 +91,7 @@ Similar to a perturbation of the ICs, the difference in trajectories grows to th
 	&\|h(x(t)) - h(x_{\delta p}(t))\| \sim \|h\left(\mathcal{R}_1\right) - h\left(\mathcal{R}_2\right) \| \text{    for }t\gg \frac{1}{\lambda}
 \end{aligned}
 \end{equation}
-(see \cref{figSI:perturbed_p} for an illustration of the divergence behaviour over time).
+(see \cref{perturbed_p} for an illustration of the divergence behaviour over time).
 
 %% 
 In the following section, we call the first divergence regime the informative divergence regime, where the loss grows with the distance to the true parameters, and we call the second divergence regime the mixed divergence regime, where the loss is dominated by the random-like behaviour.
@@ -260,7 +260,7 @@ For this set of parameter values, the dynamics of the system are chaotic for $\o
 %     \centering
 %     \includegraphics[width=0.8\textwidth]{figures/ill_conditioning_training_epochs.pdf}
 %     \caption{Ill conditioning of $L_\M(\theta)$ leads to jumps cause by the very large gradient in a neighborhood of the true parameter.}
-%     \label{figSI:ill_conditioning_training_epochs}
+%     \label[SI]{ill_conditioning_training_epochs}
 % \end{figure}
 \begin{figure}[h]
     \centering
@@ -268,7 +268,7 @@ For this set of parameter values, the dynamics of the system are chaotic for $\o
     \caption{\textbf{Performance of the ML framework in supporting the predator omnivory hypothesis in a food web for the partial observation setting}. 
     % 
     In \textbf{A},  \textbf{B} and \textbf{C} where $r = 0.1, 0.2 ,0.3$, the lack of data prevents the correct estimation of the omnivory variant model parameters, leading model $\M_1$ to be supported for a wider range of $\omega$ in contrast to the complete observation setting (\cref{fig:AIC_likelihood_comparision_3-compartments-model}A).}
-    \label{figSI:model_selection_1sp}
+    \label[SI]{model_selection_1sp}
 \end{figure}
 
 \FloatBarrier
@@ -277,7 +277,7 @@ For this set of parameter values, the dynamics of the system are chaotic for $\o
     \centering
     \includegraphics[]{figures/SI/perturbed_ICs.png}
     \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta x_0}(t)$, obtained from the reference food-web model from \citep{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 100$, $x(t)$ and $x_{\delta x_0}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 100$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime.}
-    \label{figSI:perturbed_ICs}
+    \label[SI]{perturbed_ICs}
 \end{figure}
 
 \FloatBarrier
@@ -286,7 +286,7 @@ For this set of parameter values, the dynamics of the system are chaotic for $\o
     \centering
     \includegraphics[]{figures/SI/perturbed_p.png}
     \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta p}(t)$, obtained from the reference food-web model from \citep{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 40$, $x(t)$ and $x_{\delta p}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 40$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime. }
-    \label{figSI:perturbed_p}
+    \label[SI]{perturbed_p}
 \end{figure}
 
 \FloatBarrier

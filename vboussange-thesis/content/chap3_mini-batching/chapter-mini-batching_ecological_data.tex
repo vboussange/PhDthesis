@@ -399,7 +399,7 @@ In the complete observation setting, for moderate observational noise ($r = 0.1$
 %
 As the observational noise increases the support strength naturally decreases, leading to an increased range of $\omega$ values where the simplest model $\M_1$ is favored or where no model is given strong support (\cref{fig:AIC_likelihood_comparision_3-compartments-model}\textbf{B}-\textbf{C}).
 % 
-On the other hand, in the partial observation setting, the lack of data prevents the correct estimation of the omnivory variant model parameters, leading model $\M_1$ to be supported for an even larger range of $\omega$ values (\cref{figSI:model_selection_1sp}).
+On the other hand, in the partial observation setting, the lack of data prevents the correct estimation of the omnivory variant model parameters, leading model $\M_1$ to be supported for an even larger range of $\omega$ values (\cref{model_selection_1sp}).
 
 %%
 Overall, the ML framework provides statistical support for the model embedding the most appropriate hypotheses given the available data. With appropriate data, the proposed ML framework can therefore elucidate mechanistic pathways and infer ecological processes by utilizing information-based model selection.
@@ -470,7 +470,7 @@ First, while the use of mini-batches smooths the loss surface and ensures better
 % More formally, the curvature of the loss function around the true parameters is decreased, which deteriorates the fisher information of the time series (see \cref{secSI:supmat}). 
 To circumvent this issue, iterative training can be performed, where the learning is initiated by a short batch length $K^{(s)}$ to identify the region with the most probable parameters, and in subsequent iterations the batch length is increased to improve the precision of the inference. 
 % 
-Iterative training could also improve the lack of statistical support obtained in hypothesis testing experiments (see simulations in \cref{fig:AIC_likelihood_comparision_3-compartments-model,figSI:model_selection_1sp} where none of the models is given statistical support), as it would increase differences in likelihood for parameter values around the neighbourhood of the true parameter values.
+Iterative training could also improve the lack of statistical support obtained in hypothesis testing experiments (see simulations in \cref{fig:AIC_likelihood_comparision_3-compartments-model,model_selection_1sp} where none of the models is given statistical support), as it would increase differences in likelihood for parameter values around the neighbourhood of the true parameter values.
 % 
 Second, our results highlight that the data might not provide enough constraints for a correct parametrization (\cref{fig:perfect_setting_multiple_TS}, partial observation setting and $S=1$). Pre-experimental analyses with simulated synthetic data might therefore be required to design the sampling protocol and campaign to ensure an adequate sampling effort \citep{Banks2017,Laubmeier2018}. % This can be done with Fisher information.
 %

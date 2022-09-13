@@ -28,7 +28,12 @@ $^3$ \small{Dynamic Macroecology, Land Change Science, Swiss Federal Research In
 % $^2${Email: \href{mailto:loic.pellissier@usys.ethz.ch}{\texttt{loic.pellissier@usys.ethz.ch}}}\smallskip\\
 % \smallskip
 
-\fancyabstract{
+\fancyabstractQuote{
+Thus, dare! your heritage, your acquisition, \\
+Stories, lessons from the mouths of your fathers, \\
+Laws and customs, names of the ancient Gods, \\
+Forget them with hardiness to raise your eyes \\
+like newborns, on divine nature.}{The Death of Empedocles (1st version)}{Friedrich Hölderlin}{
   The biological processes of ecological interactions, spatial transfers and evolution have been proposed as compelling forces to explain economic growth. While this analogy has delivered useful qualitative insights, whether eco-evolutionary processes can explain economic growth has not yet been quantitatively tested.
   % 
   Building upon an analogy between economic activities and biological functional groups, we investigate whether eco-evolutionary processes can explain the dynamics of economic systems.
@@ -291,7 +296,7 @@ In contrast, when the imprint of the underlying process on the dynamics is not s
 % 
 % On the other hand, $\Delta \BIC_{\modnull} < 10$ indicates that the imprint of the underlying processes on the dynamics is not strong enough, and in this case, the parsimony principle should favor the least complex model, the null model $\modnull$.
 % 
-These results hold for varying noise levels (see \cref{figSI:synthetic_test_all_AIC} for $\sigma = 0.3$), indicating that the models together with the maximum likelihood estimation method are well adapted to investigate the influence of eco-evolutionary processes with the dataset considered.
+These results hold for varying noise levels (see \cref{synthetic_test_all_AIC} for $\sigma = 0.3$), indicating that the models together with the maximum likelihood estimation method are well adapted to investigate the influence of eco-evolutionary processes with the dataset considered.
 %
 Based upon this experiment and classical model selection criterion \citep{Burnham2002}, we decide to accept the hypothesis that the null model is the best model given the data when $\Delta \BIC_{\modnull} \leq 10$. In addition, when $\BIC_{\M_i} - \BIC_{\modnull} < -10$ we conclude that $\M_i$ is supported against $\modnull$, and we conclude that $\M_i$ is the best model given the data if $\Delta \BIC_{\M_i} = 0 $ and if for all other model $\M_{j,j \neq i}$, we have that $\Delta \BIC_{\M_{j,j \neq i}} > 10$.
 %%
@@ -314,7 +319,7 @@ We apply the maximum likelihood estimation method detailed in the \nameref{sec:m
 % 
 Over the 100 countries investigated, only 79 countries have sufficiently long time series to be included in the analyses (countries with at least 20 years of data, see \nameref{sec:methods}), while 71 countries show consistent maximum likelihood estimates (best model coefficient of determination $R^2$ > 0).
 % 
-Among the 71 countries, we find that the best models have a good fit to the data, and capture well the long term growth of economic activities (median explained variance $R^2 = 0.92$, see \cref{fig:fits} and \cref{figSI:fit_alphan,figSI:fit_alphap,figSI:fit_delta,figSI:fit_mu} for graphical illustrations of the fit).
+Among the 71 countries, we find that the best models have a good fit to the data, and capture well the long term growth of economic activities (median explained variance $R^2 = 0.92$, see \cref{fig:fits} and \cref{fit_alphan,fit_alphap,fit_delta,fit_mu} for graphical illustrations of the fit).
 % 
 While this demonstrates the relevance of the proposed models, we observe discrepancies across countries in how well the best models perform (standard deviation of explained variance std$(R^2)= 0.07$, see \cref{fig:fits}\textbf{D} for a graphical illustration of the variance in terms of the model loglikelihoods).
 % 
@@ -351,11 +356,11 @@ In contrast, the model capturing economic activity transformations, $\modmu$, is
 % 
 While $\modalphan$, $\moddelta$, $\modmu$ and $\modalphap$, $\moddelta$, $\modmu$ implement complementary processes, $\modalphan$ and $\modalphap$ are structurally antagonistic, but are equally supported in some countries (see, e.g., FIN and FRA in \cref{fig:aggregate_countries}\textbf{A}). This ambiguity highlights that the success of each model arises from their ability to capture different features of the empirical data.
 % 
-For instance, $\modalphan$ is the only model capturing capital decrease (see, e.g., ARE in \cref{fig:fits,figSI:fit_alphan}) or very low capital growth (see, e.g., HRV in \cref{figSI:fit_alphan}).
+For instance, $\modalphan$ is the only model capturing capital decrease (see, e.g., ARE in \cref{fig:fits,fit_alphan}) or very low capital growth (see, e.g., HRV in \cref{fit_alphan}).
 % 
-$\modalphap$  captures well periods of exponential economic growth followed by a growth slow down, and correlation patterns in growth between activities (see, e.g., DEU and HUN in \cref{fig:fits,figSI:fit_alphap}). We find that this dynamics is associated with an increase in the self limitation coefficients $b_i$, that compensates the beneficial effect of positive interactions (\cref{fig:r_b}\textbf{B}). In contrast, the model $\modnull$ tends to overestimates the capital size for such dynamics.
+$\modalphap$  captures well periods of exponential economic growth followed by a growth slow down, and correlation patterns in growth between activities (see, e.g., DEU and HUN in \cref{fig:fits,fit_alphap}). We find that this dynamics is associated with an increase in the self limitation coefficients $b_i$, that compensates the beneficial effect of positive interactions (\cref{fig:r_b}\textbf{B}). In contrast, the model $\modnull$ tends to overestimates the capital size for such dynamics.
 %
-$\moddelta$ is the only model reproducing the oscillations observed in the empirical data (see e.g. FRA in \cref{fig:fits} and BEL, GBR in \cref{figSI:fit_delta}), where oscillations arise from the term $\overline{n\hc}$ through mismatches between the local capital size and the global capital size of a given economic activity. $\moddelta$ tends to overestimate the growth rate coefficients $r_i$ against other models (\cref{fig:r_b}\textbf{A}), due to a source-sink dynamics. The dispersal term act as capital sink for most economic activities in most countries, where only a handful of under-developed activities, relative to global trends in the world economy, are dependent on global economic trends and benefit from source dynamics (see, e.g., KOR in \cref{figSI:flux_delta}\textbf{C}).
+$\moddelta$ is the only model reproducing the oscillations observed in the empirical data (see e.g. FRA in \cref{fig:fits} and BEL, GBR in \cref{fit_delta}), where oscillations arise from the term $\overline{n\hc}$ through mismatches between the local capital size and the global capital size of a given economic activity. $\moddelta$ tends to overestimate the growth rate coefficients $r_i$ against other models (\cref{fig:r_b}\textbf{A}), due to a source-sink dynamics. The dispersal term act as capital sink for most economic activities in most countries, where only a handful of under-developed activities, relative to global trends in the world economy, are dependent on global economic trends and benefit from source dynamics (see, e.g., KOR in \cref{flux_delta}\textbf{C}).
 % 
 Characteristic trends of $\modmu$ are difficult to observe given the low number of cases where it is given statistical support. 
 % 
@@ -427,7 +432,7 @@ $\modalphan$ captures the deleterious effect that can have some economic activit
 % 
 Strong strength-of-evidence in favor of $\moddelta$ (\cref{fig:aggregate_countries}\textbf{D}) highlights that spatial transfers may greatly affect economic development. This support suggests that analogously to biological populations, economic activities spread across geographical space, possibly to increase profitability and reach new markets \citep{Luo2007}.
 % 
-A closer look at the effect of fluxes due to spatial tranfers on growth dynamics shows that, relative to the capital of economic activities, positive fluxes decrease over time in some countries (see, e.g., KOR in \cref{figSI:flux_delta}\textbf{B}). This pattern resembles a colonization process where net positive fluxes of biomass first contribute to the growth dynamics, while after some time, endogenous growth becomes the most important mechanism driving the dynamics \citep{Leibold2004}. 
+A closer look at the effect of fluxes due to spatial tranfers on growth dynamics shows that, relative to the capital of economic activities, positive fluxes decrease over time in some countries (see, e.g., KOR in \cref{flux_delta}\textbf{B}). This pattern resembles a colonization process where net positive fluxes of biomass first contribute to the growth dynamics, while after some time, endogenous growth becomes the most important mechanism driving the dynamics \citep{Leibold2004}. 
 %
 Lastly, the support for $\modmu$ indicates that predominant economic activities significantly transfer capital to smaller activities. This phenomenon evokes the diffusion process proposed in \citep{C.A.HidalgoB.Klinger} and is analogous to the processes of ecological succession \citep{Odum1969}, where new activities appear and develop thanks to spillovers an knowledge diffusion from other activities \citep{}.
 % 
