@@ -105,6 +105,7 @@ The investigation of the interplay between ecological and evolutionary processes
       - The package aim at hosting any solver algorithms that break down the curse of dimensionality, and is currently receiving contributions to implement the DeepBSDE scheme \cite{Han2018}
       - The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
       - It can solve intial conditions or terminal problems, with free or neumann boundary conditions
+      - landscape complexity is important in ecnomics \cite{Martin2007}
 - **Overall, \cref{chapi,chapiv} provide novel tools to anchor eco-evolutionary dynamics in more realistic settings, and use consider such processes to understand resolve empirical patterns and provide predictions.**
 
 #### Advances in inference methods for the investigation of eco-evolutionary processes
@@ -286,6 +287,8 @@ The investigation of the interplay between ecological and evolutionary processes
 
 
 - **The eco-evolutionary model on spatial graphs presented in \chapi, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth, and contribute to a formalization of the theory, to provide forecasts**
+- \cite{Nowak2004}: Evolutionary
+game theory is formulated in terms of phe- notypes, thereby ignoring the complexity of the genotype-phenotype mapping. More
   - Validation of prediction with diff in graphs --> limitation: how to determine patch size
     - Investigate whether the metrics found are correlated with biodiversity patterns
     - (i) using techniques to project real landscapes on graphs (see \cref{figSI:graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data.
