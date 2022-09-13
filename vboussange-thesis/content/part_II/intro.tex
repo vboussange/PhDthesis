@@ -11,7 +11,7 @@ This introduction is greatly inspired from Arnulf Jentzen lecture notes "On Deep
 \section*{Towards a Deep Learning-based approximation for PDEs}
 
 \subsection*{Curse of dimensionality}
-Standard approximation methods for nonlinear PDEs, such as finite difference approximation methods, finite element approximation methods, spectral Galerkin approximation methods, sparse grid approximation methods, and standard nested Monte Carlo approximation methods, suffer from the so-called curse of dimensionality in the sense that the number of computational operations of the employed approximation scheme grows exponentially in the PDE dimension $d \in N $or in the reciprocal $1/\epsilon$ of the prescribed approximation accuracy $\epsilon \in (0, \infty)$ and it is a very challenging problem to design and analyze approximation methods for nonlinear PDEs which overcome the curse of dimensionality in the sense that the number of computational operations of the proposed approximation algorithm grows at most polynomially in the PDE dimension $d \in N$ and in the reciprocal $1/\epsilon$ of the prescribed approximation accuracy $\epsilon \in (0, \infty)$. \cite{Beck2020}
+Standard approximation methods for nonlinear PDEs, such as finite difference approximation methods, finite element approximation methods, spectral Galerkin approximation methods, sparse grid approximation methods, and standard nested Monte Carlo approximation methods, suffer from the so-called curse of dimensionality in the sense that the number of computational operations of the employed approximation scheme grows exponentially in the PDE dimension $d \in N $or in the reciprocal $1/\epsilon$ of the prescribed approximation accuracy $\epsilon \in (0, \infty)$ and it is a very challenging problem to design and analyze approximation methods for nonlinear PDEs which overcome the curse of dimensionality in the sense that the number of computational operations of the proposed approximation algorithm grows at most polynomially in the PDE dimension $d \in N$ and in the reciprocal $1/\epsilon$ of the prescribed approximation accuracy $\epsilon \in (0, \infty)$. \citep{Beck2020}
 
 \subsubsection*{A concrete example for the finite difference scheme}
 For an ODE which solution is $u \colon [0,T] \to \R$, one needs to discretize the interval $[0,T]$ in $N_t$ time steps to find variables $u_1, \dots, u_{N_t}$ approximating $u(t_1), \dots, u(t_{N_t})$. Such variables can be found by solving a system of linear equations, in the case of an explicit scheme. For a PDE which solution is $u \colon [0,T] \times D \to \R$, $D\subseteq \R^d$ one needs to discretize the time space and the domain $D$. Assuming that dimension $i$ of $D$ is discretized in $N_i$, then one needs to write a linear system of equations with $N_t N_1 \dots N_d$ variables corresponding to $u(t_1, x_1^{(1)}, \dots, x_d^{(1)}), \dots, u(t_{N_t}, x_1^{(N_1)}, \dots, x_d^{(N_d)})$. Assuming that $N_t, N_1, \dots, N_d > N$, this means the number of variables to solve for is  greater than $N^{d+1}$. This means that the computational cost grows exponentially in the number of the dimension of the PDE.
@@ -105,9 +105,9 @@ State contribution
 
 Reverse engineering
 
-Approximate Bayesian Computation in Evolution and Ecology : \cite{Beaumont2010}
+Approximate Bayesian Computation in Evolution and Ecology : \citep{Beaumont2010}
 
-Parametric estimation applied to predict community stability: \cite{Cenci2019}
+Parametric estimation applied to predict community stability: \citep{Cenci2019}
 
 adjoint for solver 
 

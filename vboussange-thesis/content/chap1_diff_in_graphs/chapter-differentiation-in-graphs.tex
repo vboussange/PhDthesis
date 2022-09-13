@@ -39,51 +39,51 @@ $^2$ \small{Landscape Ecology, Institute of Terrestrial Ecosystems, Department o
 }
   
 \section{Introduction}  
-Biodiversity results from differentiation processes influenced by the features of the landscape over which populations are distributed \cite{Hubbel2001}. The documentation of high levels of species diversity in mountain regions and riverine systems suggests that complex connectivity patterns and habitat heterogeneity foster differentiation \cite{Rahbek2019a,Ding2020a,Dias2014,Guegan1998}.
+Biodiversity results from differentiation processes influenced by the features of the landscape over which populations are distributed \citep{Hubbel2001}. The documentation of high levels of species diversity in mountain regions and riverine systems suggests that complex connectivity patterns and habitat heterogeneity foster differentiation \citep{Rahbek2019a,Ding2020a,Dias2014,Guegan1998}.
 %
-However, hypotheses formulated based on empirical evidence should be complemented by mechanistic models to crystallise a causal understanding between processes and patterns \cite{Levin2002}. While the number of simulation studies is growing steadily \cite{Cabral2017}, such studies often lack a mathematical formalism to facilitate the interpretation of the model outcomes by providing an analytical underpinning to the simulation results \cite{Lion2016}.
+However, hypotheses formulated based on empirical evidence should be complemented by mechanistic models to crystallise a causal understanding between processes and patterns \citep{Levin2002}. While the number of simulation studies is growing steadily \citep{Cabral2017}, such studies often lack a mathematical formalism to facilitate the interpretation of the model outcomes by providing an analytical underpinning to the simulation results \citep{Lion2016}.
 
 %%
-Phenotypic differentiation processes emerge as a result of mutation, selection and migration and can be classified as neutral or adaptive \cite{Holderegger2006}.
+Phenotypic differentiation processes emerge as a result of mutation, selection and migration and can be classified as neutral or adaptive \citep{Holderegger2006}.
 %
-Neutral differentiation is initiated by the stochastic drift of local phenotypes when spatial isolation and limited dispersal create barriers to gene flow, allowing distinct phenotypes to emerge in spatially structured populations \cite{Slatkin1993a}.
+Neutral differentiation is initiated by the stochastic drift of local phenotypes when spatial isolation and limited dispersal create barriers to gene flow, allowing distinct phenotypes to emerge in spatially structured populations \citep{Slatkin1993a}.
 %
-In contrast, adaptive differentiation results from heterogeneous selection, which promotes distinct, locally well-adapted phenotypes in populations occupying patches with different habitat conditions \cite{Dieckmann1999}.
+In contrast, adaptive differentiation results from heterogeneous selection, which promotes distinct, locally well-adapted phenotypes in populations occupying patches with different habitat conditions \citep{Dieckmann1999}.
 %
-The evolution of neutral phenotypes and of adaptive phenotypes are not independent, as selective forces can indirectly select for those neutral phenotypes that happen to be linked to the fittest adaptive phenotypes, a mechanism called the “hitchhiking effect” \cite{Kaplan1989}. Moreover, selection can generate barriers to gene flow between populations in heterogeneous habitat landscapes \cite{Orsini2013,Wang2014}, a phenomenon coined “isolation by environment”, which can amplify neutral differentiation.
+The evolution of neutral phenotypes and of adaptive phenotypes are not independent, as selective forces can indirectly select for those neutral phenotypes that happen to be linked to the fittest adaptive phenotypes, a mechanism called the “hitchhiking effect” \citep{Kaplan1989}. Moreover, selection can generate barriers to gene flow between populations in heterogeneous habitat landscapes \citep{Orsini2013,Wang2014}, a phenomenon coined “isolation by environment”, which can amplify neutral differentiation.
 %
-How neutral processes, adaptive processes and their interplay are affected by landscape features is difficult to comprehend without a formalised mechanistic model \cite{GARANT2007}.
+How neutral processes, adaptive processes and their interplay are affected by landscape features is difficult to comprehend without a formalised mechanistic model \citep{GARANT2007}.
 
 %%
-Models link patterns to processes \cite{Levin2002}, and the explicit representation of the landscape within an eco-evolutionary model can lead to a causal understanding of how landscape features shape differentiation. Spatial graphs provide a convenient mathematical representation of landscapes, where vertices represent suitable habitats hosting populations, and edges capture the connectivity between habitats \cite{Dale2010}. Under ecological dynamics, metapopulation models have been used to study the role of graph topology in the persistence and stability of metapopulation \cite{Holland2008,Gilarranz2012,Mari2014,Gravel2016} and community diversity \cite{Carrara2012,Thompson2017,Suzuki2021}.
+Models link patterns to processes \citep{Levin2002}, and the explicit representation of the landscape within an eco-evolutionary model can lead to a causal understanding of how landscape features shape differentiation. Spatial graphs provide a convenient mathematical representation of landscapes, where vertices represent suitable habitats hosting populations, and edges capture the connectivity between habitats \citep{Dale2010}. Under ecological dynamics, metapopulation models have been used to study the role of graph topology in the persistence and stability of metapopulation \citep{Holland2008,Gilarranz2012,Mari2014,Gravel2016} and community diversity \citep{Carrara2012,Thompson2017,Suzuki2021}.
 %
-Evolutionary mechanisms are nevertheless fundamental drivers of diversity, and should therefore be explicitly integrated into models \cite{Pelletier2009}.
+Evolutionary mechanisms are nevertheless fundamental drivers of diversity, and should therefore be explicitly integrated into models \citep{Pelletier2009}.
 %
-Evolutionary game theory explores how graph topology impacts the fixation probability and the fixation time of a mutated phenotype \cite{Tkadlec2019}. However, the framework does not consider the continuous accumulation of mutations, and is therefore not suited to addressing the emergence of phenotypic differentiation. 
+Evolutionary game theory explores how graph topology impacts the fixation probability and the fixation time of a mutated phenotype \citep{Tkadlec2019}. However, the framework does not consider the continuous accumulation of mutations, and is therefore not suited to addressing the emergence of phenotypic differentiation. 
 %
-By combining a metapopulation model with a model of neutral evolution, \cite{Economo2007,Economo2010} investigated how graph topology affects neutral diversity. 
+By combining a metapopulation model with a model of neutral evolution, \citep{Economo2007,Economo2010} investigated how graph topology affects neutral diversity. 
 %
-Their approach demonstrated the key role of topological properties in shaping diversity, and its predictions could be matched with empirical data from e.g. river basins \cite{Muneepeerakul2008}. 
+Their approach demonstrated the key role of topological properties in shaping diversity, and its predictions could be matched with empirical data from e.g. river basins \citep{Muneepeerakul2008}. 
 %
 Nonetheless, diversity results from the combination of neutral and adaptive processes developing at the population level. A first principles modelling approach considering spatial graphs, but also building upon the elementary processes of ecological interactions, reproduction, mutation and migration may therefore be promising to investigate the emergence of diversity.
 
 %%
-Stochastic models for structured populations, rooted in the microscopic description of individuals, offer a generic framework for modelling eco-evolutionary dynamics \cite{Champagnat2006,Bansaye2015}. 
+Stochastic models for structured populations, rooted in the microscopic description of individuals, offer a generic framework for modelling eco-evolutionary dynamics \citep{Champagnat2006,Bansaye2015}. 
 %
 In particular, these models can capture the interplay between population dynamics, spatial dynamics and phenotypic evolution, while providing a rigorous set-up for analytical investigation. 
 %
-By anchoring this modelling paradigm in a mathematical framework, the work of Champagnat et al. \cite{Champagnat2006} generalises models of population genetics \cite{Burger2000} (investigating the evolution of the frequencies of alleles) and quantitative genetics \cite{Slatkin1978,Lande1991,Nagylaki1994} (investigating the evolution of phenotypic traits), which stimulated research into the link between spatial population structure and neutral differentiation. 
+By anchoring this modelling paradigm in a mathematical framework, the work of Champagnat et al. \citep{Champagnat2006} generalises models of population genetics \citep{Burger2000} (investigating the evolution of the frequencies of alleles) and quantitative genetics \citep{Slatkin1978,Lande1991,Nagylaki1994} (investigating the evolution of phenotypic traits), which stimulated research into the link between spatial population structure and neutral differentiation. 
 %
-The framework embraces density-dependent selection, which could explain the emergence of phenotypic differentiation from competition processes \cite{Dieckmann1999}, and how spatial segregation can emerge as a byproduct of these adaptive processes along environmental gradients \cite{Doebeli2003}. Related models have addressed the effects of landscape dynamics and habitat heterogeneity on adaptive differentiation, providing mathematical insights into the dynamics \cite{Meszena1997,Aguilee2012,Debarre2013,Wickman2017,Polechova2018,Mirrahimi2020}. 
+The framework embraces density-dependent selection, which could explain the emergence of phenotypic differentiation from competition processes \citep{Dieckmann1999}, and how spatial segregation can emerge as a byproduct of these adaptive processes along environmental gradients \citep{Doebeli2003}. Related models have addressed the effects of landscape dynamics and habitat heterogeneity on adaptive differentiation, providing mathematical insights into the dynamics \citep{Meszena1997,Aguilee2012,Debarre2013,Wickman2017,Polechova2018,Mirrahimi2020}. 
 %
-Because it accounts for finite population size, the baseline model of Champagnat et al. \cite{Champagnat2006} can also capture neutral differentiation dynamics and therefore the coupling between neutral and adaptive processes \cite{Billiard2015,Anceschi2019}.
+Because it accounts for finite population size, the baseline model of Champagnat et al. \citep{Champagnat2006} can also capture neutral differentiation dynamics and therefore the coupling between neutral and adaptive processes \citep{Billiard2015,Anceschi2019}.
 %
-Nonetheless, the aforementioned studies were not spatially explicit \cite{Billiard2015,Anceschi2019} or they assumed regular spatial structures (regular graphs \cite{Meszena1997,Aguilee2012,Debarre2013,Mirrahimi2020} or continuous space \cite{Doebeli2003,Wickman2017,Polechova2018}), therefore not addressing the role of the spatial complexity of landscapes.
+Nonetheless, the aforementioned studies were not spatially explicit \citep{Billiard2015,Anceschi2019} or they assumed regular spatial structures (regular graphs \citep{Meszena1997,Aguilee2012,Debarre2013,Mirrahimi2020} or continuous space \citep{Doebeli2003,Wickman2017,Polechova2018}), therefore not addressing the role of the spatial complexity of landscapes.
 %
 A stochastic individual-based model using spatial graphs as a representation of the landscape could help formalise fundamental links between landscape features and phenotypic differentiation.
 
 %%
-A key challenge is to understand how individual dynamics result in the emergence of differentiation in complex landscapes \cite{Manel2003}. Here, we investigate how complex connectivity patterns and habitat heterogeneity affect both neutral and adaptive phenotypic differentiation by constructing an individual-based model (IBM) that accounts for eco-evolutionary dynamics on spatial graphs.
+A key challenge is to understand how individual dynamics result in the emergence of differentiation in complex landscapes \citep{Manel2003}. Here, we investigate how complex connectivity patterns and habitat heterogeneity affect both neutral and adaptive phenotypic differentiation by constructing an individual-based model (IBM) that accounts for eco-evolutionary dynamics on spatial graphs.
 %
 The individuals disperse between habitat patches and possess co-evolving neutral and adaptive traits.
 %
@@ -102,7 +102,7 @@ Overall, our study establishes causal links between landscape properties and pop
 \section{Results}
 
 \subsection{Eco-evolutionary model on spatial graphs}
-We establish an individual-based model (IBM) where individuals are structured over a trait space and a graph representing a landscape. For the sake of simplicity, we consider the case of asexual reproduction and haploid genetics \cite{Champagnat2006}. Individuals die, reproduce, mutate and migrate in a stochastic fashion, which together results in macroscopic properties.
+We establish an individual-based model (IBM) where individuals are structured over a trait space and a graph representing a landscape. For the sake of simplicity, we consider the case of asexual reproduction and haploid genetics \citep{Champagnat2006}. Individuals die, reproduce, mutate and migrate in a stochastic fashion, which together results in macroscopic properties.
 %
 The formulation of the stochastic IBM allows an analytical description of the dynamics at the population level, which links emergent properties to the elementary processes that generate them.
 
@@ -110,7 +110,7 @@ The trait space $\mathcal{X} \subseteq \R^d $ is continuous and can be split int
 %
 The graph denoted by $G$ is composed of a set of vertices $\{v_1,v_2,\dots,v_M\}$ that correspond to habitat patches (suitable geographical areas), and a set of edges that constrain the movement of individuals between the habitat patches.
 %
-We use the original measure of genetic differentiation for quantitative traits $Q_{ST}$ (standing for $Q$-statistics) in the case of haploid populations \cite{Lande1992,WHITLOCK2008}.
+We use the original measure of genetic differentiation for quantitative traits $Q_{ST}$ (standing for $Q$-statistics) in the case of haploid populations \citep{Lande1992,WHITLOCK2008}.
 %
 We denote the neutral trait value of the $k$-th individual on $v_i$ as $u_{k}^{(i)}$, the number of individuals on $v_i$ as $N^{(i)}$, the mean neutral trait on $v_i$ as $\bar{u}^{(i)}$, and the mean neutral trait in the metapopulation as $\bar{u}$. It follows that we quantify neutral differentiation $Q_{ST,u}$ as
 \begin{equation}\label{eq:def_Qsty}
@@ -119,11 +119,11 @@ We denote the neutral trait value of the $k$-th individual on $v_i$ as $u_{k}^{(
 where $\sigma^2_{B,u} = \E \left[\frac{1}{M} \sum_{i} \left(\bar{u}^{(i)} - \bar{u}\right)^2 \right]$ denotes the expected neutral trait variance between the vertices and  $\sigma^2_{W,u} =  \frac{1}{M} \sum_{i}^M \E \left[ \frac{1}{N^{(i)}} \sum_k  \left(u_k^{(i)} - \bar{u}^{(i)}\right)^2 \right]$ denotes the average expected neutral trait variance within vertices. We similarly quantify adaptive differentiation $Q_{ST,s}$.
 
 %%
-Following the Gillespie update rule \cite{Gillespie1976}, individuals with trait $x_k \in \mathcal{X}$ on vertex $v_i$ are randomly selected to give birth at rate $b^{(i)}(x_k)$ and die at rate $d(N^{(i)}) = \nicefrac{N^{(i)}}{K}$, where $K$ is the local carrying capacity. 
+Following the Gillespie update rule \citep{Gillespie1976}, individuals with trait $x_k \in \mathcal{X}$ on vertex $v_i$ are randomly selected to give birth at rate $b^{(i)}(x_k)$ and die at rate $d(N^{(i)}) = \nicefrac{N^{(i)}}{K}$, where $K$ is the local carrying capacity. 
 % 
 The definition of $d$ therefore captures competition, which is proportional to the number of individuals on a vertex and does not depend on the individuals' traits (we relax this assumption later on).
 %
-The offspring resulting from a birth event inherits the parental traits, which can independently be affected by mutations with probability $\mu$. A mutated trait differs from the parental trait by a random change that follows a normal distribution with variance $\sigma_\mu^2$ (corresponding to the continuum of alleles model \cite{Kimura1964}). The offspring can further migrate to neighbouring vertices by executing a simple random walk on $G$ with probability $m$.
+The offspring resulting from a birth event inherits the parental traits, which can independently be affected by mutations with probability $\mu$. A mutated trait differs from the parental trait by a random change that follows a normal distribution with variance $\sigma_\mu^2$ (corresponding to the continuum of alleles model \citep{Kimura1964}). The offspring can further migrate to neighbouring vertices by executing a simple random walk on $G$ with probability $m$.
 %
 A schematic overview of the two different settings considered is provided in \cref{fig:conceptual}. Under the setting with no selection, individuals are only characterised by neutral traits so that $\mathcal{X} = \mathcal{U}$.
 %
@@ -134,7 +134,7 @@ Under the setting with heterogeneous selection, each vertex of the graph $v_i$ i
  b^{(i)}(x_k) \equiv b^{(i)}(s_k) = b(1 - p(s_k - \Theta_i)^2)
 \end{equation}
 %
-where $p$ is the selection strength \cite{Mirrahimi2020}. This ensures that the maximum birth rate on $v_i$ is attained for $s_k = \Theta_i$, which results in a differential advantage that acts as an evolutionary stabilising force. In the following we consider two habitat types denoted by $\bcirc$ and $\rcirc$ with symmetric environmental conditions $\theta_\bcirc$ and $\theta_\rcirc$, so that $\Theta_i \in \{\theta_{\bcirc},\theta_{\rcirc}\}$ and $\theta_{\rcirc} = -\theta_{\bcirc} = \theta$, where $\theta$ can be viewed as the habitat heterogeneity \cite{Mirrahimi2020}.
+where $p$ is the selection strength \citep{Mirrahimi2020}. This ensures that the maximum birth rate on $v_i$ is attained for $s_k = \Theta_i$, which results in a differential advantage that acts as an evolutionary stabilising force. In the following we consider two habitat types denoted by $\bcirc$ and $\rcirc$ with symmetric environmental conditions $\theta_\bcirc$ and $\theta_\rcirc$, so that $\Theta_i \in \{\theta_{\bcirc},\theta_{\rcirc}\}$ and $\theta_{\rcirc} = -\theta_{\bcirc} = \theta$, where $\theta$ can be viewed as the habitat heterogeneity \citep{Mirrahimi2020}.
 
 \begin{figure}[t]%[\sidecaptionrelwidth][t]
   \centering
@@ -148,7 +148,7 @@ where $p$ is the selection strength \cite{Mirrahimi2020}. This ensures that the 
 
 \subsection{Deterministic approximation of the population dynamics under no selection}\label{sec:212}
 
-The model can be formulated as a measure-valued point process (\cite{Bansaye2015} and \nameref{secSI:supmat}). Under this formalism, we demonstrate in the \nameref{secSI:supmat} how the population size and the trait dynamics show a deterministic behaviour when a stabilising force dampens the stochastic fluctuations. This makes it possible to express the dynamics of the macroscopic properties with deterministic differential equations, connecting emergent patterns to the processes that generate them. In particular, in the setting of no selection, competition stabilises the population size fluctuations, and the dynamics can be considered deterministic and expressed as
+The model can be formulated as a measure-valued point process (\citep{Bansaye2015} and \nameref{secSI:supmat}). Under this formalism, we demonstrate in the \nameref{secSI:supmat} how the population size and the trait dynamics show a deterministic behaviour when a stabilising force dampens the stochastic fluctuations. This makes it possible to express the dynamics of the macroscopic properties with deterministic differential equations, connecting emergent patterns to the processes that generate them. In particular, in the setting of no selection, competition stabilises the population size fluctuations, and the dynamics can be considered deterministic and expressed as
 %
 \begin{equation}\label{eq:sett1_popdyn_simple}
   \partial_t N_t^{(i)} = N_t^{(i)} \left[ b(1-m) - \frac{N_t^{(i)}}{K} \right] + m b \sum_{j\neq i}\frac{a_{i,j}}{d_j} N_t^{(j)}
@@ -162,9 +162,9 @@ Assuming that all vertices with the same degree have an equivalent position on t
 %
 The quantity $\nicefrac{\normf{\sqrt{k}}^2}{\normf{k}}$, denoted as $h_d$, relates to the homogeneity in vertex degree of the graph and can therefore be viewed as a measure negatively associated with heterogeneity in connectivity. Simulations of the IBM illustrate that $h_d$ can explain differences in population size for complex graph topologies with varying migration regimes (\cref{fig:setting1_neutr_M=7}a for graphs with $M=7$ vertices and \cref{figSI:setting1_neutr_M=9}a for $M=9$). 
 %
-This analytical result is connected to theoretical work on reaction diffusion processes \cite{Colizza2007} and highlights that irregular graphs (graphs whose vertices do not have the same degree) result in unbalanced migration fluxes that affect the ecological balance between births and deaths. Highly connected vertices present an oversaturated carrying capacity ($N^{(i)} > bK$, see \nameref{sec:methods}), increasing local competition and lowering total population size compared with regular graphs (\cref{fig:setting1_neutr_M=7}a).
+This analytical result is connected to theoretical work on reaction diffusion processes \citep{Colizza2007} and highlights that irregular graphs (graphs whose vertices do not have the same degree) result in unbalanced migration fluxes that affect the ecological balance between births and deaths. Highly connected vertices present an oversaturated carrying capacity ($N^{(i)} > bK$, see \nameref{sec:methods}), increasing local competition and lowering total population size compared with regular graphs (\cref{fig:setting1_neutr_M=7}a).
 %
-Because populations with small sizes experience more drift (\cite{Burger2000} and \cref{figSI:betau_vs_K}), this result indicates that graph topology affects neutral differentiation not only through population isolation, but also by affecting population dynamics.
+Because populations with small sizes experience more drift (\citep{Burger2000} and \cref{figSI:betau_vs_K}), this result indicates that graph topology affects neutral differentiation not only through population isolation, but also by affecting population dynamics.
 
 Nonetheless, the stochasticity of the processes at the individual level can propagate to the population level and substantially affect the macroscopic properties.  
 %
@@ -177,7 +177,7 @@ We study a setting with no selection and investigate the effect of the graph top
 %
 When migration is limited, individuals' traits are coherent on each vertex but stochastic drift at the population level generates neutral differentiation between the vertices.
 %
-Migration attenuates neutral differentiation because it has a correlative effect on local trait distributions. Following \cite{Economo2007,Carrara2012,Thompson2017}, we expect that the intensity of the correlative effect depends on the average path length of the graph $\l$, defined as the average shortest path between all pairs of vertices \cite{Bounova2012}. For a constant number of vertices, $\l$ is strictly related to the mean betweenness centrality and quantifies the graph connectivity \cite{Bounova2012}. High $\l$ implies low connectivity and a greater isolation of populations, and hence we expect that graphs with high $\l$ are associated with high differentiation levels.
+Migration attenuates neutral differentiation because it has a correlative effect on local trait distributions. Following \citep{Economo2007,Carrara2012,Thompson2017}, we expect that the intensity of the correlative effect depends on the average path length of the graph $\l$, defined as the average shortest path between all pairs of vertices \citep{Bounova2012}. For a constant number of vertices, $\l$ is strictly related to the mean betweenness centrality and quantifies the graph connectivity \citep{Bounova2012}. High $\l$ implies low connectivity and a greater isolation of populations, and hence we expect that graphs with high $\l$ are associated with high differentiation levels.
 %
 We consider various graphs with an identical number of vertices and run simulations of the IBM to obtain the neutral differentiation level $Q_{ST,u}$ attained after a time long enough to discard transient dynamics (see \nameref{sec:methods}). 
 %
@@ -222,7 +222,7 @@ In the absence of selection and with competitive interactions, graphs with a hig
 
 We next consider heterogeneous selection and investigate the response of adaptive differentiation to the spatial distribution of habitat types, denoted as the $\Theta$-spatial distribution. 
 %
-Adaptive differentiation emerges from local adaptation, but migration destabilises adaptation as a result of the influx of maladaptive migrants. We expect that higher connectivity between vertices of similar habitat type increases the level of adaptive differentiation, because it increases the proportion of well-adapted migrants. Local adaptation can be investigated by approximating the stochastic dynamics of the trait distribution with a deterministic partial differential equation (PDE). We demonstrate under mean field assumption how the deterministic approximation can be reduced to an equivalent two-habitat model. We analyse the reduced model with the theory of adaptive dynamics \cite{Meszena1997,Mirrahimi2020} and find a critical migration threshold $m^\star$ that determines local adaptation. $m^\star$ depends on a quantity coined the habitat assortativity $r_\Theta$, and we demonstrate with numerical simulations that $r_\Theta$ determines the overall adaptive differentiation level $Q_{ST,s}$ reached at steady state in the deterministic approximation.
+Adaptive differentiation emerges from local adaptation, but migration destabilises adaptation as a result of the influx of maladaptive migrants. We expect that higher connectivity between vertices of similar habitat type increases the level of adaptive differentiation, because it increases the proportion of well-adapted migrants. Local adaptation can be investigated by approximating the stochastic dynamics of the trait distribution with a deterministic partial differential equation (PDE). We demonstrate under mean field assumption how the deterministic approximation can be reduced to an equivalent two-habitat model. We analyse the reduced model with the theory of adaptive dynamics \citep{Meszena1997,Mirrahimi2020} and find a critical migration threshold $m^\star$ that determines local adaptation. $m^\star$ depends on a quantity coined the habitat assortativity $r_\Theta$, and we demonstrate with numerical simulations that $r_\Theta$ determines the overall adaptive differentiation level $Q_{ST,s}$ reached at steady state in the deterministic approximation.
 
 Heterogeneous selection, captured by the dependence of the birth rate on $\Theta_i$, generates a stabilising force  that dampens the stochastic fluctuations of the adaptive trait distribution. The dynamics of the adaptive trait distribution consequently shows a deterministic behavior and we demonstrate in the \nameref{secSI:supmat} and \cref{figSI:pde-vs-IBM-trans-setting2_localpop,figSI:pde-vs-IBM-mresponse-setting2} that the number of individuals on $v_i$ with traits $s \in \Omega \subset \mathcal{S}$ can be approximated by the quantity $\int_\Omega n^{(i)}(s)ds$, where $n^{(i)}$ is a continuous function solution of the PDE
 %
@@ -254,7 +254,7 @@ as the habitat assortativity of the graph, which ranges from $-1$ to $1$.
 %
 When $r_\Theta = -1$, all edges connect dissimilar habitat types (disassortative graph), while as $r_\Theta$ tends towards $1$ the graph is composed of two clusters of vertices with identical habitat types (assortative graph).
 %
-\cref{eq:PDE_adapt_rtheta} can be analysed with the theory of adaptive dynamics \cite{Meszena1997,Debarre2013,Mirrahimi2020}, a mathematical framework that provides analytical insights by assuming a “trait substitution process”. Following this assumption, the mutation term in \cref{eq:PDE_adapt_rtheta} is omitted and the phenotypic distribution results in a collection of discrete individual types that are gradually replaced by others until evolutionary stability is reached (see \nameref{sec:methods} and \cite{Meszena1997,Debarre2013,Mirrahimi2020} for details). By applying the theory of adaptive dynamics, we find a critical migration rate $m^\star$
+\cref{eq:PDE_adapt_rtheta} can be analysed with the theory of adaptive dynamics \citep{Meszena1997,Debarre2013,Mirrahimi2020}, a mathematical framework that provides analytical insights by assuming a “trait substitution process”. Following this assumption, the mutation term in \cref{eq:PDE_adapt_rtheta} is omitted and the phenotypic distribution results in a collection of discrete individual types that are gradually replaced by others until evolutionary stability is reached (see \nameref{sec:methods} and \citep{Meszena1997,Debarre2013,Mirrahimi2020} for details). By applying the theory of adaptive dynamics, we find a critical migration rate $m^\star$
 \begin{equation}\label{eq:m*}
     m^\star = \frac{1}{(1-r_\Theta)}\frac{4 p \theta^2}{(1 + 3 p \theta^2)}
 \end{equation}
@@ -277,7 +277,7 @@ As a consequence, the habitat assortativity $r_\Theta$ increases the differentia
 
 \subsection{Effect of graph topology on adaptive differentiation under heterogeneous selection}\label{sec:result2b}
 %%
-To generalise the conclusions drawn from the mean field deterministic approximation \cref{eq:PDE_adapt_rtheta}, we generate different $\Theta$-spatial distributions for varying graph topology, and compare outputs of the IBM simulations with those of \cref{eq:PDE_adapt_rtheta} (see \nameref{sec:methods} for the details of the simulations). For each combination of $\Theta$-spatial distribution and graph, we compute the habitat assortativity $r_\Theta$, since $r_\Theta$ can be generalised from \cref{eq:r_theta_mf} to any graph topology following the original definition of \cite{Newman2003a} as
+To generalise the conclusions drawn from the mean field deterministic approximation \cref{eq:PDE_adapt_rtheta}, we generate different $\Theta$-spatial distributions for varying graph topology, and compare outputs of the IBM simulations with those of \cref{eq:PDE_adapt_rtheta} (see \nameref{sec:methods} for the details of the simulations). For each combination of $\Theta$-spatial distribution and graph, we compute the habitat assortativity $r_\Theta$, since $r_\Theta$ can be generalised from \cref{eq:r_theta_mf} to any graph topology following the original definition of \citep{Newman2003a} as
 \begin{equation}\label{eq:r_theta}
   r_\Theta = \frac{\Cov({ \Theta}_\times, { \Theta}_\wedge)}{\sigma_{{ \Theta}_\times} \sigma_{{ \Theta}_\wedge}}
 \end{equation}
@@ -370,26 +370,26 @@ $\l$ and $h_d$ therefore drive neutral differentiation with and without heteroge
 
 Using analytical tools and simulations, we have built upon a graph representation of landscapes and a stochastic individual-based model to investigate how landscape features drive phenotypic differentiation.
 %
-Our study is based on a first principles modelling approach \cite{Champagnat2006} describing the stochastic dynamics of individuals and capturing the interplay between population dynamics, phenotypic evolution and spatial dynamics in heterogeneous habitats. In contrast to metacommunity models \cite{Holland2008,Gilarranz2012,Mari2014,Gravel2016,Carrara2012,Thompson2017,Suzuki2021} and evolutionary metacommunity models \cite{Economo2007,Economo2010}, we have focused on differentiation at the population level. Quantitative genetics and population genetics studies have investigated the effect of topology on differentiation under the assumption of non-overlapping generations, constant population sizes and regular spatial structures \cite{Burger2000,Kimura1964,Lande1991,Nagylaki1994,Yeaman2011}. Generalising beyond these assumptions, our modelling framework accounts for population dynamics and includes competition and frequency-dependent selection. The systematic investigation of the effect of topology on differentiation over general graph ensembles and under different ecological settings shows that average path length $\l$, homogeneity in vertex degree $h_d$ and habitat assortativity $r_\Theta$ contribute equally to differentiation.
+Our study is based on a first principles modelling approach \citep{Champagnat2006} describing the stochastic dynamics of individuals and capturing the interplay between population dynamics, phenotypic evolution and spatial dynamics in heterogeneous habitats. In contrast to metacommunity models \citep{Holland2008,Gilarranz2012,Mari2014,Gravel2016,Carrara2012,Thompson2017,Suzuki2021} and evolutionary metacommunity models \citep{Economo2007,Economo2010}, we have focused on differentiation at the population level. Quantitative genetics and population genetics studies have investigated the effect of topology on differentiation under the assumption of non-overlapping generations, constant population sizes and regular spatial structures \citep{Burger2000,Kimura1964,Lande1991,Nagylaki1994,Yeaman2011}. Generalising beyond these assumptions, our modelling framework accounts for population dynamics and includes competition and frequency-dependent selection. The systematic investigation of the effect of topology on differentiation over general graph ensembles and under different ecological settings shows that average path length $\l$, homogeneity in vertex degree $h_d$ and habitat assortativity $r_\Theta$ contribute equally to differentiation.
 %
-These results support correlative studies that have associated population differentiation \cite{Manel2003,McRae2007} and species richness \cite{Liu2018,Dias2014,Rahbek2001,Kreft2007a,Davies2007,Veech2007,Guegan1998,Stein2014} with a variety of metrics used as surrogates for connectivity, connectivity heterogeneity and habitat heterogeneity. 
+These results support correlative studies that have associated population differentiation \citep{Manel2003,McRae2007} and species richness \citep{Liu2018,Dias2014,Rahbek2001,Kreft2007a,Davies2007,Veech2007,Guegan1998,Stein2014} with a variety of metrics used as surrogates for connectivity, connectivity heterogeneity and habitat heterogeneity. 
 %
 To further our understanding of the origin of spatial biodiversity patterns, the contribution of landscape properties to discrepancies in population differentiation could be investigated at large scales by (i) using techniques to project real landscapes on graphs (see \cref{figSI:graph_real_land}a--b); (ii) characterising the landscape features with $\l$, $h_d$ and $r_\Theta$; and (iii) relating the obtained metrics maps to observation data. 
 %
-More generally, the proposed eco-evolutionary model on spatial graphs could be combined with approximate bayesian computation to estimate ecological, spatial and evolutionary processes of real populations from observation data, similarly to \cite{Lepers2021}. This approach might improve current inferential techniques based on models that do not account for competition nor heterogeneous selection (see e.g. \cite{Petkova2015}).
+More generally, the proposed eco-evolutionary model on spatial graphs could be combined with approximate bayesian computation to estimate ecological, spatial and evolutionary processes of real populations from observation data, similarly to \citep{Lepers2021}. This approach might improve current inferential techniques based on models that do not account for competition nor heterogeneous selection (see e.g. \citep{Petkova2015}).
 %
 Overall, our results point to topology metrics that can connect spatial biodiversity patterns to the generating eco-evolutionary and spatial processes.
 
 %%
 In the absence of selection, neutral differentiation is more pronounced on graphs with a high average path length $\l$, but is also negatively associated with homogeneity in degree $h_d$ (\cref{fig:setting1_neutr_M=7}c--d).
 %
-$\l$ generalises the concept of dimensionality in \cite{Kimura1964,Lande1991,Nagylaki1994}, where it is shown that differentiation is lower for two-dimensional grid graphs compared with path graphs. $\l$ also closely relates to the concept of resistance distance shown theoretically and empirically to drive genetic differentiation \cite{McRae2006,McRae2007}.
+$\l$ generalises the concept of dimensionality in \citep{Kimura1964,Lande1991,Nagylaki1994}, where it is shown that differentiation is lower for two-dimensional grid graphs compared with path graphs. $\l$ also closely relates to the concept of resistance distance shown theoretically and empirically to drive genetic differentiation \citep{McRae2006,McRae2007}.
 %
-At the species level, a similar effect of $\l$ on $\beta$-diversity (pairwise differences in species composition) has been reported with the graph metacommunity model of \cite{Carrara2012} and with the graph eco-evolutionary metacommunity model of \cite{Economo2007}.
+At the species level, a similar effect of $\l$ on $\beta$-diversity (pairwise differences in species composition) has been reported with the graph metacommunity model of \citep{Carrara2012} and with the graph eco-evolutionary metacommunity model of \citep{Economo2007}.
 %
 Accounting for population dynamics and specifically including competition processes, we have shown that not only $\l$ but also $h_d$ affects neutral phenotypic differentiation (\cref{fig:setting1_neutr_M=7}c,d).
 %
-Our model realistically assumes that population growth is limited by the local carrying capacity. The latter becomes saturated on highly connected vertices in irregular graphs, an effect that has been experimentally documented in microcosm experiments \cite{Altermatt2018}. As a consequence, central vertices behave as bottlenecks and amplify the isolation of peripheral vertices \cite{Orsini2013}.
+Our model realistically assumes that population growth is limited by the local carrying capacity. The latter becomes saturated on highly connected vertices in irregular graphs, an effect that has been experimentally documented in microcosm experiments \citep{Altermatt2018}. As a consequence, central vertices behave as bottlenecks and amplify the isolation of peripheral vertices \citep{Orsini2013}.
 %
 The role of $h_d$ cannot be captured with classical metapopulation and quantitative genetics models or with models of evolutionary dynamics in graphs, as they assume constant population size.
 % 
@@ -398,17 +398,17 @@ This behaviour should be prevalent in patchy landscapes where interspecific comp
 Our study highlights that heterogeneity in connectivity can reinforce differentiation patterns through the creation of unbalanced migration fluxes which affect ecological equilibrium.
 
 %%
-Habitat assortativity $r_\Theta$ is a useful indicator for assessing how the spatial distribution of habitat types modulates local adaptation and adaptive differentiation in complex landscapes \cite{Richardson2014}.
+Habitat assortativity $r_\Theta$ is a useful indicator for assessing how the spatial distribution of habitat types modulates local adaptation and adaptive differentiation in complex landscapes \citep{Richardson2014}.
 %
 While adaptation has been extensively studied along
-environmental gradients \cite{Slatkin1973,Slatkin1978,Kirkpatrick1997,Polechova2015,Polechova2018,AndradeRestrepo2019,Doebeli2003}, landscapes can be patchy and it is unrealistic to assume regularity \cite{Dale2010}.
+environmental gradients \citep{Slatkin1973,Slatkin1978,Kirkpatrick1997,Polechova2015,Polechova2018,AndradeRestrepo2019,Doebeli2003}, landscapes can be patchy and it is unrealistic to assume regularity \citep{Dale2010}.
 %
-Our model of heterogeneous selection on spatial graphs extends the two-habitat setting investigated in \cite{Meszena1997,Yeaman2011,Debarre2013,Mirrahimi2020} and captures irregularity in connectivity between distinct habitats \cite{Dale2010}.
+Our model of heterogeneous selection on spatial graphs extends the two-habitat setting investigated in \citep{Meszena1997,Yeaman2011,Debarre2013,Mirrahimi2020} and captures irregularity in connectivity between distinct habitats \citep{Dale2010}.
 % 
 Similarly to the aforementioned studies, we have found a critical migration regime $m^\star$ that dictates the possibility of adaptation. 
-\Cref{eq:m*} indicates that $m^\star$ increases with increasing selection strength $p$ and with increasing environmental heterogeneity $\theta$, the latter playing a similar role as the slope of the environmental gradient in \cite{Slatkin1973,Slatkin1978,Polechova2015,Polechova2018}. Local adaptation would consequently be sustained under higher migration regimes following an increase in these parameters.
+\Cref{eq:m*} indicates that $m^\star$ increases with increasing selection strength $p$ and with increasing environmental heterogeneity $\theta$, the latter playing a similar role as the slope of the environmental gradient in \citep{Slatkin1973,Slatkin1978,Polechova2015,Polechova2018}. Local adaptation would consequently be sustained under higher migration regimes following an increase in these parameters.
 %
-Additionally, the critical migration regime $m^\star$ in \cref{eq:m*} involves the habitat assortativity $r_\Theta$, which must be regarded as a measure of habitat spatial auto-correlation based on the dispersal range of a species \cite{Richardson2014}. 
+Additionally, the critical migration regime $m^\star$ in \cref{eq:m*} involves the habitat assortativity $r_\Theta$, which must be regarded as a measure of habitat spatial auto-correlation based on the dispersal range of a species \citep{Richardson2014}. 
 %
 Our results indicate that for general habitat distributions, $r_\Theta$ is the main determinant of adaptive differentiation under sufficiently strong selection $p$ and high habitat heterogeneity $\theta$, irrespective of the graph topology (\cref{fig:setting2_4plots_M=7}c, \cref{figSI:setting2_2plots_M=9}a and \cref{figSI:graph_real_land}).
 %
@@ -417,19 +417,19 @@ As $p$ decreases, however, the effect of stochastic drift on $Q_{ST,s}$ should i
 Our results predict that in landscapes with heterogeneous habitats and where selection is strong, populations structured over assortative habitats are larger, support higher adaptive differentiation, and can be locally well-adapted even in the case where migration rates are high.
 
 %%
-Spatial eco-evolutionary feedbacks in heterogeneous habitats can critically affect differentiation \cite{Richardson2014}.
+Spatial eco-evolutionary feedbacks in heterogeneous habitats can critically affect differentiation \citep{Richardson2014}.
 %
-While most eco-evolutionary studies have investigated diversification by considering a unique adaptive trait \cite{Doebeli2003,Kirkpatrick1997,Polechova2015,Polechova2018}, distinguishing between neutral and adaptive processes is crucial \cite{Holderegger2006} and our work underlines the distinct responses of neutral and adaptive differentiation to landscape features (\cref{fig:setting2_4plots_M=7}c vs.\ \cref{fig:setting2_4plots_M=7}d).
+While most eco-evolutionary studies have investigated diversification by considering a unique adaptive trait \citep{Doebeli2003,Kirkpatrick1997,Polechova2015,Polechova2018}, distinguishing between neutral and adaptive processes is crucial \citep{Holderegger2006} and our work underlines the distinct responses of neutral and adaptive differentiation to landscape features (\cref{fig:setting2_4plots_M=7}c vs.\ \cref{fig:setting2_4plots_M=7}d).
 %
-Our study builds upon recent mathematical models that consider the co-evolution of neutral and adaptive traits \cite{Billiard2015,Anceschi2019} and extends those works to a spatial context. Our work provides an analytical framework to the concept of isolation by environment (IBE) \cite{Orsini2013}, which has been suggested to be one of the most important mechanisms governing differentiation in nature \cite{Wang2014}.
+Our study builds upon recent mathematical models that consider the co-evolution of neutral and adaptive traits \citep{Billiard2015,Anceschi2019} and extends those works to a spatial context. Our work provides an analytical framework to the concept of isolation by environment (IBE) \citep{Orsini2013}, which has been suggested to be one of the most important mechanisms governing differentiation in nature \citep{Wang2014}.
 %
-Heterogeneous selection leads to more isolation by modifying the fitness of migrants \cite{Polechova2018}, which further reduces gene flow \cite{Richardson2014} and therefore affects the level of neutral differentiation (\cref{fig:setting2_4plots_M=7}a) \cite{GARANT2007}.
+Heterogeneous selection leads to more isolation by modifying the fitness of migrants \citep{Polechova2018}, which further reduces gene flow \citep{Richardson2014} and therefore affects the level of neutral differentiation (\cref{fig:setting2_4plots_M=7}a) \citep{GARANT2007}.
 %
 Our work proposes a mechanism by which habitat assortativity, relative to the migration regime, controls the direction of the effect of habitat heterogeneity on differentiation (\cref{fig:setting2_4plots_M=7}d).
 %
-Patchy, heterogeneous habitats can promote neutral differentiation as a result of selection that reduces effective migration \cite{Stein2014}. Nonetheless, adaptive differentiation decreases substantially when migration is high relative to the critical migration regime $m^\star$. In this case, neutral differentiation should be higher in landscapes with more aggregated habitats \cite{Richardson2014}.
+Patchy, heterogeneous habitats can promote neutral differentiation as a result of selection that reduces effective migration \citep{Stein2014}. Nonetheless, adaptive differentiation decreases substantially when migration is high relative to the critical migration regime $m^\star$. In this case, neutral differentiation should be higher in landscapes with more aggregated habitats \citep{Richardson2014}.
 %
-Our study suggests that habitat assortativity must be considered for a complete understanding of differentiation in complex environments \cite{Stein2014}. 
+Our study suggests that habitat assortativity must be considered for a complete understanding of differentiation in complex environments \citep{Stein2014}. 
 
 In conclusion, we have established how differentiation can emerge at the population level from eco-evolutionary feedbacks in complex landscapes by using an analytical description of micro-evolutionary processes explicitly accounting for spatial dynamics over graphs.
 %
@@ -454,7 +454,7 @@ Viewing $\nicefrac{a_{i,j}}{d_j}$ as the probability that an individual on $v_i$
     \partial_t \bar{N}_t^{(k)} &= \bar{N}_t^{(k)} \left[ b(1-m)- \frac{\bar{N}_t^{(k)}}{K} \right] + m b k \sum_{k'\in V} \frac{P(k,k')}{k'} \bar{N}_t^{(k')} 
   \end{split}
 \end{equation}
-Assuming uncorrelated graphs for which $ \nicefrac{P(k,k')}{k'} = \nicefrac{P(k')k'}{\langle k\rangle}$, where ${\langle k \rangle}$ denotes the average degree of the graph \cite{Colizza2007}, yields 
+Assuming uncorrelated graphs for which $ \nicefrac{P(k,k')}{k'} = \nicefrac{P(k')k'}{\langle k\rangle}$, where ${\langle k \rangle}$ denotes the average degree of the graph \citep{Colizza2007}, yields 
 \begin{equation}\label{eq:pop_dyn_meanfield_uncor}
   \begin{split}
     \partial_t \bar{N}_t^{(k)} = \bar{N}_t^{(k)} \left[ b(1-m) - \frac{\bar{N}_t^{(k)}}{K} \right] + m b \frac{k}{\langle k \rangle}  \bar{N}_t
@@ -486,10 +486,10 @@ Considering that $P({\rcirc}) = P({\bcirc}) = \tfrac{1}{2}$ (habitats are equall
 \end{equation} 
 Combining \cref{eq:r_theta_p} with \cref{eq:PDE_adapt_intermediate} yields \cref{eq:PDE_adapt_rtheta}.
 %
-We show in the \nameref{secSI:supmat} how one can derive \cref{eq:r_theta_mf} from the general definition of assortativity given in \cref{eq:r_theta} and initially introduced in \cite{Newman2003a}.
+We show in the \nameref{secSI:supmat} how one can derive \cref{eq:r_theta_mf} from the general definition of assortativity given in \cref{eq:r_theta} and initially introduced in \citep{Newman2003a}.
 
 \subsection{Adaptive dynamics on graphs}
-The adaptive dynamics theory considers a monomorphic population that evolves following a “trait substitution process” \cite{Meszena1997}. Accordingly, the trait $s$ of the monomorphic metapopulation evolves gradually along the direction given by its fitness gradient, until it reaches a singular strategy $s^*$ for which the fitness gradient vanishes. By omitting the mutation term, \cref{eq:r_theta_mf} can be written in the matrix form
+The adaptive dynamics theory considers a monomorphic population that evolves following a “trait substitution process” \citep{Meszena1997}. Accordingly, the trait $s$ of the monomorphic metapopulation evolves gradually along the direction given by its fitness gradient, until it reaches a singular strategy $s^*$ for which the fitness gradient vanishes. By omitting the mutation term, \cref{eq:r_theta_mf} can be written in the matrix form
 \begin{equation}
   \partial_t \bar{\textbf n}_t(s) = M(s, \bar{\textbf N}_t) \, \bar{\textbf n}_t(s)
 \end{equation}
@@ -502,8 +502,8 @@ M(s, \bar{\textbf N}) =
   \tfrac{m}{2} (1-r_\Theta)b^{\bcirc}(s) & \rr^{\rcirc}(s,\bar{N}^{\rcirc})
 \end{bmatrix}
 \end{equation} 
-is the so-called projection matrix \cite{Meszena1997}, with 
-$\rr^{\bcirc}(s,\bar{N}^{\bcirc}) = b^{{\bcirc}}(s)(1+\tfrac{m}{2} (r_\Theta-1)) - \nicefrac{\bar{N}^{\bcirc}}{K}$. The overall fitness of individuals with trait $s$ is the leading eigenvalue of $M$, which we denote with $\lambda(s,\bar{\textbf N})$. We obtain the singular strategy $s^*$ by setting the fitness gradient $\frac{\partial \lambda}{\partial s} (s, \bar{\textbf N}) = 0$, from which we further obtain the demographic equilibrium $\bar{\textbf N}^{s^{*}}$. Because of symmetries, we must have $\bar{N}^{\bcirc,s^*} = \bar{N}^{\rcirc,s^*} $ and $s^* = \frac{\theta_{\bcirc} +\theta_{\rcirc}}{2} =0$, such that $\bar{N}^{\bcirc,s^*} = \bar{N}^{\rcirc,s^*} = bK(1 - p \theta^2)$. $s^*$ is said to be evolutionary stable if no mutants can invade, i.e. if $s^*$ locally maximises the fitness of a mutant with trait $y$ in the resident population with trait $s^*$, given by $\lambda(y, \bar{\textbf N}^{s^*})$ (see \cite{Meszena1997} for details). One can show that $\left[ \frac{\partial \lambda}{\partial y}(y, \bar{\textbf N}^{s^*}) \right]_{y = s^*} = 0$ and the condition for evolutionary stability becomes $ \left[ \frac{\partial^2 \lambda}{\partial y^2}(y, \bar{\textbf N}^{s^*}) \right]_{y = s^*} < 0 $. We compute and simplify this inequality through computer algebra (see Mathematica notebook provided in the simulation code), which leads to \cref{eq:m*}.
+is the so-called projection matrix \citep{Meszena1997}, with 
+$\rr^{\bcirc}(s,\bar{N}^{\bcirc}) = b^{{\bcirc}}(s)(1+\tfrac{m}{2} (r_\Theta-1)) - \nicefrac{\bar{N}^{\bcirc}}{K}$. The overall fitness of individuals with trait $s$ is the leading eigenvalue of $M$, which we denote with $\lambda(s,\bar{\textbf N})$. We obtain the singular strategy $s^*$ by setting the fitness gradient $\frac{\partial \lambda}{\partial s} (s, \bar{\textbf N}) = 0$, from which we further obtain the demographic equilibrium $\bar{\textbf N}^{s^{*}}$. Because of symmetries, we must have $\bar{N}^{\bcirc,s^*} = \bar{N}^{\rcirc,s^*} $ and $s^* = \frac{\theta_{\bcirc} +\theta_{\rcirc}}{2} =0$, such that $\bar{N}^{\bcirc,s^*} = \bar{N}^{\rcirc,s^*} = bK(1 - p \theta^2)$. $s^*$ is said to be evolutionary stable if no mutants can invade, i.e. if $s^*$ locally maximises the fitness of a mutant with trait $y$ in the resident population with trait $s^*$, given by $\lambda(y, \bar{\textbf N}^{s^*})$ (see \citep{Meszena1997} for details). One can show that $\left[ \frac{\partial \lambda}{\partial y}(y, \bar{\textbf N}^{s^*}) \right]_{y = s^*} = 0$ and the condition for evolutionary stability becomes $ \left[ \frac{\partial^2 \lambda}{\partial y^2}(y, \bar{\textbf N}^{s^*}) \right]_{y = s^*} < 0 $. We compute and simplify this inequality through computer algebra (see Mathematica notebook provided in the simulation code), which leads to \cref{eq:m*}.
 
 \subsection{Numerical simulations}
 The model was implemented in a multi-purpose Julia package called \texttt{EvoId.jl}, available at \href{https://github.com/vboussange/EvoId.jl}{https://github.com/vboussange/EvoId.jl}. For each result presented, $b = 1$, local carrying capacity $K = 150$, selection strength $p = 1$, mutation rate $\mu=0.1$, mutation range $\sigma_\mu = 5 \cdot 10^{-2}$, and total time span $t = 1000$. This parameter choice made it possible to discard transient dynamics while obtaining results in a reasonable computational time (see \cref{figSI:time_effect_Q_ST_u}).
@@ -512,11 +512,11 @@ In settings (1) and (2), we ran simulations on all of the 853 undirected connect
 %
 We then computed $Q_{ST,u}$ and $Q_{ST,s}$, which we further averaged over the last time steps and across the replicates.
 %
-Since the dynamics of $Q_{ST,u}$ is characterised by large quadratic variations, we simulated individuals with $d = 300$ neutral traits, where each trait can independently be affected by mutations. $Q_{ST,u}$ values presented were then obtained from the average $Q_{ST,u}$ for each trait. This reduced the variance of the numerical simulations and is also biologically meaningful because populations are characterised by many traits, most of which are neutral \cite{Holderegger2006}.
+Since the dynamics of $Q_{ST,u}$ is characterised by large quadratic variations, we simulated individuals with $d = 300$ neutral traits, where each trait can independently be affected by mutations. $Q_{ST,u}$ values presented were then obtained from the average $Q_{ST,u}$ for each trait. This reduced the variance of the numerical simulations and is also biologically meaningful because populations are characterised by many traits, most of which are neutral \citep{Holderegger2006}.
 %
 As initial conditions, $MK$ individuals were homogeneously distributed over all of the vertices, with traits centred on 0 and with standard deviation $\sigma_\mu$.
 %
-Graph metrics used for the meta-analysis were calculated using the \textbf{LightGraphs.jl} library \cite{Bromberger2017}. We numerically solved the PDEs with a finite difference scheme using \textbf{DifferentialEquations.jl} \cite{Rackauckas2017}, ensuring that the domain was large enough to avoid border effects.
+Graph metrics used for the meta-analysis were calculated using the \textbf{LightGraphs.jl} library \citep{Bromberger2017}. We numerically solved the PDEs with a finite difference scheme using \textbf{DifferentialEquations.jl} \citep{Rackauckas2017}, ensuring that the domain was large enough to avoid border effects.
 
 \subsection{Statistics and reproducibility}
 Statistical anyalses were conducted in Julia using \textbf{StatsKit.jl}. 
@@ -538,4 +538,4 @@ We thank Thomas Poulet, Sylvian Billiard, Sepideh Mirrahimi, Heike Lischke, Josh
 We thank two anonymous reviewers for constructive comments and valuable suggestions on a previous version of this article.
   
   
-\printbibliography[heading=subbibliography]
+% \printbibliography[heading=subbibliography]

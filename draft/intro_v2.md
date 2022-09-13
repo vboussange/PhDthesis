@@ -28,66 +28,66 @@ In v2, we only keep relevant bullet points, and make nice sentences
 ## Preface
 
 ## Biological and economic systems as complex adaptive systems
-**What are the similarities between biological and economic systems? Both are complex adaptive systems (CAS): they are composed of heterogeneous entities structured at different levels of organizations, that interact in nonlinear ways and experience evolutionary processes \cite{Levin}. The processes of interaction and evolution operate at one organizational level and result in emergent properties at a higher organisational level. In other words, they result in non-trivial properties that cannot be anticipated from the sole observation of individual entities.**
+**What are the similarities between biological and economic systems? Both are complex adaptive systems (CAS): they are composed of heterogeneous entities structured at different levels of organizations, that interact in nonlinear ways and experience evolutionary processes \citep{Levin}. The processes of interaction and evolution operate at one organizational level and result in emergent properties at a higher organisational level. In other words, they result in non-trivial properties that cannot be anticipated from the sole observation of individual entities.**
 
 
 XXX 
 
 
 - In biology is of particular interest the effects of reproduction, selection and mutation of traits, that act at the level of individual organisms but influence the populations level.
-  - This is the topic of population genetics \cite{MR0274068} and quantitative genetics \cite{falconer1996introduction}. 
+  - This is the topic of population genetics \citep{MR0274068} and quantitative genetics \citep{falconer1996introduction}. 
 - Similar is the effect of replication, selection and variations of population characteristics, acting at the population level, onto ecosystems properties.
   - trophic structure, 
   - diversity-productivity relationships, and
   - patterns of nutrient flux 
- - Elucidating these interactions across scales is fundamental to resolving the issue of biodiversity and ecosystem functioning, and requires a blending of insights from different fields investigating different scales, such as population biology and ecosystems science \cite{Levin1998}.
-- In economic systems is of recent interest the effect of replication, selection and variations of habits, customs, and organizational routines \cite{Hodgson2019}, acting at the level of firms, influencing the evolution of economic activities.
+ - Elucidating these interactions across scales is fundamental to resolving the issue of biodiversity and ecosystem functioning, and requires a blending of insights from different fields investigating different scales, such as population biology and ecosystems science \citep{Levin1998}.
+- In economic systems is of recent interest the effect of replication, selection and variations of habits, customs, and organizational routines \citep{Hodgson2019}, acting at the level of firms, influencing the evolution of economic activities.
 - 
 
   - XXX
 - Similar is the effect replication, selection and variations of economic activity characteristics onto economic systems characteristics, at the scale of a country
 - Despite the great complexity of ecosystems, regular patterns are empirically observed. 
   - For example, famous patterns that have fostered fundamental questions in biology, are
-    - average densities and body sizes of species in an area decrease as energy availability increases \cite{gaston2000pattern}
-    - Latitudinal gradients in species richness: \cite{Gaston2000}
+    - average densities and body sizes of species in an area decrease as energy availability increases \citep{gaston2000pattern}
+    - Latitudinal gradients in species richness: \citep{Gaston2000}
     - Species–energy relationships
     - Relationships between local and regional richness
-    - patterns in interaction networks \cite{Bascompte} and \cite{Scheffer}
-    - in particular, diversity hostspots in mountain regions \cite{Rahbek}
-    - species abundance relationship, where most species are rare \cite{preston1948commonness}
-    - structured networks: \cite{Bascompte2003}
+    - patterns in interaction networks \citep{Bascompte} and \citep{Scheffer}
+    - in particular, diversity hostspots in mountain regions \citep{Rahbek}
+    - species abundance relationship, where most species are rare \citep{preston1948commonness}
+    - structured networks: \citep{Bascompte2003}
   - For example, famous patterns that have fostered fundamental questions in economic systems, are
-    - Economic activities such as innovation and industry concentrate disproportionately in large cities. The ten most innovative cities in the United States account for 23% of the national population, but for 48% of its patents and 33% of its gross domestic product \cite{Nicholas2008}. 
-    - diversification of economies: \cite{Hidalgo}
+    - Economic activities such as innovation and industry concentrate disproportionately in large cities. The ten most innovative cities in the United States account for 23% of the national population, but for 48% of its patents and 33% of its gross domestic product \citep{Nicholas2008}. 
+    - diversification of economies: \citep{Hidalgo}
       - may be similar to differential regional growth pattern
     - fat tails in financial economics
-    - Zipf distribution characterises firm sizes, a result holding for data from multiple years and for various definitions of firm size \cite{Axtell2001}
-    - Zipf laws for cities \cite{gabaix1999zipf}
-    - economic networks that are structured \cite{C.A.HidalgoB.Klinger,Bustos2012,Saavedra2009a,Schweitzer2009,Giuliani2007}
-    - A review of Zipf laws \cite{Gabaix2009}
-- The modelling of coupled phenomena is identified as a major frontier in 21st century science \cite{Strogatz2001a}.
-- *The close interplay between ecological and evolutionary processes plays a fundamental role in the emergence of patterns in biological systems \cite{Pelletier2009}, and may influence the dynamics of economic systems \cite{Hodgson2019}.*
+    - Zipf distribution characterises firm sizes, a result holding for data from multiple years and for various definitions of firm size \citep{Axtell2001}
+    - Zipf laws for cities \citep{gabaix1999zipf}
+    - economic networks that are structured \citep{C.A.HidalgoB.Klinger,Bustos2012,Saavedra2009a,Schweitzer2009,Giuliani2007}
+    - A review of Zipf laws \citep{Gabaix2009}
+- The modelling of coupled phenomena is identified as a major frontier in 21st century science \citep{Strogatz2001a}.
+- *The close interplay between ecological and evolutionary processes plays a fundamental role in the emergence of patterns in biological systems \citep{Pelletier2009}, and may influence the dynamics of economic systems \citep{Hodgson2019}.*
 
 
 ## Eco-evolutionary feedbacks
-**The interplay between ecological and evolutionary processes critically affects the dynamics of biological systems \cite{Pelletier2009}.**
+**The interplay between ecological and evolutionary processes critically affects the dynamics of biological systems \citep{Pelletier2009}.**
 
 - Since Darwin, biology has been divived into two distinct branches
   - Ecology: study of interactions between idividuals and biotic and abiotic environment
   - Evolution: modification of living species through reproduction, mutation and natural selection
-- Eco evolution: interaction between ecology and evolution \cite{Hendry+2016}. 
-  - Recognized that evolution can be rapid and occur on similar time scales as ecology \cite{Hairston2005}
-  - the effect of ecological change on evolution has long been a focus of scientific research. The reverse effect gas only recently captured our attention \cite{Schoener2011} --> this is eco-evolutionary dynamics
+- Eco evolution: interaction between ecology and evolution \citep{Hendry+2016}. 
+  - Recognized that evolution can be rapid and occur on similar time scales as ecology \citep{Hairston2005}
+  - the effect of ecological change on evolution has long been a focus of scientific research. The reverse effect gas only recently captured our attention \citep{Schoener2011} --> this is eco-evolutionary dynamics
   - frequency dependence
-- Empirical evidences of eco-evolutionary dynamics (in p14 if \cite{Govaert2019a}):
+- Empirical evidences of eco-evolutionary dynamics (in p14 if \citep{Govaert2019a}):
   - spatial variation in biotic interactions (geographic mosaic of coevolution; Thompson, 2005),
   - impact population regulation and community dynamics (e.g., Abrams & Matsuda, 1997; Patel, Cortez, & Schreiber, 2018), in 
   - species coexistence via stabilizing mechanisms
-  - the equal importance of ecology and evolution on population dynamics: \cite{Ezard2009}
-  - \cite{Mooney2009}:
+  - the equal importance of ecology and evolution on population dynamics: \citep{Ezard2009}
+  - \citep{Mooney2009}:
     - In one recent example an annual plant, Brassica rapa exhibited very rapid microevolutionary change in response to a climate fluctuation that led to a multiyear drought [70]. There are likely to be important limits to the rates of climate warming that natural systems can adapt to and these should be deducible from both limits to evolutionary change and limits to the rates that species can move across the landscape tracking climate change.
 - Talk about evolutionary rescue and link it with your work on spatial graphs.
-- *Eco-evolutionary feedbacks must be accounted for in order to understand the mechanisms driving the dynamics of ecosystems \cite{Govaert2019a}. Because they are affected by analogous processes, this realisation should also apply to economic systems.*
+- *Eco-evolutionary feedbacks must be accounted for in order to understand the mechanisms driving the dynamics of ecosystems \citep{Govaert2019a}. Because they are affected by analogous processes, this realisation should also apply to economic systems.*
 
 Economic system as complex system alike to biology
 
@@ -95,77 +95,77 @@ Economic system as complex system alike to biology
 ## An urgent need for better models of complex adaptive systems.
 **The effect of anthropogenic pressure on ecosystems, together with climate change, is stressing their functioning. Ecosystems may approach criticla shift state, which in turn may greatly affect economic systems. It is more than urgent to better understand the fundamental processes in order mitigate the consequences.**
 
-- Increasing rates of species extinction \cite{Barnosky2011}.
-- \cite{Midgley2019}: prediction based on habitat models on the basis of mid-range climate-warming scenarios for 2050 that 15– 37% of species would be ‘committed to extinction
-- meta analysis of \cite{fischlin2007ecosystems}: 20–30% of plant and animal species would be at increasingly high risk of extinction as global mean temperatures exceed a warming of 2–3 8C above preindustrial levels.
-- \cite{Chen2011}: shifts of species : higher elevations at a median rate of 11.0 meters per decade, higher latitudes at a median rate of 16.9 kilometers per decade. \cite{Descombes2020}
+- Increasing rates of species extinction \citep{Barnosky2011}.
+- \citep{Midgley2019}: prediction based on habitat models on the basis of mid-range climate-warming scenarios for 2050 that 15– 37% of species would be ‘committed to extinction
+- meta analysis of \citep{fischlin2007ecosystems}: 20–30% of plant and animal species would be at increasingly high risk of extinction as global mean temperatures exceed a warming of 2–3 8C above preindustrial levels.
+- \citep{Chen2011}: shifts of species : higher elevations at a median rate of 11.0 meters per decade, higher latitudes at a median rate of 16.9 kilometers per decade. \citep{Descombes2020}
 - The plausibility of a planetary-scale ‘tipping point’ highlights the need to improve biological forecasting by detecting early warning signs of critical transitions on global as well as local scales, and by detecting feedbacks that promote such transitions. It is also necessary to address root causes of how humans are forcing biological changes.
-- \cite{Rahbek2019}: Process-based models at fine spatial scales, explicitly incorpo- rating microclimate variation within similar ele- vational bands and movement between isolated habitat patches, are urgently needed to predict the future ofmountain species under conditions of global environmental change.
+- \citep{Rahbek2019}: Process-based models at fine spatial scales, explicitly incorpo- rating microclimate variation within similar ele- vational bands and movement between isolated habitat patches, are urgently needed to predict the future ofmountain species under conditions of global environmental change.
 REFERENCES
-- Developing sustainable approaches to system use implies understanding what maintains resilience and how human intervention might affect it \cite{Levin1998}.
-- Current modelling approach  This entailare based on spatial distribution models, which learn the ecological niches of species are reproject it given environmental predictors.s important assumptions that may be not justified: \cite{Pearson2003} 
+- Developing sustainable approaches to system use implies understanding what maintains resilience and how human intervention might affect it \citep{Levin1998}.
+- Current modelling approach  This entailare based on spatial distribution models, which learn the ecological niches of species are reproject it given environmental predictors.s important assumptions that may be not justified: \citep{Pearson2003} 
   - three main critics
     - biotic interactions: novel biotic interactions represent a neglected but major driver of ecosystem modifications under climate change
-    - evolutioanry change: e.g. two species of bush cricket were show to have increased fractions of longer-winged (more disper- sive) individuals in recently founded populations, whilst two butterfly species ( Hesperia comma and Aricia agestis ) have increased the variety of habitat types that they can colonize. \cite{Thomas2001}
+    - evolutioanry change: e.g. two species of bush cricket were show to have increased fractions of longer-winged (more disper- sive) individuals in recently founded populations, whilst two butterfly species ( Hesperia comma and Aricia agestis ) have increased the variety of habitat types that they can colonize. \citep{Thomas2001}
     - species dispersal: Bioclimate envelope models do not account for species dispersal, but instead aim to predict the potential range of organisms under changed climate
 - *The understanding of the key mechanisms that affect ecosystem properties is of utmost importance to anticipate ecosystem shifts.*
 
 ## Endogenous forces in economic systems
-**The field of economics is concerned with understanding and predicting economic change \cite{Nelson2014}. Disaggregating the economic development of particular countries, certain countries have developed much more rapidly than others \cite{acemoglu2001colonial}. This idiosincracy has been explained by geographic and institutional arguments \cite{C.A.HidalgoB.Klinger}. Along mainstream economic theory, the economy or sector is assumed to be in equilibrium in the sense that demand and supply are balanced on all relevant markets. Along this theory, firms are rational in maximizing profits by adapting to demand and supply, and economic change is driven by exogenous forces, such as technological change. Evolutionary economics, promoted by the seminal work of \cite{Nelson2014}, criticizes this view and seeks to explain economic change by focusing on endogenous forces. Analogously to the processes shaping the dynamics of biological populations and ecosystems, evolutionary economics suggests that interactions between economic agents and evolutionary processes acting upon them transform the economy.**
+**The field of economics is concerned with understanding and predicting economic change \citep{Nelson2014}. Disaggregating the economic development of particular countries, certain countries have developed much more rapidly than others \citep{acemoglu2001colonial}. This idiosincracy has been explained by geographic and institutional arguments \citep{C.A.HidalgoB.Klinger}. Along mainstream economic theory, the economy or sector is assumed to be in equilibrium in the sense that demand and supply are balanced on all relevant markets. Along this theory, firms are rational in maximizing profits by adapting to demand and supply, and economic change is driven by exogenous forces, such as technological change. Evolutionary economics, promoted by the seminal work of \citep{Nelson2014}, criticizes this view and seeks to explain economic change by focusing on endogenous forces. Analogously to the processes shaping the dynamics of biological populations and ecosystems, evolutionary economics suggests that interactions between economic agents and evolutionary processes acting upon them transform the economy.**
 - The premise of evolutionary economics is that habits, customs and organizational routines play the role of genes and define the cohesive identity of an economic institution.
   - Habits, customs and organizational routines define firm business strategies, which determine how they transfrom commodities and knowledge into new knowledge, new technologies or other industrial products with more added value.
   - Strategies, in turn, define the fitness of firms, which grows in terms of assets and human capital, within an ecosystem of firms, continuously adapting and experiencing evolutionary processes.
-- Analogously to organsisms or biological populations, it is suggested that firms or economic activities interact positively or negatively \cite{Pistorius2007}, spread across space \cite{RogersEverettM2003DoI,Zahra2000}, and adapt \cite{Cordes2006} or transform into new econonmic institutions  \cite{Freeman2002,Hodgson2004,Aldrich2008}.
+- Analogously to organsisms or biological populations, it is suggested that firms or economic activities interact positively or negatively \citep{Pistorius2007}, spread across space \citep{RogersEverettM2003DoI,Zahra2000}, and adapt \citep{Cordes2006} or transform into new econonmic institutions  \citep{Freeman2002,Hodgson2004,Aldrich2008}.
 - As such, notorious economists such as Veblen or Freedman have proposed that the current paradigm to undersand economic change should be evolutionary biology.
-- As a matter of fact, a number of modelling approaches have borrowed concepts and methods from biology to quantitatively investigate the processes driving economic patterns \cite{Tacchella2018,Saavedra2009a,Scholl2020,Zhang2018,Modis1997,Saavedra2014,Farmer1999,Michalakelis2011,Marasco2016,Gatabazi2019,Cauwels56,Applegate2021,Suweis2015}.
+- As a matter of fact, a number of modelling approaches have borrowed concepts and methods from biology to quantitatively investigate the processes driving economic patterns \citep{Tacchella2018,Saavedra2009a,Scholl2020,Zhang2018,Modis1997,Saavedra2014,Farmer1999,Michalakelis2011,Marasco2016,Gatabazi2019,Cauwels56,Applegate2021,Suweis2015}.
 - Nonetheless, none of those studies have adressed whether eco-evolutionary processes could explain the dynamics of economic activity at the national scale, and how could it explain difference in economic development across countries.
 
 ## Forward modelling of eco-evolutionary processes
 
-**Eco-evolutionary processes are difficult to observe in biological systems, and conducting controlled experiments to quantify their roles is usually not possible \cite{Pontarp2019}. As such, a deductive method relying on forward modelling has traditionally been used to investigate the effect of eco-evolutionary processes \cite{Brummitt2020}. Along this approach, hypotheses are embedded in a model -- so called mechanistic model \cite{XXX} --, wich forward integration generates predictions. The resulting qualitative dynamics and/or quantitative predictions are validated against common intuition and empirical data, and further refined to elaborate a theory \cite{Sayama,Brummitt2020,Schmidt2009}.**
+**Eco-evolutionary processes are difficult to observe in biological systems, and conducting controlled experiments to quantify their roles is usually not possible \citep{Pontarp2019}. As such, a deductive method relying on forward modelling has traditionally been used to investigate the effect of eco-evolutionary processes \citep{Brummitt2020}. Along this approach, hypotheses are embedded in a model -- so called mechanistic model \citep{XXX} --, wich forward integration generates predictions. The resulting qualitative dynamics and/or quantitative predictions are validated against common intuition and empirical data, and further refined to elaborate a theory \citep{Sayama,Brummitt2020,Schmidt2009}.**
 
 - model idea: experience of thought,to understand the cause and consequences of miscroscopic rules and laws
   - Simple mathematical models to investigate some long standing questions in ecology
-    - \cite{Bascompte1995}: theoretical has focused on the spatio temporal dynamics generated by simple ecological models - simple rules are able to produce complex spatio teporal patterns. This is improving oru understanding of a bunch of problems.
-    - \cite{May1976}: simple mathematical models with very complicated dynamics
+    - \citep{Bascompte1995}: theoretical has focused on the spatio temporal dynamics generated by simple ecological models - simple rules are able to produce complex spatio teporal patterns. This is improving oru understanding of a bunch of problems.
+    - \citep{May1976}: simple mathematical models with very complicated dynamics
 - Fisher, Wright and Haldane, the founders of evolutionary dynamics, have participated in generating the new synthesis, assuming strong assumptions to derive predictions from rule based modelling.
-  - A major limitation of current quantitative genetics theory is the reliance on simplified ecological scenarios that are not representative ofthe complexityofeco-evolutionary feedbacks innature \cite{Lion2022}
+  - A major limitation of current quantitative genetics theory is the reliance on simplified ecological scenarios that are not representative ofthe complexityofeco-evolutionary feedbacks innature \citep{Lion2022}
 - in parallel, work of Volterra:
   - mechanisms underlying the observed fluctuations in the Adriatic fishers. Volterra demonstrated that his equations would have a natural tendency to oscillate.
-- adaptive dynamics: fitness landscape, and analysis of invasion, introduce in \cite{Metz1995}. Provides a mathematical framework to study the interplay between ecological and evolutioanry processes
+- adaptive dynamics: fitness landscape, and analysis of invasion, introduce in \citep{Metz1995}. Provides a mathematical framework to study the interplay between ecological and evolutioanry processes
   - major contribution: diversification due to evolutionary branching sheds a new light on the fundamental quesetion of the origin of species. Before, allopatric speciation. 
   - controverse relative to the biological hypotheses
-  - while adaptive dynamics has been successful in taking into account environmental feedbacks and the emergence of polymorphism under frequency- dependent disruptive selection, it does so by assuming strong constraints on the mutation process and standing variation in the population \cite{Lion2022}
+  - while adaptive dynamics has been successful in taking into account environmental feedbacks and the emergence of polymorphism under frequency- dependent disruptive selection, it does so by assuming strong constraints on the mutation process and standing variation in the population \citep{Lion2022}
 - Computational approaches have allowed to investigate more realistic scenarios
   - Cellular automata, developed by John von Neumann in the 1940
   - network, with network science (Barabasi: How Everything Is Connected to Everything Else and What It Means for Business, Science, and Everyday Life, Barabasi: Network Science)
-  - ABM \cite{deangelis2018individual,Doebeli2003,deangelis2005individual}
+  - ABM \citep{deangelis2018individual,Doebeli2003,deangelis2005individual}
     - mainly numerical studies
     - analysis of spatial population dynamics: 
-      - moment equations with closures \cite{law1999moment,Gandhi2000} --> permit to reduce the dimensionality
+      - moment equations with closures \citep{law1999moment,Gandhi2000} --> permit to reduce the dimensionality
       - scaling of demographic parameters, temporal or spatial
   - It remains difficult to understand mechanisms from the sole observations of numerical simulations.
 - Renormalization group analysis allowed to derive macroscopic laws from microscopic phenomena in physics, and is an appealing paradigm for biology. 
   - iterative map is iterated over spatial scales to understand how property of a portion of a system scales.
 - Work of Meleard and colleagues: renormalization group analysis to understand the emergence of macroscopic biological variables (population size) from simple, well established rules (reproduction, competition, variation).
-  - \cite{Levin2002} argues that it is the only way to find out the appropriate equations
+  - \citep{Levin2002} argues that it is the only way to find out the appropriate equations
   - This work provides powerful mathematical objects and techniques to simulate complex adaptive systems, from a rule-based modelling perspective
 - This paradigm could be used to understand how population charactersitics emerge from the interplay between complex spatial structure and eco-evolutionary processes.
-- *Furthermore, the predictive ability of mechanistic modesl has remained poor \cite{DeAngelis2015}, due to a low pervasion of observation data in mechanistic models \cite{XXX}.*
+- *Furthermore, the predictive ability of mechanistic modesl has remained poor \citep{DeAngelis2015}, due to a low pervasion of observation data in mechanistic models \citep{XXX}.*
 
 ## Machine learning, and scientific machine learning
 
 **Machine learning has made enormous progresses in the recent years, computers learn abstraction of mechanisms from data to make predictions about the world --> induction process.**
 
 - Short review on ML
-  - LeCun: advances in artificial intelligence \cite{LeCun2015}
-    - computers can learn to predcit the future using vast datasets, too large for humans to grasp \cite{Brummitt2020}
+  - LeCun: advances in artificial intelligence \citep{LeCun2015}
+    - computers can learn to predcit the future using vast datasets, too large for humans to grasp \citep{Brummitt2020}
     - image recognition, and natural language processing.
     - natural language processing
 - Problem:
   -  the structure learnt is inscrutable for humans, and accuracy, not insight, is often the goal.
   - ML is limited by interpretability and extrapolability
-  - Scientific knowledge is best expressed in formal logical languages (3) (from \cite{Schmidt2009}).
+  - Scientific knowledge is best expressed in formal logical languages (3) (from \citep{Schmidt2009}).
 - Short review on SciML:
   - Scientific Machine Learning is an emerging discipline aiming at combining the best of ML and scientific models, providing unique opportunities to better understand ecosystems and economic systems.
   - How machine learning is helping scientific computing
@@ -173,7 +173,7 @@ REFERENCES
       - Arnulf and co.
     - Recent advances in interpretable machine learning are enabling the generation of theories to be automated: machines have identified mathematical laws in physical and biological systems that took many years for scientists to solve manually
     - for many parameterized scientific simulations, one can ask "what parameters would make my model best fit the data?" This inverse problem is pervasive yet difficult because it requires the ability to efficiently compute the gradient of a large existing simulation.
-    - Method for automatically generate symbolic equations for nonlinear coupled dymamical systems directly from time series data \cite{WOS:000247363000007} --> Symbolic regression. Cons: this method is "model-free", and is rather more relevant in engineering. It generates equation from a bank of polynomials, but is not suited for testing a bunch of different models. It also handle model with simple dynamics, while real-world systems often show chaotic dynamics. Identifying only the useful analytical relations that are related to the system dynamics. still faced with the challenge of justifying and giving words to their meaning. One difficulty is that we cannot know with cer- tainty the units of bulk constants in the law ex- pressions (for example, combinations of masses, lengths, etc. embodied in the system). Second, the equation may model something that is in- herently difficult to observe directly, such as total energy. Requiring equations to maintain consist- ent physical units still leaves room for ambiguity. \cite{Schmidt2009} \cite{Mangan2017}
+    - Method for automatically generate symbolic equations for nonlinear coupled dymamical systems directly from time series data \citep{WOS:000247363000007} --> Symbolic regression. Cons: this method is "model-free", and is rather more relevant in engineering. It generates equation from a bank of polynomials, but is not suited for testing a bunch of different models. It also handle model with simple dynamics, while real-world systems often show chaotic dynamics. Identifying only the useful analytical relations that are related to the system dynamics. still faced with the challenge of justifying and giving words to their meaning. One difficulty is that we cannot know with cer- tainty the units of bulk constants in the law ex- pressions (for example, combinations of masses, lengths, etc. embodied in the system). Second, the equation may model something that is in- herently difficult to observe directly, such as total energy. Requiring equations to maintain consist- ent physical units still leaves room for ambiguity. \citep{Schmidt2009} \citep{Mangan2017}
 
 - As of now, the percolation of mathematical models and machine learning in empirical evolutionary biology and complexity economics is weak.
   - first principles are blurry 
@@ -182,7 +182,7 @@ REFERENCES
 
 - application of ML to ecosystem 
   - analysis oflarge-scale simulations can illuminate the evolution ofecosystems across potential climate futures
-- *Scientific Machine Learning is yet to be developed in the field of complex adaptive systems, and help tackle climate change \cite{Rolnick2023}.*
+- *Scientific Machine Learning is yet to be developed in the field of complex adaptive systems, and help tackle climate change \citep{Rolnick2023}.*
 
 
 ## Programming languages
@@ -192,13 +192,13 @@ REFERENCES
 - 2 language problem:
   - productivity languages (high level languages, dynamic) (Python, Matlab, R) for easy development 
     - Features of productivity languages, such as dynamic typing or garbage collection, make exploratory and iterative development simple --> scientific applications often begin their lives in a productivity language. 
-  - performance languages (low level, compiled languages)(C, C++, Fortran) for speed and a predictable mapping to hardware \cite{Bezanson2018}.
+  - performance languages (low level, compiled languages)(C, C++, Fortran) for speed and a predictable mapping to hardware \citep{Bezanson2018}.
 - productivity languages are the most common scientific programming languages. They often rely on bindings with performance language, with negative externalities
-  - no handling of automatic differentiation, at the heart of the training of neural networks, which is likely to advance theoretical and statistical studies of biological problems \cite{Frank2022}
+  - no handling of automatic differentiation, at the heart of the training of neural networks, which is likely to advance theoretical and statistical studies of biological problems \citep{Frank2022}
   - no understanding and participation of the development of the libraries
 - converting an existing application (or some subset thereof) to a different language requires significant programmer involvement; features previously handled by the language (e.g. memory management) now have to be emulated by hand. As a result, porting software from a high level to a low level language is often a daunting task.
   - this is not only required for performance gain, but also compatibility between different libraries.
-- Julia, high performance programming language \cite{Bezanson2017,Bezanson2018}
+- Julia, high performance programming language \citep{Bezanson2017,Bezanson2018}
   - decrease the gap between productivity and performance languages. On one hand, it provides productivity features like dynamic typing, garbage collection, and multiple dispatch. On the other, it has a type-specializing just-in-time compiler and lets programmers control the layout of data structure in memory. 
   - start prototypes in Julia, but also solve their large-scale models within the same language, instead of resorting to two language solutions when performance is needed.
     - Julia's unique features make it easy to make packages which are type-generic and parallel (https://www.stochasticlifestyle.com/like-julia-scales-productive-insights-julia-developer/)
@@ -217,14 +217,14 @@ REFERENCES
 - Interoperability: combination of Flux.jl and Turing.jl (probabilistic programming) to construct probabilistic variants of traditional machine learning models.
 - Julia achievements
   - start prototypes in Julia, but also solve their large-scale models within the same language, instead of resorting to two language solutions when performance is needed.
-  - Experimental design \cite{Strouwen2022}
-  - DifferentialEquations.jl \cite{Rackauckas2017}
+  - Experimental design \citep{Strouwen2022}
+  - DifferentialEquations.jl \citep{Rackauckas2017}
     - through extensive use of multiple dispatch, metaprogramming, and call overloading, DifferentialEquations.jl offers a unified user interface to solve and analyze various form of DE while not sacrificing features and performance.
-  - Optim.jl \cite{KMogensen2018}
+  - Optim.jl \citep{KMogensen2018}
   - StructuralIdentifiability.jl
-  - Zygote.jl \cite{Innes2019}
-  - SciML: a library of softwares for machine learning \cite{Rackauckas2020a}
-  - the Climate Modeling Alliance is building an entirely new climate model that learns continuously from data and from high-resolution simulations, in julia, in contrast to C++/Fortran : At the cost of a daunting translation workload, they aim to build a model that is more accessible to new developers and more compatible with ML libraries. \cite{Tapio}
+  - Zygote.jl \citep{Innes2019}
+  - SciML: a library of softwares for machine learning \citep{Rackauckas2020a}
+  - the Climate Modeling Alliance is building an entirely new climate model that learns continuously from data and from high-resolution simulations, in julia, in contrast to C++/Fortran : At the cost of a daunting translation workload, they aim to build a model that is more accessible to new developers and more compatible with ML libraries. \citep{Tapio}
 - *Julia's unique features make it the right platform for developing computational tools, that can readily be used by the scientific community, and that are composable, making the sum more than its parts. This has direct benefits to the community, accelerating research.*
 
 ## Thesis outline
@@ -237,7 +237,7 @@ REFERENCES
   - Can we find general quantitative organizing principles in biological and economic systems? (Chap3)
     - Answers questions about the relationship between the organization of economic activities and the functioning of those economic systems.
   - Can we develop better computational tools to model the necessary complexity of things.
-  - to what extent, for example, do the characteristics of a developing economy simply represent properties that emerge from the selfish behaviors of individual agents, and to what extent are they imposed at higher levels of organization? \cite{Levin1998}
+  - to what extent, for example, do the characteristics of a developing economy simply represent properties that emerge from the selfish behaviors of individual agents, and to what extent are they imposed at higher levels of organization? \citep{Levin1998}
 
 - This work consists of 4 chapters, that can be grouped into two methodological and two investigative chapters. In the method chapters (Chap 2 and Chap 4) I present novel approaches for respecively inverse and forward modelling. In the two investigative chapters, I seek to undersand how eco-evolutioanry processes drive fundamental mechanisms affecting the dynamics of biological and economic systems.
 ### Chapter 1

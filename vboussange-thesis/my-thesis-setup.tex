@@ -62,11 +62,11 @@
     configurelistings=true,%
     colorize=full,%
     colortheme=bluemagenta,%
-    configurebiblatex=false,%
-    % bibsys=biber,%
-    % bibfile=bib-refs,%
-    % bibstyle=alphabetic,%
-    % bibsorting=nty,%
+    configurebiblatex=true,%
+    bibsys=bibtex,%
+    bibfile=bib-refs,%
+    bibstyle=authoryear,%
+    bibsorting=nty,%
 }{cleanthesis_vb}
 \usepackage{../cleanthesis_vb}
 
@@ -84,18 +84,18 @@
 % **************************************************
 % bibliography (used at the end of each chapter)
 % **************************************************
-\usepackage[backend=bibtex,
-    bibencoding=utf8,
-    % refsegment=chapter,
-    style=numeric, 
-    firstinits=true,
-    isbn=false,
-    doi=true,
-    url=false,
-    clearlang=true,
-    % defernumbers=true,
-    sorting=none
-]{biblatex}
+% \usepackage[backend=bibtex,
+%     bibencoding=utf8,
+%     % refsegment=chapter,
+%     style=numeric, 
+%     firstinits=true,
+%     isbn=false,
+%     doi=true,
+%     url=false,
+%     clearlang=true,
+%     % defernumbers=true,
+%     sorting=none
+% ]{biblatex}
 \addbibresource{./content/chap1_diff_in_graphs/bib.bib}
 \addbibresource{./content/chap2_NonLocalPDE/bibfile.bib}
 \addbibresource{./content/chap3_mini-batching/bib.bib}

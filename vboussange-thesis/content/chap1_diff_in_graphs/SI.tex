@@ -18,7 +18,7 @@
     % We justify heuristically why population dynamics can be investigated analytically with a deterministic approximation, but on the other hand Monte Carlo simulations of the stochastic process are necessary to investigate neutral diversity metrics.
 
     \subsection{Mathematical construction of the model}\label{secSI:formal_descrip}
-    The model is a measure-valued point process \cite{Bansaye2015}, so that individuals are represented as dirac functions $\delta_{x_{k}^{(i)}}$, where $x_{k}^{(i)} \in \mathcal{X}$ corresponds to the traits' value of individual $k$ located on vertex $v_i$.
+    The model is a measure-valued point process \citep{Bansaye2015}, so that individuals are represented as dirac functions $\delta_{x_{k}^{(i)}}$, where $x_{k}^{(i)} \in \mathcal{X}$ corresponds to the traits' value of individual $k$ located on vertex $v_i$.
     %
     Under this formalism, the population on $v_i$ is represented as a sum of dirac functions $\nu^{(i)} = \sum^{N^{(i)}}_k \delta_{x_{k}^{(i)}}$, where $N^{(i)}$ is the local population size. 
     %
@@ -26,7 +26,7 @@
     \begin{equation}\label{eqSI:def_infgen}
          L \phi(\nu^{(i)}_t) = \partial_t \E \left[\phi(\nu^{(i)}_t) \right]
     \end{equation}
-    (see \cite{Linke2015} for an introduction to infinitesimal generators). \Cref{eqSI:def_infgen} provides the expected time variation at time $t$ of e.g. the population size by choosing $\phi(\nu^{(i)}_t) = \int_\mathcal{X} \nu^{(i)}_t(dx)$.
+    (see \citep{Linke2015} for an introduction to infinitesimal generators). \Cref{eqSI:def_infgen} provides the expected time variation at time $t$ of e.g. the population size by choosing $\phi(\nu^{(i)}_t) = \int_\mathcal{X} \nu^{(i)}_t(dx)$.
     %
     Recall that we use
     $b^{(i)}$ to denote the birth rate on vertex $v_i$,
@@ -59,7 +59,7 @@
     \end{align}
     \normalsize
     %
-    Taking expectations in \cref{eqSI:infinitesimal_generator}, one can obtain an equation for the mean trajectory of the quantity of interest, $ \E \left[ \phi(\nu^{(i)}_t) \right]$. Nonetheless, \cref{eqSI:infinitesimal_generator} involves an integral with respect to $\nu^{(i)}_t(dx) \nu^{(i)}_t(dy)$, making it impossible to obtain an explicit solution. It is therefore unclear whether one can gain insight into the stochastic dynamics from \cref{eqSI:infinitesimal_generator} without simplifying assumptions. We refer to \cite{Champagnat2006} for a detailed discussion on the topic.
+    Taking expectations in \cref{eqSI:infinitesimal_generator}, one can obtain an equation for the mean trajectory of the quantity of interest, $ \E \left[ \phi(\nu^{(i)}_t) \right]$. Nonetheless, \cref{eqSI:infinitesimal_generator} involves an integral with respect to $\nu^{(i)}_t(dx) \nu^{(i)}_t(dy)$, making it impossible to obtain an explicit solution. It is therefore unclear whether one can gain insight into the stochastic dynamics from \cref{eqSI:infinitesimal_generator} without simplifying assumptions. We refer to \citep{Champagnat2006} for a detailed discussion on the topic.
     
     \subsection{Deterministic approximation} 
     One strategy to overcome the difficulties encountered above is to assimilate the process to its mean trajectory, assuming that $\E \left[ \nu^{(i)}_t \right] \approx \nu^{(i)}_t$ and further approximating $\nu^{(i)}_t$ with a continuous deterministic function $n_t^{(i)}$. Such strategy inherently neglects the stochasticity of the process, which is reasonable provided that a force dampens the stochastic fluctuations of the quantity of interest.
@@ -107,7 +107,7 @@ By applying the same strategy as above to characterise the adaptive trait distri
   \end{split}
 \end{equation}
 %
-Assuming that the variance of the mutation kernel is small, one can use a diffusion approximation for the mutation term \cite{Kimura1965,Debarre2013,Mirrahimi2020}
+Assuming that the variance of the mutation kernel is small, one can use a diffusion approximation for the mutation term \citep{Kimura1965,Debarre2013,Mirrahimi2020}
 \begin{equation}
   \begin{split}
   \int_\mathcal{S} b^{(i)}({\textbf s}) \, n_t^{(i)}({\textbf s}) \mathcal{M}({\textbf s}, s) \, d{\textbf s} 
@@ -130,7 +130,7 @@ which, after rearranging terms, yields the elegant deterministic approximation o
   \partial_t n_t^{(i)}(s) =n_t^{(i)} (s) \left[b^{(i)}(s)(1-m) -  \frac{1}{K}\int_\mathcal{S}  n_t^{(i)}({\textbf s}) d{\textbf s}  \right] + m \sum_{j\neq i} b^{(j)}(s) \frac{a_{i,j}}{d_j} n_t^{(j)}(s) + \tfrac{1}{2} \mu \sigma_\mu^2 \Delta_s \left[ b^{(i)}(s) n^{(i)}_t(s) \right].
 \end{equation}
 %
-Setting $m = 0$ \cite{Mirrahimi2020} shows that \cref{eqSI:PDE_adapt} admits a stationary solution that is Gaussian, with variance $ \nicefrac{\sqrt{\mu} \sigma_\mu^2}{\sqrt{p}}$. 
+Setting $m = 0$ \citep{Mirrahimi2020} shows that \cref{eqSI:PDE_adapt} admits a stationary solution that is Gaussian, with variance $ \nicefrac{\sqrt{\mu} \sigma_\mu^2}{\sqrt{p}}$. 
 %
 Therefore, the variance of the adaptive trait distribution stabilises to a finite value. Intuitively, this reflects the fact that the random fluctuations of the adaptive trait distribution are dampened by the stabilising force of selection. Provided that the selection strength $p$ is large enough, \cref{eqSI:PDE_adapt} is a good approximation of the adaptive trait distribution obtained from the stochastic process.
 %
@@ -143,12 +143,12 @@ To test whether the effects of the metrics hold under more complex ecological pr
     d(x_k^{(i)}, \nu^{(i)}) = \frac{1}{K}\int_{\mathcal{S}} \exp\Bigl(-\frac{(s_k^{(i)} - {\textbf s})^2}{2\sigma_\alpha^{2}} \Bigr) \nu^{(i)}({\textbf s})
 \end{equation}
 where $\sigma_\alpha$ is the competition bandwidth.
-This competition kernel tends to increase the population size, as it decreases the overall competition. The adaptive dynamics theory predicts that when $m = 0$, competition promotes two distinct types of individuals at either side of the adaptive trait optimum for a competition bandwidth $\sigma_\alpha < \nicefrac{1}{\sqrt{2p}}$, while a single type is observed when $\sigma_\alpha > \nicefrac{1}{\sqrt{2p}}$ \cite{DoebeliMichael2011Ad}.
+This competition kernel tends to increase the population size, as it decreases the overall competition. The adaptive dynamics theory predicts that when $m = 0$, competition promotes two distinct types of individuals at either side of the adaptive trait optimum for a competition bandwidth $\sigma_\alpha < \nicefrac{1}{\sqrt{2p}}$, while a single type is observed when $\sigma_\alpha > \nicefrac{1}{\sqrt{2p}}$ \citep{DoebeliMichael2011Ad}.
 We performed simulations in both cases for graphs with $M=7$ vertices and show results of the multivariate regression analyses in \cref{tableSI:coefficients_trait-dep-comp}.
 The analyses demonstrate that the trends reported in the main manuscript remain unchanged in both cases.
 
 % \subsection{Variance partitioning}\label{secSI:variance_partitioning}
-% We demonstrate that the neutral differentiation measure $Q_{ST,u}$ and the adaptive differentiation measure $Q_{ST,s}$ used in the study correspond to the original measure of genetic differentiation for quantitative traits in \cite{Lande1992,WHITLOCK2008}, denoted by $Q_{ST}$ for $Q$-statistics, for a haploid population.
+% We demonstrate that the neutral differentiation measure $Q_{ST,u}$ and the adaptive differentiation measure $Q_{ST,s}$ used in the study correspond to the original measure of genetic differentiation for quantitative traits in \citep{Lande1992,WHITLOCK2008}, denoted by $Q_{ST}$ for $Q$-statistics, for a haploid population.
 % The definition of the neutral differentiation $Q_{ST,u}$ used in the study is given in \cref{eq:def_Qsty} by
 % \begin{equation}\label{eqSI:QST_def}
 %     Q_{ST,u} = \nicefrac{\sigma^2_{B,u}}{\sigma^2_{M,u}},
@@ -157,7 +157,7 @@ The analyses demonstrate that the trends reported in the main manuscript remain 
 % % 
 % % and $\bar{x}^{(i)} = \tfrac{1}{N^{(i)}} \int_\mathcal{X} x \, \nu^{(i)}(dx)$  is the trait mean on $v_i$. 
 % %%
-% For a haploid population, \cite{WHITLOCK2008} defines $Q_{ST}$ as
+% For a haploid population, \citep{WHITLOCK2008} defines $Q_{ST}$ as
 % \begin{equation}\label{eqSI:QST_original_def}
 %     Q_{ST,u} = \nicefrac{\sigma^2_{B,u}}{(\sigma^2_{W,u}+\sigma^2_{B,u})},
 % \end{equation}
@@ -194,7 +194,7 @@ The analyses demonstrate that the trends reported in the main manuscript remain 
 \subsection{Derivation of the habitat assortativity metric $r_\Theta$ in binary environments}\label{sec:rtheta}
 We demonstrate here how the habitat assortativity $r_\Theta$ relates to the conditional probability of habitats being connected, and we show how $r_\Theta$ simplifies under mean field assumption. 
 
-Following the original definition of \cite{Newman2003a}, habitat assortativity $r_\Theta$ is defined as the Pearson correlation of environmental conditions $\theta$ at either ends of the vertices $V$ of graph $G$, that is
+Following the original definition of \citep{Newman2003a}, habitat assortativity $r_\Theta$ is defined as the Pearson correlation of environmental conditions $\theta$ at either ends of the vertices $V$ of graph $G$, that is
 %
 \begin{equation}\label{eqSI:def_rtheta}
   r_\Theta = \frac{\Cov(\Theta_\times, \Theta_\wedge)}{\sqrt{\Var(\Theta_\times) \Var(\Theta_\wedge)}} 
@@ -247,7 +247,7 @@ The mean field approximation involves the assumption that all vertices with simi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% Additional bibliography %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\printbibliography[heading=subbibliography]
+% \printbibliography[heading=subbibliography]
 
 \clearpage
 
@@ -334,9 +334,9 @@ The mean field approximation involves the assumption that all vertices with simi
   \centerline{
       \includegraphics[width=\textwidth]{SI/land2graphs_with_simu.pdf} 
   }
-  \caption{\small Simulations on graphs with $M=49$ vertices obtained from real spatial habitat datasets, in the setting with heterogeneous selection. The region from where graphs are obtained is centred on the Hengduan Mountains in Southwest China, one of the most species-rich temperate mountain biota globally \cite{Ding2020a}.
+  \caption{\small Simulations on graphs with $M=49$ vertices obtained from real spatial habitat datasets, in the setting with heterogeneous selection. The region from where graphs are obtained is centred on the Hengduan Mountains in Southwest China, one of the most species-rich temperate mountain biota globally \citep{Ding2020a}.
   %
-  (a) Graphical representation of a geographical area of size $ 0.11^{\circ} \times 0.11^{\circ}$. To create the graph, we considered biological populations living in grasslands, and used the dataset provided in \cite{Jung2020} containing global grassland coverage at $0.01^\circ$ resolution. We assigned a vertex to a geographical area of size $ 0.01^{\circ} \times 0.01^{\circ}$ if its grassland coverage was above a threshold arbitrarily set to $50\%$. We further assumed that two vertices were connected if their euclidean distance was below a certain dispersal range, which we let vary from 1 to 2.5 km. Local annual average temperature was considered as the value that captures environmental conditions at each vertex. Temperature data was obtained from the CHELSA dataset \cite{Karger2017}.
+  (a) Graphical representation of a geographical area of size $ 0.11^{\circ} \times 0.11^{\circ}$. To create the graph, we considered biological populations living in grasslands, and used the dataset provided in \citep{Jung2020} containing global grassland coverage at $0.01^\circ$ resolution. We assigned a vertex to a geographical area of size $ 0.01^{\circ} \times 0.01^{\circ}$ if its grassland coverage was above a threshold arbitrarily set to $50\%$. We further assumed that two vertices were connected if their euclidean distance was below a certain dispersal range, which we let vary from 1 to 2.5 km. Local annual average temperature was considered as the value that captures environmental conditions at each vertex. Temperature data was obtained from the CHELSA dataset \citep{Karger2017}.
   %
   (b) Grassland coverage for the considered region. Blue lines correspond to rivers and dashed grey lines correspond to country borders. Red crosses indicate the locations of the 83 graphs sampled for the simulations used in (c--d).
   (c--d) Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,s}$ and $Q_{ST,u}$ obtained from multivariate regression models independently fitted for low and high migration regimes to average results from 5 replicate simulations of the IBM on the 83 graphs which location is illustrated in (c) (see \cref{tableSI:coefficients_realgraphs} for simulation details). Error bars show 95\% confidence intervals.}

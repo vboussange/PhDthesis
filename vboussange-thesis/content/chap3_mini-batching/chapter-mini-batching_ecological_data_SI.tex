@@ -1,8 +1,8 @@
 % !TEX root = ../my-thesis.tex
-\newcommand{\perr}{|\nicefrac{(\hat p -\Tilde{p})}{\Tilde{p}}|}
-\newcommand{\by}{\textbf{y}}
-\newcommand{\AIC}{\text{AIC}}
-\newcommand{\M}{\mathcal{M}}
+% \newcommand{\perr}{|\nicefrac{(\hat p -\Tilde{p})}{\Tilde{p}}|}
+% \newcommand{\by}{\textbf{y}}
+% \newcommand{\AIC}{\text{AIC}}
+% \newcommand{\M}{\mathcal{M}}
 
 \graphicspath{{./content/chap3_mini-batching/}}
 
@@ -40,9 +40,9 @@ whose initial conditions (ICs) $x_0$ are perturbed by $\delta x_0$. Assuming tha
 \begin{equation}
 	\|x(t) - x_{\delta x_0}(t)\| \sim e^{\lambda t}\delta x_0
 \end{equation}
-where $\lambda$ is the largest Lyapunov exponent of the system \cite{strogatz2018nonlinear}.
+where $\lambda$ is the largest Lyapunov exponent of the system \citep{strogatz2018nonlinear}.
 % 
-After enough time, the trajectories diverge so much that they effectively become independent samples of the phasespace: the trajectories forget their ICs, and ergodic theory ensures that the positions of $x(t)$ and $x_{\delta x_0}(t)$ are better described by a random variable $\mathcal R$ with probability density given by the density of orbits in the chaotic attractor, the so-called invariant measure of the chaotic attractor \cite{jost2005dynamical}.
+After enough time, the trajectories diverge so much that they effectively become independent samples of the phasespace: the trajectories forget their ICs, and ergodic theory ensures that the positions of $x(t)$ and $x_{\delta x_0}(t)$ are better described by a random variable $\mathcal R$ with probability density given by the density of orbits in the chaotic attractor, the so-called invariant measure of the chaotic attractor \citep{jost2005dynamical}.
 % 
 The distance between $x(t)$ and $x_{\delta {x_0}}(t)$ can therefore be described as 
 \begin{equation}
@@ -230,7 +230,7 @@ The value of $M$ should therefore be chosen wisely to balance the benefits of mi
 \section{Three-compartment food-web models}
 \label{secSI:models}
 \subsection{Reference food-web model}
-We used the three-species chaotic food-web model from \cite{Hastings1991}, formulated as
+We used the three-species chaotic food-web model from \citep{Hastings1991}, formulated as
 \begin{equation}
     \begin{aligned}
         \tfrac{d}{dt} R &= R ( 1 - R ) - x_C y_C \frac{CR}{R + R_0}\\
@@ -238,10 +238,10 @@ We used the three-species chaotic food-web model from \cite{Hastings1991}, formu
         \tfrac{d}{dt} P &= x_P P \left[ -1 + y_P \frac{C}{C+C_0} \right],
     \end{aligned}
 \end{equation}
-with the biologically realistic parameter values $x_C = 0.4$, $0.071 \leq x_P \leq 0.225 $, $y_C = 2.01$, $y_P = 5$, $R_0 = 0.16129$, and $C_0 = 0.5$ \cite{McCann1994}. The dynamics of the system are chaotic for this set of parameter values.
+with the biologically realistic parameter values $x_C = 0.4$, $0.071 \leq x_P \leq 0.225 $, $y_C = 2.01$, $y_P = 5$, $R_0 = 0.16129$, and $C_0 = 0.5$ \citep{McCann1994}. The dynamics of the system are chaotic for this set of parameter values.
 
 \subsection{Omnivory variant food-web model}
-We used the three-species food-web model from \cite{McCann1997}, formulated as
+We used the three-species food-web model from \citep{McCann1997}, formulated as
 \begin{equation}
     \begin{aligned}
         \tfrac{d}{dt} R &= R ( 1 - R ) - x_C x_C \frac{CR}{R + R_0} - \omega x_P y_{PR} \frac{PR}{R_{02} + (1-\omega)C + \omega R}\\
@@ -253,7 +253,7 @@ with the biologically realistic parameter values $x_C = 0.4$, $ x_P = 0.08 $, $y
 % 
 For this set of parameter values, the dynamics of the system are chaotic for $\omega \lesssim 0.20$, consist of a limit cycle for $0.20 \lesssim \omega \lesssim 0.35$, and consist of dampened oscillations for $ 0.35 \lesssim \omega$.
 
-\printbibliography[heading=subbibliography]
+% \printbibliography[heading=subbibliography]
 
 \section{Supplementary Figures}
 % \begin{figure}[h]
@@ -276,7 +276,7 @@ For this set of parameter values, the dynamics of the system are chaotic for $\o
 \begin{figure}[h]
     \centering
     \includegraphics[]{figures/SI/perturbed_ICs.png}
-    \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta x_0}(t)$, obtained from the reference food-web model from \cite{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 100$, $x(t)$ and $x_{\delta x_0}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 100$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime.}
+    \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta x_0}(t)$, obtained from the reference food-web model from \citep{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 100$, $x(t)$ and $x_{\delta x_0}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 100$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime.}
     \label{figSI:perturbed_ICs}
 \end{figure}
 
@@ -285,7 +285,7 @@ For this set of parameter values, the dynamics of the system are chaotic for $\o
 \begin{figure}[h]
     \centering
     \includegraphics[]{figures/SI/perturbed_p.png}
-    \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta p}(t)$, obtained from the reference food-web model from \cite{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 40$, $x(t)$ and $x_{\delta p}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 40$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime. }
+    \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta p}(t)$, obtained from the reference food-web model from \citep{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 40$, $x(t)$ and $x_{\delta p}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 40$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime. }
     \label{figSI:perturbed_p}
 \end{figure}
 

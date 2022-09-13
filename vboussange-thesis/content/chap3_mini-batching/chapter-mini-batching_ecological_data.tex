@@ -41,13 +41,13 @@ In summary, the proposed ML framework can efficiently learn from data and elucid
 \section{Introduction}
 
 %%
-Ecosystems are complex systems involving many interacting functional entities which together play a major role in regulating global biogeochemical cycles \cite{Bonan2008} and delivering essential services to humans \cite{Kremen2005}.
+Ecosystems are complex systems involving many interacting functional entities which together play a major role in regulating global biogeochemical cycles \citep{Bonan2008} and delivering essential services to humans \citep{Kremen2005}.
 %
-Ecosystems currently face intense disruption from anthropogenic pressure, through pollution and land use \cite{Doney2010,Ellis2011}, and from climate change \cite{Midgley2019}. In order to anticipate the responses of ecosystems to these disruptions, models that can extrapolate ecological dynamics beyond observations are required \cite{Boyd2012}. 
+Ecosystems currently face intense disruption from anthropogenic pressure, through pollution and land use \citep{Doney2010,Ellis2011}, and from climate change \citep{Midgley2019}. In order to anticipate the responses of ecosystems to these disruptions, models that can extrapolate ecological dynamics beyond observations are required \citep{Boyd2012}. 
 %
-A major challenge is that the processes driving ecological dynamics are nonlinear, resulting in complex responses and feedbacks \cite{Scheffer2001}. Nonlinearity greatly affects the capacity of modelling approaches that do not incorporate specific biological knowledge to reliably project current trends into the future \cite{Barnosky2012}. For instance, while methods based on statistical descriptions \cite{Deneu2021} and nonparametric methods \cite{Ye2015,Ye2016,Deyle2016} have adequate interpolation capabilites, they are ill-suited for extrapolating beyond observed trends \cite{Barnosky2012,Urban2016}.
+A major challenge is that the processes driving ecological dynamics are nonlinear, resulting in complex responses and feedbacks \citep{Scheffer2001}. Nonlinearity greatly affects the capacity of modelling approaches that do not incorporate specific biological knowledge to reliably project current trends into the future \citep{Barnosky2012}. For instance, while methods based on statistical descriptions \citep{Deneu2021} and nonparametric methods \citep{Ye2015,Ye2016,Deyle2016} have adequate interpolation capabilites, they are ill-suited for extrapolating beyond observed trends \citep{Barnosky2012,Urban2016}.
 %
-In contrast, mechanistic ecosystem models integrate constraints on the expected dynamics by explicitly modelling interactions, feedback loops and dependencies between ecosystem components \cite{Geary2020}. While this should ensure a more robust forecast under large disruptions \cite{Norberg2012}, ecosystems models suffer in practice from parametrization issues, i.e. inaccuracies in the mathematical formulation of the processes and issues in identifying the correct parameter values \cite{DeAngelis2015}. These drawbacks have limited their broad adoption \cite{Urban2016}.
+In contrast, mechanistic ecosystem models integrate constraints on the expected dynamics by explicitly modelling interactions, feedback loops and dependencies between ecosystem components \citep{Geary2020}. While this should ensure a more robust forecast under large disruptions \citep{Norberg2012}, ecosystems models suffer in practice from parametrization issues, i.e. inaccuracies in the mathematical formulation of the processes and issues in identifying the correct parameter values \citep{DeAngelis2015}. These drawbacks have limited their broad adoption \citep{Urban2016}.
 %
 Learning the parametrization of ecosystem models from observation data by blending specific biological knowledge and ML methods could improve our representation of ecosystem processes and help us to anticipate ecosystem responses to global changes.
 
@@ -55,13 +55,13 @@ Learning the parametrization of ecosystem models from observation data by blendi
 % 2nd paragraph
 The parametrization of ecosystem models can be indirectly learnt from observations by calibrating the parameters from the data collectively using inference methods. These methods proceed by maximizing the posterior probability of the parameters given the observations, but their success is subject to a number of issues, some of which specifically relating to ecosystem model properties.
 %
-Among these issues, the exploration of the posterior landscape demands repeated model simulations, but ecosystem models are usually associated with a high computational cost that limits the number of possible runs \cite{Fisher2018}. 
+Among these issues, the exploration of the posterior landscape demands repeated model simulations, but ecosystem models are usually associated with a high computational cost that limits the number of possible runs \citep{Fisher2018}. 
 %
-Additionally, the complexity of processes requires a large number of parameters. Due to the curse of dimensionality \cite{Boyd2012}, this complicates the exploration of the posterior distribution and can further leave many parameters poorly constrained \cite{Gutenkunst2007}. The limited availability of observations, which are usually composed of multiple partial short-term time series \cite{Scheiter2013,Schartau2017}, accentuates the lack of parameter constraints. 
+Additionally, the complexity of processes requires a large number of parameters. Due to the curse of dimensionality \citep{Boyd2012}, this complicates the exploration of the posterior distribution and can further leave many parameters poorly constrained \citep{Gutenkunst2007}. The limited availability of observations, which are usually composed of multiple partial short-term time series \citep{Scheiter2013,Schartau2017}, accentuates the lack of parameter constraints. 
 %
-Moreover, ecosystem dynamics can be strongly dependent on the initial conditions (ICs) and show a chaotic behaviour \cite{Hastings1993,Huisman1999,Beninca2008}, or can be associated with a large panel of dynamics depending on the parameter values. In such case, small perturbations of the ICs or parameter values lead to large divergences in the model outcomes, causing numerical problems in finding the most probable parameters \cite{DeAngelis2015}.
+Moreover, ecosystem dynamics can be strongly dependent on the initial conditions (ICs) and show a chaotic behaviour \citep{Hastings1993,Huisman1999,Beninca2008}, or can be associated with a large panel of dynamics depending on the parameter values. In such case, small perturbations of the ICs or parameter values lead to large divergences in the model outcomes, causing numerical problems in finding the most probable parameters \citep{DeAngelis2015}.
 %
-Last but not least, in contrast to fields such as climate and weather modelling, the derivation of fundamental processes regulating ecosystems is far from being established \cite{Gehlen2015,Schartau2017,Purves2013}, resulting in inaccurate mechanistic pathways and uncertain mathematical formulations \cite{Gentleman2003}, limiting extrapolation to unseen data.
+Last but not least, in contrast to fields such as climate and weather modelling, the derivation of fundamental processes regulating ecosystems is far from being established \citep{Gehlen2015,Schartau2017,Purves2013}, resulting in inaccurate mechanistic pathways and uncertain mathematical formulations \citep{Gentleman2003}, limiting extrapolation to unseen data.
 %
 To summarize, the parametrization of ecosystem models requires inference methods that are robust despite the models' complexity, the limited observation data, and the inaccurate description of ecological processes.
 
@@ -69,27 +69,27 @@ To summarize, the parametrization of ecosystem models requires inference methods
 % 3d paragraph
 A variety of data assimilation and ML methods are increasingly being used to parametrize ecosystem models.
 %
-Bayesian inference with Markov Chain Monte Carlo methods, used in \cite{Lignell2013,Higgins2010,Xu2006,Fiechter2013,Rosenbaum2019}, offer the advantage of quantifying uncertainties by inferring the full posterior probability distribution of the unknown parameters. This is achieved by a global exploration of the parameter space, which makes Bayesian methods computationally expensive and particularly prone to the curse of dimensionality \cite{Gosh2021}.
+Bayesian inference with Markov Chain Monte Carlo methods, used in \citep{Lignell2013,Higgins2010,Xu2006,Fiechter2013,Rosenbaum2019}, offer the advantage of quantifying uncertainties by inferring the full posterior probability distribution of the unknown parameters. This is achieved by a global exploration of the parameter space, which makes Bayesian methods computationally expensive and particularly prone to the curse of dimensionality \citep{Gosh2021}.
 %
-Simulated annealing \cite{Matear1995}, genetic algorithms \cite{Ward2010}, and sequential methods such as extended Kalman filtering and ensemble Kalman methods \cite{Bertino2003,Doron2013,Gharamti2017} have been used as alternatives, but are similarly subject to the curse of dimensionality and demand a large number of model evaluations.
+Simulated annealing \citep{Matear1995}, genetic algorithms \citep{Ward2010}, and sequential methods such as extended Kalman filtering and ensemble Kalman methods \citep{Bertino2003,Doron2013,Gharamti2017} have been used as alternatives, but are similarly subject to the curse of dimensionality and demand a large number of model evaluations.
 %
-Variational methods rely on the model adjoint, i.e. the model sensitivity to the parameters, to explore more efficiently the parameter space, iteratively updating the parameter estimates using the gradient of the posterior landscape. Such methods therefore demand less evaluation \cite{Schartau2017}, which explains their wide adoption in the field of artificial intelligence to train highly parametrized neural networks (up to the order of $10^8$ parameters \cite{NIPS2017_3f5ee243}) and their use in calibrating marine ecosystem models \cite{Fennel2001,Spitz1998,Xiao2014,Pelc2012} (see \cite{Schartau2017} for a review) and terrestrial ecosystem models \cite{Zhu2015,DeLong2014,Curtsdotter2019}. 
+Variational methods rely on the model adjoint, i.e. the model sensitivity to the parameters, to explore more efficiently the parameter space, iteratively updating the parameter estimates using the gradient of the posterior landscape. Such methods therefore demand less evaluation \citep{Schartau2017}, which explains their wide adoption in the field of artificial intelligence to train highly parametrized neural networks (up to the order of $10^8$ parameters \citep{NIPS2017_3f5ee243}) and their use in calibrating marine ecosystem models \citep{Fennel2001,Spitz1998,Xiao2014,Pelc2012} (see \citep{Schartau2017} for a review) and terrestrial ecosystem models \citep{Zhu2015,DeLong2014,Curtsdotter2019}. 
 %
-However, as the complex dynamics of ecosystem models tend to be associated with rugged posterior landscapes, variational methods are prone to converging to local minima, making variational methods very sensitive to the choice of initial model parameters \cite{Gabor2015,Schartau2017}.
+However, as the complex dynamics of ecosystem models tend to be associated with rugged posterior landscapes, variational methods are prone to converging to local minima, making variational methods very sensitive to the choice of initial model parameters \citep{Gabor2015,Schartau2017}.
 %
-Ecosystem models are specified as differential equations that depend not only on parameters but also on ICs. The state-dependency of ecosystems means that neglecting the estimation of initial ICs might compromise the correct fitting of the parameters and the forecast skill \cite{Lignell2013}. However, few of the aforementioned studies have addressed the problem of IC estimation (but see \cite{Pelc2012}). 
+Ecosystem models are specified as differential equations that depend not only on parameters but also on ICs. The state-dependency of ecosystems means that neglecting the estimation of initial ICs might compromise the correct fitting of the parameters and the forecast skill \citep{Lignell2013}. However, few of the aforementioned studies have addressed the problem of IC estimation (but see \citep{Pelc2012}). 
 %
-Finally, the numerical implementation of variational methods is also challenging, as the model adjoint is difficult to obtain and maintain as the model is modified \cite{Lawson1995,Pelc2012,Gharamti2017}. 
+Finally, the numerical implementation of variational methods is also challenging, as the model adjoint is difficult to obtain and maintain as the model is modified \citep{Lawson1995,Pelc2012,Gharamti2017}. 
 %
-Novel methods for model parametrization are emerging, thanks to advances in the field of artificial intelligence \cite{Willard2020,Kashinath2021,Alber2019,Peng2021}, providing new opportunities to better address these issues.
+Novel methods for model parametrization are emerging, thanks to advances in the field of artificial intelligence \citep{Willard2020,Kashinath2021,Alber2019,Peng2021}, providing new opportunities to better address these issues.
     
 %%
 % 4th paragraph    
-Here, we propose a ML framework relying on a mini-batch method inspired by multiple shooting methods \cite{Pisarenko2004} and on automatic differentiation and state-of-the-art optimizers to efficiently learn the parametrization of ecosystem models from observation data. 
+Here, we propose a ML framework relying on a mini-batch method inspired by multiple shooting methods \citep{Pisarenko2004} and on automatic differentiation and state-of-the-art optimizers to efficiently learn the parametrization of ecosystem models from observation data. 
 %
 The mini-batch method divides the training problem into mini-batches with a short time horizon. We show analytically how this learning strategy regularizes the ill-behaviour of the loss function arising from the strong nonlinearities of ecosystem models.
 %
-We implement the mini-batch method in the software ecosystem SciML \cite{Rackauckas2020a}, which provides advanced optimizers and allows the automatic generation of efficient and accurate model adjoints, leading to excellent performance.
+We implement the mini-batch method in the software ecosystem SciML \citep{Rackauckas2020a}, which provides advanced optimizers and allows the automatic generation of efficient and accurate model adjoints, leading to excellent performance.
 %
 The resulting ML framework makes it possible to efficiently combine the information contained in short, independent time series, and is a workhorse for performing model selection and improving model accuracy.
 %
@@ -137,7 +137,7 @@ where $\by_{1:K} = (y_1,\dots,y_K)$, $p(\by_{1:K} | \theta, \M)$ is the product 
 \end{equation}
 and $p(\theta,\M)$ is the prior distribution of the model and its associated parameter values. The model $\M$ is included in the probabilistic quantities in order to accommodate multiple candidate models (see \cref{sec:model_comparision}).
 
-A variational method to obtain a Bayesian estimate of $\theta$ involves maximizing $p(\theta, \M | \by_{1:k})$ to obtain the maximum a posteriori (MAP) estimator \cite{Bocquet2019}, which is equivalent to a maximum likelihood approach under a uniform prior distribution of the parameters, i.e. when no prior information on the parameter values is used \cite{Schartau2017}. Observing that maximizing $p(\theta, \M | \by_{1:K})$ is equivalent to minimizing $- \log p(\theta | \by_{1:K}, \M)$ and assuming a normal prior distribution of the parameters $\mathcal{N}_{p_b, \Sigma_p}$, one can obtain the MAP $\hat{\theta}$
+A variational method to obtain a Bayesian estimate of $\theta$ involves maximizing $p(\theta, \M | \by_{1:k})$ to obtain the maximum a posteriori (MAP) estimator \citep{Bocquet2019}, which is equivalent to a maximum likelihood approach under a uniform prior distribution of the parameters, i.e. when no prior information on the parameter values is used \citep{Schartau2017}. Observing that maximizing $p(\theta, \M | \by_{1:K})$ is equivalent to minimizing $- \log p(\theta | \by_{1:K}, \M)$ and assuming a normal prior distribution of the parameters $\mathcal{N}_{p_b, \Sigma_p}$, one can obtain the MAP $\hat{\theta}$
 \begin{equation}\label{eq:argmin_xi}
     \hat{\theta} = \argmin_\theta  L_{\M}(\theta)
 \end{equation}
@@ -148,7 +148,7 @@ where
     L_{\M}(\theta) &= \frac{1}{2} \left[ \sum_{k=1}^{K-1} \|y_k - h\left(\M(t_k,\theta)\right)\|_{\Sigma_y}^2 + \|p - p_b\|_{\Sigma_p}^2 \right] \\
    \end{split}
 \end{equation}
-\cite{Schneider2017,Raue2009} and where we use the notation $\|y\|_\Sigma^2 = y \Sigma^{-1}y^{\textbf{T}}$.
+\citep{Schneider2017,Raue2009} and where we use the notation $\|y\|_\Sigma^2 = y \Sigma^{-1}y^{\textbf{T}}$.
 %
 \cref{eq:loss_fn} is similar to a traditional least squares function commonly used in regression, where the second summand is the analogue of a regularization term for the weights and biases of e.g. a neural network.
 
@@ -164,7 +164,7 @@ where $\gamma$ is the learning rate. Other gradient-based algorithms, such as th
 \subsubsection{Information indigestion}
 A naive minimization of $L_\M(\theta)$ with gradient-based methods is likely to fail, as its associated surface cannot be navigated properly. As illustrated in \cref{fig:training_on_mini-batches}\textbf{A}, the loss surface associated with models characterized by complex dynamics consists of multiple local minima, which cause problems of convergence in efforts to reach the global minimum (depicted by the orange curve in \cref{fig:training_on_mini-batches}\textbf{B}). Furthermore, in a neighbourhood of the global minimum, the gradient of the loss function is very large (a "ravine" with almost vertical walls), leading the optimizer to overshoot the true parameter values (depicted by the green curve in \cref{fig:training_on_mini-batches}\textbf{B}).
 %
-In \cref{secSI:supmat} we show in a general setting that these problematic features arise from the dynamical properties of ecosystem models: when the dynamics are chaotic or exhibit a limit cycle (as is often the case for ecological dynamics \cite{Bjornstad2001,Hastings1993,Huisman1999,Beninca2008}), the dynamical trajectories exhibit high sensitivity to the model parameters and ICs. This means that a small modification of the parameters or ICs leads to large divergences over time. 
+In \cref{secSI:supmat} we show in a general setting that these problematic features arise from the dynamical properties of ecosystem models: when the dynamics are chaotic or exhibit a limit cycle (as is often the case for ecological dynamics \citep{Bjornstad2001,Hastings1993,Huisman1999,Beninca2008}), the dynamical trajectories exhibit high sensitivity to the model parameters and ICs. This means that a small modification of the parameters or ICs leads to large divergences over time. 
 %
 The prevalence of large deviations causes discontinuities, appearing as many sub-optimal local minima on the loss surface. Moreover, the true minimum can only be found in a narrow ravine that becomes narrower as the number of data points increases.
 % 
@@ -241,11 +241,11 @@ The choice of the optimizer and the correct calculation of the model sensitivity
 % 
 To accelerate the learning process and make it more robust, we propose to combine the mini-batch method with modern optimizers and automatic differentiation.
 %
-Building upon the software ecosystem SciML \cite{Rackauckas2020a}, we use \textbf{DifferentialEquations.jl} for the forward integration of the ecosystem model, as it provides highly efficient ODE solvers \cite{Rackauckas2017}.  \textbf{DifferentialEquations.jl} is additionally compatible with automatic differentiation and includes an extensive set of sensitivity analysis methods \cite{Ma2021}, enabling the automatic generation of the model sensitivity to the parameters and ICs and guaranteeing their accuracy. This automatic generation greatly reduces the effort and potential errors associated with the adjoint code construction, enabling continuous development of the models. The accuracy is also an essential feature, as the model sensitivities are critically involved in the minimization of \cref{eq:loss_fn} and their inaccuracies can compromise the convergence of the gradient-based optimizers \cite{Gholaminejad2019}.
+Building upon the software ecosystem SciML \citep{Rackauckas2020a}, we use \textbf{DifferentialEquations.jl} for the forward integration of the ecosystem model, as it provides highly efficient ODE solvers \citep{Rackauckas2017}.  \textbf{DifferentialEquations.jl} is additionally compatible with automatic differentiation and includes an extensive set of sensitivity analysis methods \citep{Ma2021}, enabling the automatic generation of the model sensitivity to the parameters and ICs and guaranteeing their accuracy. This automatic generation greatly reduces the effort and potential errors associated with the adjoint code construction, enabling continuous development of the models. The accuracy is also an essential feature, as the model sensitivities are critically involved in the minimization of \cref{eq:loss_fn} and their inaccuracies can compromise the convergence of the gradient-based optimizers \citep{Gholaminejad2019}.
 %
-The interoperability of the SciML ecosystem further makes it possible to benefit from the tooling of the deep learning library \textbf{Flux.jl} and the nonlinear optimization library \textbf{Optim.jl} \cite{KMogensen2018}, providing state-of-the-art optimizers that are computationally efficient and well suited for highly parameterized models \cite{Ruder2016}.
+The interoperability of the SciML ecosystem further makes it possible to benefit from the tooling of the deep learning library \textbf{Flux.jl} and the nonlinear optimization library \textbf{Optim.jl} \citep{KMogensen2018}, providing state-of-the-art optimizers that are computationally efficient and well suited for highly parameterized models \citep{Ruder2016}.
 % 
-We use the adaptive, momentum-based Adam optimizer \cite{Kingma2014} to converge in the basin of attraction of the true parameters, which we substitute with the limited memory Broyden–Fletcher–Goldfarb–Shanno optimizer (L-BFGS) \cite{Liu1989} for the final training epochs to ensure faster and more accurate convergence.
+We use the adaptive, momentum-based Adam optimizer \citep{Kingma2014} to converge in the basin of attraction of the true parameters, which we substitute with the limited memory Broyden–Fletcher–Goldfarb–Shanno optimizer (L-BFGS) \citep{Liu1989} for the final training epochs to ensure faster and more accurate convergence.
 
 %% 
 The reformulation of the learning problem in \cref{eq:ML-framework}, together with the numerical implementation suggested above, define the proposed ML framework, which we benchmark with a concrete case scenario in the next section.
@@ -259,13 +259,13 @@ We use a reference model to generate the observation data and first assume a per
 Second, we relax the perfect-model assumption by considering two plausible candidate models capturing contrasting hypotheses regarding the ecological processes, and test whether the ML framework can provide support for the true generating model by combining it with information-based model selection.
 
 \subsection{Three-compartment food-web ecosystem}
-We use a reference food-web model investigated in \cite{Hastings1991,McCann1994a,McCann1994,Klebanoff1994} where a resource $R$ is eaten by consumers $C$, which in turn are fed upon by predators $P$ (model $\M_1$ in \cref{fig:3species_foodchain_simple}). We further consider an "omnivory variant" of the reference model introduced in \cite{McCann1997}, where predators are omnivorous and can feed upon the resource with a determined strength $\omega$ (model $\M_2$ in \cref{fig:3species_foodchain_simple}). 
+We use a reference food-web model investigated in \citep{Hastings1991,McCann1994a,McCann1994,Klebanoff1994} where a resource $R$ is eaten by consumers $C$, which in turn are fed upon by predators $P$ (model $\M_1$ in \cref{fig:3species_foodchain_simple}). We further consider an "omnivory variant" of the reference model introduced in \citep{McCann1997}, where predators are omnivorous and can feed upon the resource with a determined strength $\omega$ (model $\M_2$ in \cref{fig:3species_foodchain_simple}). 
 %
-These models generate fluctuations that resemble the behaviour of observed ecological time series \cite{Bjornstad2001}, they produce chaotic dynamics that are notoriously challenging to forecast for a wide range of realistic parameters \cite{Post2000}, and they have been used as benchmarks for proposed ecosystem forecasting methods (see \cite{Perretti2013,Deyle2016,Ye2016}). 
+These models generate fluctuations that resemble the behaviour of observed ecological time series \citep{Bjornstad2001}, they produce chaotic dynamics that are notoriously challenging to forecast for a wide range of realistic parameters \citep{Post2000}, and they have been used as benchmarks for proposed ecosystem forecasting methods (see \citep{Perretti2013,Deyle2016,Ye2016}). 
  
 After nondimensionalization, the three-compartment model and the omnivory variant comprise a total of six and nine parameters, respectively: the mass-specific metabolic rate of consumers and predators $x_C$ and $x_P$, the ingestion rate per unit metabolic rate of consumers and predators $y_C$ and $y_P$ (decomposed into $y_{PC}, y_{PR}$ for the omnivory variant), the half saturation densities for the type II functional responses of the consumers and predators $R_0$ (decomposed into $R_0$, $R_{02}$ for the omnivory variant) and $C_0$, and the omnivory strength $\omega$ for the omnivory variant (see \cref{secSI:models} for the ODE details). 
 %
-Time is nondimensionalized by the resource growth rate and set to the biologically realistic value of 100\% biomass increase per day, so that one unit of time corresponds to one day. The parameters in the simulations are set to the biologically realistic values proposed by \cite{McCann1994,McCann1997}, which additionally ensure that the dynamics of the system are chaotic or show oscillations (see \cref{secSI:models} for details).
+Time is nondimensionalized by the resource growth rate and set to the biologically realistic value of 100\% biomass increase per day, so that one unit of time corresponds to one day. The parameters in the simulations are set to the biologically realistic values proposed by \citep{McCann1994,McCann1997}, which additionally ensure that the dynamics of the system are chaotic or show oscillations (see \cref{secSI:models} for details).
 
 We generate the observation data by sampling the simulated ecosystem dynamics and by contaminating the samples with noise. The noise variance--covariance matrix $\Sigma_y$ is set to be diagonal, with entries that are proportional to the sample variances of the observables
 \begin{equation}
@@ -282,7 +282,7 @@ We assume a uniform distribution of the parameter priors, and randomly draw init
 %%
 We consider two different settings: one where all compartment abundances are observable, i.e. the observing system map $h$ is the identity, and one where only predator and consumer abundances are available, i.e. discarding the resource abundance data.
 %
-For both settings, structural identifiability is tested with the Julia library \textbf{StructuralIdentifibility.jl} \cite{Dong2021} and verified globally. This means that in theory, the unique observation of predator and consumer abundances carries the information required for a complete characterization of all the model parameters.
+For both settings, structural identifiability is tested with the Julia library \textbf{StructuralIdentifibility.jl} \citep{Dong2021} and verified globally. This means that in theory, the unique observation of predator and consumer abundances carries the information required for a complete characterization of all the model parameters.
 
 %%
 For the meta-parameters of the ML framework, we set 
@@ -298,7 +298,7 @@ and $\beta_2 = 0.999$ for the first 6000 epochs, where $\gamma_m$ corresponds to
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{figures/figure2.pdf}
-    \caption{\textbf{Reference food web systems considered.} In \cref{sec:perfect-model}, the blue model $\M_1$ from \cite{Hastings1991} is considered, where a resource is eaten by consumers, which are themselves eaten by predators. In \cref{sec:model_comparision}, the orange model $\M_2$, corresponding to the omnivory variant introduced in \cite{McCann1997}, is also considered.}
+    \caption{\textbf{Reference food web systems considered.} In \cref{sec:perfect-model}, the blue model $\M_1$ from \citep{Hastings1991} is considered, where a resource is eaten by consumers, which are themselves eaten by predators. In \cref{sec:model_comparision}, the orange model $\M_2$, corresponding to the omnivory variant introduced in \citep{McCann1997}, is also considered.}
     \label{fig:3species_foodchain_simple}
 \end{figure}
 \FloatBarrier
@@ -379,7 +379,7 @@ Specifically, we investigate whether the ML framework can detect omnivory from s
 %
 We generate multiple observation datasets from the omnivory variant model $\M_2$ for different omnivory strengths $\omega$ and noise levels $r$. We consider both the standard model $\M_1$ and the omnivory variant model $\M_2$ as two plausible candidate models (see \cref{fig:3species_foodchain_simple} for a graphical illustration of the models).
 % 
-We use the Akaike information criterion (AIC) to select the model with the strongest support in relation to the data \cite{Mangan2017}.
+We use the Akaike information criterion (AIC) to select the model with the strongest support in relation to the data \citep{Mangan2017}.
 % 
 In the specific case of our framework, we calculate the AIC as
 \begin{equation}
@@ -390,7 +390,7 @@ where $p(\hat \theta , \M_i| y_{1:K})$ corresponds to the maximum value of the l
 % 
 The AIC ranks the most probable models by penalizing complexity to balance information loss and parsimony, where candidate models with the lowest scores are ranked as the most likely.
 %
-We consider the Akaike weights $w_{\M_i} = \tfrac{\exp(- \Delta \AIC_{\M_i}/2)}{\sum_j \exp(- \Delta \AIC_{\M_j} / 2)}$, where $\Delta \AIC_{\M_i} = \AIC_{\M_i} - \min_{j} \AIC_{\M_j}$, which can be directly interpreted as the probability that $\M_i$ is the most appropriate model given the data (see \cite{Burnham2002}).
+We consider the Akaike weights $w_{\M_i} = \tfrac{\exp(- \Delta \AIC_{\M_i}/2)}{\sum_j \exp(- \Delta \AIC_{\M_j} / 2)}$, where $\Delta \AIC_{\M_i} = \AIC_{\M_i} - \min_{j} \AIC_{\M_j}$, which can be directly interpreted as the probability that $\M_i$ is the most appropriate model given the data (see \citep{Burnham2002}).
 %
 We expect that the Akaike weights provide support for the generating model $\M_2$ only across values where $\omega > 0$, as $\M_1$ is equivalent to $\M_2$ when $\omega = 0$ and $\M_2$ is penalized by its three additional parameters.
 
@@ -421,32 +421,32 @@ Overall, the ML framework provides statistical support for the model embedding t
 \section{Discussion}\label{sec:discussion}
 
 %% summary and comparison with other methods
-We propose a ML framework combining a mini-batch method inspired by multiple shooting methods \cite{Pisarenko2004} with automatic differentiation \cite{Rackauckas2020a} and state-of-the-art variational optimizers \cite{Kingma2014} to efficiently and accurately parametrize complex dynamical models. 
+We propose a ML framework combining a mini-batch method inspired by multiple shooting methods \citep{Pisarenko2004} with automatic differentiation \citep{Rackauckas2020a} and state-of-the-art variational optimizers \citep{Kingma2014} to efficiently and accurately parametrize complex dynamical models. 
 % 
 We show formally that splitting the data into mini-batches with a short time horizon regularizes the loss function associated with dynamical models characterized by complex dynamics, such as chaotic dynamics and limit cycles (\cref{secSI:supmat}). We demonstrate numerically that this reformulation ensures the success of gradient-based optimizers to parametrize ecosystem models (\cref{fig:training_on_mini-batches,fig:perfect_setting_noise,fig:perfect_setting_multiple_TS}).
 % 
-This mini-batch method is also relevant beyond variational methods and applies to any inferential method navigating the posterior landscape, such as evolutionary algorithms \cite{wilke2001evolution,Rodriguez-Fernandez2006} or Markov Chain Monte Carlo methods \cite{Lignell2013,Higgins2010,Xu2006,Fiechter2013,Rosenbaum2019}.
+This mini-batch method is also relevant beyond variational methods and applies to any inferential method navigating the posterior landscape, such as evolutionary algorithms \citep{wilke2001evolution,Rodriguez-Fernandez2006} or Markov Chain Monte Carlo methods \citep{Lignell2013,Higgins2010,Xu2006,Fiechter2013,Rosenbaum2019}.
 % 
-The proposed approach is particularly relevant for the parametrization of ecosystem models incorporating realistic ecological and adaptive mechanisms \cite{Urban2016}, which are generally associated with strong nonlinearities due to the complexity of processes linking interacting ecological compartments \cite{Bjornstad2001,Hastings1993,Huisman1999,Beninca2008}. It further integrates the practical constraints of available ecological datasets \cite{Dornelas2018}, accommodating incomplete, noisy, shallow and independent observation data.
+The proposed approach is particularly relevant for the parametrization of ecosystem models incorporating realistic ecological and adaptive mechanisms \citep{Urban2016}, which are generally associated with strong nonlinearities due to the complexity of processes linking interacting ecological compartments \citep{Bjornstad2001,Hastings1993,Huisman1999,Beninca2008}. It further integrates the practical constraints of available ecological datasets \citep{Dornelas2018}, accommodating incomplete, noisy, shallow and independent observation data.
 %%
-Overall, the ML framework successfully blends ML methods with mechanistic ecosystem models to learn from ecological time series, and it could therefore improve our quantitative understanding of ecosystem dynamics and help to anticipate their responses to global changes \cite{Urban2016}.
+Overall, the ML framework successfully blends ML methods with mechanistic ecosystem models to learn from ecological time series, and it could therefore improve our quantitative understanding of ecosystem dynamics and help to anticipate their responses to global changes \citep{Urban2016}.
 
 %%
-Our work contributes to the ongoing effort to better assimilate observational data into mechanistic models \cite{Schartau2017,Raissi2019,Kashinath2021}, with a specific focus on the parametrization of ecosystem models with strong nonlinearities.
+Our work contributes to the ongoing effort to better assimilate observational data into mechanistic models \citep{Schartau2017,Raissi2019,Kashinath2021}, with a specific focus on the parametrization of ecosystem models with strong nonlinearities.
 %
-Recently, \cite{Yazdani2020} proposed an alternative framework dubbed "systems biology informed deep learning", where a neural network is fitted to the data and the additional mechanistic model constraints are integrated. This alternative framework extends previous colocation methods \cite{Ramsay2007,Cao2008} and has the advantage of being able to parametrize stochastic models. As it requires the selection of a neural network architecture and a "goodness of fit" parameter, it nevertheless imposes an additional layer of complexity, which might negatively affect the model parametrization  \cite{Yazdani2020}. 
+Recently, \citep{Yazdani2020} proposed an alternative framework dubbed "systems biology informed deep learning", where a neural network is fitted to the data and the additional mechanistic model constraints are integrated. This alternative framework extends previous colocation methods \citep{Ramsay2007,Cao2008} and has the advantage of being able to parametrize stochastic models. As it requires the selection of a neural network architecture and a "goodness of fit" parameter, it nevertheless imposes an additional layer of complexity, which might negatively affect the model parametrization  \citep{Yazdani2020}. 
 % 
-In contrast, the ML framework proposed here trains the model directly against data, using automatic differentiation and sensitivity analysis in order to apply variational optimizers directly to the model simulations. This makes it possible to bypass the use of neural networks, rendering the parametrization process simpler and more amenable to model selection \cite{Ramsay2007}. 
+In contrast, the ML framework proposed here trains the model directly against data, using automatic differentiation and sensitivity analysis in order to apply variational optimizers directly to the model simulations. This makes it possible to bypass the use of neural networks, rendering the parametrization process simpler and more amenable to model selection \citep{Ramsay2007}. 
 % 
 
 %%
 By integrating the practical constraints imposed by ecological datasets, the ML framework can learn from short time series with partial and noisy observations (\cref{fig:perfect_setting_noise,fig:perfect_setting_multiple_TS}). 
 % 
-Local ecosystem surveys, such as marine trawling surveys or local terrestrial surveys (\cite{Pinsky2013,Dornelas2018,Burrows2019} and references therein), provide time series that are generally shallow in time but composed of many replicates \cite{Hsieh2008,Clark2015}, in part due to the practical difficulties of long-term monitoring \cite{Ye2016}. 
+Local ecosystem surveys, such as marine trawling surveys or local terrestrial surveys (\citep{Pinsky2013,Dornelas2018,Burrows2019} and references therein), provide time series that are generally shallow in time but composed of many replicates \citep{Hsieh2008,Clark2015}, in part due to the practical difficulties of long-term monitoring \citep{Ye2016}. 
 % 
 Our results show that the inclusion of multiple independent time series in the training dataset reduces the error in the parameter estimates and increases the forecast skill (\cref{fig:perfect_setting_multiple_TS}). This indicates that the proposed ML framework could, in practice, efficiently harness the information available in current ecological datasets.
 % 
-Instead of directly comparing simulated and observed data, matching time-averaged statistics between observations and simulations (e.g. means and covariances) could further yield an improved assimilation of observations from diverse data sources, such as global observations of productivity from satellites and local surveys, as proposed for climate models \cite{Schneider2017}.
+Instead of directly comparing simulated and observed data, matching time-averaged statistics between observations and simulations (e.g. means and covariances) could further yield an improved assimilation of observations from diverse data sources, such as global observations of productivity from satellites and local surveys, as proposed for climate models \citep{Schneider2017}.
 % 
 Overall, the proposed ML framework accommodates the specificities of current ecological time series and can improve the assimilation of ecological data into mechanistic ecosystem models.
 
@@ -455,13 +455,13 @@ Our work can help elucidate mechanistic pathways by contrasting hypotheses embed
 %
 Using information-criterion-based model selection, we demonstrate with a case study that the ML framework is able to provide statistical support for the true generating model among two different candidates (\cref{fig:AIC_likelihood_comparision_3-compartments-model}).
 % 
-Importantly, the ML framework can perform model selection on complex models, incorporating key mechanisms such as trait--species interactions, evolutionary potential and responses to environmental conditions, which have been shown to be important in mediating ecosystem dynamics and must be refined in models to improve predictive accuracy \cite{Urban2016}.
+Importantly, the ML framework can perform model selection on complex models, incorporating key mechanisms such as trait--species interactions, evolutionary potential and responses to environmental conditions, which have been shown to be important in mediating ecosystem dynamics and must be refined in models to improve predictive accuracy \citep{Urban2016}.
 % 
-The ML framework can therefore lead to the improvement of current ecosystem models and knowledge, which is crucially needed given that key ecological processes are only partially described in most ecosystem models \cite{Schartau2017}.
+The ML framework can therefore lead to the improvement of current ecosystem models and knowledge, which is crucially needed given that key ecological processes are only partially described in most ecosystem models \citep{Schartau2017}.
 % 
-AIC can also be used to ensure the interpretability of the model parameters, and should be preferred to estimating the parameter uncertainty through e.g. the Cramer Rao inqequality \cite{Burnham2002}: by favouring models with less complexity, model selection techniques disqualify uninformative parameters to ensure interpretability \cite{Burnham2002}. This has the extra benefit of reducing the dimensionality of the parameter space, hence improving the estimation of other parameters. 
+AIC can also be used to ensure the interpretability of the model parameters, and should be preferred to estimating the parameter uncertainty through e.g. the Cramer Rao inqequality \citep{Burnham2002}: by favouring models with less complexity, model selection techniques disqualify uninformative parameters to ensure interpretability \citep{Burnham2002}. This has the extra benefit of reducing the dimensionality of the parameter space, hence improving the estimation of other parameters. 
 %
-Following recent novel approaches to investigate ecological hypotheses \cite{Curtsdotter2019}, our method contributes to the development of a process understanding of ecosystem functions and provides a path forward to better link ecological theory and data.
+Following recent novel approaches to investigate ecological hypotheses \citep{Curtsdotter2019}, our method contributes to the development of a process understanding of ecosystem functions and provides a path forward to better link ecological theory and data.
 
 %%
 The proposed approach still presents a set of limitations, which might hamper its success under specific situations. 
@@ -472,18 +472,18 @@ To circumvent this issue, iterative training can be performed, where the learnin
 % 
 Iterative training could also improve the lack of statistical support obtained in hypothesis testing experiments (see simulations in \cref{fig:AIC_likelihood_comparision_3-compartments-model,figSI:model_selection_1sp} where none of the models is given statistical support), as it would increase differences in likelihood for parameter values around the neighbourhood of the true parameter values.
 % 
-Second, our results highlight that the data might not provide enough constraints for a correct parametrization (\cref{fig:perfect_setting_multiple_TS}, partial observation setting and $S=1$). Pre-experimental analyses with simulated synthetic data might therefore be required to design the sampling protocol and campaign to ensure an adequate sampling effort \cite{Banks2017,Laubmeier2018}. % This can be done with Fisher information.
+Second, our results highlight that the data might not provide enough constraints for a correct parametrization (\cref{fig:perfect_setting_multiple_TS}, partial observation setting and $S=1$). Pre-experimental analyses with simulated synthetic data might therefore be required to design the sampling protocol and campaign to ensure an adequate sampling effort \citep{Banks2017,Laubmeier2018}. % This can be done with Fisher information.
 %
-Third, while in \cref{eq:ML-framework} it is assumed that the parameter values are the same across the time series, strong regional variability might also be observed among the spatially replicated data, causing parameter values to vary across the replicates. The knowledge of this variability could motivate partial pooling \cite{Beaumont2010} or parametrization of the parameters in terms of environmental conditions \cite{Pahlow2008}, to account for the independence of the parameter values across the replicates.
+Third, while in \cref{eq:ML-framework} it is assumed that the parameter values are the same across the time series, strong regional variability might also be observed among the spatially replicated data, causing parameter values to vary across the replicates. The knowledge of this variability could motivate partial pooling \citep{Beaumont2010} or parametrization of the parameters in terms of environmental conditions \citep{Pahlow2008}, to account for the independence of the parameter values across the replicates.
 %
-Finally, while the proposed ML framework greatly improves convergence, it could still be that -- even with a large amount of data -- poor initial parameter estimates, a large number of free parameters, or high noise levels prevent convergence to the true minimum. Performing multiple runs with varying initial parameter estimates can ensure that the maximum a priori estimate is reliable. If this is not the case, stochasticity could further be introduced within the ML framework to prevent the convergence to local minima, where only a subset of mini-batches are fitted at each epoch \cite{bottou2012stochastic}.
+Finally, while the proposed ML framework greatly improves convergence, it could still be that -- even with a large amount of data -- poor initial parameter estimates, a large number of free parameters, or high noise levels prevent convergence to the true minimum. Performing multiple runs with varying initial parameter estimates can ensure that the maximum a priori estimate is reliable. If this is not the case, stochasticity could further be introduced within the ML framework to prevent the convergence to local minima, where only a subset of mini-batches are fitted at each epoch \citep{bottou2012stochastic}.
 
 \section{Conclusion}
 We proposed a ML framework based on a mini-batch method combined with automatic differentiation and state-of-the-art optimizers to estimate the parameters and improve the forecast skill of complex ecosystem models from observation data.
 % 
 The ML framework was benchmarked with a realistic ecosystem model characterized by strong nonlinearities and delivered excellent performance, accommodating the practical constraints imposed by the quality and availability of ecological datasets.  Our experiments have further illustrated the ability of the ML framework to discriminate between several candidate models, enabling the testing of ecological theories against data and the improvement of current mechanistic models.
 % 
-Given the increasing number of ecological datasets following the development of monitoring technologies such as environmental DNA \cite{Ruppert2019}, remote sensing \cite{Jetz2019}, bioaccoustics \cite{Aide2013}, and citizen observations \cite{GBIF}, the proposed ML framework opens up new opportunities for the quantitative investigation of current ecosystem functions \cite{Curtsdotter2019} and the prediction of ecosystem responses to increasing disruptions \cite{Urban2016}.
+Given the increasing number of ecological datasets following the development of monitoring technologies such as environmental DNA \citep{Ruppert2019}, remote sensing \citep{Jetz2019}, bioaccoustics \citep{Aide2013}, and citizen observations \citep{GBIF}, the proposed ML framework opens up new opportunities for the quantitative investigation of current ecosystem functions \citep{Curtsdotter2019} and the prediction of ecosystem responses to increasing disruptions \citep{Urban2016}.
 
 \section{Acknowledgements}
 % The authors thank Thomas Poulet and François Duchene for helpful discussions and comments.
@@ -492,4 +492,4 @@ L.P. and V.B. were supported by the SNF grant 310030E\_205556. P.V.A. was suppor
 \section{Code availability}
 The ML framework is implemented in the multi-purpose Julia package \textbf{MiniBatchInference.jl} available at \href{https://github.com/vboussange/MiniBatchInference.jl}{https://github.com/vboussange/MiniBatchInference.jl}, and the simulation code is available at \href{https://github.com/vboussange/mini-batching-ecological-data}{https://github.com/\linebreak vboussange/mini-batching-ecological-data}.
 
-\printbibliography[heading=subbibliography]
+% \printbibliography[heading=subbibliography]
