@@ -17,7 +17,7 @@
 % \makeatother % changes the catcode of @ back to 12
 
 \section{Supplementary Information}
-\label{secSI:supmat}
+\label{secSI:mini-batching}
 
 We show that the loss function $L_\M(\theta)$ in the main manuscript in \cref{eq:loss_fn} is ill-behaved for models with complex dynamics when the time horizon is large. We proceed by first analysing the dynamics of models with complex dynamics showing chaotic behaviour or limit cycles, and approximate the divergence of perturbed dynamical trajectories. We then show that the divergence in dynamics translates into a loss function whose surface is rugged in most of the parameter space, and that the gradient of the loss function around the true parameters becomes exponentially steeper with time. We conclude by formally discussing how the proposed mini-batch method regularizes the ill-behaviour of the loss function.
 
@@ -257,37 +257,37 @@ For this set of parameter values, the dynamics of the system are chaotic for $\o
 % \printbibliography[heading=subbibliography]
 
 \section{Supplementary Figures}
-% \begin{figure}[h]
+% \begin{figure}[ht]
 %     \centering
 %     \includegraphics[width=0.8\textwidth]{figures/ill_conditioning_training_epochs.pdf}
 %     \caption{Ill conditioning of $L_\M(\theta)$ leads to jumps cause by the very large gradient in a neighborhood of the true parameter.}
-%     \label[SI]{ill_conditioning_training_epochs}
+%     \label{ill_conditioning_training_epochs}
 % \end{figure}
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[]{figures/SI/figure5_2sp.png}
     \caption{\textbf{Performance of the ML framework in supporting the predator omnivory hypothesis in a food web for the partial observation setting}. 
     % 
     In \textbf{A},  \textbf{B} and \textbf{C} where $r = 0.1, 0.2 ,0.3$, the lack of data prevents the correct estimation of the omnivory variant model parameters, leading model $\M_1$ to be supported for a wider range of $\omega$ in contrast to the complete observation setting (\cref{fig:AIC_likelihood_comparision_3-compartments-model}A).}
-    \label[SI]{figSI:model_selection_1sp}
+    \label{figSI:model_selection_1sp}
 \end{figure}
 
 \FloatBarrier
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[]{figures/SI/perturbed_ICs.png}
     \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta x_0}(t)$, obtained from the reference food-web model from \cite{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 100$, $x(t)$ and $x_{\delta x_0}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 100$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime.}
-    \label[SI]{figSI:perturbed_ICs}
+    \label{figSI:perturbed_ICs}
 \end{figure}
 
 \FloatBarrier
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[]{figures/SI/perturbed_p.png}
     \caption{\textbf{Divergence between the trajectory $x(t)$ and a perturbed trajectory $x_{\delta p}(t)$, obtained from the reference food-web model from \cite{Hastings1991} and detailed in \cref{secSI:models}}. For $t \lesssim 40$, $x(t)$ and $x_{\delta p}(t)$ are correlated and the divergence regime is informative, but for $t \gtrsim 40$ the trajectories become essentially uncorrelated, corresponding to the mixed divergence regime. }
-    \label[SI]{figSI:perturbed_p}
+    \label{figSI:perturbed_p}
 \end{figure}
 
 \FloatBarrier

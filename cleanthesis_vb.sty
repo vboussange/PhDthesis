@@ -258,14 +258,14 @@
 \RequirePackage{hyperref} 			% interactive link inside the document
 \RequirePackage{calc}
 \RequirePackage[automark]{scrlayer-scrpage}
-\RequirePackage{caption} % used for nice spacing of captions
 
 %
 \RequirePackage[					% modify figure and table captions
 	font={small}, 					% 	- small font size
 	labelfont={bf,sf,color=ctcolorfloatlabel},% 	- label in bold, sans-serif and magenta
 	labelsep=\cthesis@figuresep,				% 	- separator: none, colon, period, space, quad, newline, endash
-	singlelinecheck=false			% 	- no centered single-lined captions
+	singlelinecheck=false,			% 	- no centered single-lined captions
+	tableposition=below
 ]{caption}[2008/08/24]
 %\ifthenelse{\boolean{@figurecaptionoutside}}%
 \ifct@cthesis@hangfigurecaption
@@ -780,6 +780,8 @@
 % ******************************************
 % Define the 'experiences' environment
 \RequirePackage{longtable}
+\captionsetup[longtable]{skip=1em} % for longtable legends
+
 \newcommand{\sociallink}[3]{\mbox{\link{#2}{#3}\hspace{1em}}}
 \newcommand*{\github}[1]{\sociallink{}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
 % \newcommand{\githubSymbol}{\faGithub}

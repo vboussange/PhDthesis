@@ -126,7 +126,7 @@ like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of
 %%%%%%%%%%%%%% METHODS    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
 
-\section{Methods}\label{sec:methods}
+\section{Methods}\label{sec:methods_econobio}
 \subsection{Eco-evolutionary model to characterise the dynamics of economic activities}
 
 We derive a general population dynamic model where the dynamics of national economic activities is driven self-replication, self-limitation, interactions with other activities, spatial transfers between countries, and activity transformations within the country. We present the general model in the following, which we further split into alternative sub-models to test the support of each process.
@@ -142,11 +142,11 @@ In the general population dynamic model that includes all the processes investig
 \end{equation}
 where $N\hc$ is the number of economic activities considered in country $c$ and $M$ is the number of countries considered.
 % 
-In \cref{eq:model_general}, the first summand corresponds to a Lotka Volterra model for ecological communities (see, e.g., \citep{Bunin2017,Scheffer2006a,Case1990}), where  $r_i\hc $ is the growth rate, involved in the self-replication, and $b_i\hc $ is the self-interaction coefficient, involved in the self-limitation. $b_i\hc $ can also be interpreted as the inverse of the country's carrying capacity for the activity. %\citep{Grimme}
+In \cref{eq:model_general}, the first summand corresponds to a Lotka Volterra model for ecological communities (see, e.g., \cite{Bunin2017,Scheffer2006a,Case1990}), where  $r_i\hc $ is the growth rate, involved in the self-replication, and $b_i\hc $ is the self-interaction coefficient, involved in the self-limitation. $b_i\hc $ can also be interpreted as the inverse of the country's carrying capacity for the activity. %\citep{Grimme}
 %
 The individual dynamics of economic activities are altered by interactions, where $\alpha_{i,j}\hc $ captures the interaction between activity $ i $ and activity $ j $ at location $c$. The interaction between $i$ and $j$ is mutualistic if $\alpha_{i,j}\hc  > 0$, and competitive when $\alpha_{i,j}\hc  < 0$, altering positively or negatively the rate of change of the activity $i$ by the presence of other activities.
 %
-The second summand accounts for spatial transfers across locations (see, e.g., \citep{Tilman1994b}), where $\delta^{(l,c)}_{i}$ is the rate of spatial transfer for activity $i$ between locations $l$ and $c$.
+The second summand accounts for spatial transfers across locations (see, e.g., \cite{Tilman1994b}), where $\delta^{(l,c)}_{i}$ is the rate of spatial transfer for activity $i$ between locations $l$ and $c$.
 % 
 The last summand corresponds to economic activity transformations within country $c$, where $\mu\hc _{j,i}$ is the rate of transfer dictating how fast activity $j$ transforms into activity $i$. In the sense of the quasi-species model \citep{eigen1988molecular}, this term can be interpreted as accounting for evolutionary processes, and can contribute to the development of an activity in the presence of other activities.
 %
@@ -239,7 +239,7 @@ $ y_i\hc (t) = X_{i}\hc (t) / P\hc (t) $.
 % 
 %although RCA is usually further scaled by the ensemble export product within the country as the end goal of complexity economics is not to characterise growth but specialisation of an economy.
 %%
-In each country, we only consider economic activities which have sustained a significant size relative to the world trends for at least 4 years (revealed comparative advantage $>1$, see \citep{Hidalgo2021}).
+In each country, we only consider economic activities which have sustained a significant size relative to the world trends for at least 4 years (revealed comparative advantage $>1$, see \cite{Hidalgo2021}).
 % 
 We assume that the observation data is contaminated by a white noise with log-normal distribution $\epsilon$ with zero mean and a variance-covariance matrix $\Sigma = \sigma^2 I$ where $\sigma$ is the noise level, which is a reasonable error model for population dynamics \citep{Schartau2017}, so that
 % 
@@ -284,7 +284,7 @@ We then take the best run among the 5 optimization runs, making sure that the li
 \subsection{Validation with synthetic data}\label{sec:synthetic}
 We first investigate whether the inverse modelling technique of \cite{Boussange2022a} together with the proposed sub-models in \cref{eq:submodels1,eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5} can detect signatures of eco-evolutionary processes in a controlled experiment, using synthetic datasets.
 %
-We proceed by generating multiple observation datasets from the models $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ with realistic $r_i$ and $b_i$ parameters and with different values for the parameters $\alpha$, $\mu$, and $\delta$ and with different values for the noise level $\sigma$. We consider $\modnull$, $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ as equally plausible candidate models for each generated datasets, and apply the maximum likelihood estimation method detailed in the \nameref{sec:methods} to obtain the maximum likelihood $\LL(\hat \theta, \M | \by)$ of each model for each generated dataset. We then use the Bayesian information criterion (BIC) to select the model with the strongest strength-of-evidence in relation to the data \citep{Mangan2017}, calculating the BIC for model $\M_i$ as $\BIC_{\M_i} = -2 \ln(\LL(\hat \theta, \M_i | \by)) + k_{\M} \ln(N T ) $
+We proceed by generating multiple observation datasets from the models $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ with realistic $r_i$ and $b_i$ parameters and with different values for the parameters $\alpha$, $\mu$, and $\delta$ and with different values for the noise level $\sigma$. We consider $\modnull$, $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ as equally plausible candidate models for each generated datasets, and apply the maximum likelihood estimation method detailed in the \nameref{sec:methods_econobio} to obtain the maximum likelihood $\LL(\hat \theta, \M | \by)$ of each model for each generated dataset. We then use the Bayesian information criterion (BIC) to select the model with the strongest strength-of-evidence in relation to the data \citep{Mangan2017}, calculating the BIC for model $\M_i$ as $\BIC_{\M_i} = -2 \ln(\LL(\hat \theta, \M_i | \by)) + k_{\M} \ln(N T ) $
 % 
 where $N$ is the number of activities in country $c$, $T$ is the number of time points in the time series considered ($N T$ therefore being the number of data points for country $c$) and $k_{\M}$ is the number of parameters in the model $\M$ for country $c$.
 % 
@@ -327,7 +327,7 @@ Overall, the proposed eco-evolutionary model together with the maximum likelihoo
 
 \subsection{Discrepancies in dynamical regime across countries}
 
-We apply the maximum likelihood estimation method detailed in the \nameref{sec:methods} to obtain the maximum likelihood of each model for the world top 100 countries with the highest GDP per capita, as of 2020 (see list in \cref{tab:country_codes}). 
+We apply the maximum likelihood estimation method detailed in the \nameref{sec:methods_econobio} to obtain the maximum likelihood of each model for the world top 100 countries with the highest GDP per capita, as of 2020 (see list in \cref{tab:country_codes}). 
 % 
 We first investigate the quality of best fit, and further detail the results for each model in the following section. %as it is assumed that the corresponding data is less fluctuating \citep{Tacchella2018}.
 % 
@@ -335,7 +335,7 @@ In the following, we refer to countries by their ISO 3166-1 reference code, whic
 % 
 Details of the numerical simulations are provided in \cref{tab:results}.
 %
-Over the 100 countries investigated, only 78 countries have sufficiently long time series to be included in the analyses (countries with at least 20 years of data, see \nameref{sec:methods}), while 77 countries show consistent maximum likelihood estimates (best model coefficient of determination $R^2$ > 0).
+Over the 100 countries investigated, only 78 countries have sufficiently long time series to be included in the analyses (countries with at least 20 years of data, see \nameref{sec:methods_econobio}), while 77 countries show consistent maximum likelihood estimates (best model coefficient of determination $R^2$ > 0).
 % 
 Among the 77 countries, we find that the best models have a good fit to the data, and capture well the long term growth of economic activities (median explained variance $R^2 = 0.940$, see \cref{fig:fits} and \cref{figSI:fit_alphan,figSI:fit_alphap,figSI:fit_delta,figSI:fit_mu} for graphical illustrations of the fit).
 % 

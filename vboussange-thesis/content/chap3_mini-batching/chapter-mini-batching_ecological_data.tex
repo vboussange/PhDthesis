@@ -97,7 +97,7 @@ We evaluate the performance of the ML framework in recovering the chaotic dynami
 %
 By blending biological knowledge and ML methods, the proposed ML framework is interpretable and data-efficient, and it facilitates mechanism discovery. The proposed approach thus shows promise in improving our ability to understand and forecast ecosystem dynamics.
 
-\section{Machine learning framework for ecosystem models}\label{sec:methods}
+\section{Machine learning framework for ecosystem models}\label{sec:methods_mini-batching}
 \subsection{Ecosystem model parametrization as a learning problem}
 \subsubsection{Ecosystem models}
 Ecosystem models generally consist of a system of ordinary differential equations (ODEs) of the form
@@ -164,7 +164,7 @@ where $\gamma$ is the learning rate. Other gradient-based algorithms, such as th
 \subsubsection{Information indigestion}
 A naive minimization of $L_\M(\theta)$ with gradient-based methods is likely to fail, as its associated surface cannot be navigated properly. As illustrated in \cref{fig:training_on_mini-batches}\textbf{A}, the loss surface associated with models characterized by complex dynamics consists of multiple local minima, which cause problems of convergence in efforts to reach the global minimum (depicted by the orange curve in \cref{fig:training_on_mini-batches}\textbf{B}). Furthermore, in a neighbourhood of the global minimum, the gradient of the loss function is very large (a "ravine" with almost vertical walls), leading the optimizer to overshoot the true parameter values (depicted by the green curve in \cref{fig:training_on_mini-batches}\textbf{B}).
 %
-In \cref{secSI:supmat} we show in a general setting that these problematic features arise from the dynamical properties of ecosystem models: when the dynamics are chaotic or exhibit a limit cycle (as is often the case for ecological dynamics \citep{Bjornstad2001,Hastings1993,Huisman1999,Beninca2008}), the dynamical trajectories exhibit high sensitivity to the model parameters and ICs. This means that a small modification of the parameters or ICs leads to large divergences over time. 
+In \cref{secSI:mini-batching} we show in a general setting that these problematic features arise from the dynamical properties of ecosystem models: when the dynamics are chaotic or exhibit a limit cycle (as is often the case for ecological dynamics \citep{Bjornstad2001,Hastings1993,Huisman1999,Beninca2008}), the dynamical trajectories exhibit high sensitivity to the model parameters and ICs. This means that a small modification of the parameters or ICs leads to large divergences over time. 
 %
 The prevalence of large deviations causes discontinuities, appearing as many sub-optimal local minima on the loss surface. Moreover, the true minimum can only be found in a narrow ravine that becomes narrower as the number of data points increases.
 % 
@@ -218,9 +218,9 @@ The ICs $x_{0}^{(s,m)}$ are nuisance parameters that augment the dimensionality 
 % 
 $K^{(s,m)}$ expresses the overlap between each batch of data for $m < M^{(s)}$ and ensures that all the available information is utilized to constrain the parameter vector $p$.
 %
-By smoothing the ruggedness of the loss surface (orange curve in \cref{fig:training_on_mini-batches}\textbf{A}), the proposed mini-batch method yields an improved navigability (orange curve in \cref{fig:training_on_mini-batches}\textbf{B}). We show analytically in \cref{secSI:supmat} that using $L_\M^\star$ yields a more navigable loss surface than if $L_\M(\theta)$ is used in \cref{eq:loss_fn}.
+By smoothing the ruggedness of the loss surface (orange curve in \cref{fig:training_on_mini-batches}\textbf{A}), the proposed mini-batch method yields an improved navigability (orange curve in \cref{fig:training_on_mini-batches}\textbf{B}). We show analytically in \cref{secSI:mini-batching} that using $L_\M^\star$ yields a more navigable loss surface than if $L_\M(\theta)$ is used in \cref{eq:loss_fn}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[]{figures/figure1.png}
     \caption{\textbf{Illustration of the mini-batch method.} 
@@ -295,7 +295,7 @@ $\gamma_m = \one_{[0,2000]}(m) 10^{-1} +\one_{[0,2000]}(m) 10^{-2} + \one_{[0,20
 % 
 and $\beta_2 = 0.999$ for the first 6000 epochs, where $\gamma_m$ corresponds to the learning rate of the $m$th epoch, and we use L-BFGS for the last 200 epochs.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{figures/figure2.pdf}
     \caption{\textbf{Reference food web systems considered.} In \cref{sec:perfect-model}, the blue model $\M_1$ from \citep{Hastings1991} is considered, where a resource is eaten by consumers, which are themselves eaten by predators. In \cref{sec:model_comparision}, the orange model $\M_2$, corresponding to the omnivory variant introduced in \citep{McCann1997}, is also considered.}
@@ -329,7 +329,7 @@ To investigate systematically how the ML framework accommodates different levels
 
 Given that the food-web dynamics are chaotic (\cref{secSI:models}), excellent performance in parameter estimation might not be sufficient to provide accurate forecasts. We therefore also test the ML algorithm by evaluating how the forecast skill $\rho^2$ is affected by the noise level under complete or partial observations. Results for the complete and partial observation settings reported in \cref{fig:perfect_setting_noise}\textbf{C} show good forecast skill under moderate observational noise, where $\rho^2$ linearly decreases with the time horizon considered. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[]{figures/figure3.png}
     \caption{\textbf{Performance of the proposed ML framework for varying noise levels, under the complete and the partial observation setting.} 
@@ -354,7 +354,7 @@ We reduce the time horizon of the observation data by setting the time series le
 These results confirm the robustness of the ML framework against noise and partial observations, and show that the ML framework can efficiently harness the information from disparate observation datasets.
 %
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[]{figures/figure4.png}
     \caption{\textbf{Performance of the ML framework in processing and combining the information of multiple independent data sets.}
@@ -404,7 +404,7 @@ On the other hand, in the partial observation setting, the lack of data prevents
 %%
 Overall, the ML framework provides statistical support for the model embedding the most appropriate hypotheses given the available data. With appropriate data, the proposed ML framework can therefore elucidate mechanistic pathways and infer ecological processes by utilizing information-based model selection.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[]{figures/figure5.png}
     \caption{\textbf{Performance of the ML framework in supporting the predator omnivory hypothesis in a food web.}
@@ -423,7 +423,7 @@ Overall, the ML framework provides statistical support for the model embedding t
 %% summary and comparison with other methods
 We propose a ML framework combining a mini-batch method inspired by multiple shooting methods \citep{Pisarenko2004} with automatic differentiation \citep{Rackauckas2020a} and state-of-the-art variational optimizers \citep{Kingma2014} to efficiently and accurately parametrize complex dynamical models. 
 % 
-We show formally that splitting the data into mini-batches with a short time horizon regularizes the loss function associated with dynamical models characterized by complex dynamics, such as chaotic dynamics and limit cycles (\cref{secSI:supmat}). We demonstrate numerically that this reformulation ensures the success of gradient-based optimizers to parametrize ecosystem models (\cref{fig:training_on_mini-batches,fig:perfect_setting_noise,fig:perfect_setting_multiple_TS}).
+We show formally that splitting the data into mini-batches with a short time horizon regularizes the loss function associated with dynamical models characterized by complex dynamics, such as chaotic dynamics and limit cycles (\cref{secSI:mini-batching}). We demonstrate numerically that this reformulation ensures the success of gradient-based optimizers to parametrize ecosystem models (\cref{fig:training_on_mini-batches,fig:perfect_setting_noise,fig:perfect_setting_multiple_TS}).
 % 
 This mini-batch method is also relevant beyond variational methods and applies to any inferential method navigating the posterior landscape, such as evolutionary algorithms \citep{wilke2001evolution,Rodriguez-Fernandez2006} or Markov Chain Monte Carlo methods \citep{Lignell2013,Higgins2010,Xu2006,Fiechter2013,Rosenbaum2019}.
 % 
@@ -442,7 +442,7 @@ In contrast, the ML framework proposed here trains the model directly against da
 %%
 By integrating the practical constraints imposed by ecological datasets, the ML framework can learn from short time series with partial and noisy observations (\cref{fig:perfect_setting_noise,fig:perfect_setting_multiple_TS}). 
 % 
-Local ecosystem surveys, such as marine trawling surveys or local terrestrial surveys (\citep{Pinsky2013,Dornelas2018,Burrows2019} and references therein), provide time series that are generally shallow in time but composed of many replicates \citep{Hsieh2008,Clark2015}, in part due to the practical difficulties of long-term monitoring \citep{Ye2016}. 
+Local ecosystem surveys, such as marine trawling surveys or local terrestrial surveys (see \cite{Pinsky2013,Dornelas2018,Burrows2019} and references therein), provide time series that are generally shallow in time but composed of many replicates \citep{Hsieh2008,Clark2015}, in part due to the practical difficulties of long-term monitoring \citep{Ye2016}. 
 % 
 Our results show that the inclusion of multiple independent time series in the training dataset reduces the error in the parameter estimates and increases the forecast skill (\cref{fig:perfect_setting_multiple_TS}). This indicates that the proposed ML framework could, in practice, efficiently harness the information available in current ecological datasets.
 % 
@@ -467,7 +467,7 @@ Following recent novel approaches to investigate ecological hypotheses \citep{Cu
 The proposed approach still presents a set of limitations, which might hamper its success under specific situations. 
 % 
 First, while the use of mini-batches smooths the loss surface and ensures better convergence, it also flattens the loss surface around the true parameter value, which consequently deteriorates the precision of the inferred parameters because the loss function takes similar values in an extended neighbourhood of the true parameters. 
-% More formally, the curvature of the loss function around the true parameters is decreased, which deteriorates the fisher information of the time series (see \cref{secSI:supmat}). 
+% More formally, the curvature of the loss function around the true parameters is decreased, which deteriorates the fisher information of the time series (see \cref{secSI:mini-batching}). 
 To circumvent this issue, iterative training can be performed, where the learning is initiated by a short batch length $K^{(s)}$ to identify the region with the most probable parameters, and in subsequent iterations the batch length is increased to improve the precision of the inference. 
 % 
 Iterative training could also improve the lack of statistical support obtained in hypothesis testing experiments (see simulations in \cref{fig:AIC_likelihood_comparision_3-compartments-model,figSI:model_selection_1sp} where none of the models is given statistical support), as it would increase differences in likelihood for parameter values around the neighbourhood of the true parameter values.

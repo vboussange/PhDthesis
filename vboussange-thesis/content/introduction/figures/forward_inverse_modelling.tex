@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%
+
+% designed to be integrated with conceptual figure
+
+%%%%%%%%%%%
+\documentclass[border=0.2cm,11pt]{standalone}
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}%
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,automata}
+\usetikzlibrary{shapes}
+
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+
+% taken from neural networks
+\usepackage{amsmath} % for aligned
+%\usepackage{amssymb} % for \mathbb
+%\usepackage{etoolbox} % for \ifthen
+\usepackage{listofitems} % for \readlist to create arrays
+\usetikzlibrary{arrows.meta} % for arrow size
+\usepackage[outline]{contour} % glow around text
+\contourlength{1.4pt}
+
+% using tableau 10 color palette: https://public.tableau.com/views/TableauColors/ColorPaletteswithRGBValues?%3Aembed=y&%3AshowVizHome=no&%3Adisplay_count=y&%3Adisplay_static_image=y
+
+\definecolor{myblue}{RGB}{31,119,180}
+\definecolor{myred}{RGB}{214,39,40}
+\definecolor{mygreen}{RGB}{44,160,44}
+
+% original colors defined by original author
+\colorlet{myorange}{orange!70!red!60!black}
+\colorlet{mydarkred}{red!30!black}
+\colorlet{mydarkblue}{blue!40!black}
+\colorlet{mydarkgreen}{green!30!black}
+\tikzstyle{mynode}=[align=center, rounded corners, minimum height=1cm]
+\tikzstyle{procs_ecolo}=[mynode, rectangle, fill=mygreen!30]
+\tikzstyle{procs_evol}=[mynode, rectangle, fill=myred!30]
+\tikzstyle{mechanisms}=[mynode, rectangle, thick, minimum width=3cm]
+\tikzstyle{patterns}=[mynode, circle, thick, fill=myblue!20]
+
+
+% \tikzstyle{node}=[ultra thick,circle,minimum size=30,inner sep=2.,outer sep=0.6]
+% \tikzstyle{node green}=[node,fill=mygreen]
+% \tikzstyle{node blue}=[node,fill=myblue]
+% \tikzstyle{node orange}=[node,orange!20!black,draw=myorange!30!black,fill=myorange!20]
+% \tikzstyle{node red}=[node,fill=myred]
+\tikzstyle{connect}=[thick,mydarkblue] %,line cap=round
+\tikzstyle{connect arrow}=[-{Latex[length=6,width=6]},thick,mydarkblue,shorten <=0.5,shorten >=1]
+ 
+
+% spacing nodes
+% \tikzset{node distance = 0.5cm and 0.5cm}
+
+\begin{document}
+
+ 
+\begin{tikzpicture}[
+    node distance=4cm,
+    on grid,
+    very thick,
+    font=\large]
+ 
+\node[mechanisms, fill=mygreen!30] (procs) { Processes };
+\node[mechanisms, fill=myred!30] (mechs) [right=of procs] { Mechanisms };
+\node[mechanisms, fill=myblue!20] (patt) [right= of mechs]{ Patterns };
+
+\node[mechanisms,] () [below= 2cm of mechs]{ Forward modelling };
+\node[mechanisms,] () [above= 2cm of mechs]{ Inverse modelling };
+
+\begin{scope} [connect arrow]  % now dashed is for the lines inside the scope
+    \draw (procs) to [bend right] (mechs.south)  ; 
+    \draw (mechs) to [bend right] (patt.south)  ; 
+
+    \draw (patt.north) to [bend right] (mechs)  ; 
+    \draw (mechs.north) to [bend right] (procs)  ; 
+
+
+\end{scope}
+
+\end{tikzpicture}
+ 
+\end{document}

@@ -116,7 +116,7 @@ We use both methods to solve five non-local nonlinear PDEs arising in models fro
 %
 We manage to solve the non-local nonlinear PDEs with reasonable accuracy in up to 10 dimensions.
 
-For an account of classical numerical methods for solving non-local PDEs, such as finite differences, finite elements, and spectral methods, we refer the reader to the recent survey \citep{delia2020numerical}. Several machine-learning based schemes for solving non-local PDEs can also be found in the literature. 
+For an account of classical numerical methods for solving non-local PDEs, such as finite differences, finite elements, and spectral methods, we refer the reader to the recent survey of \cite{delia2020numerical}. Several machine-learning based schemes for solving non-local PDEs can also be found in the literature. 
 %
 In particular, the \emph{physics-informed neural network} and \emph{deep Galerkin} approaches \citep{raissi2019physics,Sirignano2018dgm}, based on representing an approximation of the whole solution of the PDE as a neural network and using automatic differentiation to do a least-squares minimization of the residual of the PDE, have been extended to fractional PDEs and other non-local PDEs \citep{pang2019fpinns,lu2021deepxde,guo2022monte,alaradi2019extensions,yuan2022apinn}. While some of these approaches use classical methods susceptible to the curse of dimensionality for the non-local part \citep{pang2019fpinns,lu2021deepxde}, mesh-free methods suitable for high-dimensional problems have also been investigated \citep{guo2022monte,alaradi2019extensions,yuan2022apinn}. 
 

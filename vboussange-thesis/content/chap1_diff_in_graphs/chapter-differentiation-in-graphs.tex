@@ -148,7 +148,7 @@ where $p$ is the selection strength \citep{Mirrahimi2020}. This ensures that the
 
 \subsection{Deterministic approximation of the population dynamics under no selection}\label{sec:212}
 
-The model can be formulated as a measure-valued point process (\citep{Bansaye2015} and \nameref{secSI:supmat}). Under this formalism, we demonstrate in the \nameref{secSI:supmat} how the population size and the trait dynamics show a deterministic behaviour when a stabilising force dampens the stochastic fluctuations. This makes it possible to express the dynamics of the macroscopic properties with deterministic differential equations, connecting emergent patterns to the processes that generate them. In particular, in the setting of no selection, competition stabilises the population size fluctuations, and the dynamics can be considered deterministic and expressed as
+The model can be formulated as a measure-valued point process (\citep{Bansaye2015} and \nameref{secSI:diff-in-graphs}). Under this formalism, we demonstrate in the \nameref{secSI:diff-in-graphs} how the population size and the trait dynamics show a deterministic behaviour when a stabilising force dampens the stochastic fluctuations. This makes it possible to express the dynamics of the macroscopic properties with deterministic differential equations, connecting emergent patterns to the processes that generate them. In particular, in the setting of no selection, competition stabilises the population size fluctuations, and the dynamics can be considered deterministic and expressed as
 %
 \begin{equation}\label{eq:sett1_popdyn_simple}
   \partial_t N_t^{(i)} = N_t^{(i)} \left[ b(1-m) - \frac{N_t^{(i)}}{K} \right] + m b \sum_{j\neq i}\frac{a_{i,j}}{d_j} N_t^{(j)}
@@ -158,11 +158,11 @@ where $A = (a_{i,j})_{1\leq i, j \leq M}$ is the adjacency matrix of the graph $
 %
 The first term on the right-hand side corresponds to logistic growth, which accounts for birth and death events of non-migrating individuals. The second term captures the gains due to migrations, which depend on the graph topology. 
 %
-Assuming that all vertices with the same degree have an equivalent position on the graph, corresponding to a “mean field” approach (see \nameref{sec:methods}), one can obtain a closed-form solution from \cref{eq:sett1_popdyn_simple} (see \cref{eq:mean_field_set1}), which shows that the average population size $\bar{N}$ scales with $\nicefrac{\normf{\sqrt{k}}^2}{\normf{k}}$, where $\normf{k}$ is the average vertex degree and $\normf{\sqrt{k}}$ is the average square-rooted vertex degree. 
+Assuming that all vertices with the same degree have an equivalent position on the graph, corresponding to a “mean field” approach (see \nameref{sec:methods_diff-in-graphs}), one can obtain a closed-form solution from \cref{eq:sett1_popdyn_simple} (see \cref{eq:mean_field_set1}), which shows that the average population size $\bar{N}$ scales with $\nicefrac{\normf{\sqrt{k}}^2}{\normf{k}}$, where $\normf{k}$ is the average vertex degree and $\normf{\sqrt{k}}$ is the average square-rooted vertex degree. 
 %
 The quantity $\nicefrac{\normf{\sqrt{k}}^2}{\normf{k}}$, denoted as $h_d$, relates to the homogeneity in vertex degree of the graph and can therefore be viewed as a measure negatively associated with heterogeneity in connectivity. Simulations of the IBM illustrate that $h_d$ can explain differences in population size for complex graph topologies with varying migration regimes (\cref{fig:setting1_neutr_M=7}a for graphs with $M=7$ vertices and \cref{figSI:setting1_neutr_M=9}a for $M=9$). 
 %
-This analytical result is connected to theoretical work on reaction diffusion processes \citep{Colizza2007} and highlights that irregular graphs (graphs whose vertices do not have the same degree) result in unbalanced migration fluxes that affect the ecological balance between births and deaths. Highly connected vertices present an oversaturated carrying capacity ($N^{(i)} > bK$, see \nameref{sec:methods}), increasing local competition and lowering total population size compared with regular graphs (\cref{fig:setting1_neutr_M=7}a).
+This analytical result is connected to theoretical work on reaction diffusion processes \citep{Colizza2007} and highlights that irregular graphs (graphs whose vertices do not have the same degree) result in unbalanced migration fluxes that affect the ecological balance between births and deaths. Highly connected vertices present an oversaturated carrying capacity ($N^{(i)} > bK$, see \nameref{sec:methods_diff-in-graphs}), increasing local competition and lowering total population size compared with regular graphs (\cref{fig:setting1_neutr_M=7}a).
 %
 Because populations with small sizes experience more drift (\citep{Burger2000} and \cref{betau_vs_K}), this result indicates that graph topology affects neutral differentiation not only through population isolation, but also by affecting population dynamics.
 
@@ -179,7 +179,7 @@ When migration is limited, individuals' traits are coherent on each vertex but s
 %
 Migration attenuates neutral differentiation because it has a correlative effect on local trait distributions. Following \citep{Economo2007,Carrara2012,Thompson2017}, we expect that the intensity of the correlative effect depends on the average path length of the graph $\l$, defined as the average shortest path between all pairs of vertices \citep{Bounova2012}. For a constant number of vertices, $\l$ is strictly related to the mean betweenness centrality and quantifies the graph connectivity \citep{Bounova2012}. High $\l$ implies low connectivity and a greater isolation of populations, and hence we expect that graphs with high $\l$ are associated with high differentiation levels.
 %
-We consider various graphs with an identical number of vertices and run simulations of the IBM to obtain the neutral differentiation level $Q_{ST,u}$ attained after a time long enough to discard transient dynamics (see \nameref{sec:methods}). 
+We consider various graphs with an identical number of vertices and run simulations of the IBM to obtain the neutral differentiation level $Q_{ST,u}$ attained after a time long enough to discard transient dynamics (see \nameref{sec:methods_diff-in-graphs}). 
 %
 We then interpret the discrepancies in $Q_{ST,u}$ across the simulations by relating them to the underlying graph topologies.
 
@@ -224,7 +224,7 @@ We next consider heterogeneous selection and investigate the response of adaptiv
 %
 Adaptive differentiation emerges from local adaptation, but migration destabilises adaptation as a result of the influx of maladaptive migrants. We expect that higher connectivity between vertices of similar habitat type increases the level of adaptive differentiation, because it increases the proportion of well-adapted migrants. Local adaptation can be investigated by approximating the stochastic dynamics of the trait distribution with a deterministic partial differential equation (PDE). We demonstrate under mean field assumption how the deterministic approximation can be reduced to an equivalent two-habitat model. We analyse the reduced model with the theory of adaptive dynamics \citep{Meszena1997,Mirrahimi2020} and find a critical migration threshold $m^\star$ that determines local adaptation. $m^\star$ depends on a quantity coined the habitat assortativity $r_\Theta$, and we demonstrate with numerical simulations that $r_\Theta$ determines the overall adaptive differentiation level $Q_{ST,s}$ reached at steady state in the deterministic approximation.
 
-Heterogeneous selection, captured by the dependence of the birth rate on $\Theta_i$, generates a stabilising force  that dampens the stochastic fluctuations of the adaptive trait distribution. The dynamics of the adaptive trait distribution consequently shows a deterministic behavior and we demonstrate in the \nameref{secSI:supmat} and \cref{figSI:pde-vs-IBM-trans-setting2_localpop,figSI:pde-vs-IBM-mresponse-setting2} that the number of individuals on $v_i$ with traits $s \in \Omega \subset \mathcal{S}$ can be approximated by the quantity $\int_\Omega n^{(i)}(s)ds$, where $n^{(i)}$ is a continuous function solution of the PDE
+Heterogeneous selection, captured by the dependence of the birth rate on $\Theta_i$, generates a stabilising force  that dampens the stochastic fluctuations of the adaptive trait distribution. The dynamics of the adaptive trait distribution consequently shows a deterministic behavior and we demonstrate in the \nameref{secSI:diff-in-graphs} and \cref{figSI:pde-vs-IBM-trans-setting2_localpop,figSI:pde-vs-IBM-mresponse-setting2} that the number of individuals on $v_i$ with traits $s \in \Omega \subset \mathcal{S}$ can be approximated by the quantity $\int_\Omega n^{(i)}(s)ds$, where $n^{(i)}$ is a continuous function solution of the PDE
 %
 \begin{equation}\label{eq:PDE_adapt}
 \begin{split}
@@ -248,7 +248,7 @@ By further assuming that habitats are homogeneously distributed on the graph so 
   \end{split}
 \end{equation}
 %
-(see \nameref{sec:methods}), where we define
+(see \nameref{sec:methods_diff-in-graphs}), where we define
 \begin{equation}\label{eq:r_theta_mf}
   r_\Theta = 2 \left( P({\bcirc},{\bcirc}) - P({\bcirc},{\rcirc}) \right)
 \end{equation} 
@@ -256,11 +256,11 @@ as the habitat assortativity of the graph, which ranges from $-1$ to $1$.
 %
 When $r_\Theta = -1$, all edges connect dissimilar habitat types (disassortative graph), while as $r_\Theta$ tends towards $1$ the graph is composed of two clusters of vertices with identical habitat types (assortative graph).
 %
-\cref{eq:PDE_adapt_rtheta} can be analysed with the theory of adaptive dynamics \citep{Meszena1997,Debarre2013,Mirrahimi2020}, a mathematical framework that provides analytical insights by assuming a “trait substitution process”. Following this assumption, the mutation term in \cref{eq:PDE_adapt_rtheta} is omitted and the phenotypic distribution results in a collection of discrete individual types that are gradually replaced by others until evolutionary stability is reached (see \nameref{sec:methods} and \citep{Meszena1997,Debarre2013,Mirrahimi2020} for details). By applying the theory of adaptive dynamics, we find a critical migration rate $m^\star$
+\cref{eq:PDE_adapt_rtheta} can be analysed with the theory of adaptive dynamics \citep{Meszena1997,Debarre2013,Mirrahimi2020}, a mathematical framework that provides analytical insights by assuming a “trait substitution process”. Following this assumption, the mutation term in \cref{eq:PDE_adapt_rtheta} is omitted and the phenotypic distribution results in a collection of discrete individual types that are gradually replaced by others until evolutionary stability is reached (see \nameref{sec:methods_diff-in-graphs} and \citep{Meszena1997,Debarre2013,Mirrahimi2020} for details). By applying the theory of adaptive dynamics, we find a critical migration rate $m^\star$
 \begin{equation}\label{eq:m*}
     m^\star = \frac{1}{(1-r_\Theta)}\frac{4 p \theta^2}{(1 + 3 p \theta^2)}
 \end{equation}
-so that when $m > m^\star$, a single type of individual exists with adaptive trait $s^* = \nicefrac{\left(\theta_{\rcirc} + \theta_{\bcirc}\right)}{2} = 0$ in the steady state (see \nameref{sec:methods} for the derivation of \cref{eq:m*}). In this case, adaptive differentiation $Q_{ST,s}$ is nil and the average population size is given by $\bar{N} = bK(1-p\theta)^2$.
+so that when $m > m^\star$, a single type of individual exists with adaptive trait $s^* = \nicefrac{\left(\theta_{\rcirc} + \theta_{\bcirc}\right)}{2} = 0$ in the steady state (see \nameref{sec:methods_diff-in-graphs} for the derivation of \cref{eq:m*}). In this case, adaptive differentiation $Q_{ST,s}$ is nil and the average population size is given by $\bar{N} = bK(1-p\theta)^2$.
 %
 In contrast, when $m=0$ and/or $r_\Theta = 1$, all individuals are locally well-adapted with trait $\Theta_i$ on $v_i$, and it follows that the average population size is higher and equal to $\bar{N} = bK$, while adaptive differentiation is maximal and equal to $Q_{ST,s} = \nicefrac{\Var(\Theta)}{\left(\Var(\Theta) + 0\right)} = 1$. 
 %
@@ -279,18 +279,18 @@ As a consequence, the habitat assortativity $r_\Theta$ increases the differentia
 
 \subsection{Effect of graph topology on adaptive differentiation under heterogeneous selection}\label{sec:result2b}
 %%
-To generalise the conclusions drawn from the mean field deterministic approximation \cref{eq:PDE_adapt_rtheta}, we generate different $\Theta$-spatial distributions for varying graph topology, and compare outputs of the IBM simulations with those of \cref{eq:PDE_adapt_rtheta} (see \nameref{sec:methods} for the details of the simulations). For each combination of $\Theta$-spatial distribution and graph, we compute the habitat assortativity $r_\Theta$, since $r_\Theta$ can be generalised from \cref{eq:r_theta_mf} to any graph topology following the original definition of \citep{Newman2003a} as
+To generalise the conclusions drawn from the mean field deterministic approximation \cref{eq:PDE_adapt_rtheta}, we generate different $\Theta$-spatial distributions for varying graph topology, and compare outputs of the IBM simulations with those of \cref{eq:PDE_adapt_rtheta} (see \nameref{sec:methods_diff-in-graphs} for the details of the simulations). For each combination of $\Theta$-spatial distribution and graph, we compute the habitat assortativity $r_\Theta$, since $r_\Theta$ can be generalised from \cref{eq:r_theta_mf} to any graph topology following the original definition of \citep{Newman2003a} as
 \begin{equation}\label{eq:r_theta}
   r_\Theta = \frac{\Cov({ \Theta}_\times, { \Theta}_\wedge)}{\sigma_{{ \Theta}_\times} \sigma_{{ \Theta}_\wedge}}
 \end{equation}
-where ${ \Theta}_\times$ and ${ \Theta}_\wedge$ denote the sets of habitats found at the toe and tip of each directed vertex of graph $V$, and $\langle { \Theta}_\times \rangle, \langle {\Theta}_\wedge \rangle$ and $\sigma_{{\Theta}_\times}, \sigma_{{\Theta}_\wedge}$ denote their respective means and standard deviations (see \nameref{secSI:supmat}). 
+where ${ \Theta}_\times$ and ${ \Theta}_\wedge$ denote the sets of habitats found at the toe and tip of each directed vertex of graph $V$, and $\langle { \Theta}_\times \rangle, \langle {\Theta}_\wedge \rangle$ and $\sigma_{{\Theta}_\times}, \sigma_{{\Theta}_\wedge}$ denote their respective means and standard deviations (see \nameref{secSI:diff-in-graphs}). 
 %
 The mean field deterministic approximation \cref{eq:PDE_adapt_rtheta} is in very good agreement with the IBM simulations for general graph ensembles at low migration regimes, and captures the response of $\bar{N}$ and $Q_{ST,s}$ to $r_\Theta$ (\cref{fig:sett2_adapt_IBM_horizontal_0.1}). Nonetheless, under high migration regimes, higher levels of $Q_{ST,s}$ are observed in the stochastic simulations compared with the mean field deterministic approximation (\cref{figSI:sett2_adapt_IBM_horizontal_0.5}). We hypothesize that this reinforcement is generated by stochastic drift, which must become the main driver of differentiation when local adaptation is lost for $m>m^\star$, and perform a multivariate regression analysis to investigate the additional effect of $\l$ and $h_d$ on $Q_{ST,s}$. As expected, the analysis highlights that the effect of $\l$ and $h_d$ are substantial and complement the effect of $r_\theta$ for high $m$ (\cref{fig:setting2_4plots_M=7}c for graphs with $M = 7$ vertices and \cref{figSI:setting2_2plots_M=9}a for $M=9$), further explaining the discrepancies observed (see \cref{tableSI:coefficients_set2}).
 
 %%
-We extend our analyses to realistic landscapes with a continuum of habitat types by running simulations on graphs obtained from real spatial habitat datasets and by considering mean annual temperature as a proxy for habitat type (see \cref{graph_real_land,tableSI:coefficients_realgraphs}). 
+We extend our analyses to realistic landscapes with a continuum of habitat types by running simulations on graphs obtained from real spatial habitat datasets and by considering mean annual temperature as a proxy for habitat type (see \cref{figSI:graph_real_land,tableSI:coefficients_realgraphs}). 
 %
-We also consider simulations accounting for trait-dependent competition to test whether our results hold under more complex ecological processes (see \nameref{secSI:supmat} for the implementation details and \cref{tableSI:coefficients_trait-dep-comp} for the results). 
+We also consider simulations accounting for trait-dependent competition to test whether our results hold under more complex ecological processes (see \nameref{secSI:diff-in-graphs} for the implementation details and \cref{tableSI:coefficients_trait-dep-comp} for the results). 
 %
 The simulations are congruent and show that the effects of $r_\Theta$, $h_d$ and $\l$ are similar under these alternative settings, underlining the robustness of these metrics and the generality of our conclusions.
 %
@@ -323,7 +323,7 @@ Simulations with varying $m$ on the complete graph confirm that selection in het
 %
 Nonetheless, previous results show that adaptive differentiation $Q_{ST,s}$ vanishes on a disassortative graph when $m > m^\star$, implying that individuals become equally fit in all habitats. 
 %
-In this case, the isolation effect of heterogeneous selection is lost and $Q_{ST,u}$ reaches a similar level as in the setting with no selection for $m > m^\star$ (\cref{fig:setting2_4plots_M=7}a), although $Q_{ST,u}$ is slightly higher in the setting with heterogeneous selection due to a lower population size ($\bar{N}=bK(1-p \theta)$ vs. $\bar{N}=bK$, see section above and \nameref{sec:methods}). % for the complete graph.
+In this case, the isolation effect of heterogeneous selection is lost and $Q_{ST,u}$ reaches a similar level as in the setting with no selection for $m > m^\star$ (\cref{fig:setting2_4plots_M=7}a), although $Q_{ST,u}$ is slightly higher in the setting with heterogeneous selection due to a lower population size ($\bar{N}=bK(1-p \theta)$ vs. $\bar{N}=bK$, see section above and \nameref{sec:methods_diff-in-graphs}). % for the complete graph.
 %
 This suggests that $r_\Theta$ reinforces $Q_{ST,u}$, as assortative graphs sustain higher levels of adaptive differentiation (\cref{fig:heatmap_betas_m_rtheta,fig:sett2_adapt_IBM_horizontal_0.1}). 
 %
@@ -355,7 +355,7 @@ $\l$ and $h_d$ therefore drive neutral differentiation with and without heteroge
     %
     In (a--b), each plain dot represents average results from 5 replicate simulations, the bars represent one standard deviation, and each fade dot represents a single replicate value.
     %
-    (c--d) Standardized effect of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,s}$ and $Q_{ST,u}$ obtained from a multivariate regression model independently fitted for low and high migration regimes on average results from 5 replicate simulations of the IBM on all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$ (see \nameref{sec:methods}).
+    (c--d) Standardized effect of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,s}$ and $Q_{ST,u}$ obtained from a multivariate regression model independently fitted for low and high migration regimes on average results from 5 replicate simulations of the IBM on all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$ (see \nameref{sec:methods_diff-in-graphs}).
     %
     The ambivalence of the effect of $r_\Theta$ on $Q_{ST,u}$ found for the path graph holds for general graph ensembles and adds up to that of $\l$ and $h_d$.
     %
@@ -444,7 +444,7 @@ Additionally, our work highlights that heterogeneity in connectivity is an equal
 The present approach offers a promising framework for studying complex adaptive systems, as it can elucidate how macroscopic properties emerge from microscopic processes acting upon agents structured over complex spatio-evolutionary structures.
 
 \section{Methods}
-\label{sec:methods}
+\label{sec:methods_diff-in-graphs}
 
 \subsection{Mean field approximation}
 In the setting with no selection, the mean field approach involves the assumption that all vertices having the same degree are equivalent. For this, let $P(k,k')$ denote the proportion of edges that map a vertex with degree $k$ to a vertex with degree $k'$, and consider the average population size $\bar{N}_t^{(k)}$ in each vertex with degree $k$ at time $t$. An individual has probability $\nicefrac{P(k,k')}{k'}$ to migrate from a vertex with degree $k'$ to a vertex with degree $k$. 
@@ -488,7 +488,7 @@ Considering that $P({\rcirc}) = P({\bcirc}) = \tfrac{1}{2}$ (habitats are equall
 \end{equation} 
 Combining \cref{eq:r_theta_p} with \cref{eq:PDE_adapt_intermediate} yields \cref{eq:PDE_adapt_rtheta}.
 %
-We show in the \nameref{secSI:supmat} how one can derive \cref{eq:r_theta_mf} from the general definition of assortativity given in \cref{eq:r_theta} and initially introduced in \citep{Newman2003a}.
+We show in the \nameref{secSI:diff-in-graphs} how one can derive \cref{eq:r_theta_mf} from the general definition of assortativity given in \cref{eq:r_theta} and initially introduced in \citep{Newman2003a}.
 
 \subsection{Adaptive dynamics on graphs}
 The adaptive dynamics theory considers a monomorphic population that evolves following a “trait substitution process” \citep{Meszena1997}. Accordingly, the trait $s$ of the monomorphic metapopulation evolves gradually along the direction given by its fitness gradient, until it reaches a singular strategy $s^*$ for which the fitness gradient vanishes. By omitting the mutation term, \cref{eq:r_theta_mf} can be written in the matrix form
