@@ -62,20 +62,41 @@
     very thick,
     font=\large]
  
-\node[mechanisms, fill=mygreen!30] (procs) { Processes };
-\node[mechanisms, fill=myred!30] (mechs) [right=of procs] { Mechanisms };
-\node[mechanisms, fill=myblue!20] (patt) [right= of mechs]{ Patterns };
+\node[mechanisms, draw=mygreen!30, minimum height = 3.cm, minimum width = 4cm] (model_contour) at (-2.5,-2.5) {};
+\node[above left] at (model_contour.south east) {Model};
 
-\node[mechanisms,] () [below= 2cm of mechs]{ Forward modelling };
-\node[mechanisms,] () [above= 2cm of mechs]{ Inverse modelling };
+\foreach \Z in {1,...,4}{
+    \node[mechanisms, fill=mygreen!20,draw=mygreen] at (-2,-2,\Z/2) (procs\Z) { Processes };
+}
+
+\node[mechanisms, fill=myred!30] (mechs) [right=of procs2] { Mechanisms };
+% \node[mechanisms, fill=mygreen!30, below left =of mechs] (struc) { Structure };
+
+\node[mechanisms, fill=myblue!20] (patt) [right= of mechs]{ Pattern };
+
+\node[mechanisms,] (data) [below= 3cm of model_contour]{ Data};
+\node[mechanisms,] (knowledge) [above= 3cm of model_contour]{ Knowledge };
 
 \begin{scope} [connect arrow]  % now dashed is for the lines inside the scope
-    \draw (procs) to [bend right] (mechs.south)  ; 
-    \draw (mechs) to [bend right] (patt.south)  ; 
+    % \draw (procs1) to [bend right] (model_contour.east)  ; 
+    % \draw (patt.north) to [bend right] (mechs)  ; 
 
-    \draw (patt.north) to [bend right] (mechs)  ; 
-    \draw (mechs.north) to [bend right] (procs)  ; 
+    % \draw (patt.north) to [bend right] (model_contour.east)  ; 
+    \draw ([yshift=-0.5cm]model_contour.east) to [bend right] (mechs.south); 
+    \draw (mechs.north) to [bend right] ([yshift=0.5cm]model_contour.east);
 
+    \draw (mechs.east) to (patt.west); 
+
+
+    \draw[myred] (data) to  (model_contour.south)  ; 
+    \draw[myred] ([xshift=0.5cm]model_contour.north) to  ([xshift=0.5cm]knowledge.south)  ; 
+    \draw[myblue] ([xshift=-0.5cm]knowledge.south) to  ([xshift=-0.5cm]model_contour.north)  ; 
+
+    \path ([xshift=0cm,yshift=0.5cm]current bounding box.north)
+    node[matrix,anchor=north west,cells={nodes={anchor=west}},thick,inner sep=1ex]{
+     \draw[myblue](0,0) -- ++ (1,0); & \node{Forward modelling};\\
+     \draw[myred](1,0) -- ++ (-1,0); & \node{Inverse modelling};\\
+    };
 
 \end{scope}
 

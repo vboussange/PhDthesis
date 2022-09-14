@@ -21,7 +21,7 @@ Following this approach, my work aimed at advancing our understanding of how eco
 
 In the following, I discuss the chapters of my thesis collectively within the broader context of our current understanding of the dynamics of biological and economic systems, and the accompanying modelling paradigm.
 
-\subsection{Advances in the fundamental understanding of biological and eocnomic systems}
+\subsection{Advancing our fundamental understanding of eco-evolutionary processes in biological and eocnomic systems}
 
 \subsubsection{Linking eco-evolutionary processes to patterns of differentiation}
 Spatial patterns of biodiversity result from the processes of selection, mutation and dispersal, that act upon individual organisms \citep{hamilton2021population}.
@@ -124,7 +124,7 @@ I provide a summary of the mechanisms evidenced in economic systems in \cref{fig
 % 
 % by using data and dimensionality reduction technique to leverage these assumptions \citep{Taschella},
 
-\subsection{Methodological advances in forward and inverse modelling}
+\subsection{Leveraging forward and inverse modelling with ML}
 
 \subsubsection{Advances in the modelling of realistic spatial and phenotypic structures}
 
@@ -197,7 +197,7 @@ Those central issues likely explain the very poor number of studies that have us
 %% Our method
 \cref{\chapii} presents a novel inference framework that can efficiently recover the most probable parameter values of eco-evolutionary models, given temporal data.
 % 
-The framework is based on a variational method, but resolves its main drawbacks by including key ingredients in the recipe, including automatic differentiation \citep{Rackauckas2020a}, state-of-the-art optimizers \citep{Kingma2014}, and a learning strategy based on a mini-batch method. 
+The framework is based on a variational method, but resolves its main shortcomings by including key ingredients in the recipe, including automatic differentiation \citep{Rackauckas2020a}, state-of-the-art optimizers \citep{Kingma2014}, and a learning strategy based on a mini-batch method. 
 % 
 The use of automatic differentiation simply eliminates the effort required to obtain the model sensitivity to its parameters, and the state-of-the-art optimizers, together with the mini-batch method, ensure the efficiency and reliably of the method in handling highly nonlinear models.
 % 
@@ -213,7 +213,30 @@ The ML framework is implemented in the multi-purpose Julia package \textbf{MiniB
 
 Overall, the method proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concrete case examples in \cref{\chapii, \chapiii} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \citep{Urban2016}.
 
+\section{Limitations}
 
+Alternatives to the methods presented in \cref{\chapi,\chapiv} may be more appropriate for the forward modelling of eco-evolutionary dynamics.
+% 
+PDEs can allow an analytical underpinning to e.g. the IBM presented in \cref{\chapi} while demanding less computational power when the number of individual to model is large, but they still require a considerable effort to track the evolution of the full phenotypic density. 
+% 
+While methods presented in \cref{\chapiv} dramatically reduce the cost of the forward integration of PDE models, they still suffer from a number of issues that may prevent their practical use.
+% 
+In particular, the MLP method can only provide one point at a time, while the first three moments of the population density are usually of interest to investigate eco-evolutionary dynamics (population size, trait mean and trait variance, see \cite{XXX}). 
+% 
+On the other hand, the ML based approach can approximate the full population density, but requires the intensive use of GPUs, involves the training of a neural networks at each time step. This is worrying, since long simulation times may be required by practitioners. An other problem with the numerical methods proposed in \cref{\chapiv} is that they involve the tuning of meta parameters, inluding the choice of a kernel for the integration of the nonlocal term. This choice is critical for the success of the approximation, but it is not clear how to determine it.
+% 
+Together, the methods proposed in \cref{\chapiv} may require further development to be used in practice by practictioners. Moment closure approximation methods \citep{Wickman2021,Lion2022,Nordbotten2020} may be so far more appropriate alternatives to investigate eco-evolutinoary dynanmics in high dimensional spaces. Those approaches consist in approximating the population density with a gaussian distribution. This, in turn, allows to transform the PDE problem into a sytem of coupled differential equations involving the time evolution of the population size (1 variable for a single species population), the mean trait value in each dimension of the trait space ($d$ variables), and the variance-covariance matrix of the trait density ($d^2$). As such, this method scales only polynomially with the number of dimension, while not suffering from the need to simulate many stochastic trajectories as in the MLP and the ML-based methods. 
+
+The method proposed in \cref{\chapii} and used in \cref{\chapiii} present shortcomings, some of which may favor the use of radically different methods to infer eco-evolutionary processes from data.
+%
+The mini-batching learning strategy requires the choice of a minibatch size, which choice is arbitrary but may lead to ambiguous results.
+% 
+The batch size may not only affect the convergence of the variational method, but could also affect the model selection process. For instance, reducing the batch size leads to characterise the short term dynamics of the data, which resulting support could differ from long term dynamics. Further developments will be required to assess this spurious effect and guide the choice of this meta parameter. 
+
+
+% 
+% 
+% 
 % \printbibliography[heading=subbibliography]
 % \subsection{Blending ML and mechanistic models to learn from data}
 
