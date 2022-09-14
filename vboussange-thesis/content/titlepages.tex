@@ -5,11 +5,17 @@
 % ------------------------------------  --> cover title page
 \begin{titlepage}
 	\pdfbookmark[0]{Cover}{Cover}
-	\begin{tikzpicture}[remember picture,overlay]  
+	\begin{tikzpicture}[remember picture,overlay,node distance=-0.2cm]  
         % Background image     
         % Title & Subtitle 
-		\node[above right,inner sep=0pt, yshift=0.25cm] at (current page.south west) (trees) {\includegraphics[height=0.5\paperheight]{AdobeStock_231608971.jpeg}};      
-		\node[above = of trees,inner sep=0pt, yshift=-0.25cm]{\includegraphics[height=0.5\paperheight]{luca-bravo-A-fubu9QJxE-unsplash.jpg}};     
+		\node[above right,
+			inner sep=0pt, 
+			% yshift=0.25cm
+			] at (current page.south west) (trees) {\includegraphics[height=0.5\paperheight]{AdobeStock_231608971.jpeg}};      
+		\node[above = of trees,inner sep=0pt, 
+		% yshift=-0.25cm
+		]
+		{\includegraphics[height=0.5\paperheight]{luca-bravo-A-fubu9QJxE-unsplash.jpg}};     
        
 		\node [
             %   below=0.5cm,     
@@ -17,7 +23,7 @@
               fill=white,     
               opacity=1,
               text opacity=1,
-            %   rounded corners,     
+              rounded corners,     
               inner xsep=15pt,     
               inner ysep=15pt,
 			  yshift = 0.6cm,    
@@ -37,18 +43,20 @@
 					\\[5mm]}
 					% \rule[8pt]{0.8\textwidth}{.4pt} \par
 					}
-					% \flushright
-					% {\large Victor \textbf{BOUSSANGE}}
+					\flushright
+					{\LARGE Victor \color{ctcolortitle}\textbf{BOUSSANGE}}
 					% \vfill
 					% \textit{\large\thesisDate} \\
 					% Version: \thesisVersion
                   \end{minipage}
               };  
-			\node[yshift = 1cm, 
-				xshift = -3cm, 
-				fill=white, 
-				% rounded corners
-				] at (current page.south east) (trees) {{\large Victor \color{ctcolortitle}\textbf{BOUSSANGE}}};      
+			% \node[yshift = 0.5cm, 
+			% 	%xshift = -3cm, 
+			% 	fill=white,
+			% 	minimum width=\paperwidth,
+			% 	align=center
+			% 	% rounded corners
+			% 	] at (current page.south) (trees) {{\large Victor \color{ctcolortitle}\textbf{BOUSSANGE}}};      
 		 
 
         % % Author  
@@ -133,21 +141,20 @@
 % ------------------------------------  --> lower title back for single page layout
 \hfill
 \vfill
-{
-	\small
-	\textbf{\thesisName} \\
-	\textit{\thesisTitle} \\
-	% \thesisSubject, 
-	\thesisDate \\
+{\small
+\textbf{\thesisName} \\
+\textit{\thesisTitle} \\
+% \thesisSubject, 
+\thesisDate \\
 % 	Version: \thesisVersion \\
-	Cover picture: Top: forest in Sorapiss, Dolomites, Italy. Bottom: New York City, USA. @ Luca Bravo / PhotoSpirit\\
-	The document format is based on the \textit{Clean Thesis} style developed by Ricardo Langner.
-	% Reviewers: \thesisFirstReviewer\, \thesisSecondReviewer and \thesisThirdReviewer\\
-	% Supervisors: \thesisFirstSupervisor\ \\[1.5em]
-	% \textbf{\thesisUniversity} \\
-	% \textit{\thesisUniversityGroup} \\
-	% \thesisUniversityInstitute \\
-	% \thesisUniversityDepartment \\
-	% \thesisUniversityStreetAddress \\
-	% \thesisUniversityPostalCode\ and \thesisUniversityCity
+Cover picture: Top: forest in Sorapiss, Dolomites, Italy. Bottom: New York City, USA. @ Luca Bravo / PhotoSpirit\\
+The document format is based on the \textit{Clean Thesis} style developed by Ricardo Langner.
+% Reviewers: \thesisFirstReviewer\, \thesisSecondReviewer and \thesisThirdReviewer\\
+% Supervisors: \thesisFirstSupervisor\ \\[1.5em]
+% \textbf{\thesisUniversity} \\
+% \textit{\thesisUniversityGroup} \\
+% \thesisUniversityInstitute \\
+% \thesisUniversityDepartment \\
+% \thesisUniversityStreetAddress \\
+% \thesisUniversityPostalCode\ and \thesisUniversityCity
 }

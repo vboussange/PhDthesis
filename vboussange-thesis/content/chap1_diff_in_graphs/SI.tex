@@ -46,11 +46,16 @@
     Summing over all all individuals and all vertices yields
     \small
     \begin{align} \label{eqSI:infinitesimal_generator}
-        L\phi(\nu^{(i)}_t) &= \int_\mathcal{X} \left\{ b^{(i)}({\textbf x}) (1 - \mu ) (1 - m)( \phi(\nu^{(i)}_t + \delta_{{\textbf x}}) - \phi(\nu^{(i)}_t))\right\} \nu^{(i)}_t(d{\textbf x}) &\text{ births w/o mutations, w/o migrations} \nonumber\\
-        &\quad + \int_\mathcal{X}  \left\{\mu (1-m) \int_\mathcal{X} b^{(i)}(y) (\phi(\nu^{(i)}_t + \delta_z) - \phi(\nu^{(i)}_t))\mathcal{M}({\textbf x},y) dy \right\} \nu^{(i)}_t(d{\textbf x})  &\text{ births w/ mutations, w/o migrations} \nonumber\\
-        &\quad + \iint_\mathcal{X} \left\{ \frac{1}{K}(\phi(\nu^{(i)}_t - \delta_{{\textbf x}})) - \phi(\nu^{(i)}_t))\nu^{(i)}_t(d y) \, \nu^{(i)}_t(dx)  \right\} &\text{ deaths} \nonumber\\
-        &\quad + \sum_{j \neq i } \frac{a_{i,j}}{d_j} \int_\mathcal{X}  \mu m \left\{ \int_\mathcal{X} b^{(j)}(y) (\phi(\nu^{(j)} +  \delta_{\textbf x}) - \phi(\nu^{(j)}))\mathcal{M}({\textbf x}, y)dy \right\} \nu^{(j)}_t(d{\textbf x})  &\text{ migrations w/ mutations} \nonumber\\
-        &\quad + \sum_{j\neq i}\frac{a_{i,j}}{d_j} \int_\mathcal{X} \left\{ b^{(j)}({\textbf x}) (1 - \mu ) m ( \phi(\nu^{(j)} + \delta_{{\textbf x}}) - \phi(\nu^{(j)})) \right\} \nu^{(j)}_t(d{\textbf x}). &\text{ migrations w/o mutations} 
+        L\phi(\nu^{(i)}_t) &= \int_\mathcal{X} \left\{ b^{(i)}({\textbf x}) (1 - \mu ) (1 - m)( \phi(\nu^{(i)}_t + \delta_{{\textbf x}}) - \phi(\nu^{(i)}_t))\right\} \nu^{(i)}_t(d{\textbf x}) \nonumber\\
+          &\qquad \text{ births w/o mutations, w/o migrations} \nonumber\\
+        &\quad + \int_\mathcal{X}  \left\{\mu (1-m) \int_\mathcal{X} b^{(i)}(y) (\phi(\nu^{(i)}_t + \delta_z) - \phi(\nu^{(i)}_t))\mathcal{M}({\textbf x},y) dy \right\} \nu^{(i)}_t(d{\textbf x}) \nonumber\\
+         &\qquad \text{ births w/ mutations, w/o migrations} \nonumber\\
+        &\quad + \iint_\mathcal{X} \left\{ \frac{1}{K}(\phi(\nu^{(i)}_t - \delta_{{\textbf x}})) - \phi(\nu^{(i)}_t))\nu^{(i)}_t(d y) \, \nu^{(i)}_t(dx)  \right\} \nonumber\\
+        &\qquad \text{ deaths} \nonumber\\
+        &\quad + \sum_{j \neq i } \frac{a_{i,j}}{d_j} \int_\mathcal{X}  \mu m \left\{ \int_\mathcal{X} b^{(j)}(y) (\phi(\nu^{(j)} +  \delta_{\textbf x}) - \phi(\nu^{(j)}))\mathcal{M}({\textbf x}, y)dy \right\} \nu^{(j)}_t(d{\textbf x}) \nonumber \\
+         &\qquad \text{ migrations w/ mutations} \nonumber\\
+        &\quad + \sum_{j\neq i}\frac{a_{i,j}}{d_j} \int_\mathcal{X} \left\{ b^{(j)}({\textbf x}) (1 - \mu ) m ( \phi(\nu^{(j)} + \delta_{{\textbf x}}) - \phi(\nu^{(j)})) \right\} \nu^{(j)}_t(d{\textbf x}). \\
+        &\qquad \text{ migrations w/o mutations} \nonumber
     \end{align}
     \normalsize
     %
@@ -68,7 +73,7 @@
     \begin{equation}\label{eqSI:sett1_popdyn_simple}
       \partial_t N_t^{(i)} = N_t^{(i)} \left[ b(1-m) - \frac{N_t^{(i)}}{K} \right] +  m b \sum_{j\neq i}\frac{a_{i,j}}{d_j}  N_t^{(j)} .
     \end{equation}
-    Competition stabilises the population size dynamics, which behaves deterministically. This is supported by \cref{pde-vs-IBM-trans-setting1_localpop}a, which shows how \cref{eqSI:sett1_popdyn_simple} accurately describes the population size for varying migration regimes. Nonetheless, stochastic fluctuations drive the dynamics of the neutral trait distribution. Attempting to characterise the neutral trait distribution with the same strategy, this time setting $\phi(n^{(i)}_t) = n^{(i)}_t(u)$, yields
+    Competition stabilises the population size dynamics, which behaves deterministically. This is supported by \cref{figSI:pde-vs-IBM-trans-setting1_localpop}a, which shows how \cref{eqSI:sett1_popdyn_simple} accurately describes the population size for varying migration regimes. Nonetheless, stochastic fluctuations drive the dynamics of the neutral trait distribution. Attempting to characterise the neutral trait distribution with the same strategy, this time setting $\phi(n^{(i)}_t) = n^{(i)}_t(u)$, yields
     %
     \begin{equation}\label{eqSI:detern_approx_infgen_sett1}
     \begin{split}
@@ -79,9 +84,9 @@
   \end{split}
 \end{equation}
 %
-Solving for \cref{eqSI:detern_approx_infgen_sett1}, one can show that the variance of $n_t^{(i)}$ continuously grows in time (see \cref{pde-vs-IBM-trans-setting1_localpop}) and tends to infinity as time goes to infinity, which is an unrealistic behaviour considering finite populations. Intuitively, this reflects the fact that no stabilising force acts on the neutral trait distribution, such that random fluctuations play a major role in driving the dynamics of the stochastic process.
+Solving for \cref{eqSI:detern_approx_infgen_sett1}, one can show that the variance of $n_t^{(i)}$ continuously grows in time (see \cref{figSI:pde-vs-IBM-trans-setting1_localpop}) and tends to infinity as time goes to infinity, which is an unrealistic behaviour considering finite populations. Intuitively, this reflects the fact that no stabilising force acts on the neutral trait distribution, such that random fluctuations play a major role in driving the dynamics of the stochastic process.
 %
-\Cref{pde-vs-IBM-trans-setting1_localpop} shows how IBM trajectories significantly differ from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{pde-vs-IBM-mresponse-setting1} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} do not match those obtained from simulations of the IBM.
+\Cref{figSI:pde-vs-IBM-trans-setting1_localpop} shows how IBM trajectories significantly differ from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{figSI:pde-vs-IBM-mresponse-setting1} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} do not match those obtained from simulations of the IBM.
 
 \subsubsection{Setting with heterogeneous selection}\label{sec:anal_sett_2}
 In contrast to the neutral trait dynamics, the adaptive distribution can successfully be approximated by a deterministic description because selection pressure acts as a stabilising force and stabilises the populations' adaptive trait, dampening the stochastic fluctuations.
@@ -122,14 +127,18 @@ Neglecting the terms in $m \mu$, we obtain
 which, after rearranging terms, yields the elegant deterministic approximation of the adaptive trait dynamics
 %
 \begin{equation}\label{eqSI:PDE_adapt}
-  \partial_t n_t^{(i)}(s) =n_t^{(i)} (s) \left[b^{(i)}(s)(1-m) -  \frac{1}{K}\int_\mathcal{S}  n_t^{(i)}({\textbf s}) d{\textbf s}  \right] + m \sum_{j\neq i} b^{(j)}(s) \frac{a_{i,j}}{d_j} n_t^{(j)}(s) + \tfrac{1}{2} \mu \sigma_\mu^2 \Delta_s \left[ b^{(i)}(s) n^{(i)}_t(s) \right].
+  \begin{split}
+    \partial_t n_t^{(i)}(s) &=n_t^{(i)} (s) \left[b^{(i)}(s)(1-m) -  \frac{1}{K}\int_\mathcal{S}  n_t^{(i)}({\textbf s}) d{\textbf s}  \right] \\
+    & \quad + m \sum_{j\neq i} b^{(j)}(s) \frac{a_{i,j}}{d_j} n_t^{(j)}(s) \\
+    & \quad + \tfrac{1}{2} \mu \sigma_\mu^2 \Delta_s \left[ b^{(i)}(s) n^{(i)}_t(s) \right].
+  \end{split}
 \end{equation}
 %
 Setting $m = 0$ \citep{Mirrahimi2020} shows that \cref{eqSI:PDE_adapt} admits a stationary solution that is Gaussian, with variance $ \nicefrac{\sqrt{\mu} \sigma_\mu^2}{\sqrt{p}}$. 
 %
 Therefore, the variance of the adaptive trait distribution stabilises to a finite value. Intuitively, this reflects the fact that the random fluctuations of the adaptive trait distribution are dampened by the stabilising force of selection. Provided that the selection strength $p$ is large enough, \cref{eqSI:PDE_adapt} is a good approximation of the adaptive trait distribution obtained from the stochastic process.
 %
-\Cref{pde-vs-IBM-trans-setting2_localpop} shows how IBM trajectories are similar to the ones obtained from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{pde-vs-IBM-mresponse-setting2} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} match those obtained from simulations of the IBM.
+\Cref{figSI:pde-vs-IBM-trans-setting2_localpop} shows how IBM trajectories are similar to the ones obtained from \cref{eqSI:detern_approx_infgen_sett1}, and \cref{figSI:pde-vs-IBM-mresponse-setting2} illustrates how diversity metrics obtained from \cref{eqSI:detern_approx_infgen_sett1} match those obtained from simulations of the IBM.
 
 
 \subsection{Trait-dependent competition}\label{secSI:trait-dep-comp}
@@ -203,24 +212,24 @@ Let $P(\rcirc,\bcirc)$ be the proportion of edges that connect a vertex of habit
 %
 First observe that for undirected graphs, one has $ \langle \Theta_\times \rangle  = \langle \Theta_\wedge \rangle$ and $ \langle \Theta_\times^2 \rangle  = \langle \Theta_\wedge^2 \rangle$.
 %
-Assuming that habitats are symmetric and binary, it follows that $\theta_{\rcirc} = -\theta_{\bcirc}$. Then
+Assuming that habitats are symmetric and binary, it follows that $\theta_{\rcirc|} = -\theta_{\bcirc|}$. Then
 \begin{equation}\label{eqSI:mom1}
   \begin{split}
-    \langle \Theta_\times\Theta_\wedge \rangle &=P(\bcirc,\bcirc)\theta_{\bcirc}^2 + P(\rcirc,\rcirc)\theta_{\rcirc}^2 + [ P(\rcirc,\bcirc) + P(\bcirc,\rcirc)]\theta_{\bcirc}\theta_{\rcirc}  \\
-    &= \theta_{\rcirc}^2 \left( P(\bcirc,\bcirc) + P(\rcirc,\rcirc) -  [ P(\rcirc,\bcirc) + P(\bcirc,\rcirc)] \right) ,
+    \langle \Theta_\times\Theta_\wedge \rangle &=P(\bcirc,\bcirc)\theta_{\bcirc|}^2 + P(\rcirc,\rcirc)\theta_{\rcirc|}^2 + [ P(\rcirc,\bcirc) + P(\bcirc,\rcirc)]\theta_{\bcirc|}\theta_{\rcirc|}  \\
+    &= \theta_{\rcirc|}^2 \left( P(\bcirc,\bcirc) + P(\rcirc,\rcirc) -  [ P(\rcirc,\bcirc) + P(\bcirc,\rcirc)] \right) ,
   \end{split}
 \end{equation}
 \begin{equation}\label{eqSI:mom2}
   \begin{split}
-    \langle \Theta_\times \rangle &=  P(\bcirc)\theta_{\bcirc} + P(\rcirc)\theta_{\rcirc}\\
-    &= \theta_{\rcirc} \left[ P(\rcirc) - P(\bcirc)\right],
+    \langle \Theta_\times \rangle &=  P(\bcirc)\theta_{\bcirc|} + P(\rcirc)\theta_{\rcirc|}\\
+    &= \theta_{\rcirc|} \left[ P(\rcirc) - P(\bcirc)\right],
   \end{split}
 \end{equation}
 \begin{equation}\label{eqSI:mom3}
   \begin{split}
-    \langle \Theta_\times^2 \rangle &=  P(\bcirc)\theta_{\bcirc}^2 + P(\rcirc)\theta_{\rcirc}^2\\
-    &= \theta_{\rcirc}^2 \left[ P(\bcirc) + P(\rcirc) \right] \\
-    &= \theta_{\rcirc}^2 .
+    \langle \Theta_\times^2 \rangle &=  P(\bcirc)\theta_{\bcirc|}^2 + P(\rcirc)\theta_{\rcirc|}^2\\
+    &= \theta_{\rcirc|}^2 \left[ P(\bcirc) + P(\rcirc) \right] \\
+    &= \theta_{\rcirc|}^2 .
   \end{split}
 \end{equation}
 Combining \cref{eqSI:mom1}, \cref{eqSI:mom2} and \cref{eqSI:mom3} with \cref{eqSI:def_rtheta} one gets
@@ -237,7 +246,7 @@ Assuming that habitats are homogeneously distributed, we have $P(\bcirc) = P(\rc
   r_\Theta =   P(\bcirc,\bcirc) + P(\rcirc,\rcirc)   -  [ P(\rcirc,\bcirc) + P(\bcirc,\rcirc)].
 \end{equation}
 %
-The mean field approximation involves the assumption that all vertices with similar habitats are equivalent in terms of their connections with other habitats, so that $P(\bcirc,\bcirc) = P(\rcirc,\rcirc)$ and $P(\rcirc,\bcirc) = P(\bcirc,\rcirc)$, which yields $r_\Theta = 2 \left( P({\bcirc},{\bcirc}) - P({\bcirc},{\rcirc}) \right)$.
+The mean field approximation involves the assumption that all vertices with similar habitats are equivalent in terms of their connections with other habitats, so that $P(\bcirc,\bcirc) = P(\rcirc,\rcirc)$ and $P(\rcirc,\bcirc) = P(\bcirc,\rcirc)$, which yields $r_\Theta = 2 \left( P({\bcirc|},{\bcirc|}) - P({\bcirc|},{\rcirc|}) \right)$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% Additional bibliography %%%%%%%%%%%%%%
@@ -246,76 +255,73 @@ The mean field approximation involves the assumption that all vertices with simi
 
 \clearpage
 
-
 \section{Supplementary Figures}
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centerline{
       \includegraphics[width=0.8\textwidth]{SI/setting1_neutr_M=9.pdf} 
   }
   \caption{Effect of $\l$ and $h_d$ on average population size $\bar{N}$ and neutral differentiation $Q_{ST,u}$ under the setting with no selection, analogous to \cref{fig:setting1_neutr_M=7} but for 1126 of the 261,080 undirected connected graphs with $M=9$ vertices.}
-  \label[SI]{setting1_neutr_M=9}
+  \label{figSI:setting1_neutr_M=9}
 \end{figure}
 
-
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
     \includegraphics[width=\textwidth]{SI/betau_vs_K.pdf}
-    \caption{Effect of the carrying capacity $K$ on $Q_{ST,u}$, $Q_{ST,s}$ and metapopulation size $N$ for the line graph with $M=7$ vertices for $m=0.1$. Decreasing $K$ increases $Q_{ST,u}$ as it favours drift, but it does not influence $Q_{ST,s}$. Each boxplot is based on 5 replicate simulations of the IBM, and fade dots represent single values for each replicate.}\label[SI]{betau_vs_K}
+    \caption{Effect of the carrying capacity $K$ on $Q_{ST,u}$, $Q_{ST,s}$ and metapopulation size $N$ for the line graph with $M=7$ vertices for $m=0.1$. Decreasing $K$ increases $Q_{ST,u}$ as it favours drift, but it does not influence $Q_{ST,s}$. Each boxplot is based on 5 replicate simulations of the IBM, and fade dots represent single values for each replicate.}\label{betau_vs_K}
 \end{figure}
 
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centerline{
       \includegraphics[width=\textwidth,trim= 0 0cm 0cm 0cm]{SI/pde-vs-IBM-trans-setting2_localpop.pdf}}
     \caption{ Comparison of the adaptive trait density on one vertex obtained from \cref{eqSI:PDE_adapt} (left) and from the IBM simulations (right) in the setting with heterogeneous selection, for the star graph with $M=7$ vertices. The densities obtained from \cref{eqSI:PDE_adapt} and from the IBM are qualitatively similar.}
-    \label[SI]{pde-vs-IBM-trans-setting2_localpop}
+    \label{figSI:pde-vs-IBM-trans-setting2_localpop}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%PDE vs IBM diversity %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
       \includegraphics[width=0.8\textwidth,trim= 0 0cm 0cm 0cm]{SI/pde-vs-IBM-mresponse-setting2.pdf}
     \caption{ Comparison of $Q_{ST,s}$ and $N$ obtained from the deterministic approximation \cref{eqSI:PDE_adapt} and from IBM simulations in the setting with heterogeneous selection, on the star graph with $M=7$ vertices. $Q_{ST,s}$ and population size obtained from \cref{eqSI:PDE_adapt} closely match the IBM simulations. Each plain dot represents average results from 5 replicate simulations of the IBM, bars represent one standard deviation, and each fade dot represents a single replicate value.}
-    \label[SI]{pde-vs-IBM-mresponse-setting2}
+    \label{figSI:pde-vs-IBM-mresponse-setting2}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%r_theta %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
+\begin{figure}[ht]
   \centerline{
       \includegraphics[width=\textwidth]{SI/r_theta_for_different_graphs.pdf} 
   }
   \caption{Graphs with spatial distribution of habitat types corresponding to different habitat assortativity $r_\Theta$. Graphs (a–d) can be described exactly with a mean field approach, as blue and red vertices have an equivalent position on the graph.}
-  \label[SI]{graph_rtheta}
+  \label{figSI:graph_rtheta}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%   PDE m=0.3  %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
+\begin{figure}[ht]
   \centerline{
       \includegraphics[width=\textwidth]{SI/sett2_adapt_IBM_horizontal_0.5.pdf} 
   }
   \caption{Effects of habitat heterogeneity $r_\Theta$ on $Q_{ST,s}$ and average population size $\bar{N}$ for all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$, obtained for similar simulations to those in \cref{fig:sett2_adapt_IBM_horizontal_0.1} with $m = 0.5$. In (a) and (b), each dot represents average results from 5 replicate simulations of the IBM, the colour scale corresponds to the proportion of the graph with similar $x$ and $y$ axis values (graph density), and the blue lines correspond to results obtained from the mean field, deterministic approximation \cref{eq:PDE_adapt_rtheta}. Deviations from the mean field, deterministic approximation \cref{eq:PDE_adapt_rtheta} can be explained by differences in $\l$ and $h_d$ between the graphs.}
-  \label[SI]{sett2_adapt_IBM_horizontal_0.5}
+  \label{figSI:sett2_adapt_IBM_horizontal_0.5}
 \end{figure}
 \FloatBarrier
 
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centerline{
       \includegraphics[width=\textwidth]{SI/setting2_2plots_M=9.pdf} 
   }
   \caption{Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,s}$ and $Q_{ST,u}$ obtained from multivariate regression models independently fitted for low and high migration regimes on average results from 5 replicate simulations of the IBM, analogous \cref{fig:setting2_4plots_M=7}c--d but for 1126 of the 261,080 undirected connected graphs with $M=9$ vertices and varying $r_\Theta$ (see \nameref{sec:methods} for details). Error bars show 95\% confidence intervals.
 }
-  \label[SI]{setting2_2plots_M=9}
+  \label{figSI:setting2_2plots_M=9}
 \end{figure}
-\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% real graphs.  %%%%
@@ -326,37 +332,32 @@ The mean field approximation involves the assumption that all vertices with simi
   }
   \caption{\small Simulations on graphs with $M=49$ vertices obtained from real spatial habitat datasets, in the setting with heterogeneous selection. The region from where graphs are obtained is centred on the Hengduan Mountains in Southwest China, one of the most species-rich temperate mountain biota globally \citep{Ding2020a}.
   %
-  (a) Graphical representation of a geographical area of size $ 0.11^{\circ} \times 0.11^{\circ}$. To create the graph, we considered biological populations living in grasslands, and used the dataset provided in \citep{Jung2020} containing global grassland coverage at $0.01^\circ$ resolution. We assigned a vertex to a geographical area of size $ 0.01^{\circ} \times 0.01^{\circ}$ if its grassland coverage was above a threshold arbitrarily set to $50\%$. We further assumed that two vertices were connected if their euclidean distance was below a certain dispersal range, which we let vary from 1 to 2.5 km. Local annual average temperature was considered as the value that captures environmental conditions at each vertex. Temperature data was obtained from the CHELSA dataset \citep{Karger2017}.
+  (a) Graphical representation of a geographical area of size $ 0.11^{\circ|} \times 0.11^{\circ|}$. To create the graph, we considered biological populations living in grasslands, and used the dataset provided in \citep{Jung2020} containing global grassland coverage at $0.01^\circ$ resolution. We assigned a vertex to a geographical area of size $ 0.01^{\circ|} \times 0.01^{\circ|}$ if its grassland coverage was above a threshold arbitrarily set to $50\%$. We further assumed that two vertices were connected if their euclidean distance was below a certain dispersal range, which we let vary from 1 to 2.5 km. Local annual average temperature was considered as the value that captures environmental conditions at each vertex. Temperature data was obtained from the CHELSA dataset \citep{Karger2017}.
   %
   (b) Grassland coverage for the considered region. Blue lines correspond to rivers and dashed grey lines correspond to country borders. Red crosses indicate the locations of the 83 graphs sampled for the simulations used in (c--d).
   (c--d) Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,s}$ and $Q_{ST,u}$ obtained from multivariate regression models independently fitted for low and high migration regimes to average results from 5 replicate simulations of the IBM on the 83 graphs which location is illustrated in (c) (see \cref{tableSI:coefficients_realgraphs} for simulation details). Error bars show 95\% confidence intervals.}
-  \label[SI]{graph_real_land}
+  \label{figSI:graph_real_land}
 \end{figure}
-\FloatBarrier
 
-
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
     \includegraphics[width=0.9\textwidth]{SI/time_effect_QST_u_QST_s.png}
-    \caption{Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,u}$ in the setting with no selection and in the setting with heterogeneous selection for the time horizons $t=1000$ and $t=2000$, obtained from multivariate regression models independently fitted for low and high migration regimes to average results from 5 replicate simulations of the IBM on all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$ (see \nameref{sec:methods} for details). (a--c) illustrate that the effects of the topology metrics on $Q_{ST,u}$ and  $Q_{ST,s}$ remain constant for $t > 1000$ in both the settings without selection and with heterogeneous selection. Error bars show 95\% confidence intervals. }\label[SI]{time_effect_Q_ST_u}
+    \caption{Standardized effects of $h_d$, $\l$ and $r_\Theta$ on $Q_{ST,u}$ in the setting with no selection and in the setting with heterogeneous selection for the time horizons $t=1000$ and $t=2000$, obtained from multivariate regression models independently fitted for low and high migration regimes to average results from 5 replicate simulations of the IBM on all undirected connected graphs with $M=7$ vertices and varying $r_\Theta$ (see \nameref{sec:methods} for details). (a--c) illustrate that the effects of the topology metrics on $Q_{ST,u}$ and  $Q_{ST,s}$ remain constant for $t > 1000$ in both the settings without selection and with heterogeneous selection. Error bars show 95\% confidence intervals. }\label{time_effect_Q_ST_u}
 \end{figure}
 
-\FloatBarrier
-
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
       \includegraphics[width=\textwidth]{SI/pde-vs-IBM-trans-setting1_localpop.pdf}
     \caption{ Comparison of the neutral trait density on one vertex obtained from \cref{eqSI:detern_approx_infgen_sett1} (left) and from the IBM simulations (right) in the setting with no selection, for the chain graph. The densities obtained from \cref{eqSI:detern_approx_infgen_sett1} and from the IBM are dissimilar.}
-    \label[SI]{pde-vs-IBM-trans-setting1_localpop}
+    \label{figSI:pde-vs-IBM-trans-setting1_localpop}
   \end{figure}
-\FloatBarrier
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
     \includegraphics[width=0.8\textwidth]{SI/pde-vs-IBM-mresponse-setting1.pdf} 
-    \caption{Comparison of results obtained from the deterministic approximations \cref{eqSI:detern_approx_infgen_sett1,eqSI:sett1_popdyn_simple} and from IBM simulations in the setting with no selection, on the star graph with $M=7$ vertices. While \cref{eqSI:sett1_popdyn_simple} can capture population size, \cref{eqSI:detern_approx_infgen_sett1} is not able to capture $Q_{ST,u}$. Each plain dot represents average results from 5 replicate simulations, bars represent one standard deviation, and each fade dot represents a single replicate value.
+    \caption{\textbf{Comparison of results obtained from the deterministic approximations \cref{eqSI:detern_approx_infgen_sett1,eqSI:sett1_popdyn_simple} and from IBM simulations in the setting with no selection, on the star graph with $M=7$ vertices}. While \cref{eqSI:sett1_popdyn_simple} can capture population size, \cref{eqSI:detern_approx_infgen_sett1} is not able to capture $Q_{ST,u}$. Each plain dot represents average results from 5 replicate simulations, bars represent one standard deviation, and each fade dot represents a single replicate value.
     }
-    \label[SI]{pde-vs-IBM-mresponse-setting1}
+    \label{figSI:pde-vs-IBM-mresponse-setting1}
 \end{figure}
 \clearpage
 
@@ -364,18 +365,16 @@ The mean field approximation involves the assumption that all vertices with simi
 %%%%%%%%%%tables %%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Tables}
-% \FloatBarrier
 
-\begin{table}  
-  \caption{Linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ in the setting with no selection, based on all graphs with $M=7$ vertices. *** $P < 0.001$}
+\begin{table}[ht]
   \vspace{3mm}
   \centering
-  % \resizebox{\textwidth}{!}{
-    \begin{tabular}{lrrrrrr}
-    \toprule
-                &  \multicolumn{4}{c}{$Q_{ST,u}$}                                                                          &      \multicolumn{2}{c}{$Q_{ST,u} - b N$}          \\ 
-                      \cmidrule(lr){2-5}                                                                                           \cmidrule(lr){6-7}
-    $m$         & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.50} \\ 
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{|l|r|r|r|r|r|r|}
+    \hline
+                &  \multicolumn{4}{c|}{$Q_{ST,u}$}                                                                          &      \multicolumn{2}{c|}{$Q_{ST,u} - b N$}          \\ 
+    \hline
+$m$         & \multicolumn{1}{c|}{0.01} & \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.01} & \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.01} & \multicolumn{1}{c|}{0.50} \\ 
     \hline
 (Intercept)    &                    0.000 &                   -0.000 &                   -0.000 &                   -0.000 &                   -0.000 &                   -0.000 \\
                &                  (0.023) &                  (0.017) &                  (0.023) &                  (0.025) &                  (0.023) &                  (0.028) \\
@@ -383,27 +382,27 @@ $\l$           &                 0.739*** &                 0.872*** &          
                &                  (0.023) &                  (0.017) &                          &                          &                          &                          \\
 $h_d$          &                          &                          &                -0.753*** &                -0.674*** &                -0.753*** &                -0.143*** \\
                &                          &                          &                  (0.023) &                  (0.025) &                  (0.023) &                  (0.028) \\
-\midrule                                                                                                                                                                           
+\hline                                                                                                                                                                
 Number of sim. &                      853 &                      853 &                      853 &                      853 &                      853 &                      853 \\
 $R^2$          &                    0.546 &                    0.760 &                    0.567 &                    0.454 &                    0.567 &                    0.030 \\
-    \bottomrule
+    \hline 
     \end{tabular}
-    % }
+    }
+  \caption{\textbf{Linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ in the setting with no selection, based on all graphs with $M=7$ vertices}. *** $P < 0.001$}
   \label{tableSI:sett1_1var}
 \end{table}
 
 
-\begin{table}
-  \caption{ Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ in the setting with no selection. *** $P < 0.001$}
+\begin{table}[ht]
   \centering
   % \resizebox{\textwidth}{!}{%
-  \begin{tabular}{lrrrr}
-    \toprule
-    &                                                    \multicolumn{2}{c}{$M=7$} & \multicolumn{2}{c}{$M=9$}                                         \\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} 
-    &                                                    \multicolumn{4}{c}{$Q_{ST,u}$}                                                               \\
-     \cmidrule(lr){2-5} 
-$m$             & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.50}  & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.50} \\
+  \begin{tabular}{|l|r|r|r|r|}
+    \hline
+    &                                                    \multicolumn{2}{c|}{$M=7$} & \multicolumn{2}{c|}{$M=9$}                                         \\
+\hline
+    &                                                    \multicolumn{4}{c|}{$Q_{ST,u}$}                                                               \\
+\hline
+$m$             & \multicolumn{1}{c|}{0.01} & \multicolumn{1}{c|}{0.50}  & \multicolumn{1}{c|}{0.01} & \multicolumn{1}{c|}{0.50} \\
     \hline 
     (Intercept) &                   -0.000 &                   -0.000 &                    0.000 &                   -0.000 \\       
                 &                  (0.017) &                  (0.013) &                  (0.009) &                  (0.010) \\       
@@ -411,27 +410,27 @@ $m$             & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.50}  & \multic
                 &                  (0.019) &                  (0.014) &                  (0.013) &                  (0.013) \\       
     $\l$        &                 0.500*** &                 0.712*** &                 0.583*** &                 0.784*** \\       
                 &                  (0.019) &                  (0.014) &                  (0.013) &                  (0.013) \\       
-    \midrule 
+    \hline 
 Number of sim.  &                      853 &                      853 &                    1,126 &                    1,126 \\       
     $R^2$       &                    0.766 &                    0.858 &                    0.899 &                    0.896 \\       
-    \bottomrule
+    \hline 
     \end{tabular}
     % }
+    \caption{ \textbf{Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ in the setting with no selection}. *** $P < 0.001$}
     \label{tableSI:coefficients_set1}
 \end{table}
 
 
-\begin{table}
-  \caption{ Multivariate linear regression model coefficients for the effect of the topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ in the setting with heterogeneous selection. *** $P < 0.001$}
+\begin{table}[ht]
   \centering
   \resizebox{\textwidth}{!}{
-    \begin{tabular}{lrrrrrrrr}
-    \toprule
-                   & \multicolumn{4}{c}{$M=7$}                                                                                  & \multicolumn{4}{c}{$M=9$}                                                                                   \\                                                                                              
-                   \cmidrule(lr){2-5}                                                                                           \cmidrule(lr){6-9}                                                                                             
-                   & \multicolumn{2}{c}{$Q_{ST,s}$}    &   \multicolumn{2}{c}{$Q_{ST,u}$}                                        & \multicolumn{2}{c}{$Q_{ST,s}$}    &   \multicolumn{2}{c}{$Q_{ST,u}$}                                         \\
-                   \cmidrule(lr){2-3} \cmidrule(lr){4-5}                                                                        \cmidrule(lr){6-7} \cmidrule(lr){8-9}                                                                          
-$m$                & \multicolumn{1}{c}{0.01} &  \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.01}& \multicolumn{1}{c}{0.50}   & \multicolumn{1}{c}{0.01} &  \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.01}& \multicolumn{1}{c}{0.50}   \\ 
+    \begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+    \hline
+                   & \multicolumn{4}{c|}{$M=7$}                                                                                  & \multicolumn{4}{c|}{$M=9$}                                                                                   \\                                                                                              
+    \hline
+                   & \multicolumn{2}{c|}{$Q_{ST,s}$}    &   \multicolumn{2}{c|}{$Q_{ST,u}$}                                        & \multicolumn{2}{c|}{$Q_{ST,s}$}    &   \multicolumn{2}{c|}{$Q_{ST,u}$}                                         \\
+    \hline                                                                       
+$m$                & \multicolumn{1}{c|}{0.01} &  \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.01}& \multicolumn{1}{c|}{0.50}   & \multicolumn{1}{c|}{0.01} &  \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.01}& \multicolumn{1}{c|}{0.50}   \\ 
                    \hline 
     (Intercept)    &                    -0.000 &                   -0.000 &                   -0.000 &                   -0.000   &     0.000 &                    0.000 &                    0.000 &                    0.000\\ 
                    &                   (0.008) &                  (0.009) &                  (0.009) &                  (0.009)   &   (0.008) &                  (0.008) &                  (0.008) &                  (0.008)\\ 
@@ -441,26 +440,26 @@ $m$                & \multicolumn{1}{c}{0.01} &  \multicolumn{1}{c}{0.50} & \mul
                    &                   (0.009) &                  (0.010) &                  (0.010) &                  (0.010)   &   (0.010) &                  (0.011) &                  (0.011) &                  (0.011)\\ 
     $r_\Theta$     &                  0.914*** &                 0.805*** &                -0.838*** &                 0.807***   &  0.926*** &                 0.715*** &                -0.730*** &                 0.725***\\ 
                    &                   (0.008) &                  (0.009) &                  (0.009) &                  (0.009)   &   (0.008) &                  (0.008) &                  (0.008) &                  (0.008)\\ 
-    \midrule
+    \hline
     Number of sim. &                     2,548 &                    2,548 &                    2,548 &                    2,548   &     2,250 &                    2,250 &                    2,250 &                    2,250\\ 
     $R^2$          &                     0.845 &                    0.808 &                    0.808 &                    0.799   &     0.870 &                    0.853 &                    0.862 &                    0.851\\ 
-    \bottomrule
+    \hline 
     \end{tabular}
     }
+    \caption{ \textbf{Multivariate linear regression model coefficients for the effect of the topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ in the setting with heterogeneous selection}. *** $P < 0.001$}
     \label{tableSI:coefficients_set2}
 \end{table}
 
 
-\begin{table}
-  \caption{Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ on real graphs with $M=49$ vertices in the setting with heterogeneous selection. * $P < 0.05$,  ** $P < 0.01$, *** $P < 0.001$}
+\begin{table}[ht]
   \centering
   % \resizebox{\textwidth}{!}{%
   % \resizebox{\textwidth}{!}{
-    \begin{tabular}{lrrrr}
-    \toprule
-    &       \multicolumn{2}{c}{$Q_{ST,s}$}                           &               \multicolumn{2}{c}{$Q_{ST,u}$}        \\ 
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} 
-$m$            & \multicolumn{1}{c}{0.1} & \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.1} & \multicolumn{1}{c}{0.50} \\ 
+    \begin{tabular}{|l|r|r|r|r|}
+    \hline
+    &       \multicolumn{2}{c|}{$Q_{ST,s}$}                           &               \multicolumn{2}{c|}{$Q_{ST,u}$}        \\ 
+\hline
+$m$            & \multicolumn{1}{c|}{0.1} & \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.1} & \multicolumn{1}{c|}{0.50} \\ 
     \hline
 (Intercept) &                  -0.000 &                   -0.000 &                    0.000 &                   -0.000 \\ 
             &                 (0.093) &                  (0.064) &                  (0.056) &                  (0.059) \\ 
@@ -470,27 +469,27 @@ $\l$        &                 -0.220* &                  0.195** &              
             &                 (0.106) &                  (0.073) &                  (0.064) &                  (0.068) \\ 
 $r_\Theta$  &                0.610*** &                 0.675*** &                -0.282*** &                 0.282*** \\ 
             &                 (0.106) &                  (0.073) &                  (0.063) &                  (0.068) \\ 
-\midrule
+\hline
 Number of sim.&                    83 &                       83 &                       83 &                       83 \\ 
 $R^2$       &                   0.313 &                    0.675 &                    0.752 &                    0.717 \\ 
-    \bottomrule
+    \hline 
   \end{tabular}
   % }
+  \caption{\textbf{Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ on real graphs with $M=49$ vertices in the setting with heterogeneous selection}. * $P < 0.05$,  ** $P < 0.01$, *** $P < 0.001$}
 \label{tableSI:coefficients_realgraphs}
 \end{table}
 
 
-\begin{table}
-  \caption{ Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ in the setting of trait-dependent competition and heterogeneous selection (\cref{secSI:trait-dep-comp}), based on all graphs with $M=7$ vertices.  *** $P < 0.001$}
+\begin{table}[ht]
   \centering
   % \resizebox{\textwidth}{!}{%
-  \resizebox{\textwidth}{!}{\begin{tabular}{lrrrrrrrr}
-    \toprule
-                &                                 \multicolumn{4}{c}{$\sigma_a = 0.5 < \nicefrac{1}{\sqrt{2p}}$} & \multicolumn{4}{c}{$\sigma_a = 1 > \nicefrac{1}{\sqrt{2p}}$} \\
-                \cmidrule(lr){2-5} \cmidrule(lr){6-9} 
-                &            \multicolumn{2}{c}{$Q_{ST,s}$}           &            \multicolumn{2}{c}{$Q_{ST,u}$}           &            \multicolumn{2}{c}{$Q_{ST,s}$}           &            \multicolumn{2}{c}{$Q_{ST,u}$}          \\ 
-                \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} 
-    $m$          & \multicolumn{1}{c}{0.05} & \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.05} & \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.05} & \multicolumn{1}{c}{0.50} & \multicolumn{1}{c}{0.05} & \multicolumn{1}{c}{0.50}\\ 
+  \resizebox{\textwidth}{!}{\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+    \hline
+                &                                 \multicolumn{4}{c|}{$\sigma_a = 0.5 < \nicefrac{1}{\sqrt{2p}}$} & \multicolumn{4}{c|}{$\sigma_a = 1 > \nicefrac{1}{\sqrt{2p}}$} \\
+           \hline
+                &            \multicolumn{2}{c|}{$Q_{ST,s}$}           &            \multicolumn{2}{c|}{$Q_{ST,u}$}           &            \multicolumn{2}{c|}{$Q_{ST,s}$}           &            \multicolumn{2}{c|}{$Q_{ST,u}$}          \\ 
+          \hline
+    $m$          & \multicolumn{1}{c|}{0.05} & \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.05} & \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.05} & \multicolumn{1}{c|}{0.50} & \multicolumn{1}{c|}{0.05} & \multicolumn{1}{c|}{0.50}\\ 
     \hline
     (Intercept) &                    0.000 &                   -0.000 &                   -0.000 &                   -0.000 &                    0.000 &                   -0.000 &                    0.000 &                   -0.000\\ 
                 &                  (0.005) &                  (0.010) &                  (0.011) &                  (0.010) &                  (0.004) &                  (0.008) &                  (0.012) &                  (0.007)\\ 
@@ -503,8 +502,9 @@ $R^2$       &                   0.313 &                    0.675 &              
     \hline
 Number of sim.  &                    2,548 &                    2,548 &                    2,548 &                    2,548 &                    2,548 &                    2,548 &                    2,548 &                    2,548\\ 
     $R^2$       &                    0.934 &                    0.768 &                    0.716 &                    0.732 &                    0.962 &                    0.828 &                    0.659 &                    0.861\\ 
-    \bottomrule
+    \hline
     \end{tabular}}
+    \caption{ \textbf{Multivariate linear regression model coefficients for the effect of topology metrics on $Q_{ST,u}$ and $Q_{ST,s}$ in the setting of trait-dependent competition and heterogeneous selection (\cref{secSI:trait-dep-comp}), based on all graphs with $M=7$ vertices}.  *** $P < 0.001$}
 \label{tableSI:coefficients_trait-dep-comp}
 \end{table}
 

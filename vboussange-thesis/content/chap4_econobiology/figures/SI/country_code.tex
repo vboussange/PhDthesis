@@ -1,0 +1,9 @@
+\begin{scriptsize}
+\pgfplotstabletypeset[
+columns={Country Code, Country Name, Country Code, Country Name},
+display columns/0/.style={select equal part entry of={0}{2},string type},% first part of ‘A’
+display columns/1/.style={select equal part entry of={0}{2},string type},% first part of ‘B’
+display columns/2/.style={select equal part entry of={1}{2},string type},% second part of ‘A’
+display columns/3/.style={select equal part entry of={1}{2},string type},% second part of ‘B’
+]{\datatable}
+\end{scriptsize}

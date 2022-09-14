@@ -98,7 +98,7 @@
 \addbibresource{./content/chap1_diff_in_graphs/bib.bib}
 \addbibresource{./content/chap2_NonLocalPDE/bibfile.bib}
 \addbibresource{./content/chap3_mini-batching/bib.bib}
-% \addbibresource{./content/chap4_econobiology/bib.bib}
+\addbibresource{./content/chap4_econobiology/bib.bib}
 
 % **************************************************
 % Other Packages
@@ -162,7 +162,6 @@
 \def\l{\langle l \rangle} % average path length
 \usepackage{blindtext}
 \graphicspath{{assets/}}
-\usepackage{subfiles} % Best loaded last in the preamble
 % \AtBeginEnvironment{appendices}{\crefalias{section}{Supplementary methods}}
 \usepackage{nameref}
 % \AtBeginEnvironment{appendices}{\crefalias{equation}{SI Equation}}
@@ -358,3 +357,19 @@
 % ***** Minibatching **********
 % *****************************
 \DeclareMathOperator*{\argmin}{arg\,min} % Jan Hlavacek
+
+
+% *****************************
+% ***** econobiology **********
+% *****************************
+\usepackage{pgfplotstable}
+\pgfplotstableset{
+every head row/.style={before row=\toprule,after row=\midrule},
+every last row/.style={after row=\bottomrule},
+col sep=semicolon}
+\pgfplotstableread{./content/chap4_econobiology/figures/SI/country_code.csv}\datatable
+% for long table result
+\usepackage{longtable}
+\usepackage[tableposition=below]{caption}
+\captionsetup[longtable]{skip=1em}
+\captionsetup[table]{position=below}

@@ -1,121 +1,85 @@
 % !TEX root = ../my-thesis.tex
-% \newcommand{\M}{\mathcal{M}}
-% \newcommand{\modnull}{\M_{null}}
-% \newcommand{\modalphap}{\M_{\alpha^+}}
-% \newcommand{\modalphan}{\M_{\alpha^-}}
-% \newcommand{\modmu}{\M_\mu}
-% \newcommand{\moddelta}{\M_\delta}
-% \newcommand{\hc}{^{(c)}}
-% \newcommand{\LL}{\mathcal{L}}
-% \newcommand{\BIC}{\text{BIC}}
-% \newcommand{\by}{\textbf{y}}
 
-\graphicspath{{./content/chap4_econobiology/}}
+\graphicspath{{./content/chap4_econobiology/figures/}}
 
-% \setcounter{equation}{0}
-% \setcounter{figure}{0}
-% \setcounter{table}{0}
-% % \setcounter{page}{1}
-% \makeatletter % changes the catcode of @ to 11
-% \renewcommand{\thetable}{S\arabic{table}}
-% \renewcommand{\theequation}{S\arabic{equation}}
-% \renewcommand{\thefigure}{S\arabic{figure}}
-% \makeatother % changes the catcode of @ back to 12
-
+\clearpage
 \section{Supplementary Figures}
-\FloatBarrier
 
-
-\begin{figure}
+\begin{figure}[ht]
   \center
-  \includegraphics{figures/SI/synthetic_test_all_AIC_r=0.3.png}
+  \includegraphics{SI/synthetic_test_all_AIC_r=0.3.png}
   \caption{\small \textbf{Validation of the model selection procedure}. The figure is analogous to \cref{fig:synthetic_test_all_AIC} but with $\sigma = 0.3$. 
-   }\label[SI]{synthetic_test_all_AIC}
+   }\label{figSI:synthetic_test_all_AIC}
 \end{figure}
 
-\FloatBarrier
-\begin{figure}
+\begin{figure}[ht]
   \center
-  \includegraphics{figures/SI/figure_alphan_simulate.png}
+  \includegraphics{SI/figure_alphan_simulate.png}
   \caption{\small \textbf{Fits of model $\modalphan$ for ARE and HRV, where $\modalphan$ is given support against $\modnull$}. 
-   }\label[SI]{fit_alphan}
+   }\label{figSI:fit_alphan}
 \end{figure}
 
-\FloatBarrier
-\begin{figure}
+\begin{figure}[ht]
   \center
-  \includegraphics{figures/SI/figure_alphap_simulate.png}
+  \includegraphics{SI/figure_alphap_simulate.png}
   \caption{\small \textbf{Fits of model $\modalphap$ for DEU and HUN, where $\modalphap$ is given support against $\modnull$}. 
-   }\label[SI]{fit_alphap}
+   }\label{figSI:fit_alphap}
 \end{figure}
 
-\FloatBarrier
-\begin{figure}
+\begin{figure}[ht]
   \center
-  \includegraphics{figures/SI/figure_delta_simulate.png}
+  \includegraphics{SI/figure_delta_simulate.png}
   \caption{\small \textbf{Fits of model $\moddelta$ for GBR and BEL, where $\moddelta$ is given support against $\modnull$}. 
-   }\label[SI]{fit_delta}
+   }\label{figSI:fit_delta}
 \end{figure}
 
-\FloatBarrier
-\begin{figure}
+\begin{figure}[ht]
   \center
-  \includegraphics{figures/SI/figure_mu_simulate.png}
-  \caption{\small \textbf{Fits of model $\modmu$ for NZL and SAU, where $\modmu$ is given support against $\modnull$}. 
-   }\label[SI]{fit_mu}
+  \includegraphics{SI/figure_mu_simulate.png}
+  \caption{\small \textbf{Fits of model $\modmu$ for NZL and KOR, where $\modmu$ is given support against $\modnull$}. 
+   }\label{figSI:fit_mu}
 \end{figure}
-\FloatBarrier
 
-\begin{figure}
+\begin{figure}[ht]
   \center
-  \includegraphics{figures/SI/flux_delta.png}
+  \includegraphics{SI/flux_delta.png}
   \caption{\small \textbf{Contributions of fluxes due to spatial transfers on growth dynamics}. \textbf{A} shows the growth dynamics for KOR, together with the best model fit. \textbf{B}-\textbf{C} show the positive and negative fluxes, respectively, due to spatial transfers for each economic activity, relative to the capital size of economic activity. The contributions of spatial transfers to growth decreases over time.
-   }\label[SI]{flux_delta}
+  }\label{figSI:flux_delta}
 \end{figure}
-\FloatBarrier
 
-% \begin{figure}
-%   \center
-%   \includegraphics{figures/SI/flux_mu.png}
-%   \caption{\small\textbf{ Contributions of fluxes due to economic activity transformation on growth dynamics}. \textbf{A} shows the growth dynamics 
-%   }\label[SI]{flux_mu}
-% \end{figure}
-% \FloatBarrier
-
-% \begin{figure}[h]
-%     \includegraphics[width=0.9\textwidth]{img/SI/loss_CHN.png}
-%     \centering
-%     \caption{Stochastic gradient descent for China. To initiate the gradient descents, $\alpha, \mu = 10^{-3}\epsilon$ where $\epsilon \sim \mathcal{N}(0,1)$ and $r_i$, $K_i$ obtained from least squares for logistic growth.}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \includegraphics[width=0.9\textwidth]{img/SI/100runs_analysis.png}
-%     \centering
-%     \caption{Sensitivity analysis for China, USA, and world.}
-% \end{figure}
-% \input{SI}
+\clearpage 
 
 \section{Supplementary Tables}
 
 \begin{table}[ht]
-\centering
-\begin{tabular}{lrr}
-\toprule
-                    & \multicolumn{1}{c}{Loglikelihood} & \multicolumn{1}{c}{Loglikelihood residuals} \\ 
-\cmidrule(lr){2-2} \cmidrule(lr){3-3} 
-(Intercept)         &                             0.000 &                                    1.869*** \\ 
-                    &                           (0.051) &                                     (0.477) \\ 
-NT                  &                          0.915*** &                                             \\ 
-                    &                           (0.052) &                                             \\ 
-N                   &                                   &                                   -0.288*** \\ 
-                    &                                   &                                     (0.071) \\ 
-log(GDP)             &                                   &                                    0.834*** \\ 
-                    &                                   &                                     (0.189) \\ 
-\midrule
-Number of countries &                                63 &                                          63 \\ 
-$R^2$               &                             0.837 &                                       0.251 \\ 
-\bottomrule
-\end{tabular}
-\caption{Linear regression model coefficients for the effect of the number of data points ($NT$) on the best model loglikelihood, and linear regression model coefficients for the effect of GDP and number of economic activities ($N$) on the residuals. $^{***} p < 0.001$}\label{table:gdp_loglikelihood}
+    \centering
+    \input{./content/chap4_econobiology/figures/SI/country_code}
+    \caption{\textbf{ISO 3166-1 country codes for each of the 100 country investigated.}}
+    \label{tab:country_codes}
 \end{table}
-% \FloatBarrier
+
+% \begin{footnotesize}
+\setlength\LTcapwidth{\linewidth}
+\begin{longtable}[ht]{|c|c|c|c|c|c|c|}
+    \hline
+        Country & Model & Loss & Rel. std. loss & R2 & Log-likelihood & $\Delta \text{BIC}$\\
+    \hline
+    \endhead
+    % \hline
+    \endfoot
+    \hline
+
+    
+    \caption{\textbf{Results of the numerical simulations}. Numerical values for each model and each country correspond to the optimization run with the minimum loss value. "Rel. std. loss" corresponds to the standard deviation of the loss values obtained for the five independent runs, divided by the mean loss value. Low "Rel. std. loss" indicates that the optimization runs have converged towards the same maximum likelihood.}
+    \label{tab:results}
+    \endlastfoot
+    \input{./content/chap4_econobiology/figures/SI/results}
+\end{longtable}
+% \end{footnotesize}
+
+
+\begin{table}[ht]
+\centering
+    \input{./content/chap4_econobiology/figures/SI/lm_likelihood}
+\caption{\textbf{Linear regression model coefficients for the effect of the number of data points ($NT$) on the best model loglikelihood, and linear regression model coefficients for the effect of GDP and number of economic activities ($N$) on the residuals}. $^{***} p < 0.001$}\label{table:gdp_loglikelihood}
+\end{table}

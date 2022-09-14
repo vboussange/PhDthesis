@@ -4,7 +4,7 @@
 
 \chapter{Introduction}
 
-\cleanchapterquote{Nature loves to hide.}{Heraclitus}{}
+\cleanchapterquote{Nature loves to hide.}{Heraclitus (c. 6th-5th century BCE)}{}
 
 
 \label{sec:intro}
@@ -12,7 +12,9 @@
 % \cleanchapterquote{Le bout du monde et le fond du jardin contiennent la même quantité de merveilles.}{Christian Bobin}{(French poet)}
 
 % TODO : investigate the difference between frequency dependence, density dependence, and the likes , cf \citep{Lion2022}
-\subsubsection*{Biological and economic systems as complex adaptive systems}
+\section{Context}
+
+\subsection{Biological and economic systems as complex adaptive systems}
 %% definition of complex adaptive system
 What are the similarities between biological and economic systems? Both are complex adaptive systems (CAS) \citep{Levin2002}, which are composed of heterogeneous entities structured at different levels of organizations, that interact in nonlinear ways and experience evolutionary processes. 
 % 
@@ -52,7 +54,7 @@ In economic systems, we still do not exactly understand the nature of those proc
 
 
 
-\subsubsection*{Ecological and evolutionary processes drive the dynamics of biological systems}
+\subsection{Ecological and evolutionary processes drive the dynamics of biological systems}
 % 
 % History of the understanding of forces in ecology and evolution
 % The challenge is to bridge the microscopic processes developing at a lower organizational level to deduce the long-term dynamics of these macroscopic features.
@@ -96,7 +98,7 @@ In order to mitigate the consequences of human development, it is of utmost urge
 % Beyond raising questions of sheer scientific interest, gaining such an understanding is a pressing need to mitigate the effect of global change.
 
 
-\subsubsection*{Drivers of economic change}
+\subsection{Drivers of economic change}
 The processes that determine economic change is controversial in economics \citep{Nelson2014}. 
 %  This idiosyncrasy has been traditionally explained by geographic and institutional arguments \citep{C.A.HidalgoB.Klinger}. 
 %% Mainstream econoomics vs evolutionary economics
@@ -124,7 +126,9 @@ However, those studies did not seek to understand how these processes may affect
 % 
 Recent modelling approaches developed in evolutionary biology may help to disentangle whether eco-evolutionary processes could explain differences in economic development across countries.
 
-\subsubsection*{Forward modelling of eco-evolutionary processes}
+\section{Modeling eco-evolutionary dynamics}
+
+\subsection{Forward modelling of eco-evolutionary processes}
 The complex interplay between ecological and evolutionary processes, acting at different scales of time and space and organization, can hardly be studied with experimental approaches \citep{Pontarp2019,Hagen2022}. 
 % TODO: cite \citep{May2004}
 As such, a deductive approach, relying on forward modelling, has traditionally been put forward to advance our understanding of the mechanisms underlying \citep{Brummitt2020}. Along this approach, hypotheses about causal processes are embedded in a model, wich forward integration generates emergent properties. Such emergent behavior may be seen as predictions from the consideration of the causal processes \citep{May2004}. The role of the modeller is to point at the mechanisms by which the properties emerge, disentangling the underlying interplay between the processes. % The resulting qualitative dynamics and/or quantitative predictions are validated against common intuition and empirical data, and further refined to elaborate a theory \citep{Sayama,Brummitt2020,Schmidt2009}.
@@ -170,10 +174,10 @@ In order to better understand eco-evolutionary feedbacks, we need to investigate
 \begin{figure}[t]
     \centering
     \includegraphics{proc_mech_patt.pdf}
-    \caption{Forward and inverse modelling approaches for the understanding of CAS. A forward modelling approach starts with assuming a set of processes, and seeks to understand how their interplay transforms in mechanisms that are associated with macroscopic patterns. An inverse modelling approach starts from empirical patterns (or observations) to deduce the underlying mechanisms and associated processes.}
+    \caption{\textbf{Forward and inverse modelling approaches for the understanding of CAS}. A forward modelling approach starts with assuming a set of processes, and seeks to understand how their interplay transforms in mechanisms that are associated with macroscopic patterns. An inverse modelling approach starts from empirical patterns (or observations) to deduce the underlying mechanisms and associated processes.}
 \end{figure}
 
-\subsubsection*{Inverse modelling}
+\subsection{Inverse modelling}
 %% inverse modelling
 While in forward modelling, observation data is uniquely considered at the end of the modelling cycle - when comparing predicted and empirical patterns to refine the baseline hypotheses -, inverse modelling integrates data at the start the modelling cycle \xxx (\cref{fig:forward_inverse_modelling}).
 % 
@@ -202,7 +206,7 @@ Inference methods involve numerical methods to recover the model distance to the
 % 
 Thus far, the use of inverse modelling for understanding eco-evolutionary dynamics has been limited because of a number of issues, including the high computational cost of the forward integration of eco-evolutionary models \citep{Fisher2018}, the large number of parameters involved \citep{Boyd2012}, and their strong nonlinearities \citep{Hastings1993,Huisman1999,Beninca2008}. Advances in the field of artificial intelligence could circumvent these issues, allowin to confront eco-evolutionary models with data \xxx.
 
-\subsubsection*{Machine learning to leverage forward and inverse modelling}
+\subsection{Machine learning to leverage forward and inverse modelling}
 
 In the recent years, the field of artificial intelligence (AI) has made enormous progresses in computer vision \citep{XXX} and natural language processing \citep{XXX}. At the backbone of this success are key computational techniques that could leverage the forward and inverse modelling of CAS.
 % 
@@ -247,7 +251,7 @@ As such, the derivation of AI techniques to investigate causal processes in CAS 
 
 % The predictive ability of mechanistic models has remained poor \citep{DeAngelis2015}, due to a low pervasion of observation data in mechanistic models \citep{XXX}.
 
-\subsubsection*{Programming languages}
+\subsection{Programming languages}
 
 Combining ML techniques with scientific models requires computational environments that allow to easily develop scientific models, ensure simulation performance, and provide composability between ML and other scientific libraries \citep{Rackauckas2020}. Unfortunately, performance and composability are features that are poorly represented in mainstream programming languages used by the scientific community, such as Python, Matlab or R.
 % 
@@ -271,7 +275,7 @@ Multiple dispatch also allows to automatically generate the gradient of any Juli
 % 
 As such, Julia allows to prototype a program which is readily generic and can directly be shared to the research community. Further, by granting the composability of libraries, it allows to blend ML techniques with scientific models. This makes Julia a promising computational environment to accelerate research in CAS. 
 
-\subsubsection*{Thesis outline}
+\section{Thesis outline}
 
 In summary, while it is increasingly acknowledged that feedbacks between ecological and evolutionary processes play an important role in the dynamics of biological systems \citep{Pelletier2009, Urban2016}, our understanding of the mechanisms in which they are involved has been limited to simplified scenarios.
 % 

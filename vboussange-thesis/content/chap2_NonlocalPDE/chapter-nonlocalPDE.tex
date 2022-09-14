@@ -54,10 +54,10 @@ Lo{\"i}c Pellissier$^{1,2}$\bigskip
 
 \begin{center}
   \href{https://arxiv.org/abs/2205.03672}{arXiv:2205.03672}\\
-  Under review at Journal of Partial Differential Equations and Applications
+  Revision requested from Journal of Partial Differential Equations and Applications
 \end{center}
 
-\fancyabstract{
+\fancyabstractQuote{The key to growth is the introduction of higher dimensions of consciousness into our awareness.}{Lao Tzu (c. 4th century BCE)}{}{
 	Nonlinear partial differential equations (PDEs) are used to model dynamical processes in a large number of scientific fields, ranging from finance to biology. In many applications standard local models are not sufficient to accurately account for certain non-local phenomena such as, e.g., interactions at a distance. In order to properly capture these phenomena non-local nonlinear PDE models are frequently employed in the literature. In this article we propose two numerical methods based on machine learning and on Picard iterations, respectively, to approximately solve non-local nonlinear PDEs.
 	%
 	The proposed machine learning-based method is an extended variant of a deep learning-based splitting-up type approximation method previously introduced in the literature and utilizes neural networks to provide approximate solutions on a subset of the spatial domain of the solution. 
@@ -83,7 +83,7 @@ Such PDEs have been used to describe  a variety of processes in physics, enginee
 %Paragraph 2: demonstrates the specific needs in different domains
 The need for solving non-local nonlinear PDEs has been expressed in various fields as they provide a more general description of the dynamical systems than their local counterparts \citep{Kavallaris2018,delia2020numerical,Sunderasan2020}.
 %
-In physics and engineering, non-local nonlinear PDEs are found, e.g., in models of Ohmic heating production \citep{Lacey1995}, in the investigation of the fully turbulent behavior of real flows \citep{Caglioti1992}, in phase field models allowing non-local interactions \citep{Barone1971,Gajewski2003,Coleman1994,Hairer2016}, or in phase transition models with conservation of mass \citep{RUBINSTEIN1992,Stoleriu2011}; see \citep{Kavallaris2018} for further references.
+In physics and engineering, non-local nonlinear PDEs are found, e.g., in models of Ohmic heating production \citep{Lacey1995}, in the investigation of the fully turbulent behavior of real flows \citep{Caglioti1992}, in phase field models allowing non-local interactions \citep{Barone1971,Gajewski2003,Coleman1994,Hairer2016}, or in phase transition models with conservation of mass \citep{RUBINSTEIN1992,Stoleriu2011}; see \cite{Kavallaris2018} for further references.
 %
 In finance, non-local PDEs are used, e.g., in jump-diffusion models for the pricing of derivatives where the dynamics of stock prices are described by stochastic processes experiencing large jumps \citep{Merton1976,Chan1999,Kou2000,Abergel2010,Benth2001,Sunderasan2020,Cruz2020,Tankov2003}. Penalty methods for pricing American put options such as in Kou's jump-diffusion model \citep{Huang2013,Gan2020}, considering large investors where the agent policy affects the assets prices \citep{Amadori2003,Abergel2010}, or considering default risks \citep{Pham2009,Henry-Labordere2012} can further introduce nonlinear terms in non-local PDEs.
 %
@@ -103,7 +103,7 @@ Numerical methods exploiting stochastic representations of the solutions of PDEs
 %
 Recently, two novel classes of methods have proved successful in dealing with high-dimensional nonlinear PDEs, namely deep learning-based and full history recursive multilevel Picard approximation methods (in the following we will abbreviate \emph{full history recursive multilevel Picard} by MLP).
 %
-The explosive success of deep learning in recent years across a wide range of applications \citep{LeCun2015} has inspired a variety of neural network-based approximation methods for high-dimensional PDEs; see \citep{Beck2020} for an overview. One class of such methods is based on reformulating the PDE as a stochastic learning problem through the Feynman--Kac formula \citep{EHanJentzen2017,Han2018,beck2018solving}. In particular, the \emph{deep splitting} scheme introduced in \citep{Beck2019} relies on splitting the differential operator into a linear and a nonlinear part and in that sense belongs to the class of splitting-up methods \citep{cox2013pathwise,gyongy2003splitting,hochbruck2005explicit}. The PDE approximation problem is then decomposed along the time axis into a sequence of separate learning problems. The deep splitting approximation scheme has proved capable of computing reasonable approximations to the solutions of nonlinear PDEs in up to 10000 dimensions.
+The explosive success of deep learning in recent years across a wide range of applications \citep{LeCun2015} has inspired a variety of neural network-based approximation methods for high-dimensional PDEs; see \cite{Beck2020} for an overview. One class of such methods is based on reformulating the PDE as a stochastic learning problem through the Feynman--Kac formula \citep{EHanJentzen2017,Han2018,beck2018solving}. In particular, the \emph{deep splitting} scheme introduced in \citep{Beck2019} relies on splitting the differential operator into a linear and a nonlinear part and in that sense belongs to the class of splitting-up methods \citep{cox2013pathwise,gyongy2003splitting,hochbruck2005explicit}. The PDE approximation problem is then decomposed along the time axis into a sequence of separate learning problems. The deep splitting approximation scheme has proved capable of computing reasonable approximations to the solutions of nonlinear PDEs in up to 10000 dimensions.
 %
 On the other hand, the MLP approximation method, introduced in \citep{Weinan2019,Hutzenthaler2020,Weinan2021}, utilizes the Feynman--Kac formula to reformulate the PDE problem as a fixed point equation. It further reduces the complexity of the numerical approximation of the time integral through a multilevel Monte Carlo approach.
 %
@@ -124,7 +124,7 @@ The literature also contains approaches that are more closely related to the mac
 %
 Finally, Gonon \& Schwab \citep{gonon2021deep} provide theoretical results showing that neural networks with ReLU activation functions have sufficient expressive power to approximate solutions of certain high-dimensional non-local linear PDEs without the curse of dimensionality.
 
-There is a more extensive literature on machine learning-based methods for approximately solving standard PDEs without non-local terms but with various boundary conditions, going back to early works by Lagaris et al.~\citep{lagaris1998artificial,lagaris2000neural} (see also \citep{mcfall2009artificial}), which employed a grid-based method based on least-squares minimization of the residual and shallow neural networks to solve low-dimensional ODEs and PDEs with Dirichlet, Neumann, and mixed boundary conditions. More recently, approximation methods for PDEs with Neumann (and other) boundary conditions have been proposed using, e.g., physics-informed neural networks \citep{lu2021deepxde,sukumar2022exact,WangPerdikaris2020}, the \emph{deep Ritz} method (based on a variational formulation of certain elliptic PDEs) \citep{e2018deep,liao2021deep,chen2020comparison}, or adversarial networks \citep{zang2020weak}.
+There is a more extensive literature on machine learning-based methods for approximately solving standard PDEs without non-local terms but with various boundary conditions, going back to early works by \cite{lagaris1998artificial,lagaris2000neural} (see also \cite{mcfall2009artificial}), which employed a grid-based method based on least-squares minimization of the residual and shallow neural networks to solve low-dimensional ODEs and PDEs with Dirichlet, Neumann, and mixed boundary conditions. More recently, approximation methods for PDEs with Neumann (and other) boundary conditions have been proposed using, e.g., physics-informed neural networks \citep{lu2021deepxde,sukumar2022exact,WangPerdikaris2020}, the \emph{deep Ritz} method (based on a variational formulation of certain elliptic PDEs) \citep{e2018deep,liao2021deep,chen2020comparison}, or adversarial networks \citep{zang2020weak}.
 
 %Paragraph 6: Structure of the paper
 The remainder of this article is organized as follows. \Cref{sec:derivation_spec}  discusses a special case of the proposed machine learning-based method, in order to provide a readily comprehensible exposition of the key ideas of the method. \Cref{sec:derivation_gen} discusses the general case, which is flexible enough to cover a larger class of PDEs and to allow more sophisticated optimization methods. \Cref{sec:MLP} presents our extension of the MLP approximation method to non-local nonlinear PDEs, which we use to obtain reference solutions in \cref{sec:examples}. \Cref{sec:examples} provides numerical simulations for five concrete examples of (non-local) nonlinear PDEs.
@@ -136,7 +136,7 @@ The remainder of this article is organized as follows. \Cref{sec:derivation_spec
 
 In this section, we present in \cref{algo:special_case} in \cref{subsec:algo_spec} below a simplified version of our general machine learning-based algorithm for approximating solutions of non-local nonlinear PDEs with Neumann boundary conditions proposed in \cref{sec:derivation_gen} below. This simplified version applies to a smaller class of non-local heat PDEs, specified in \cref{subsec:pde_spec} below. In \cref{subsec:temp-discret} we introduce some notation related to the reflection of straight lines on the boundaries of a suitable subset $D\subseteq\R^d$ where $d\in\N$, which will be used to describe time-discrete reflected stochastic processes that are employed in our approximations throughout the rest of the article. The simplified algorithm described in \cref{subsec:algo_spec} below is limited to using neural networks of a particular architecture that are trained using plain vanilla stochastic gradient descent, whereas the full version proposed in \cref{def:general_algorithm} in \cref{subsec:algo-Full-gen} below is formulated in such a way that it encompasses a wide array of neural network architectures and more sophisticated training methods, in particular Adam optimization, minibatches, and batch normalization. Stripping away some of these more intricate aspects of the full algorithm is intended to exhibit more acutely the central ideas in the proposed approximation method.
 
-The simplified algorithm described in this section as well as the more general version proposed in \cref{def:general_algorithm} in \cref{subsec:algo-Full-gen} below are based on the deep splitting method introduced in Beck et al.~\citep{Beck2019}, which combines operator splitting with a previous deep learning-based approximation method for Kolmogorov PDEs \citep{beck2018solving}; see also Beck et al.~\citep[Sections~2 and~3]{Beck2020} for an exposition of these methods.
+The simplified algorithm described in this section as well as the more general version proposed in \cref{def:general_algorithm} in \cref{subsec:algo-Full-gen} below are based on the deep splitting method introduced in \cite{Beck2019}, which combines operator splitting with a previous deep learning-based approximation method for Kolmogorov PDEs \citep{beck2018solving}; see also \cite[Sections~2 and~3]{Beck2020} for an exposition of these methods.
 
 \subsection{Partial differential equations (PDEs) under consideration}
 \label{subsec:pde_spec}
@@ -866,13 +866,13 @@ Compared to the simplified algorithm in \cref{algo:special_case} above, the majo
 	\item For every $m\in\{1,2,\dots,M\}$ the loss function used in the $m$th gradient descent step may be computed using a minibatch of samples instead of just one sample (cf.~\cref{eq:loss_general_case}). The sizes of these minibatches are specified by a sequence $(J_m)_{m\in\N}\subseteq\N$.
 	\item Compared to \cref{algo:special_case} above, the more general form of the PDEs considered in this section (cf.~\cref{eq:defPDE_general}) requires more flexibility in the definition of the time-discrete stochastic processes $\mathcal Y^{n,m,j}\colon \{0,1,\dots,N\}\times\Omega\to\R^d$, $(n,m,j)\in\{1,2,\dots,N\}\times\N\times\N$, which are specified in \cref{def:general_algorithm} above in terms of the Brownian motions $W^{n,m,j}\colon[0,T]\times\Omega\to\R^d$, $(n,m,j)\in\{1,2,\dots,N\}\times\N\times\N$, via a function $H\colon [0,T]^2\times\R^d\times\R^d\to\R^d$ (cf.~\cref{eq:FormalXapprox}). We refer the reader to \cref{eq:Hfkpp} in \cref{subsec:fisherKPP_neumann_r} below, \cref{eq:Hcomp} in \cref{subsec:nonlocalcompPDE} below, \cref{eq:Hsinegordon} in \cref{subsec:sinegordon_nonlocal} below, \cref{eq:Hrepmut} in \cref{subsec:aniso_mutator_selector} below, and \cref{eq:Hallencahn} in \cref{subsec:allen_cahn} below for concrete choices of $H$ in the approximation of various example PDEs.
 	\item For every $n\in\{1,2,\dots,N\}$, $m\in\N$ the optimization step in \cref{eq:general_gradient_step} in \cref{def:general_algorithm} above is specified generically in terms of the functions $\psi^n_m\colon \R^{\varrho}\to\R^{\mathfrak d}$ and $\Psi^n_m\colon\R^{\varrho}\times\R^{\mathfrak d}\to\R^{\varrho}$ and the random variable $\Xi^n_m\colon \Omega\to\R^{\varrho}$. This generic formulation covers a variety of SGD based optimization algorithms such as Adagrad \citep{duchi2011adaptive}, RMSprop, or Adam \citep{Kingma2014}. For example, in order to implement the Adam optimization algorithm, for every $n\in\{1,2,\dots,N\}$, $m\in\N$ the random variable $\Xi^n_m$ can be used to hold suitable first and second moment estimates (see~\cref{eq:examples_setting_moment_estimation} and \cref{eq:examples_setting_adam_grad_update} in \cref{sec:examples} below for the concrete specification of these functions implementing the Adam optimization algorithm).
-	\item The processes $\mathbb{S}^n\colon \N_0\times\Omega \to \R^{\varsigma}$, $n\in\{1,2,\ldots,N\}$, and functions $\mathcal S^n\colon \R^{\varsigma}\times\R^{\mathfrak d}\times(\R^d)^{\{0,1,\dots,N\}\times\N}\to\R^\varsigma$, $n\in\{1,2,\dots,N\}$, in \cref{def:general_algorithm} above can be used to implement batch normalization; see \citep{ioffe2015batch} for details. Loosely speaking, for every $n\in\{1,2,\dots,N\}$, $m\in\N$ the random variable $\mathbb S^n_m\colon \Omega\to\R^\varsigma$ then holds mean and variance estimates of the outputs of each layer of the approximating neural networks related to the minibatches that are used as inputs to the neural networks in computing the loss function at the corresponding gradient descent step.
+	\item The processes $\mathbb{S}^n\colon \N_0\times\Omega \to \R^{\varsigma}$, $n\in\{1,2,\ldots,N\}$, and functions $\mathcal S^n\colon \R^{\varsigma}\times\R^{\mathfrak d}\times(\R^d)^{\{0,1,\dots,N\}\times\N}\to\R^\varsigma$, $n\in\{1,2,\dots,N\}$, in \cref{def:general_algorithm} above can be used to implement batch normalization; see \cite{ioffe2015batch} for details. Loosely speaking, for every $n\in\{1,2,\dots,N\}$, $m\in\N$ the random variable $\mathbb S^n_m\colon \Omega\to\R^\varsigma$ then holds mean and variance estimates of the outputs of each layer of the approximating neural networks related to the minibatches that are used as inputs to the neural networks in computing the loss function at the corresponding gradient descent step.
 \end{enumerate}
 
 \section{Multilevel Picard approximation method for non-local PDEs}
 \label{sec:MLP}
 
-In this section we introduce in \cref{frame:mlpsetting} in \cref{subsec:mlpmethod} below our extension of the full history recursive multilevel Picard approximation method for approximating solutions of non-local nonlinear PDEs with Neumann boundary conditions. The MLP method was first introduced in E et al.~\citep{Weinan2021} and Hutzenthaler et al.~\citep{Hutzenthaler2020} and later extended in a number of directions; see E et al.~\citep{E2020} and Beck et al.~\citep{Beck2020} for recent surveys. We also refer the reader to Becker et al.~\citep{becker2020numerical} and E et al.~\citep{E2019multilevel} for numerical simulations illustrating the performance of MLP methods across a range of example PDE problems.
+In this section we introduce in \cref{frame:mlpsetting} in \cref{subsec:mlpmethod} below our extension of the full history recursive multilevel Picard approximation method for approximating solutions of non-local nonlinear PDEs with Neumann boundary conditions. The MLP method was first introduced in \cite{Weinan2021,Hutzenthaler2020} and later extended in a number of directions; see \cite{E2020} and \cite{Beck2020} for recent surveys. We also refer the reader to \cite{becker2020numerical} and \cite{E2019multilevel} for numerical simulations illustrating the performance of MLP methods across a range of example PDE problems.
 
 In \cref{subsec:mlp_examples} below, we will specify five concrete examples of (non-local) nonlinear PDEs and describe how \cref{frame:mlpsetting} can be specialized to compute approximate solutions to these example PDEs. These computations will be used in \cref{sec:examples} to obtain reference values to compare the deep learning-based approximation method proposed in \cref{sec:derivation_gen} above against.
 
@@ -1057,7 +1057,7 @@ In \cref{subsec:mlp_examples} below, we will specify five concrete examples of (
 
 \begin{example}[Fisher--KPP PDEs with Neumann boundary conditions]
 	\label{exampleMLP:fisherkpp_neumann}
-	In this example we specialize \cref{frame:mlpsetting} to the case of certain Fisher--KPP PDEs with Neumann boundary conditions (cf., e.g., Bian et al.~\citep{Bian2017} and Wang et al.~\citep{Wang2021}).
+	In this example we specialize \cref{frame:mlpsetting} to the case of certain Fisher--KPP PDEs with Neumann boundary conditions (cf., e.g., \citep{Bian2017,Wang2021}).
 	
 	Assume 
 		\cref{frame:mlpsetting},
@@ -1137,7 +1137,7 @@ In \cref{subsec:mlp_examples} below, we will specify five concrete examples of (
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{exampleMLP:nonlocal_comp}
-	In this example we specialize \cref{frame:mlpsetting} to the case of certain non-local competition PDEs (cf., e.g., Doebeli \& Ispolatov \citep{Doebeli2010}, Berestycki et al.~\citep{Berestycki2009b}, Perthame \& Génieys \citep{Perthame2007}, and Génieys et al.~\citep{Genieys2006a}).
+	In this example we specialize \cref{frame:mlpsetting} to the case of certain non-local competition PDEs (cf., e.g., \cite{Doebeli2010,Berestycki2009b,Perthame2007,Genieys2006a}).
 
 	Assume 
 		\cref{frame:mlpsetting},
@@ -1212,7 +1212,7 @@ In \cref{subsec:mlp_examples} below, we will specify five concrete examples of (
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{exampleMLP:sinegordon_nonlocal}
-	In this example we specialize \cref{frame:mlpsetting} to the case of certain non-local sine-Gordon type PDEs (cf., e.g., Hairer \& Shen \citep{Hairer2016}, Barone et al.~\citep{Barone1971}, and Coleman \citep{Coleman1994}).
+	In this example we specialize \cref{frame:mlpsetting} to the case of certain non-local sine-Gordon type PDEs (cf., e.g., \cite{Hairer2016,Barone1971,Coleman1994}).
 
 	Assume 
 		\cref{frame:mlpsetting},
@@ -1288,7 +1288,7 @@ In \cref{subsec:mlp_examples} below, we will specify five concrete examples of (
 	\label{exampleMLP:hamel}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	In this example we specialize \cref{frame:mlpsetting} to the case of certain $d$-dimensional replicator-mutator PDEs (cf., e.g., Hamel et al.~\citep{Hamel2020}). 
+	In this example we specialize \cref{frame:mlpsetting} to the case of certain $d$-dimensional replicator-mutator PDEs (cf., e.g., \cite{Hamel2020}). 
 
 	Assume 
 		\cref{frame:mlpsetting}, 
@@ -1502,7 +1502,7 @@ $
 \R \ni x \mapsto x \in \R
 $
 as activation function just in front of the output layer.
-Furthermore, we employ Xavier initialization to initialize all neural network parameters; see Glorot \& Bengio \citep{glorot2010} for details. We did not employ batch normalization in our simulations.
+Furthermore, we employ Xavier initialization to initialize all neural network parameters; see \cite{glorot2010} for details. We did not employ batch normalization in our simulations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %
@@ -1511,7 +1511,7 @@ Each of the numerical experiments presented below was performed with the {\textb
 %We would like to point out that no special emphasis has been
 %put on optimizing computation speed. In many cases some of the algorithm parameters
 %could be adjusted in order to obtain similarly accurate results in shorter runtime.
-We refer to \cref{sec:sourcecodes} below for the employed {\textbf Julia} source codes.
+% We refer to \cite{sec:sourcecodes} below for the employed {\textbf Julia} source codes.
 
 
 \begin{figure}
@@ -1562,7 +1562,7 @@ We refer to \cref{sec:sourcecodes} below for the employed {\textbf Julia} source
 		\node[above=.1,align=center,mydarkred] at (N\Nnodlen-1.90) {Output layer\\[-0.2em](4th layer)};
 	\end{tikzpicture}
 	% \end{adjustbox}
-	\caption{Graphical illustration of the neural network architecture used in the numerical simulations. In \cref{subsec:fisherKPP_neumann_r,subsec:nonlocalcompPDE,subsec:sinegordon_nonlocal,subsec:aniso_mutator_selector,subsec:allen_cahn} we employ neural networks with $4$ layers
+	\caption{\textbf{Graphical illustration of the neural network architecture used in the numerical simulations.} In \cref{subsec:fisherKPP_neumann_r,subsec:nonlocalcompPDE,subsec:sinegordon_nonlocal,subsec:aniso_mutator_selector,subsec:allen_cahn} we employ neural networks with $4$ layers
 	(corresponding to $3$ affine linear transformations in the neural networks) 
 	with $d$ neurons on the input layer (corresponding to a $d$-dimensional input layer), 
 	with $d + 50$ neurons on the 1st hidden layer (corresponding to a $(d+50)$-dimensional 1st hidden layer),
@@ -1713,7 +1713,7 @@ We refer to \cref{sec:sourcecodes} below for the employed {\textbf Julia} source
 
 \subsection{Fisher--KPP PDEs with Neumann boundary conditions}
 \label{subsec:fisherKPP_neumann_r}
-In this subsection we use the machine learning-based approximation method in \cref{frame:adam} to approximately calculate the solutions of certain Fisher--KPP PDEs with Neumann boundary conditions (cf., e.g., Bian et al.~\citep{Bian2017} and Wang et al.~\citep{Wang2021}).
+In this subsection we use the machine learning-based approximation method in \cref{frame:adam} to approximately calculate the solutions of certain Fisher--KPP PDEs with Neumann boundary conditions (cf., e.g., \cite{Bian2017} and \cite{Wang2021}).
 
 Assume 
 	\cref{frame:adam},
@@ -1814,7 +1814,7 @@ $
 %
 based on $5$ independent realizations (5 independent runs).
 %
-The reference value, which is used as an approximation for the unknown value $u(T,(0,\ldots,0))$ of the exact solution of \eqref{eq:fisherKPP_neumann_r}, has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:fisherkpp_neumann} and Beck et al.~\citep[Remark~3.3]{Beck2017a}).
+The reference value, which is used as an approximation for the unknown value $u(T,(0,\ldots,0))$ of the exact solution of \eqref{eq:fisherKPP_neumann_r}, has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:fisherkpp_neumann} and \cite[Remark~3.3]{Beck2017a}).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % % alternative style #1, using multirowcell
@@ -1868,7 +1868,7 @@ The reference value, which is used as an approximation for the unknown value $u(
 		\end{approxtabular}
 		}
 	\end{center}
-	\caption{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the Fisher--KPP PDEs with Neumann boundary conditions in \eqref{eq:fisherKPP_neumann_r} in \cref{subsec:fisherKPP_neumann_r}.
+	\caption{\textbf{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the Fisher--KPP PDEs with Neumann boundary conditions in \eqref{eq:fisherKPP_neumann_r} in \cref{subsec:fisherKPP_neumann_r}}.
 	\label{table:fisherKPP_neumann_r}}
 \end{table}
 
@@ -1880,7 +1880,7 @@ The reference value, which is used as an approximation for the unknown value $u(
 %
 In this subsection we use the machine learning-based approximation method in \cref{frame:adam}
 %\Cref{def:general_algorithm}
-to approximately calculate the solutions of certain non-local competition PDEs (cf., e.g., Doebeli \& Ispolatov \citep{Doebeli2010}, Berestycki et al.~\citep{Berestycki2009b}, Perthame \& Génieys \citep{Perthame2007}, and Génieys et al.~\citep{Genieys2006a}).
+to approximately calculate the solutions of certain non-local competition PDEs (cf., e.g., \cite{Doebeli2010,Berestycki2009b,Perthame2007,Genieys2006a}).
 %
 
 Assume 
@@ -1976,7 +1976,7 @@ $
 %
 based on $5$ independent realizations (5 independent runs).
 %
-The reference value, which is used as an approximation for the unknown value $u(T,(0,\ldots,0))$ of the exact solution of \eqref{eq:nonlocalcompPDE},  has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:nonlocal_comp} and Beck et al.~\citep[Remark~3.3]{Beck2017a}).
+The reference value, which is used as an approximation for the unknown value $u(T,(0,\ldots,0))$ of the exact solution of \eqref{eq:nonlocalcompPDE},  has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:nonlocal_comp} and \cite[Remark~3.3]{Beck2017a}).
 
 
 \begin{table}
@@ -1997,7 +1997,7 @@ The reference value, which is used as an approximation for the unknown value $u(
 			\hline
 		\end{approxtabular}}
 	\end{center}
-	\caption{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the non-local competition PDEs in \eqref{eq:nonlocalcompPDE} in \cref{subsec:nonlocalcompPDE}.
+	\caption{\textbf{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the non-local competition PDEs in \eqref{eq:nonlocalcompPDE} in \cref{subsec:nonlocalcompPDE}.}
 	\label{table:nonlocalcompPDE}
 	}
 \end{table}
@@ -2007,7 +2007,7 @@ The reference value, which is used as an approximation for the unknown value $u(
 %
 In this subsection we use the machine learning-based approximation method in \cref{frame:adam}
 to approximately calculate the solutions of non-local sine-Gordon type PDEs 
-(cf., e.g., Hairer \& Shen \citep{Hairer2016}, Barone et al.~\citep{Barone1971}, and Coleman \citep{Coleman1994}).
+(cf., e.g., \cite{Hairer2016,Barone1971,Coleman1994}).
 %
 
 Assume 
@@ -2104,7 +2104,7 @@ $
 %
 based on $5$ independent realizations (5 independent runs).
 %
-The reference value, which is used as an approximation for the unknown value $u(T,(0,\ldots,0))$ of the exact solution of \eqref{eq:sinegordon_nonlocal},  has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:sinegordon_nonlocal} and Beck et al.~\citep[Remark~3.3]{Beck2017a}).
+The reference value, which is used as an approximation for the unknown value $u(T,(0,\ldots,0))$ of the exact solution of \eqref{eq:sinegordon_nonlocal},  has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:sinegordon_nonlocal} and \cite[Remark~3.3]{Beck2017a}).
 
 \begin{table}
 	\begin{center}
@@ -2126,13 +2126,13 @@ The reference value, which is used as an approximation for the unknown value $u(
 			\hline
 		\end{approxtabular}}
 	\end{center}
-	\caption{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the non-local sine-Gordon PDEs in \eqref{eq:sinegordon_nonlocal} in \cref{subsec:sinegordon_nonlocal}.
+	\caption{\textbf{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the non-local sine-Gordon PDEs in \eqref{eq:sinegordon_nonlocal} in \cref{subsec:sinegordon_nonlocal}.}
 	\label{table:sinegordon_nonlocal}}
 \end{table}
 
 \subsection{Replicator-mutator PDEs}
 \label{subsec:aniso_mutator_selector}
-In this subsection we use the machine learning-based approximation method in \cref{frame:adam} to approximately calculate the solutions of certain replicator-mutator PDEs describing the dynamics of a phenotype distribution under the combined effects of selection and mutation (cf., e.g., Hamel et al.~\citep{Hamel2020}).
+In this subsection we use the machine learning-based approximation method in \cref{frame:adam} to approximately calculate the solutions of certain replicator-mutator PDEs describing the dynamics of a phenotype distribution under the combined effects of selection and mutation (cf., e.g., \cite{Hamel2020}).
 
 Assume 
 	\cref{frame:adam}, 
@@ -2293,7 +2293,7 @@ Note that the solution of the PDE in \cref{eq:aniso_mutator_selector} in the cas
 			\hline
 		\end{approxtabular}}
 	\end{center}
-	\caption{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the replicator-mutator PDEs in \eqref{eq:aniso_mutator_selector} in \cref{subsec:aniso_mutator_selector}
+	\caption{\textbf{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the replicator-mutator PDEs in \eqref{eq:aniso_mutator_selector} in \cref{subsec:aniso_mutator_selector}
 	where we assume for every
 		$n,m,j\in\N$
 	that
@@ -2308,6 +2308,7 @@ Note that the solution of the PDE in \cref{eq:aniso_mutator_selector} in the cas
 	  $\delta(\mathbf x)=(2\pi)^{-\nicefrac d2}\mathfrak t^{-d}\exp\bpr{-\tfrac{\norm{\mathbf x}^2}{2\mathfrak t^2}}$.
 		% $A \in \mathcal{B}(\R^d)$
 		% and $\nu_x(A) = (2\pi)^{-\nicefrac d2}\mathfrak t^{-d}\int_{A} \exp\bpr{-\frac{\norm{\mathbf x}^2}{2\mathfrak t^2}}\diff\mathbf{x}$.
+		}
 	}
 	\label{table:aniso_mutator_selector}
 \end{table}
@@ -2315,7 +2316,7 @@ Note that the solution of the PDE in \cref{eq:aniso_mutator_selector} in the cas
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{hamel_5d.pdf}
-	\caption{Plot of a machine learning-based approximation of the solution of the replicator-mutator PDE in \cref{eq:aniso_mutator_selector} in the case $d=5$, $T=\nicefrac12$, and $\mathcal D=\R^d$.
+	\caption{\textbf{Plot of a machine learning-based approximation of the solution of the replicator-mutator PDE in \cref{eq:aniso_mutator_selector} in the case $d=5$, $T=\nicefrac12$, and $\mathcal D=\R^d$.}
 	%
 	The left-hand side shows a plot of $[-\nicefrac{1}{4}, \nicefrac{1}{4}] \ni x \mapsto \bV_n^{1,0}(\Theta^n_{M_n}(\omega),(x, 0, \dots,0)) \in \R$ for $n\in\{0,1,2,3\}$ and one realization $\omega\in\Omega$ where the functions $\R^d\ni x\mapsto \bV_n^{1,0}(\Theta^n_{M_n}(\omega),x)\in\R$ for $n\in\{0,1,2,3\}$, $\omega\in\Omega$ were computed via \cref{frame:adam} as an approximation of the solution of the PDE in \cref{eq:aniso_mutator_selector} with $d=5$, $T=\nicefrac12$, and $\mathcal D=[-\nicefrac 12,\nicefrac 12]^d$ where we take
 		$M_1=M_2=\ldots=M_N=2000$,
@@ -2824,7 +2825,7 @@ $
 based on $5$ independent realizations (5 independent runs).
 %
 The reference value, which is used as an approximation for the unknown value $u(T,(0,\ldots,0))$
-of the exact solution of \eqref{eq:allen_cahn}, has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:allen_cahn} and Beck et al.~\citep[Remark~3.3]{Beck2017a}).
+of the exact solution of \eqref{eq:allen_cahn}, has been calculated via the MLP approximation method for non-local nonlinear PDEs in \cref{frame:mlpsetting} (cf.~\cref{exampleMLP:allen_cahn} and \cite[Remark~3.3]{Beck2017a}).
 
 \begin{table}% temporary results to be updated, waiting for simulations 
 	\begin{center}
@@ -2844,8 +2845,14 @@ of the exact solution of \eqref{eq:allen_cahn}, has been calculated via the MLP 
 			\hline
 		\end{approxtabular}}
 	\end{center}
-	\caption{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the Allen--Cahn PDEs with conservation of mass in \eqref{eq:allen_cahn} in \cref{subsec:allen_cahn}.
+	\caption{\textbf{Numerical simulations for the approximation method in \cref{def:general_algorithm} in the case of the Allen--Cahn PDEs with conservation of mass in \eqref{eq:allen_cahn} in \cref{subsec:allen_cahn}.}
 	\label{table:allen_cahn}}
 \end{table}
 
-% \printbibliography[heading=subbibliography]
+\section{Code availability}
+The machine learning-based method and the MLP method are implemented the Julia package \textbf{HighDimPDE.jl} available at \href{https://github.com/SciML/HighDimPDE.jl}{https://github.com/SciML/HighDimPDE.jl}, and the simulation code is available at \href{https://github.com/vboussange/HighDimPDE\_examples}{https://github.com/vboussange/HighDimPDE\_examples}.
+
+\section{Acknowledgements}
+This project has been funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy EXC 2044-390685587, Mathematics M{\"u}nster: Dynamics-Geometry-Structure.
+This project has been partially supported by the startup fund project of Shenzhen Research Institute of Big Data under grant No.~T00120220001.
+L.P. was supported by the Swiss National Science Foundation grant (N° 310030\_188550).
