@@ -69,10 +69,12 @@
     \node[mechanisms, fill=mygreen!20,draw=mygreen] at (-2,-2,\Z/2) (procs\Z) { Processes };
 }
 
-\node[mechanisms, fill=myred!30] (mechs) [right=of procs2] { Mechanisms };
+\node[mechanisms, fill=myred!30,draw=myred] (mechs2) [right=of procs2] {  };
+\node[mechanisms, fill=myred!30,draw=myred] (mechs) at ([xshift=-0.2cm,yshift=-0.2cm]mechs2.center) {Mechanisms};
+
 % \node[mechanisms, fill=mygreen!30, below left =of mechs] (struc) { Structure };
 
-\node[mechanisms, fill=myblue!20] (patt) [right= of mechs]{ Pattern };
+\node[mechanisms, fill=myblue!20,draw=myblue] (patt) [right= of mechs2]{ Pattern };
 
 \node[mechanisms,] (data) [below= 3cm of model_contour]{ Data};
 \node[mechanisms,] (knowledge) [above= 3cm of model_contour]{ Knowledge };
@@ -82,10 +84,10 @@
     % \draw (patt.north) to [bend right] (mechs)  ; 
 
     % \draw (patt.north) to [bend right] (model_contour.east)  ; 
-    \draw ([yshift=-0.5cm]model_contour.east) to [bend right] (mechs.south); 
-    \draw (mechs.north) to [bend right] ([yshift=0.5cm]model_contour.east);
+    \draw ([yshift=-0.7cm]model_contour.east) to [bend right] (mechs.south); 
+    \draw (mechs2.north) to [bend right] ([yshift=0.7cm]model_contour.east);
 
-    \draw (mechs.east) to (patt.west); 
+    \draw (mechs2.east) to (patt.west); 
 
 
     \draw[myred] (data) to  (model_contour.south)  ; 

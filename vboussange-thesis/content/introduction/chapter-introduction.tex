@@ -178,18 +178,18 @@ In order to better understand eco-evolutionary feedbacks, we need to investigate
 \begin{figure}[t]
     \centering
     \includegraphics{forward_inverse_modelling.pdf}
-    \caption{\textbf{Forward and inverse modelling approaches for the understanding of CAS}. A forward modelling approach starts with assuming a set of processes, and seeks to understand how their interplay transforms in mechanisms that are associated with macroscopic patterns. An inverse modelling approach starts from empirical patterns (or observations) to deduce the underlying mechanisms and associated processes.}
+    \caption{\textbf{Forward and inverse modelling approaches for the understanding of CAS}. A forward modelling approach starts with assuming a set of processes, that are embedded in a model, and seeks to understand how their interplay transforms in mechanisms that are associated with a macroscopic pattern (macroscopic invariance). An inverse modelling approach integrates empirical observation to constrain the model output, generating knowledge by inferring the probability and the strength of the processes investigated, given the empirical observations. Similarly to forward modelling, mechanisms may be deduced from the processes inferred, leading to the undersanding of invariances (pattern).}
     \label{fig:forward_inverse_modelling}
 \end{figure}
 
 \subsection{Inverse modelling}
 %% inverse modelling
-While in forward modelling, observation data is uniquely considered at the end of the modelling cycle - when comparing predicted and empirical patterns to refine the baseline hypotheses -, inverse modelling integrates data at the start the modelling cycle \xxx (\cref{fig:forward_inverse_modelling}).
+While in forward modelling, observation data is uniquely considered at the end of the modelling cycle - when comparing predicted and empirical patterns to refine prior knowledge on the system investigated -, inverse modelling integrates empirical data right at the start the modelling cycle to characterise the processes involved \xxx (\cref{fig:forward_inverse_modelling}).
 % 
 % Diametrically opposed to forward modelling, inverse modelling consists in using observation data to infer causal processes \citep{Peng2011}. Inverse modelling has recently seen an increased attention, thanks to the increased computational power and availability of datasets \citep{Csillery2010}.
 % 
 %% Parameter estimation
-Inverse modelling can take the form of parameter estimation \citep{Schartau2017} or model selection \citep{Johnson2004}, both involving the use of inference methods to estimate, respectively, the most probable model parameter value, or the most probable model among candidates, given the data.
+Inverse modelling can take the form of parameter estimation \citep{Schartau2017} or model selection \citep{Johnson2004}, both involving the use of inference methods to estimate, respectively, the most probable model parameter value, or the most probable model among candidates, given empirical data.
 % 
 % involves the use of inference methods to estimate the most probable model parameter value given the data \citep{Schartau2017}. They can also be used to test the support of competing hypotheses, embedded in alternative models, where 
 % 
@@ -197,19 +197,23 @@ Inverse modelling can take the form of parameter estimation \citep{Schartau2017}
 % 
 % Those methods proceed by defining a distance between the model simulation and the observation data, which relates to the probability of the parameters given the model and the data \citep{Schartau2017}. The most likely parameters are associated with the minimum distance, obtained using ad-hoc algorithms.
 % 
-Provided that they are inferred together with uncertainties, parameters can be interpreted to better understand the strengths and effects of the associated processes \citep{Pontarp2019}. For instance, \citep{Higgins2010,Curtsdotter2019} infer and analyse the parameters of population dynamic models to understand processes involved in ecosystem functions.
+In parameter estimation, provided that they are inferred together with uncertainties, parameters can be interpreted to better understand the strengths and effects of the associated processes \citep{Pontarp2019}. For instance, \citep{Higgins2010,Curtsdotter2019} infer and analyse the parameters of population dynamic models to understand the processes involved in ecosystem functions.
 %
-In model selection, the candidate models embed competing hypotheses about processes and mechanisms, and the relative support of each model given the data is used to discriminate \citep{Johnson2004}. For instance, \citep{Skeels2022} shows that temperature-dependent evolutionary speed is the most likely mechanism to explain variations in biodiversity patterns, using inference methods to discriminate between alternative dynamic models embedding different evolutionary hypotheses.
+In model selection, the candidate models embed competing hypotheses about processes and mechanisms, and the relative support of each model given the data is used to discriminate \citep{Johnson2004}. For instance, \citep{Skeels2022} shows that temperature-dependent evolutionary speed is the most likely mechanism to explain variations in biodiversity patterns, using inverse modelling to discriminate different evolutionary hypotheses embedded in alternative eco-evolutionary models.
 % 
-The inference methods used to calculate the parameter and model probabilities proceed by defining a distance between the model simulation and the observation data \xxx, which relates to the probability of the parameters given the model and the data \citep{Schartau2017}. In parameter estimation, the most likely parameters are associated with the minimum distance to the data \xxx, and in model selection, the most likely models are associated with the minimum of the minimum model distance \xxx.
+Inverse modelling strongly relies on inference methods, used to calculate the parameter and model probabilities given the data. Inference methods proceed by characterising the global, or minimum, distance between the model simulation and the observation data \xxx, which relates to the probability of the data given the model and the parameter values \citep{Schartau2017}. %In parameter estimation, the most likely parameters are associated with the minimum distance to the data \xxx, and in model selection, the most likely models are associated with the minimum of the minimum model distance \xxx.
 % 
-Inference methods involve numerical methods to recover the model distance to the data \xxx, which success is dependent on the model formulation and its dynamical properties \xxx.
+Inference methods are limited by the difficulty to compute the global or minimum distance between a model and the empirical data. This problem is tightly related to the model complexity \citep{Csillery2010}, where the number of model parameters, the computational cost associated to the model integration, and the model nonlinearity prevent to correctly approximate the distance.
+% 
+As such, inverse modelling methods have mostly been used with simple evolutionary models \citep{Csillery2010}. In contrast, eco-evolutionary models are characterised by a high computational cost \citep{Fisher2018}, are dependent on a large number of parameters \citep{Boyd2012}, and are strongly nonlinear \citep{Hastings1993,Huisman1999,Beninca2008}, challenging the use of inverse modelling to uncover eco-evolutionary processes. Advances in the field of artificial intelligence could circumvent these issues, allowin to confront eco-evolutionary models with empirical systems \xxx.  
+% 
+% Inference methods involve numerical methods to recover the model distance to the data \xxx, which success is dependent on the model formulation and its dynamical properties \xxx.
 % 
 % The parameter estimation problem consists in finding the maximum probability of the model given the observation data, inference methods can also be used to discriminate between candidate mechanisms embedded in alternative models \citep{Burnham2002,Johnson2004}. For instance, \citep{Skeels2022} shows that temperature-dependent evolutionary speed is the most likely mechanism to explain variations in biodiversity patterns, using inference methods to discriminate between alternative dynamic models embedding different hypotheses.
 % 
 % For instance, \citep{Higgins2010,Curtsdotter2019} infers and analyse the parameters of population dynamic models to understand processes involved in ecosystem functions.
 % 
-Thus far, the use of inverse modelling for understanding eco-evolutionary dynamics has been limited because of a number of issues, including the high computational cost of the forward integration of eco-evolutionary models \citep{Fisher2018}, the large number of parameters involved \citep{Boyd2012}, and their strong nonlinearities \citep{Hastings1993,Huisman1999,Beninca2008}. Advances in the field of artificial intelligence could circumvent these issues, allowin to confront eco-evolutionary models with data \xxx.
+% Thus far, the use of inverse modelling for understanding eco-evolutionary dynamics has been limited because of a number of issues, including the high computational cost of the forward integration of eco-evolutionary models \citep{Fisher2018}, the large number of parameters involved \citep{Boyd2012}, and their strong nonlinearities 
 
 \subsection{Machine learning to leverage forward and inverse modelling}
 
