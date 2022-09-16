@@ -266,25 +266,24 @@ Overall, the methods presented in \cref{\chapii,\chapiv} solve major problems ar
 
 \section{Perspectives}
 
-\subsubsection{Opportunities for inverse modelling}
+\subsubsection{Development opportunities in inverse modelling}
 
-The mini-batch method presented in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique opportunities to leverage inverse modelling.
+The mini-batch method developed in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique development opportunities to leverage inverse modelling.
+%%
+The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework \xxx, where the full posterior distribution of the model is estimated.
+% 
+While Bayesian inference with MCMC chains methods may not be appropriate for eco-evolutionary models (see \cref{sec:xxx}), automatic differentiation variational inference (ADVI,\xxx) offers an appealing alternative. With ADVI, the posterior distribution is approximated by a gaussian distribution \xxx, significantly reducing the number of model integration \citep{Gosh2021}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the model selection procedure (\cref{sec:limitations}), and provide uncertainties measures to the value of the parameters inferred.
+% 
+Providing uncertainty estimates while ensuring computational efficiency, Bayesian Learning via Stochastic Gradient Langevin Dynamics \citep{Welling2011BayesianLV} could also be implemented in the ML framework. This method builds upon recent advances in Bayesian Deep Learning \citep{Wilson2020} and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, and can provide good estimates of uncertainty errors for complex models.
 
 %%
-The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully bayesian framework \xxx, where the full posterior distribution of the model is estimated.
+The ML-based approximation method for high dimensional PDEs, presented in \cref{\chapiv}, could be used for inverse modelling.
 % 
-While Bayesian inference with MCMC chains methods may not be appropriate for eco-evolutionary models (because they require a large number of forward model integration, which, additionally, grows considerably with the number of model parameters, while eco-evolutionary models are computationally intensive and are characterised by a high number of parameters), Automatic Differentiation Variational Inference (ADVi,\xxx) offers an appealing alternative. With ADVI, the posterior distribution is approximated by a gaussian distribution \xxx, which significantly reduces the number of model integration \citep{Gosh2021}. As such, ADVI could account for potential multimodality in the model posteriors (by approximating the a multimodal distribution with a gaussian distribution with large variance). The consideration of multimodality could, in turn, improve the model selection procedure, and provide uncertainites measures to the value of the parameters inferred.
+In \cref{sec:frameworkML}, the parameters of the PDE model are assumed fixed, but could be set as free parameters, analogously to the parameters of the neural networks used for approximating the solution. The loss function in \cref{eq:xxx} would then take the PDE model parameters as additional arguments, and include an additional term, involving the distance between the PDE model solution and the data. This term, analogous to \cref{eq:xxx} in \cref{sec:xxx}, would constrain the PDE parameters, similarly to the training of physics informed neural networks \citep{Raissi2019,Yazdani2020}.
 % 
-An other possible extension of the ML framework to provide uncertainty estimates would be to use Bayesian Learning via Stochastic Gradient Langevin Dynamics \citep{Welling2011BayesianLV}. This method builds upon recent advances in Bayesian Deep Learning \citep{Wilson2020} and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, and can provide good estimates of uncertainty errors for complex models.
-
-%%
-The ML-based approximation method for high dimensional PDEs, presented in \cref{\chapiv}, could also be easily extended for inverse modelling.
+In contrast to \cite{Raissi2019,Yazdani2020}, a major advantage of this approach it to efficiently perform inverse modelling with high-dimensional dynamical models. Because Julia is a programming language with pervasive AD, this development would require little effort with the Julia library \textbf{HighDimPDE.jl}.
 % 
-While throughought \cref{frameworkML}, the parameters of the PDE model are assumed fixed, they could be set as free parameters, analogously to the parameters of the neural networks. The loss function in \cref{eq:xxx} would then take the PDE model parameters as additional arguments, and an additional term, involving the distance between the PDE model solution and the data, would be added, similarly to \cref{eq:xxx} in \cref{sec:xxx}.
-% 
-The extension of the ML-based approximation method for inverse modelling would readily provide an efficient tool to perform inverse modelling with high-dimensional eco-evolutionary models. Because Julia is language with pervasive AD, this development would require little effort with the Julia library \textbf{HighDimPDE.jl}.
-
-Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique development opportunities to bring more robustness to inverse modelling, and extend it to high dimensional models.
+Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique development opportunities to bring more robustness and efficiency to inverse modelling methods, providing uncertainty estimation and the possibility to handle high dimensional models.
 
 % Allows to estimate the uncertainty in estimation, and localize different equally likely region in the parameter space that are likely.
 
@@ -292,11 +291,37 @@ Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique develo
 % The piecewise loglikelihood function presented in \cref{\chapii} (\cref{eq:minibatch}) 
 
 
-\subsubsection{Eco-evolutionary model on spatial graphs to advance our understanding and forecast of the dynamics of life on Earth}
-The eco-evolutionary model on spatial graphs presented in \chapi, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth, and contribute to a formalization of the theory, to provide forecasts
+\subsubsection{Confronting eco-evolutionary model on spatial graphs and empirical data}
+
+The confrontation of the predictions from \cref{\chapi} with empirical data, and the use of inference methods with the proposed eco-evolutionary model on spatial graphs, could advance our understanding of eco-evolutionary dynamics in empirical systems.
+% 
+\cref{\chapi} proposed topology metrics that should correlate with standard population differentiation metrics ($Q_{ST}$ metrics). Because real landscapes can be projected on spatial graphs (\xxx and \cref{fig:diff-in-graphs}), the topology metrics, together with empirical data on population differentiation (e.g., \cite{Fluerin}), could be used to verify our predictions. Discrepancies may indicate that other important processes may be involved in empirical patterns. On the other hand, a validation of our predictions could help to predict population differentiation at a global scale. These predictions could, in turn, be linked to patterns of species richness, in order to underpin how population genetics may lead to speciation over time \xxx.
+% 
+In the same direction, the use of the eco-evolutionary model on spatial graphs, together with paleo-climatic data \citep{HagenXXX} and inference methods, could help addressing fundamental questions on the processes involved in current biodiversity patterns. \Cref{\chapi} succinctly tests whether our predictions hold for a more general setting involving trait-based competition. Trait-based competition may be ubiquitous in biological systems \xxx, and similarly to the process of environmental filtering \xxx, can lead to diversification. An important question on the research agenda is to underpin how competition may mediate environmental filtering and promote and hamper diversification over time. This fundamental question could be adressed by embedding the competing hypotheses in alternative models, which support could be tested against data.
+% 
+Along shorter time scales, the eco-evolutionary model on spatial graph could be calibrated on empirical data of species distribution \xxx with the inference method proposed in \cref{\chapi}, and combined with climate scenarios \xxx to better predict how biological populations will adapt to climate change \citep{Norberg2012,Urban2016}.
+% 
+Together, the model developed in \cref{\chapi} and the resulting predictions, together with the ML framework presented in \cref{\chapii}, could bring insights on the actual mechanisms involved in empirical systems, and help to predict their responses to climate change. 
+% may be used to characterize real landscape properties
+
+
+% eco-evolutionary model on spatial graphs presented in \chapi, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth, and contribute to a formalization of the theory, to provide forecasts
 
 
 \subsubsection{Econobiology, a new venue to understand economic systems, and design more appropriate governance}
+
+The current understanding of patterns in biological systems may provide insights into economic systems, and vice versa.
+% 
+The success of the eco-evolutionary model presented in \cref{\chapiii} in characterizing the dynamics of economic activities calls for investigating in depth parallels in processes and organizational structures between biological and economic systems.
+% 
+\cite{Saavedra2009a} shows that processes of specialization and interactions yield similar organizational properties in plant pollinator systems, and in firms engaged in joint production.
+% 
+More generally, are there common organizational principles that can explain dynamics and structures in biological and economic systems? \cite{Veldhuis2018} provides a synthesis of our understanding of how ecosystem organization emerges through self-reinforcing circular interaction structures. Such structures, determining conversions by organisms of energy and materials, could play important roles in determining fluxes of capital in economic systems. 
+
+
+In particular, whether the processes we found are conserved at different organizational levels
+% 
+
 
 
 \section{Concluding remarks}
