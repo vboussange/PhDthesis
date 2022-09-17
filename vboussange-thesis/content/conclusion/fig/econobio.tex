@@ -39,7 +39,7 @@
 \tikzstyle{procs_evol}=[mynode, rectangle, fill=myred!30]
 \tikzstyle{mechanisms}=[mynode, rectangle, thick, minimum width=3cm]
 \tikzstyle{patterns}=[mynode, circle, thick, fill=myblue!20]
-\tikzstyle{node_cust}=[minimum height=1cm, minimum width=3.5cm, fill=black!10,rounded corners,draw=black!30]
+\tikzstyle{node_cust}=[minimum height=1cm, minimum width=4.5cm, fill=black!10,rounded corners,draw=black!30]
 
 
 % \tikzstyle{node}=[ultra thick,circle,minimum size=30,inner sep=2.,outer sep=0.6]
@@ -62,54 +62,39 @@
     on grid,
     very thick]
 
-% biological systems
-        \node[node_cust, align=center] (genes) {Genes / genomes};
-        \node[node_cust, below=of genes] (phen) {Phenotype};
-        \node[node_cust, below=of phen] (pop) {Population};
-        \node[node_cust, below=of pop] (com) {Community};
-        \node[node_cust, below=of com] (ecos) {Ecosystem};
-        % biological systems
-        \node[node_cust,right=6cm of genes] (orga) {Organizational routines};
+
+        \node[node_cust,right] (orga) {Organizational routines};
         \node[node_cust,below=of orga] (Firms) {Firm};
         \node[node_cust,below=of Firms] (ecoa) {Economic activity};
         \node[node_cust,below=of ecoa] (nateco) {National economy};
         \node[node_cust,below=of nateco] (weco) {World economy};
 
+
         \begin{scope}[connect arrow]
-            \draw (genes.west) to [bend right] (phen.west);
-            \draw (phen.west)  to [bend right] (pop.west);
-            \draw (phen.west)  to [bend right] (com.west);
-            \draw (phen.west)  to [bend right] (ecos.west);
-            \draw (pop.west)   to [bend right] (com.west);
-            \draw (pop.west)   to [bend right] (ecos.west);
-            \draw (com.west)   to [bend right] (ecos.west);
-            \draw (phen.east)  to [bend right] (genes.east);
+            \draw (orga.west) to [bend right] node[left]{Diffusion}  (weco.west); % spatial transfers
+            \draw (orga.west) to [bend right] node[right]{Growth behavior} (Firms.west); % growth behavior
+            \draw (Firms.west) to [bend right] node[right]{Endogenous growth} (ecoa.west); % replication
+            \draw (ecoa.west) to [bend right] node[right]{Intra-specific competition} (nateco.west); % competition
+            \draw (nateco.east) to [bend right] node[right]{} (ecoa.east); % symbiosis
+            \draw (nateco.east) to [bend right] node[right]{Facilitation} (Firms.east); % symbiosis
+            \draw (weco.east) to [bend right] node[right]{Dispersal} (ecoa.east); % symbiosis
 
-            \draw (ecos.east) to [bend right] (com.east);
-            \draw (ecos.east) to [bend right] (pop.east);
-            \draw (ecos.east) to [bend right] (phen.east);
-            \draw (com.east) to [bend right] (pop.east);
-            \draw (com.east) to [bend right] (phen.east);
-            \draw (pop.east) to [bend right] (phen.east);
+
+            % \draw (Firms.west)  to [bend right] (ecoa.west);
+            % \draw (Firms.west)  to [bend right] (nateco.west);
+            % \draw (Firms.west)  to [bend right] (weco.west);
+            % \draw (ecoa.west)   to [bend right] (nateco.west);
+            % \draw (ecoa.west)   to [bend right] (weco.west);
+            % \draw (nateco.west)   to [bend right] (weco.west);
+            % \draw (Firms.east)  to [bend right] (orga.east);
+
+            % \draw (weco.east) to [bend right] (nateco.east);
+            % \draw (weco.east) to [bend right] (ecoa.east);
+            % \draw (weco.east) to [bend right] (Firms.east);
+            % \draw (nateco.east) to [bend right] (ecoa.east);
+            % \draw (nateco.east) to [bend right] (Firms.east);
+            % \draw (ecoa.east) to [bend right] (Firms.east);
         \end{scope}
-
-        % \begin{scope}[connect arrow]
-        %     \draw (orga.west) to [bend right] (Firms.west);
-        %     \draw (Firms.west)  to [bend right] (ecoa.west);
-        %     \draw (Firms.west)  to [bend right] (nateco.west);
-        %     \draw (Firms.west)  to [bend right] (weco.west);
-        %     \draw (ecoa.west)   to [bend right] (nateco.west);
-        %     \draw (ecoa.west)   to [bend right] (weco.west);
-        %     \draw (nateco.west)   to [bend right] (weco.west);
-        %     \draw (Firms.east)  to [bend right] (orga.east);
-
-        %     \draw (weco.east) to [bend right] (nateco.east);
-        %     \draw (weco.east) to [bend right] (ecoa.east);
-        %     \draw (weco.east) to [bend right] (Firms.east);
-        %     \draw (nateco.east) to [bend right] (ecoa.east);
-        %     \draw (nateco.east) to [bend right] (Firms.east);
-        %     \draw (ecoa.east) to [bend right] (Firms.east);
-        % \end{scope}
 
 
 \end{tikzpicture}
