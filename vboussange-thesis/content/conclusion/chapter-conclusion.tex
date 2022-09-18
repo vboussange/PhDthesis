@@ -9,25 +9,30 @@
 
 
 \section{Contributions}
-Understanding biological and economic systems involves the underpinning of the elemental processes underlying the systems' macroscopic features, and establishing the associated mechanisms (\cite{Levin2002}, \cref{fig:forward_inverse_modelling}).
+Understanding complex adaptive systems involves the underpinning of organizational principles at the origin of invariance (\cite{Levin2002}, \cref{fig:forward_inverse_modelling}).
 % 
-Following this approach, my work aimed at advancing our understanding of how ecological and evolutionary processes, and their interplay, shape the dynamics of biological and economic systems. In particular, this thesis contributed to 
+Aiming at advancing our understanding of eco-evolutionary dynamics in biological and economic systems, this thesis contributed to
 % 
 \begin{mylisti}
-    \item a fundamental undersanding of the role of eco-evolutionary processes in shaping the dynamics of biological populations structured in complex landscapes \cref{chap:diff-in-graphs},
-    \item the quantification of the effect of mechanisms associted with eco-evolutionary processes in economic systems \cref{chap:econobiology},
-    \item methodological advances in the forward and inverse modelling of eco-evolutionary dynamics \cref{chap:diff-in-graphs,chap:mini-batching,chap:nonlocalPDE}.
+    \item a fundamental undersanding of the role of eco-evolutionary processes in shaping the dynamics of biological populations structured in complex landscapes (\cref{chap:diff-in-graphs}),
+    \item the quantification of the effect of eco-evolutionary processes on economic dynamics at the country level (\cref{chap:econobiology}),
+    \item methodological advances in the forward and inverse modelling of eco-evolutionary dynamics (\cref{chap:diff-in-graphs,chap:mini-batching,chap:nonlocalPDE}).
 \end{mylisti}
 
-In the following, I discuss the chapters of my thesis collectively within the broader context of our current understanding of the dynamics of biological and economic systems, and the accompanying modelling paradigm.
+In the following, I discuss the chapters of my thesis collectively within the broader context of their contribution to the current verbal and formal models we have to understand and forecast the dynamics of biological and economic systems.
 
 \subsection{Advancing our fundamental understanding of eco-evolutionary processes in biological and eocnomic systems}
 
 \subsubsection{Linking eco-evolutionary processes to patterns of differentiation}
-Spatial patterns of biodiversity result from the processes of selection, mutation and dispersal, that act upon individual organisms \citep{hamilton2021population}.
+
+Phenotypic differentiation arises from feedbacks between population dynamics, dispersal and mutations \citep{hamilton2021population}, and \cref{\chapi} determines how these feedbacks are modulated by landscape features.
+% 
+Mutations act upon individual organisms, and result in drift in finite size populations, causing stochastic variations in the allelic proportions and phenotypes of biological populations \citep{Slatkin1987a}.
 % \cref{\chapi} contributed to advance our understanding on how eco-evolutionary processes and population structure influence population dynamics and phenotypic evolution in biological systems.
 % 
-In finite size populations, mutations result in "drift" \citep{Slatkin1987a}, causing stochastic variations in the allelic proportions and phenotypes of biological populations. In geographically structured population, drift results in patterns of neutral differentiation \citep{Slatkin1987a}, where isolated populations are characterised by differentiated allelic proportions and phenotypes. 
+% In finite size populations, mutations result in "drift" \citep{Slatkin1987a}, causing stochastic variations in the allelic proportions and phenotypes of biological populations. 
+% 
+In geographically structured population, drift results in patterns of neutral differentiation \citep{Slatkin1987a}, where isolated populations are characterized by differentiated allelic proportions and phenotypes. 
 % 
 Dispersal tends to reduce neutral differentiation \citep{Slatkin1987a}, and this effect is modulated by landscape connectivity \citep{Wright1943,McRae2006,McRae2007} through the mechanism of "isolation by limited dispersal" \citep{Orsini2013}. By increasing the dispersal ability of organisms, landscape connectivity decreases neutral differentiation \citep{Lande1991}.
 % 
@@ -35,7 +40,7 @@ When landscapes present heterogeneous habitats, natural selection can supplement
 % 
 % This results in adaptive differentiation, and is regarded as one of the most important factors govening species richness gradients \citep{Kawecki2004}.
 % 
-Adaptive differentiation is hindered by dispersal, which prevents local adaptation by bringing maladapted individuals, that destabilise the evolution of traits towards the optimal \citep{Meszena1997,Debarre2013,Mirrahimi2020}.
+Adaptive differentiation is hindered by dispersal, which prevents local adaptation by destabilizing the evolution of traits towards the optimal \citep{Meszena1997,Debarre2013,Mirrahimi2020}.
 % 
 % confounded by genetic drift, opposed by natural selection due to tempoeral envionrmental variability, and constrained by loack of genetic variation of by the genetic architecture of underlying traits \citep{Kawecki2004}. TODO: this may go in the perspective and limitations
 % 
@@ -50,13 +55,13 @@ Simple mechanisms resulting in neutral and adaptive differentiation are identifi
 
 In \cref{\chapi}, I demonstrate a novel mechanism, involving the process of intra-specific competition, that considerably affects neutral differentiation. Through the creation of unbalanced migration fluxes which increases the intensity of competition in highly connected populations, heterogeneity in connectivity reduces gene flow and reinforces neutral differentiation. %Through the accumulation of incompatibilities over time \citep{Dobhsanski}, this mechanism could lead to speciation over time, and contribute to the high diversification in mountain regions \citep{Rahbek}.
 % 
-I also investigate how the mechanism of local adaptation in complex landscapes, where habitats are arranged in a realistic fashion. I show that the complexity of habitat spatial distribution can be reduced to a measure of habitat spatial auto-correlation, coined the "habitat assortativity". Landscapes characterised by a high habitat assortativity systematically support populations that are locally better adapted than in landscape with low assortativity, resulting in higher adaptive differentiation. Specifically, I provide an analytical condition for local adaptation that sheds light on how it relates to dispersal intensity, selection strength, habitat heterogneity, and habitat assortativity.
+I also investigate the mechanism of local adaptation in complex landscapes, where habitat connectivity is irregular. I show that the complexity of habitat spatial distribution can be reduced to a measure of habitat spatial auto-correlation, coined the "habitat assortativity". Landscapes characterised by a high habitat assortativity support populations that are systematically better adapted than in landscape with low assortativity. Specifically, I provide an analytical condition for local adaptation  (\cref{eq:xxx}), that sheds light on how it relates to dispersal intensity, selection strength, habitat heterogneity, and habitat assortativity.
 
-Because habitat assortativity affects local adaptation, is must also affect neutral differentiation throuh the mechanism of isolation by adapation. Closing the loop, I demonstrate that habitat assortativity affects population differentiation through two antagonistic effects. By favoring local adaptation, it promotes isolation by adaptation, therefore increasing neutral differentiation. In parallel, it also favors gene flow within clusters of similar environmental conditions, decreasing isolation by limited dispersal. This results in habitat assortativity decreasing neutral differentiation for low dispersal intensity, and increasing neutral differentiation for high dispersal intensity.
+Because habitat assortativity affects local adaptation, is must also affect neutral differentiation throuh the mechanism of isolation by adapation. Closing the loop, I demonstrate that habitat assortativity affects neutral differentiation through two antagonistic effects. By favoring local adaptation, it promotes isolation by adaptation, therefore increasing neutral differentiation. In parallel, it also favors gene flow within clusters of similar environmental conditions, decreasing isolation by limited dispersal. This results in habitat assortativity decreasing neutral differentiation for low dispersal intensity, and increasing neutral differentiation for high dispersal intensity.
 % 
 This complex feedback is essential to understand population differentiation in complex landscapes.
-
-I provide a summary of the processes and resulting mechanisms shaping neutral and adaptive differentiation in \cref{fig:summary_diff-in-graph}. Overall, \cref{\chapi} links processes to patterns, establishing an extensive map of causal pathways involved in the phenotypic differentiation of populations. % It extends on recent work including the interplay between ecological and evolutionary processes, and frequency dependence, hihglighting non-trivial emergent properties with large consequences on emergent patterns.
+% 
+I provide a graphical summary of the feedback mechanisms shaping neutral and adaptive differentiation in \cref{fig:summary_diff-in-graph}. Overall, \cref{\chapi} establishes a complete map of causal pathways involved in the phenotypic differentiation of populations structured in complex landscapes. % It extends on recent work including the interplay between ecological and evolutionary processes, and frequency dependence, hihglighting non-trivial emergent properties with large consequences on emergent patterns.
 
 \begin{figure}[t]
     \centering
@@ -70,7 +75,9 @@ I provide a summary of the processes and resulting mechanisms shaping neutral an
 
 % Hypotheses concerning the processes that underly economic system dynamics are numerous, and have mainly been investigated through forward modelling. Starting from empirical observations, 
 % 
-\cref{\chapiii} provides a novel understanding of the role of eco-evolutionary processes in economic systems. %by assessing their effect on the dynamics of economic activities from data.
+By confronting empirical data and process-based models, \cref{\chapiii} bridges evolutionary economics, economic complexity and biology to better understand the drivers of economic development.
+% 
+%by assessing their effect on the dynamics of economic activities from data.
 % 
 % complements recent follows an inverse modelling approach to understand which processes are most likely shaping economic development. 
 % 
@@ -78,29 +85,32 @@ Neoclassical economics and evolutionary economics seek to explain economic chang
 % 
 % Neoclassical economics sugggests that exogenous drivers, such as production costs, drive the diversification of economic systems \xxx. 
 % 
-In particular, evolutionary economics is concerned with explaining economic change by endogenous forces, such as interactions between firms and economic activities, and evolutionary processes acting upon them \citep{Hodgson2019,Metcalfe2006}.
+In particular, evolutionary economics tries to understand economic change by relating it to endogenous forces, such as interactions between firms and economic activities, and evolutionary processes acting upon them \citep{Hodgson2019,Metcalfe2006}.
 % 
 % Exogenous drivers, such as technological change \xxx, economic institutions \xxx, and production costs \citep{Boschma2005a} have been proposed, but 
 % 
-In opposition to this approach, complexity economics \citep{Hidalgo2021} seeks to predict variations in national income by using fine-grained data of economic activity outputs and dimensionality reduction techniques \citep{Mitchell}, without making assumptions on the underlying processes \citep{Hidalgo}. 
+In contrast, complexity economics uses empirical data, rather than formal models, to investigate economic change \citep{Hidalgo2021}. It relies on data of economic activity outputs, which are processed with dimensionality reduction techniques to predict variations in national income \citep{Mitchell}. 
 % 
 % One of the major contribution of complexity economics is to provide a metric that can predict economic development \citep{Taschella}, and the field is now concerned with understanding the factors underlying this factor.
 %
-While a current concern in evolutionary economics is to obtain an agreement between the mechanisms proposed and empirical observations \xxx, complexity economics seeks to understand the causal processes underlying the success of the dimensionality reduction technique \xxx.
+While a current concern in evolutionary economics is to test the explanatory power of the theory \cite{Hodgson2019}, complexity economics seeks to unfold the causal processes underlying the success of the dimensionality reduction technique \citep{Hidalgo2021}.
 
-By being agnostic to economic variables yet providing a causal link with the most probable processes underlying economic development, \cref{\chapiii} bridges evolutionary economics and economic complexity.
 % 
-Our approach relies on the simple observation that the dynamics of economic activities contains signatures from the many complex processes that underpin them.
+% \cref{\chapiii} provides a novel understanding of the role of eco-evolutionary processes in economic systems. 
 % 
-These signatures consist in peculiar temporal variations and couplings that can be conveniently modelled by biologically inspired population dynamic models, which use are additionally justified by deep analogies between economic activities and biological populations. 
+\cref{\chapiii} confronts process-based models and data to underpin the processes responsible for economic change.
 % 
-Analogously to biological populations that are characterised by genes, economic activities are characterised by organizational routines \citep{NelsonWinter}, which experience evolutionary processes and define how they engage in ecological processes \citep{NelsonWinter}.
+Our approach relies on deep connections between processes acting upon economic activities and biological populations.
+% 
+Analogously to biological populations that are characterized by genes, economic activities are characterised by organizational routines \citep{NelsonWinter}, which experience evolutionary processes and define how they engage in ecological processes \citep{NelsonWinter}.
 % 
 % This connection is justified by evolutionary economics, which argues that similarly to genes, organizational routines are at the core of economic entities and experience ecological and evolutionary processes.
 % 
-As a result, and similarly to the size of biological populations, the capital growth of economic activites is determined by the ensemble of organizational routines that characterise them \citep{Boschma2005a}.
+As a result, economic activities can be considered as autonomous entities, which dynamics is determined by its characteristics and the processes acting upon them \citep{Boschma2005a}.
 % 
-Similarly to approaches used in ecology and evolution \citep{Skeels}, inverse modelling approaches can then be used to disentangle, from their signatures \citep{Skeels} left on the dynamics of economic activities, the role of the eco-evolutionary processes acting upon them.
+The temporal dynamics of economic activities contains signatures, i.e. distinctive temporal variations and couplings, left by underpinning processes.
+% 
+Population dynamic models, combined with an inverse modelling approach, can then be used to recover the role of the eco-evolutionary processes on the dynamics, extracting from the temporal data the information contained in the signatures.
 
 %%
 Specifically, \cref{\chapiii} explores the effect of eco-evolutionary processes, proposed in the evolutionary economics and geography economics literature, on the dynamics of economic activities at the national scale.
@@ -115,7 +125,7 @@ Its support implies that diversity promotes economic development \citep{Hidalgo2
 % 
 The support for spatial transfers implies that, besides international patent laws \xxx, transfers of knowledge and organisational routines have a considerable effect on economic activities. Nevertheless, discrepancies in the strength-of-evidence obtained for spatial transfers across countries highlight that some countries are overall more akin to spatial transfers than others, which may be explained by differences in cognitive, organizational, social, institutional or geographic proximities across countries \xxx .
 % 
-I provide a summary of the mechanisms evidenced in economic systems in \cref{fig:summary_econobio}. Overall, \cref{\chapiii} bridges approaches in economics and biology to understand the mechanisms shaping the endogenous dynamics of economic systems.
+I provide a graphical summary of the mechanisms evidenced in economic systems in \cref{fig:summary_econobio}. Overall, \cref{\chapiii} evidences that, akin to biological systems, processes of interaction and dispersal shape the dynamics of economic systems at the country scale.
 
 \begin{figure}[t]
     \centering
@@ -135,7 +145,9 @@ I provide a summary of the mechanisms evidenced in economic systems in \cref{fig
 
 \subsubsection{Advances in the modelling of realistic spatial and phenotypic structures}
 
-\Cref{\chapi,\chapiv} provide new tools to better understand mechanisms resulting from ecological and evolutionary processes, and their interplay, in the context of realistic population structures and phenotypic distributions.
+Current eco-evolutionary models miss important features of empirical systems. \Cref{\chapi,\chapiv} deliver new approaches to incorporate more realism within eco-evolutionary models.
+% 
+% \Cref{\chapi,\chapiv} provide new tools to better understand mechanisms resulting from ecological and evolutionary processes, and their interplay, in the context of realistic population structures and phenotypic distributions.
 % 
 % Population structure
 Evolutionary dynamics have been traditionally studied in the context of regular population structures \citep{LiebermanHauert2005}.
@@ -178,16 +190,18 @@ I have implemented the numerial methods for simulating high dimensional models i
 The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
 %
 The package aims at hosting many more solver algorithms that break down the curse of dimensionality, and is currently receiving contributions from developers to implement the DeepBSDE scheme \citep{Han2018}.
-
-%% Conclusion
-The combination of analytical insights and numerical simulations can help to elucidate the links between microscopic processes and macroscopic properties \citep{Levin}.
 % 
-\cref{\chapi,\chapiv} provide novel analytical and numerical tools to better understand how complex spatio-evolutionary structures affect the interplay between eco-evolutionary processes and generate macroscopic patterns.
+%% Conclusion
+% The combination of analytical insights and numerical simulations can help to elucidate the links between microscopic processes and macroscopic properties \citep{Levin}.
+% 
+Together, \cref{\chapi,\chapiv} deliver novel tools to advance our understanding on the effect of the complexity of population structures and the variety of characteristics on eco-evolutionary feedbacks in complex adaptive systems.
 
 
 \subsubsection{Advances in inference methods for the investigation of eco-evoluationary processes}
 
-\cref{\chapii,\chapiii} develop and test a novel inverse modelling method that allows to infer highly nonlinear dynamical processes from observation data, opening up new venues to advance our understanding and prediction of the dynamics of biological and economic systems.
+Our understanding and prediction of eco-evolutionary dynamics in biological and economic systems critically depends on the integration of data within mechanistic models.
+% 
+\cref{\chapii,\chapiii} develop and test a novel inverse modelling method that allows to infer highly nonlinear dynamical processes from observation data.
 % 
 The most developed inference methods in current use for inverse modelling are Bayesian inference methods with Markov Chain Monte Carlo \xxx and variational methods \xxx.
 % 
@@ -217,8 +231,8 @@ By contrasting competing hypotheses embedded in alternative models, \cref{\chapi
 The proposed method is also relevant for improving the forecast of predictive eco-evolutionary model \cite{Urban2016}, and integrates the practical constraints of datasets including short time series with partial, noisy, shallow and independent observations \citep{Dornelas2018}.
 
 The ML framework is implemented in the multi-purpose Julia package \textbf{MiniBatchInference.jl} \citep{MiniBatchInference}, readily available to the scientific community. \textbf{MiniBatchInference.jl} is built around the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}. As such, the use of \textbf{MiniBatchInference.jl} requires very limited efforts to any user familiar with those libraries.
-
-Overall, the method proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concrete case examples in \cref{\chapii, \chapiii} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \citep{Urban2016}.
+% 
+Together, the method proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concrete case examples in \cref{\chapii, \chapiii} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \citep{Urban2016}.
 
 \section{Limitations}
 
