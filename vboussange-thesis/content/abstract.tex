@@ -4,17 +4,62 @@
 \addchap*{Summary}
 \label{sec:summary}
 
-Ecological and economic systems are complex adaptive systems (CAS): they are systems that are composed of many entities with heterogeneous characteristics, which interact and experience selection processes. Those processes act at the entity level, but are key in determining the macroscopic behaviour at the system level, a feature that make those systems unique. For instance, the diversity of species within an ecosystem results from a hierarchy of processes acting at different scales of time and space, comprising the variations experienced by single organisms, their interactions, and selection pressure acting upon populations. Analogously, economic growth at the level of a country is greatly affected by its ensemble of economic actors, their interactions, and the selection pressure they experience. Despite the complexity of the processes driving their dynamics, regularities at the macroscopic level emerge in ecological and economic systems. This is the case of large-scale spatial patterns of biodiversity and differences in economic growth across countries, calling for a mechanistic understanding of the essential mechanisms that generate them.
-
-Recently, a considerable interest has grown up around the interplay between ecological processes, the processes that regulate interactions between organisms, and evolutionary processes, the change of the characteristics of biological populations over time, to explain current biodiversity patterns. Analogous economic processes have been proposed to explain differences in economic growth across nations. Nonetheless, a quantitative investigation of their importance is missing. Determining how those patterns can emerge from eco-evolutionary processes is required to improve our current understanding. This project delivers new quantitative insights following a unique approach that combines dynamical eco-evolutionary models and empirical data.
-
-Simulations of eco-evolutionary models and their integration with empirical data pose several methodological challenges that I adress in the first part of this thesis. Entities in CAS have distinct quantitative attributes that determine their fitness in a given environment. Accounting for the variety of these characteristics leads to models with a high dimensionality, associated to a large if not prohibitive computational cost preventing its simulation. In particular, partial differential equation (PDE) models, which can encode eco-evolutionary processes acting upon entities defined by many characteristics, are cursed by their dimensionality. To this aim, I develop machine learning algorithms that break down the curse of dimensionality. Such algorithms rely on neural networks to approximate the solution to PDE models. An other difficulty consists in confronting eco-evolutionary models outputs to data, since those models cannot be manipulated with standard statistical techniques. I apply methods commonly employed in the training of neural networks, together with model selection techniques, to infer fundamental mechanisms that might have generated the patterns under investigation. Altogether, the methods permit efficient model simulations and their integration with empirical data, allowing to deliver quantitative answers to the motivated research questions.
-
-In the second part, I make use of the above techniques to study eco-evolutionary models and to test them against data, to explore hypotheses on the fundamental mechanisms that drive patterns of biodiversity and economic growth. On the one hand, I explore how eco-evolutionary processes, in combination with complex landscape topologies, can explain patterns of species diversity. To this aim, I develop and analyse an eco-evolutionary model on spatial graphs, to understand how the combination of eco-evolutionary processes and spatial structure might have shaped biodiversity patterns that are found in complex landscapes such as mountain regions. 
+Biological and economic systems are complex adaptive systems, composed of heterogeneous organisms and agents interacting in nonlinear ways and experiencing evolutionary processes.
 % 
-On the other hand, I investigate how eco-evolutionary processes can provide new insights in the understanding of economic dynamics. I proceed by developing a simple eco-evolutionary model which explanatory power I test against long time series that proxy the dynamics of the size of economic sectors. 
+The processes of interaction and evolution act at different organizational scales, from genes to ecosystems and from organizational routines to economies. Despite the astonishing complexity of biological and economic systems, they often show organized structural properties and invariant patterns. 
+% 
+% This is the case of spatial patterns of biodiversity and economic growth.
+%
+Invariant patterns must originate from fundamental organizational principles, which we need to underpin and formalize in models in order to advance our understanding.
 
-Overall, this project delivers quantitative insights on how the interplay between ecological and evolutionary processes is shaping the features of the world that surrounds us.
+Feedbacks between ecological and evolutionary processes have recently been proposed as fundamental mechanisms shaping the dynamics of biological systems. % In particular, the interplay between population dynamics, dispersal and mutations affects the phenotypic evolution of populations, and can facilitate or prevent populations to adapt to local environment conditions. 
+% 
+In economic systems, analogous eco-evolutionary processes, involving interaction processes between firms and economic activities, and evolutionary processes acting upon them, may play a major role in determining economic change. 
+%  evolutionary economics suggests that economic activities behave as autonomous entities.
+% Because of rapid environmental disruptions affecting ecosystems, the eco-evolutionary feedbacks involved in adaptation mechanisms are expected to affect ecosystem dynamics in the coming decades, but
+Yet, our understanding of eco-evolutionary processes and feedback mechanisms in empirical systems is limited, because of the over simplicity of current eco-evolutionary models and their lack of integration with empirical data. Current eco-evolutionary models do not capture important features of empirical systems, such as the complexity of their spatial structures, and the variety of their characteristics. Empirical data, carrying signatures of organizational principles, could be used to advance our understanding, but the information it contains is difficult to extract.
+% 
+This thesis delivers new forward and inverse modelling methods to improve the ability of eco-evolutionary models to describe real-world features, and to use them in combination with empirical data to infer knowledge. These methods are employed to advance our understanding of eco-evolutionary dynamics in biological and economic systems.
+
+\Cref{\chapi} develops and analyses an eco-evolutionary model on spatial graphs to understand how eco-evolutionary processes, in combination with complex habitat structures, influence the phenotypic distribution of biological populations. \Cref{\chapii} develops an inverse modelling method to estimate the parameters of eco-evolutionary models from empirical data, and discriminate between competing hypotheses embedded in alternative eco-evolutionary model. \Cref{\chapiv} uses the latter inverse modelling method, together with 59 years of economic data, to investigate whether eco-evolutionary processes can explain the dynamics of economic systems at the country level. \Cref{\chapiv} finally develops two numerical methods to efficiently simulate high dimensional eco-evolutionary models.
+% , allowing to capture mechanisms associated to the variety of properties characterizing real-world systems
+
+Aiming at underpinning organizational principles in biological and economic systems, this thesis develops innovative methods to link invariant patterns in complex adaptive systems to underlying eco-evolutionary processes. It further delivers a fundamental understanding of eco-evolutionary feedbacks in complex landscapes, and highlights that processes akin to those in biological systems may shape the dynamics of economic systems. This realization may be of considerable value, because it means that we could improve the functioning and resilience of our economic systems by copying the regulatory mechanisms in biological systems, which have been meticulously shaped by evolution for the past 3.5 billion years. 
+
+% quantitative insights following a unique approach that combines dynamical eco-evolutionary models and empirical data.
+
+
+% Also, they critically miss a systemic integration with data, 
+
+
+% The development and analysis of eco-evolutionary models accounting for more realistic features, together with their integration with data 
+
+
+% because it involves the development and analysis of complex models 
+% % 
+% % Also, whether eco-evolutionary processes could explain the dynamics of economic systems has not been tested.
+% % 
+% This thesis delivers new methods and quantitative insights following a unique approach that combines dynamical eco-evolutionary models and empirical data.
+
+% % These invariant patterns provide opportunities to underpin organizational principles in biological and economic systems, despite the astonishing complexity of the processes and feedback mechanisms involved.
+
+
+
+
+
+
+
+% Ecological and economic systems are complex adaptive systems (CAS): they are systems that are composed of many entities with heterogeneous characteristics, which interact and experience selection processes. Those processes act at the entity level, but are key in determining the macroscopic behaviour at the system level, a feature that make those systems unique. For instance, the diversity of species within an ecosystem results from a hierarchy of processes acting at different scales of time and space, comprising the variations experienced by single organisms, their interactions, and selection pressure acting upon populations. Analogously, economic growth at the level of a country is greatly affected by its ensemble of economic actors, their interactions, and the selection pressure they experience. Despite the complexity of the processes driving their dynamics, regularities at the macroscopic level emerge in ecological and economic systems. This is the case of large-scale spatial patterns of biodiversity and differences in economic growth across countries, calling for a mechanistic understanding of the essential mechanisms that generate them.
+
+% Recently, a considerable interest has grown up around the interplay between ecological processes, the processes that regulate interactions between organisms, and evolutionary processes, the change of the characteristics of biological populations over time, to explain current biodiversity patterns. Analogous economic processes have been proposed to explain differences in economic growth across nations. Nonetheless, a quantitative investigation of their importance is missing. Determining how those patterns can emerge from eco-evolutionary processes is required to improve our current understanding. This project delivers new quantitative insights following a unique approach that combines dynamical eco-evolutionary models and empirical data.
+
+% Simulations of eco-evolutionary models and their integration with empirical data pose several methodological challenges that I adress in the first part of this thesis. Entities in CAS have distinct quantitative attributes that determine their fitness in a given environment. Accounting for the variety of these characteristics leads to models with a high dimensionality, associated to a large if not prohibitive computational cost preventing its simulation. In particular, partial differential equation (PDE) models, which can encode eco-evolutionary processes acting upon entities defined by many characteristics, are cursed by their dimensionality. To this aim, I develop machine learning algorithms that break down the curse of dimensionality. Such algorithms rely on neural networks to approximate the solution to PDE models. An other difficulty consists in confronting eco-evolutionary models outputs to data, since those models cannot be manipulated with standard statistical techniques. I apply methods commonly employed in the training of neural networks, together with model selection techniques, to infer fundamental mechanisms that might have generated the patterns under investigation. Altogether, the methods permit efficient model simulations and their integration with empirical data, allowing to deliver quantitative answers to the motivated research questions.
+
+% In the second part, I make use of the above techniques to study eco-evolutionary models and to test them against data, to explore hypotheses on the fundamental mechanisms that drive patterns of biodiversity and economic growth. On the one hand, I explore how eco-evolutionary processes, in combination with complex landscape topologies, can explain patterns of species diversity. To this aim, I develop and analyse an eco-evolutionary model on spatial graphs, to understand how the combination of eco-evolutionary processes and spatial structure might have shaped biodiversity patterns that are found in complex landscapes such as mountain regions. 
+% % 
+% On the other hand, I investigate how eco-evolutionary processes can provide new insights in the understanding of economic dynamics. I proceed by developing a simple eco-evolutionary model which explanatory power I test against long time series that proxy the dynamics of the size of economic sectors. 
+
+% Overall, this project delivers quantitative insights on how the interplay between ecological and evolutionary processes is shaping the features of the world that surrounds us.
 
 % \begin{outline}
 %     % General introduction
@@ -46,7 +91,9 @@ Overall, this project delivers quantitative insights on how the interplay betwee
 
 % \vspace*{20mm}
 
-{\usekomafont{chapter} Résumé}
+\addchap*{Résumé}
+
+% {\usekomafont{chapter} Résumé}
 \label{sec:summary-fr}
 
 \begin{outline}
