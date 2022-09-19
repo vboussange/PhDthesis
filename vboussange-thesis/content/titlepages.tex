@@ -10,8 +10,8 @@
         % Title & Subtitle 
 		\node[above right,
 			inner sep=0pt, 
-			% yshift=0.25cm
-			] at (current page.south west) (trees) {\includegraphics[height=0.5\paperheight]{AdobeStock_231608971.jpeg}};      
+			yshift=-0cm
+			] at (current page.south west) (trees) {\includegraphics[height=0.5\paperheight]{buildings.jpg}};      
 		\node[above = of trees,inner sep=0pt, 
 		% yshift=-0.25cm
 		]
@@ -20,34 +20,35 @@
 		\node [
             %   below=0.5cm,     
               align=center,     
-              fill=white,     
+              text=white,     
               opacity=1,
               text opacity=1,
               rounded corners,     
               inner xsep=15pt,     
               inner ysep=15pt,
-			  yshift = 0.6cm,    
+			  yshift = -4.5cm,    
             %   minimum width=0.7\textwidth, 
             %   minimum height=0.7\paperheight,
             %   text width=0.6\textwidth,
               ] (title) at (current page.center) {
                 \begin{minipage}[b]{\textwidth}
+					% \begin{center}
 					% \hfill
 					% \vfill
-					\centering{
 					% {\LARGE \color{ctcolortitle}\textbf{\thesisTitle} \\[5mm]}
-					{\Huge\color{ctcolortitle}
-					\textbf{Forward and inverse modelling of\\
-					eco-evolutionary dynamics}}\\
+					
+					\Huge{
+					% \color{ctcolortitle}
+					\textbf{Forward and inverse modelling\\
+					of eco-evolutionary dynamics}}\\
 					\LARGE{in biological and economic systems
-					\\[5mm]}
-					% \rule[8pt]{0.8\textwidth}{.4pt} \par
+					\\[12cm]
 					}
-					\flushright
-					{\LARGE Victor \color{ctcolortitle}\textbf{BOUSSANGE}}
-					% \vfill
-					% \textit{\large\thesisDate} \\
-					% Version: \thesisVersion
+					% \flushright
+					\Large{Victor 
+					% \color{ctcolortitle}
+					\textbf{BOUSSANGE}}
+					% \end{center}
                   \end{minipage}
               };  
 			% \node[yshift = 0.5cm, 
