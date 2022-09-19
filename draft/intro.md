@@ -101,13 +101,13 @@ Complex
   - the effect of ecological change on evolution has long been a focus of scientific research. The reverse effect gas only recently captured our attention \citep{Schoener2011} --> this is eco-evolutionary dynamics
   - evolution might have shaped ecological networks --> \citep{Bastolla2009}
   - review on eco-evo: \citep{Pelletier2009}
-- Empirical evidences of eco-evolutionary dynamics (in p14 if \citep{Govaert2019a}):
+- Empirical evidences of eco-evolutionary dynamics (in p14 if \citep{Govaert2019}):
   - spatial variation in biotic interactions (geographic mosaic of coevolution; Thompson, 2005),
   - impact population regulation and community dynamics (e.g., Abrams & Matsuda, 1997; Patel, Cortez, & Schreiber, 2018), in 
   - species coexistence via stabilizing mechanisms
 
 - Theoretical work on eco-evolutionary processes
-  - (e.g., Becks, Ellner, Jones, & Hairston, 2010, 2012; Brunner, Anaya-Rojas, Matthews, & Eizaguirre, 2017; Schoener, 2011; Turcotte, Reznick, & Hare, 2011; Yoshida, Jones, Ellner, Fussmann, & Hairston, 2003), and have strongly contributed to our understanding on EEFs. (in \citep{Govaert2019a})
+  - (e.g., Becks, Ellner, Jones, & Hairston, 2010, 2012; Brunner, Anaya-Rojas, Matthews, & Eizaguirre, 2017; Schoener, 2011; Turcotte, Reznick, & Hare, 2011; Yoshida, Jones, Ellner, Fussmann, & Hairston, 2003), and have strongly contributed to our understanding on EEFs. (in \citep{Govaert2019})
 
 - Ecology is of course involved in in natural selection process,
 
@@ -128,7 +128,7 @@ Complex
 | mutation            | speciation         | Innovation         | innovation              |
 | migration           | immigration        | Conversation       | innovation diffusion    |
 
-- understand the dynamical consequences of eco-evolutionary feedbacks is more important than ever in a rpidly changing world \citep{Govaert2019a}
+- understand the dynamical consequences of eco-evolutionary feedbacks is more important than ever in a rpidly changing world \citep{Govaert2019}
 - selection is manifest on multiple interacting scales \citep{Levin2002}
 - frequency dependence
 

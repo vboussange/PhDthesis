@@ -79,7 +79,7 @@ XXX
   - Recognized that evolution can be rapid and occur on similar time scales as ecology \citep{Hairston2005}
   - the effect of ecological change on evolution has long been a focus of scientific research. The reverse effect gas only recently captured our attention \citep{Schoener2011} --> this is eco-evolutionary dynamics
   - frequency dependence
-- Empirical evidences of eco-evolutionary dynamics (in p14 if \citep{Govaert2019a}):
+- Empirical evidences of eco-evolutionary dynamics (in p14 if \citep{Govaert2019}):
   - spatial variation in biotic interactions (geographic mosaic of coevolution; Thompson, 2005),
   - impact population regulation and community dynamics (e.g., Abrams & Matsuda, 1997; Patel, Cortez, & Schreiber, 2018), in 
   - species coexistence via stabilizing mechanisms
@@ -87,7 +87,7 @@ XXX
   - \citep{Mooney2009}:
     - In one recent example an annual plant, Brassica rapa exhibited very rapid microevolutionary change in response to a climate fluctuation that led to a multiyear drought [70]. There are likely to be important limits to the rates of climate warming that natural systems can adapt to and these should be deducible from both limits to evolutionary change and limits to the rates that species can move across the landscape tracking climate change.
 - Talk about evolutionary rescue and link it with your work on spatial graphs.
-- *Eco-evolutionary feedbacks must be accounted for in order to understand the mechanisms driving the dynamics of ecosystems \citep{Govaert2019a}. Because they are affected by analogous processes, this realisation should also apply to economic systems.*
+- *Eco-evolutionary feedbacks must be accounted for in order to understand the mechanisms driving the dynamics of ecosystems \citep{Govaert2019}. Because they are affected by analogous processes, this realisation should also apply to economic systems.*
 
 Economic system as complex system alike to biology
 
