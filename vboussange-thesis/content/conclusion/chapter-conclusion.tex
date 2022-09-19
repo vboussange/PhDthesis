@@ -8,7 +8,6 @@
 \cleanchapterquote{To be but one with all living things, to return, by a radiant self-forgetfulness, to the All of Nature.}{Friedrich Hölderlin (1770-1843)}{}
 
 
-\section{Contributions}
 Understanding biological and economic systems involves the underpinning of general organizational principles at the origin of invariance (\cite{Levin2002}, \cref{fig:forward_inverse_modelling}).
 % 
 Aiming at advancing our understanding of eco-evolutionary dynamics in biological and economic systems, this thesis contributed to
@@ -19,7 +18,9 @@ Aiming at advancing our understanding of eco-evolutionary dynamics in biological
     \item methodological advances in the forward and inverse modelling of eco-evolutionary dynamics (\cref{chap:diff-in-graphs,chap:mini-batching,chap:nonlocalPDE}).
 \end{mylisti}
 % 
-In the following, I discuss the chapters of my thesis collectively within the broader context of their contribution to our current understanding of the dynamics of biological and economic systems, and how they advance the current eco-evolutionary modelling paradigm.
+In the following, I discuss the chapters of my thesis collectively within the broader context of their contribution to our current understanding of the dynamics of biological and economic systems, and how they advance the current eco-evolutionary modelling paradigm. I further highlight current limitations, and propose future research directions.
+
+\section{Contributions}
 
 % \subsection{Advancing our fundamental understanding of eco-evolutionary processes in biological and eocnomic systems}
 
@@ -209,7 +210,7 @@ Bayesian inference methods require numerous forward model integrations \citep{Sc
 % 
 Variational methods require the model sensitivity to its parameters \citep{Schartau2017} and are prone to converge to local minima, especially with complex models \citep{Gabor2015}.
 % 
-Those central issues likely explain the very limited use of inverse modelling to further our knowledge on eco-evolutionary processes in biological systems (but see \citep{Skeels2022}). 
+Those central issues likely explain the very limited use of inverse modelling to further our knowledge on eco-evolutionary processes in biological systems (but see \cite{Sukumaran2016,Skeels2019,Skeels2022} that use approximate Bayesian computation methods). 
 
 %
 %% Our method
@@ -236,63 +237,68 @@ Together, the inverse modelling framework proposed in \cref{\chapii} successfull
 \subsection{Forward modelling}
 Alternative methods to those presented in \cref{\chapi,\chapiv} may be more appropriate for the forward modelling of eco-evolutionary dynamics.
 % 
-While individual-based models are interesting tools to investigate stochastic drift in finite size populations, the Gillespie algorithm \citep{Gillespie1976} used to simulate the individual-based model in \cref{\chapi} is computationally intensive, and requires to compute the fitness of all individuals at each time step, which depends on the characteristics of all the other individuals. The resulting computational complexity grows polynomially with the number of individuals ($\mathcal{O}(N^2)$), preventing its use to model large populations. 
+While individual-based models are interesting tools to investigate stochastic drift in finite size populations, the Gillespie algorithm \citep{Gillespie1976} used to simulate the individual-based model in \cref{\chapi} is computationally intensive, and requires to compute the fitness of all individuals at each birth or death event, which depends on the characteristics of all the other individuals. The resulting computational complexity scales poorly with the number of individuals involved, preventing its use to model large populations. 
 % 
-On the other hand, PDEs can provide deterministic approximations of individual-based models \citep{Champagnat2006}, while demanding less computational power. 
+Individual-based models can be approximated by PDE models under simplifying assumptions \citep{Champagnat2006}, which are computationally more efficient in large populations for low dimensional phenotypic spaces ($\lessapprox 3$-dimensional). 
 % 
 % The computational complexity of standard approximation methods grows exponentially in the number of dimensions of the phenotypic space, but 
 % 
-The methods presented in \cref{\chapiv} can approximate PDEs in high dimensions (up to 10 traits, which seems more than enough in practice \xxx), but still suffer from a number of issues that may prevent their practical use.
+The methods presented in \cref{\chapiv} can efficiently simulate PDE models in higher dimensions (demonstrated up to 10 traits), but still suffer from a number of issues that may prevent their practical use.
 % 
-In particular, the MLP method can only provide the population density for one single trait value, and as such, cannot characterise the total population density with a reasonable computational complexity. 
+First, the MLP method can only provide the population number for one single trait value in one run. Consequently, the MLP method cannot characterize the total population density with a reasonable computational complexity. 
 % 
-On the other hand, the ML based approximation method can provide the full population density, but involves the training of many neural networks, one at each time step. This is worrying, since the training of a neural network is numerically costly, and that long simulation times may be required by practitioners. An other problem with the numerical methods proposed in \cref{\chapiv} is that they involve the tuning of meta parameters, inluding the choice of a kernel for the integration of the nonlocal term. This choice is critical for the success of the approximation, but how to determine it is not clear .
+In contrast, the ML-based approximation method can provide the full population density, but involves the training of many neural networks (one at each time step). This is worrying, since the training of a neural network is numerically costly, and that long simulation times may be required by practitioners. Another problem with the numerical methods proposed in \cref{\chapiv} is that they involve the tuning of meta parameters, including the choice of a measure for the integration of the non-local term ($\nu_x$ in \cref{frameworkMLP, frameworkDS}). This measure is critical for the success of the numerical simulations, but how to determine it is unclear.
 % 
 Together, the methods proposed in \cref{\chapiv} may require further development to be used in practice by practictioners. 
-% 
-Yet irrespective of the numerical method used, solving PDEs inevitably requires a considerable computational effort, because PDEs track the evolution of the full phenotypic density of populations. 
-% 
-Nevertheless, only the first three moments of the population density are usually of interest to investigate eco-evolutionary dynamics (population size, trait mean and trait variance, see \cite{XXX}). 
-% 
-Instead of seeking to numerically approximate the full phenotypic density, moment closure approximation methods \citep{Wickman2021,Lion2022,Nordbotten2020} may be, so far, more appropriate tools. Those approaches consist in approximating the population density with a gaussian distribution. This, in turn, allows to transform the PDE problem into a sytem of coupled differential equations involving the time evolution of the population size (1 variable for a single species population), the mean trait value in each dimension of the trait space ($d$ variables), and the variance-covariance matrix of the trait density ($d^2$ variables). As such, the computational cost of this method scales only polynomially with the number of dimension ($\mathcal{O}(d^2)$), while providing the exact information required to investigate eco-evolutionary dynamics in high dimensional spaces. 
-% 
-It is worth noting that instead of neural networks, gaussian functions could easily be used with the ML-based approximation method to simulate PDEs. Equivalent to the assumption taken in the moment closure methods presented in \cite{Wickman2021,Lion2022,Nordbotten2020}, we expect that this approach would greatly improve the computational efficiency of the ML-based approximation method in simulating eco-evolutionary models, while solving the problem of the choice of a kernel for the integration of the nonlocal term. Using Gaussian functions may considerably lower the number of iterations required in the training process, while reducing the computational cost, as they involve less parameters ($d(d+1) + 1$) than neural networks ($xx$ in \cref{examplesxxx}).
 
-% moment closure approximations could be used to leverage 
+Because PDE models track the evolution of the full phenotypic density of populations, PDE models inevitably require a considerable computational effort - irrespective of the numerical method used. 
+% 
+Nevertheless, only the first three moments of the population density are usually of interest, namely population size, trait mean and trait variance \citep{Nordbotten2020}. 
+% 
+Instead of seeking to numerically approximate the full phenotypic density, moment closure approximation methods \citep{Wickman2021,Lion2022,Nordbotten2020} may be considered. Those approaches consist in approximating the population density with a Gaussian distribution. This, in turn, allows to transform the PDE problem into a system of coupled differential equations involving the time evolution of the population size (1 variable for a single species population), the mean trait values ($d$ scalar variables), and the variance-covariance matrix of the multidimensional trait density ($d^2$ variables). As such, the computational cost of this method only scales polynomially with the number of dimension ($\mathcal{O}(d^2)$), while providing the sufficient information required to investigate eco-evolutionary dynamics in high dimensional phenotypic spaces. 
+% 
+It is worth noting that instead of using neural networks, Gaussian functions could also be used within the ML-based method for simulating eco-evolutionary models. Equivalent to the simplifying assumption taken with moment closure methods, we expect this approach to greatly improve the computational efficiency of the ML-based method, while solving the problem of the choice of a kernel for the integration of the nonlocal term. Using Gaussian functions may considerably lower the number of iterations required in the training process, while reducing the computational cost, as they involve fewer free parameters ($d(d+1) + 1$) than neural networks ($xx$ in \cref{examplesxxx}).
+
+Together, the proposed methods in \cref{\chapi,\chapiv} suffer from considerable computational cost, because they seek to simulate PDE models which track the evolution of the full phenotypic distribution of populations. Because only the population number, the mean and the variance-covariance matrix of the phenotypic distributions are of interest, closure approximation methods could be considered. Those methods are compatible with the ML-based method proposed in \cref{\chapiv}.
 
 
 \subsection{Inverse modelling}
-The inverse modelling framework proposed in \cref{\chapii} and used in \cref{\chapiii} also present shortcomings, which may favor the use of other methods to infer eco-evolutionary processes from data.
+The inverse modelling framework proposed in \cref{\chapii} and used in \cref{\chapiii} also present pitfalls, which may favor the use of other methods to infer eco-evolutionary processes from empirical data.
 %
-First, the mini-batching learning strategy requires the choice of a minibatch size to ensure the convergence to the maximum likelihood estimate. This choice is arbitrary, but may affect the model selection process.
-Reducing the batch size implies that the model is fitted on the short term dynamics of the data, but because the model is likely to only characterise some of the features of the data, the resulting support could differ, were the model rather fitted to long term dynamics. Theoretical developments will be required to better understand the assumptions behind the choice of the mini-batch size, which may provide guidance to the choice of this meta parameter. 
+First, the mini-batching learning strategy requires the choice of a minibatch size to ensure the convergence to the maximum likelihood estimate. This choice should be motivated by the roughness of the model likelihood landscape (see \cref{sec:XXX}), but may affect the model selection process:
+a small batch size implies that the model goodness-of-fit is evaluated on the fast dynamics of the data, but the resulting support could differ, were the model fitted with a higher minibatch size. Theoretical developments are required to provide statistically justified guidance for the choice of this meta parameter. 
 % 
-Second, the proposed method may fail to find the maximum likelihood estimate of complex models, since the associated likelihood landscape is harder to navigate than simpler ones. This may lead to a bias in the model selection process towards simpler models.
+Second, the maximum likelihood estimate of models with complex likelihood landscape may be underestimated, because not correctly identified. As a result, the model selection process may be biased towards models with easier to navigate likelihood landscapes. 
 % 
-Third, the information criterion-based model selection procedure used in \cref{\chapii,\chapiii} is uniquely based on a trade-off between goodness-of-fit and number of parameters of the model, which may not be satisfactory to characterise the complexity of dynamical models. 
+Third, the information criterion-based model selection procedure used in \cref{\chapii,\chapiii} is uniquely based on a trade-off between the goodness-of-fit and the number of parameters of the model, which may not be satisfactory to characterize process-based model \citep{Clermont2015}. 
 % 
-For instance, \cite{XXX} shows that the logistic map, which consists of only two parameters, can be fitted to any pattern. Other criterion, involving the complexity of the dynamical behavior of the model (such as, e.g., its Lyapunov exponent), could as such be developed.
+% For instance, \cite{XXX} shows that the logistic map, which consists of only two parameters, can be fitted to any pattern. 
+Other criterion, involving the complexity of the dynamical behavior of the model (such as, e.g., its Lyapunov exponent), could be developed.
 % 
-Fourth, the ML framework developed in \cref{\chapii} requires a differentiable model, a strong prerequisite that may not be met by stochastic models \xxx. 
+Fourth, the inverse modelling framework developed in \cref{\chapii} requires a differentiable model, a strong prerequisite that may not be met by stochastic models. 
 % 
-Fifth, the ML framework provides a single point estimate of the posterior distribution, which is subsequently used for model selection. Yet the models' posterior distributions may be multimodal, where the alternative modes carry valuable information to consider in the model selection process \citep{Daniels2015}. In this case, fully Bayesian method may be required to characterise the full posterior distribution.
-% 
-Alternatively, \cite{Skeels2022} employs a more flexible approach for model selection, which does not require differentiability. The method consists in aggregating model simulation outputs into summary statistics, which are used to train classifier algorithms in recognizing the generating model. The classifier algorithms, such as random forests and neural networks, are further used on summary statistics obtained from the empirical data, recovering the most likely models and associated hypotheses. This approach is similar to Approximation Bayesian Computation methods \cite{Csillery2010}, and requires summary statistics that can correctly discriminate between models. This is a strong requirement to grant the success of the model selection procedure, but it has the major advantage of clarifying why the model is more likely.
+Fifth, the inverse modelling framework only provides the maximum of the posterior distribution, while the posterior distribution may be multimodal. The alternative modes may carry valuable information to consider in the model selection process \citep{Daniels2015}.%, and in this case, the consideration of the full posterior distribution, obtained with fully Bayesian methods, may be more appropriate for model selection.
 
-Overall, the methods presented in \cref{\chapii,\chapiv} solve major problems arising in the forward and inverse modelling of eco-evolutionary dynamics, but suffer from shortcomings. These limitations may direct practictioners to alternative methods, but also invite to further developments.
-
+% 
+Alternatively, \cite{Sukumaran2016,Skeels2019,Skeels2022} employ variants of approximate Bayesian computation methods for eco-evolutionary model selection \citep{Csillery2010}. The approach consists in aggregating model simulation outputs into summary statistics, used to train classifier algorithms (e.g., random forests or neural networks) in recognizing the signatures of the competing models. Once trained, the classifier algorithms are used on summary statistics obtained from the empirical data, discriminating between the alternative hypotheses. 
+% 
+This approach does not require model differentiability, and is consequently more flexible than the method proposed in \cref{\chapii}. Also, the use of summary statistics can elucidate which particular feature of the empirical data is better explained by a given model. 
+% 
+Nevertheless, this strength is a pitfall: summary statistics necessarily reduce the information contained in empirical data, which can prevent to correctly discriminate between models \citep{Csillery2010}.
+% 
+Together, the minibatch inverse modelling framework in \cref{\chapii} is sensitive to the minibatch size, requires models to be differentiable, and does not provide uncertainty estimation. While approximate Bayesian computation may be a valuable alternative, it also presents restrictive shortcomings. Still, the minibatch learning strategy extends beyond the framework proposed, and could be used in combination with novel approaches in Bayesian computation to combine the best of both worlds.
 
 \section{Perspectives}
 
-\subsubsection{Development opportunities in inverse modelling}
+\subsection{Development opportunities in inverse modelling}
 
-The mini-batch method developed in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique development opportunities to leverage inverse modelling.
+The mini-batch method presented in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique development opportunities to leverage inverse modelling.
 %%
-The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework \xxx, where the full posterior distribution of the model is estimated.
+The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to a plain vanilla Bayesian inference, using the loglikelihood formulation proposed in \cref{eq:xxx} would result in a simpler posterior distribution, potentially reducing the number of forward model integration.
 % 
-While Bayesian inference with MCMC chains methods may not be appropriate for eco-evolutionary models (see \cref{sec:xxx}), automatic differentiation variational inference (ADVI,\xxx) offers an appealing alternative. With ADVI, the posterior distribution is approximated by a gaussian distribution \xxx, significantly reducing the number of model integration \citep{Gosh2021}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the model selection procedure (\cref{sec:limitations}), and provide uncertainties measures to the value of the parameters inferred.
+While this number could still be prohibitively expensive for Bayesian inference with MCMC chains (see \cref{sec:xxx}), automatic differentiation variational inference (ADVI, \cite{Morningstar2020,Gosh2021}) offers an appealing alternative. In ADVI, the posterior distribution is approximated by a Gaussian distribution \citep{Morningstar2020}, significantly reducing the number of model integration \citep{Morningstar2020}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the robustness of model selection (\cref{sec:limitations}), and provide uncertainties estimations on the parameters.
 % 
-Providing uncertainty estimates while ensuring computational efficiency, Bayesian Learning via Stochastic Gradient Langevin Dynamics \citep{Welling2011BayesianLV} could also be implemented in the ML framework. This method builds upon recent advances in Bayesian Deep Learning \citep{Wilson2020} and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, and can provide good estimates of uncertainty errors for complex models.
+Providing uncertainty estimates while ensuring computational efficiency, Bayesian Learning via Stochastic Gradient Langevin Dynamics \citep{Welling2011BayesianLV} could also be used instead of the optimization algorithms employed in \cref{\chapiii,\chapiv}. This algorithm builds upon recent advances in Bayesian Deep Learning \citep{Wilson2020}, and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, and can provide good estimates of uncertainty errors for complex models.
 
 %%
 The ML-based approximation method for high dimensional PDEs, presented in \cref{\chapiv}, could be used for inverse modelling.
@@ -301,7 +307,7 @@ In \cref{sec:frameworkML}, the parameters of the PDE model are assumed fixed, bu
 % 
 In contrast to \cite{Raissi2019,Yazdani2020}, a major advantage of this approach it to efficiently perform inverse modelling with high-dimensional dynamical models. Because Julia is a programming language with pervasive AD, this development would require little effort with the Julia library \textbf{HighDimPDE.jl}.
 % 
-Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique development opportunities to bring more robustness and efficiency to inverse modelling methods, providing uncertainty estimation and the possibility to handle high dimensional models.
+Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique opportunities to bring more robustness and efficiency to inverse modelling methods, providing uncertainty estimation and the possibility to handle high dimensional models.
 
 % Allows to estimate the uncertainty in estimation, and localize different equally likely region in the parameter space that are likely.
 
@@ -309,7 +315,7 @@ Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique develo
 % The piecewise loglikelihood function presented in \cref{\chapii} (\cref{eq:minibatch}) 
 
 
-\subsubsection{Confronting eco-evolutionary model on spatial graphs and empirical data}
+\subsection{Confronting eco-evolutionary model on spatial graphs and empirical data}
 
 The confrontation of the predictions from \cref{\chapi} with empirical data, and the use of inference methods with the proposed eco-evolutionary model on spatial graphs, could advance our understanding of eco-evolutionary dynamics in empirical systems.
 % 
@@ -326,9 +332,9 @@ Together, the model developed in \cref{\chapi} and the resulting predictions, to
 % eco-evolutionary model on spatial graphs presented in \chapi, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth, and contribute to a formalization of the theory, to provide forecasts
 
 
-\subsubsection{Econobiology, a new venue to understand economic systems, and design more appropriate governance}
+\subsection{Econobiology, a new venue to understand economic systems, and design more appropriate governance}
 
-The current understanding of key processes and patterns in biological systems may provide insights into organization principles in economic systems, and provide guidance for economic policies.
+The current understanding of key processes and patterns in biological systems may provide insights into general organizational principles in economic systems, and provide guidance for economic policies.
 % 
 The biologically inspired eco-evolutionary model presented in \cref{\chapiii} was succesful in characterizing the dynamics of economic activities. \Cref{\chapiii} therefore evidences deep connections between processes acting upon economic and biological systems. 
 % 
