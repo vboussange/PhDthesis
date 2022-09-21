@@ -14,11 +14,11 @@ Aiming at advancing our understanding of eco-evolutionary dynamics in biological
 % 
 \begin{mylisti}
     \item a general understanding of the role of eco-evolutionary processes in shaping the dynamics of biological populations structured in complex landscapes (\cref{chap:diff-in-graphs}),
-    \item the quantification of the effect of eco-evolutionary processes on the dynamics of economic systems at the country level (\cref{chap:econobiology}),
+    \item the quantification of the effect of eco-evolutionary processes on the dynamics of economic systems at the country level (\cref{chap:econobiology}), and
     \item methodological advances in the forward and inverse modelling of eco-evolutionary dynamics (\cref{chap:diff-in-graphs,chap:mini-batching,chap:nonlocalPDE}).
 \end{mylisti}
 % 
-In the following, I discuss the chapters of this thesis collectively within the broader context of their contribution to our current understanding of the dynamics of biological and economic systems, and how they advance the current eco-evolutionary modelling paradigm. I further highlight current limitations, and propose future research directions.
+In the following, I discuss the chapters of this thesis collectively, highlighting how they contribute to advance our current understanding of the dynamics of biological and economic systems, and how they improve the current eco-evolutionary modelling paradigm. I further highlight current limitations, and propose future research directions.
 
 \section{Contributions}
 
@@ -28,7 +28,7 @@ In the following, I discuss the chapters of this thesis collectively within the 
 
 Phenotypic differentiation arises from feedbacks between population dynamics, dispersal and mutations \citep{hamilton2021population}, and \cref{\chapi} determines how these feedbacks are modulated by landscape features.
 % 
-Mutations act upon individual organisms, and result in genetic drift in finite size populations, causing stochastic variations in the allelic proportions and phenotypes of biological populations \citep{Slatkin1987a}.
+Mutations act upon individual organisms, and result in genetic drift in populations of finite size, causing stochastic variations in the allelic proportions and phenotypes of biological populations \citep{Slatkin1987a}.
 % \cref{\chapi} contributed to advance our understanding on how eco-evolutionary processes and population structure influence population dynamics and phenotypic evolution in biological systems.
 % 
 % In finite size populations, mutations result in "drift" \citep{Slatkin1987a}, causing stochastic variations in the allelic proportions and phenotypes of biological populations. 
@@ -37,7 +37,7 @@ In geographically structured populations, drift results in patterns of neutral d
 % 
 Dispersal tends to reduce neutral differentiation \citep{Slatkin1987a}, and this effect is modulated by landscape connectivity \citep{Wright1943,McRae2006,McRae2007} through the mechanism of "isolation by limited dispersal" \citep{Orsini2013}. By increasing the dispersal ability of organisms, landscape connectivity decreases neutral differentiation \citep{Lande1991}.
 % 
-When landscapes present heterogeneous habitats, natural selection can supplement the effect of genetic drift and increase the sole effect of stochasticity on differentiation \citep{fisher1958genetical}. Under this scenario, local environment conditions select individuals with traits that provide them higher fitness \citep{Gaither2018}. At the population level, this results in populations adapting to their local environment, a mechanism coined "local adaptation" \citep{Kawecki2004} and resulting in patterns of "adaptive differentiation". 
+When landscapes present heterogeneous habitats, natural selection can supplement the effect of genetic drift and increase the sole effect of stochasticity on differentiation \citep{fisher1958genetical}. Under this scenario, local environmental conditions select individuals with traits that provide them higher fitness \citep{Gaither2018}. At the population level, this results in populations adapting to their local environment, a mechanism coined "local adaptation" \citep{Kawecki2004} and resulting in patterns of "adaptive differentiation". 
 % 
 % This results in adaptive differentiation, and is regarded as one of the most important factors govening species richness gradients \citep{Kawecki2004}.
 % 
@@ -50,15 +50,15 @@ Adaptive differentiation is hindered by dispersal, which prevents local adaptati
 %     m < 2s\theta^2.
 % \end{equation}
 % 
-While adaptive differentiation concerns traits under selection, it undirectly affects the differentiation of neutral traits, that are co-evolving with traits under selection through linkages \citep{Billiard2015,Lepers2021}. This results in turn to the mechanism of "isolation by adaptation", where habitat heterogeneity, rather than landscape connectivity, increases neutral differentiation \citep{nosil2008}. 
+While adaptive differentiation concerns traits under selection, it indirectly affects the differentiation of neutral traits, that are co-evolving with traits under selection through linkages \citep{Billiard2015,Lepers2021}. This results in turn to the mechanism of "isolation by adaptation", where habitat heterogeneity, rather than landscape connectivity, increases neutral differentiation \citep{nosil2008}. 
 % 
 Simple mechanisms resulting in neutral and adaptive differentiation are identified, but how they are modulated by eco-evolutionary feedbacks and landscape complexity is unclear. %TODO: unclear
 
 In \cref{\chapi}, I demonstrate a novel mechanism, involving the process of intra-specific competition, that considerably affects neutral differentiation. Through the creation of unbalanced migration fluxes which increases the intensity of competition in highly connected populations, heterogeneity in connectivity reduces gene flow and reinforces neutral differentiation. %Through the accumulation of incompatibilities over time \citep{Dobhsanski}, this mechanism could lead to speciation over time, and contribute to the high diversification in mountain regions \citep{Rahbek}.
 % 
-I also investigate the mechanism of local adaptation in complex landscapes, where habitat connectivity is irregular. I show that the complexity of habitat spatial distribution can be reduced to a measure of habitat spatial auto-correlation, coined the "habitat assortativity". Landscapes characterised by a high habitat assortativity support populations that are systematically better adapted than in landscape with low assortativity. Specifically, I provide an analytical condition for local adaptation  (\cref{eq:xxx}), that sheds light on how it relates to dispersal intensity, selection strength, habitat heterogneity, and habitat assortativity.
+I also investigate the mechanism of local adaptation in realistic landscapes where habitat connectivity is irregular \citep{Dale2010,LiebermanHauert2005}. I show that the complexity of habitat spatial distribution can be reduced to a measure of habitat spatial auto-correlation, coined the "habitat assortativity". Landscapes characterised by a high habitat assortativity support populations that are systematically better adapted than in landscape with low assortativity. Specifically, I provide an analytical condition for local adaptation  (\cref{eq:xxx}), that sheds light on how it relates to dispersal intensity, selection strength, habitat heterogneity, and habitat assortativity.
 
-Because habitat assortativity affects local adaptation, is must also affect neutral differentiation throuh the mechanism of isolation by adapation. Closing the loop, I demonstrate that habitat assortativity affects neutral differentiation through two antagonistic effects. By favoring local adaptation, it promotes isolation by adaptation, therefore increasing neutral differentiation. In parallel, it also favors gene flow within clusters of similar environmental conditions, decreasing isolation by limited dispersal. This results in habitat assortativity decreasing neutral differentiation for low dispersal intensity, and increasing neutral differentiation for high dispersal intensity.
+Because habitat assortativity affects local adaptation, is must also affect neutral differentiation through the mechanism of isolation by adaptation \citep{Orsini2013}. Closing the loop, I demonstrate that habitat assortativity affects neutral differentiation through two antagonistic effects. By favoring local adaptation, it promotes isolation by adaptation, therefore increasing neutral differentiation. In parallel, it favors gene flow within clusters of similar environmental conditions, decreasing isolation by limited dispersal. This results in habitat assortativity decreasing neutral differentiation for low dispersal intensity, and increasing neutral differentiation for high dispersal intensity (\cref{fig:figure5}).
 % 
 This complex feedback is essential to understand population differentiation in complex landscapes.
 % 
@@ -76,55 +76,53 @@ I provide a graphical summary of the feedback mechanisms shaping neutral and ada
 
 % Hypotheses concerning the processes that underly economic system dynamics are numerous, and have mainly been investigated through forward modelling. Starting from empirical observations, 
 % 
-By confronting fine-grained empirical data and process-based models, \cref{\chapiii} bridges evolutionary economics, economic complexity and biology to better understand the endogenous drivers of economic development.
+Combining fine-grained economic data and process-based models, \cref{\chapiii} bridges evolutionary economics, economic complexity and biology to better understand the endogenous drivers of economic change.
 % 
 %by assessing their effect on the dynamics of economic activities from data.
 % 
 % complements recent follows an inverse modelling approach to understand which processes are most likely shaping economic development. 
 % 
-Neoclassical economics and evolutionary economics seek to explain economic change with process-based models, focusing on the relationships between aggregated economic variables such as output, employment and productivity \citep{Boschma2005a}.
+Neoclassical economics and evolutionary economics seek to explain economic change with process-based models.
 % 
 % Neoclassical economics sugggests that exogenous drivers, such as production costs, drive the diversification of economic systems \xxx. 
 % 
-In particular, evolutionary economics tries to understand economic change by relating it to endogenous forces, such as interactions between firms and economic activities, and evolutionary processes acting upon them \citep{Hodgson2019,Metcalfe2006}.
+While Neoclassical economics explains economic change by exogenous changes \citep{Boschma2005a}, evolutionary economics rather focuses on endogenous forces (such as interactions between firms and economic activities, and evolutionary processes acting upon them \citep{Metcalfe2006}), but has up to now restricted its attention to subnational industrial dynamics \citep{Hodgson2019}.
 % 
 % Exogenous drivers, such as technological change \xxx, economic institutions \xxx, and production costs \citep{Boschma2005a} have been proposed, but 
 % 
-In contrast, complexity economics uses fine-grained empirical data to investigate economic change \citep{Hidalgo2021}. Instead of process-based models, dimensionality reduction techniques are used to process the data and predict variations in national income \citep{Mitchell}. 
+In contrast, complexity economics predicts economic change at the national level \citep{Hidalgo2021} with endogenous predictors, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather, it relies on statistical techniques to process fine-grained economic data \citep{Mitchell}, and a current concern is to unfold the causal processes \citep{Hidalgo2021}.
 % 
 % One of the major contribution of complexity economics is to provide a metric that can predict economic development \citep{Taschella}, and the field is now concerned with understanding the factors underlying this factor.
 %
-While a current concern in evolutionary economics is to test the explanatory power of the proposed process-based models \cite{Hodgson2019}, complexity economics seeks to unfold the causal processes underlying the success of the dimensionality reduction technique \citep{Hidalgo2021}.
 
-% 
 % \cref{\chapiii} provides a novel understanding of the role of eco-evolutionary processes in economic systems. 
 % 
-\cref{\chapiii} confronts process-based models and data to underpin the processes responsible for economic change.
+Relying on inverse modelling, \cref{\chapiii} combines process-based models and fine-grained data to underpin the processes responsible for economic change.
 % 
-Our approach relies on deep connections between processes acting upon economic activities and biological populations.
+The approach undertaken relies on deep connections between processes acting upon economic activities and biological populations.
 % 
-Analogously to biological populations that are characterized by genes, economic activities are characterised by organizational routines \citep{NelsonWinter}, which experience evolutionary processes and define how they engage in ecological processes \citep{NelsonWinter}.
+Analogously to biological populations that are characterized by genes, economic activities are characterized by organizational routines \citep{NelsonWinter}, which experience evolutionary processes and define how they engage in interactions with other economic activities \citep{NelsonWinter}.
 % 
 % This connection is justified by evolutionary economics, which argues that similarly to genes, organizational routines are at the core of economic entities and experience ecological and evolutionary processes.
 % 
 As a result, economic activities can be considered as autonomous entities, which dynamics is determined by its characteristics and the processes acting upon them \citep{Boschma2005a}.
 % 
-The temporal dynamics of economic activities contain signatures, i.e. distinctive temporal variations and couplings, left by the most important processes at stage.
+The processes at stake leave characteristic signatures on the temporal dynamics of economic activities, consisting in distinctive temporal variations and couplings.
 % 
-Population dynamic models, combined with inverse modelling methods, can therefore be used to recover the role of the eco-evolutionary processes on the dynamics of economic systems, extracting this information from signatures in historical dynamics data.
+These signatures can be identified with inverse modelling methods, estimating the support of population dynamic models embedding alternative hypothetical processes. %The effect of eco-evolutionary processes on the dynamics of economic systems can be quantified by assessing the strength of the signatures left by those processes in historical dynamics data.
 
 %%
-Specifically, \cref{\chapiii} explores the effect of processes involving positive and negative interactions between economic activities, spatial transfers, and economic activity transformations, on the dynamics of economic activities at the national scale.
+\cref{\chapiii} seek to test whether the dynamics of economic activities at the national scale can be explained by positive and negative interactions between them, spatial dispersal processes, and/or economic transformations.
 % 
 % \cref{\chapiii} seeks to test whether the dynamics of economic activities can be explained by different types of interdependencies, including positive \xxx and negative interactions \xxx, spatial transfers \xxx, and economic transformations \xxx.
 % 
-Using population dynamic models capturing the different interdependencies, \cref{\chapiii} provides empirical evidence that economic activities engage in positive interactions, and benefit from spatial transfers of knowledge and routines.
+Using population dynamic models capturing the different interdependencies, \cref{\chapiii} provides quantitative evidence that economic activities engage in positive interactions and disperse across countries.
 % 
 Positive interactions may arise from a variety of processes proposed in the evolutionary economic literature, such as supply chains \citep{Ozman2009,Saavedra2009a} and knowledge spillovers \citep{Menon2015}. 
 % 
-Its support implies the dynamics of economic activities are highly inter-dependent, and suggest that diversity promotes economic development \citep{Hidalgo2018}.
+Its support implies that the dynamics of economic activities are highly inter-dependent, and suggests that diversity promotes economic development \citep{Hidalgo2018}.
 % 
-The support for spatial transfers implies that transfers of knowledge and organisational routines \citep{Zahra2000,Zahra2000,RogersEverettM2003DoI,Boschma2008} have a considerable effect on economic activities. Nevertheless, discrepancies in the strength-of-evidence obtained for spatial transfers across countries highlight that some countries are overall more akin to spatial transfers than others, which may be explained by differences in cognitive, organizational, social, institutional or geographic proximities across countries \citep{Boschma2005}.
+Transfers of knowledge and routines (organizational, technological, \cite{XXX}) may be at the origin of spatial dispersal processes \citep{Zahra2000,Zahra2000,RogersEverettM2003DoI,Boschma2008}. Nonetheless, discrepancies in the strength-of-evidence for spatial dispersal were found, highlighting that economic activities are more akin to disperse in some countries than others. As an explanation, we propose that transfers of knowledge and routines may be blocked by barriers due to differences in cognitive, organizational, social, institutional or geographic proximity between countries \citep{Boschma2005}.
 % 
 I provide a graphical summary of the mechanisms evidenced in economic systems in \cref{\chapiii} in \cref{fig:summary_econobio}. Overall, \cref{\chapiii} evidences that, akin to biological systems, processes of interaction and dispersal shape the dynamics of economic systems at the country scale.
 
@@ -151,21 +149,21 @@ I provide a graphical summary of the mechanisms evidenced in economic systems in
 % Population structure
 Evolutionary dynamics have been traditionally studied in the context of regular population structures \citep{LiebermanHauert2005}.
 % 
-For instance, to investigate differentiation in biological populations, \cite{Slatkin1973,Slatkin1978,Kirkpatrick1997,Polechova2015,Polechova2018,AndradeRestrepo2019,Doebeli2003,Meszena1997,Yeaman2011,Debarre2013,Mirrahimi2020} consider regular spatial structures, missing the effect of spatial complexity on the underlying mechanisms.
+For instance, to investigate differentiation in biological populations, a multitude of studies have considered regular spatial structures, missing the effect of spatial complexity on the underlying mechanisms \citep{Slatkin1973,Slatkin1978,Kirkpatrick1997,Polechova2015,Polechova2018,AndradeRestrepo2019,Doebeli2003,Meszena1997,Yeaman2011,Debarre2013,Mirrahimi2020}.
 % 
-Biological habitats differ in their connectivity \citep{Dale2010}, and economic entities are structured through complex networks \citep{Schweitzer2009}. \cite{LiebermanHauert2005} and subsequent studies of "evolutionary dynamics on graphs" (e.g., \cite{Tkadlec2019}) show that this complexity affects the interplay between selection and drift. However, evolutionary dynamics on graphs does not consider eco-evolutionary feedbacks \citep{Govaert2019}.
+Biological habitats differ in their connectivity \citep{Dale2010}, and economic entities are structured through complex networks \citep{Schweitzer2009}. \cite{LiebermanHauert2005} and subsequent studies of "evolutionary dynamics on graphs" (e.g., \cite{Tkadlec2019}) show that this complexity considerably affects the interplay between selection and drift. However, evolutionary dynamics on graphs does not consider eco-evolutionary feedbacks \citep{Govaert2019}.
 % 
 Thus far, models that capture eco-evolutionary feedbacks together with realistic, complex population structures were missing.
 
-Another important feature of biological populations that may affect their dynamics is the variety of traits that characterize them \citep{Doebeli2011}. While a vast majority of the work on eco-evolutionary feedbacks has focused on the evolution of scalar phenotypes \citep{Doebeli2011}, in most organisms, many phenotypic properties combine in complicated ways to determine ecological processes \citep{Doebeli2014}.
+Another important feature of biological populations that may affect their dynamics is the variety of traits that characterize them \citep{Doebeli2011}. While a vast majority of studies on eco-evolutionary feedbacks has focused on the evolution of scalar phenotypes \citep{Doebeli2011}, in most organisms, many phenotypic properties combine in complicated ways to determine ecological processes \citep{Doebeli2014}.
 % 
 For instance, \cite{Doebeli2011} shows that the consideration of multiple traits is likely to generate more diversity than expected with one dimensional models.
 % 
 % \Cref{\chapi} also demonstrates that the co-evolution of traits proved to have genuine consequences on differentiation, pointing towards the inclusion of multiple traits to understand the dynamics of ecological interactions.
 % 
-Trade-offs in traits is also an essential feature shaping the evolutionary dynamics of biological populations, with consquences on the dynamics of e.g. cancer cell evolution \citep{Fiandaca2021} and plankton dynamics \citep{LeGland2020}.
+Trade-offs in traits are also essential features shaping the evolutionary dynamics of biological populations, with consequences on the dynamics of e.g. cancer cell evolution \citep{Fiandaca2021} and plankton dynamics \citep{LeGland2020}.
 % 
-Yet the simulation of eco-evolutionary models capturing the evolution of high dimensional phenotypic distributions is tremendously difficult, since the numerical cost of traditional methods grows exponentially in the number of dimensions of the phenotypic space \citep{Bellman1957}. 
+Yet the simulation of eco-evolutionary models capturing the evolution of high dimensional phenotypic distributions is tremendously difficult, since the numerical cost of traditional methods grows exponentially in the number of dimensions considered \citep{Bellman1957}. 
 % 
 % Novel numerical methods have been proposed to simulate high dimensional models, but they could not handle non-local terms, which capture non-local interactions between microscopic agents.
 
@@ -173,27 +171,27 @@ From first principles, \cref{\chapi} derives a stochastic individual-based model
 % 
 % TODO: this part does not work really well
 %% individual-based model
-The individual-based model presented in \cref{\chapi} involves the combination of graphs and hig dimensional phenotypic spaces, together with eco-evolutionary feedbacks, to model population structures. The model can readily be generalized to include other processes (see \cref{sec:SI-comp} for an extended variant with trait-based competition), and the Julia library \textbf{Evoid.jl} \cite{Evoid.jl}, written to run the numerical experiments in \cref{\chapi}, already implements a generic version of the model. %(), 
+The individual-based model presented in \cref{\chapi} involves the combination of graphs and high dimensional phenotypic spaces to model population structures. Naturally capturing eco-evolutionary feedbacks, the model can readily be generalized to include other eco-evolutionary processes (see \cref{sec:SI-comp} for an extended variant with trait-based competition), and the Julia library \textbf{Evoid.jl} \cite{Evoid.jl}, written for the purpose of the numerical experiments in \cref{\chapi}, implements a generic version of the model. %(), 
 % 
-As such, the model presented in \cref{\chapi} and the Julia library \textbf{Evoid.jl} may be used to investigate other questions involving complex population structures \cite{LiebermanHauert2005} and the co-evolution of characteristics \citep{Doebeli2011}.
+As such, the model presented in \cref{\chapi} and the Julia library \textbf{Evoid.jl} may be used to investigate other questions involving complex population structures \citep{LiebermanHauert2005} and the co-evolution of characteristics \citep{Doebeli2011}.
 % 
 %% PDE
-Reproducing the discrete and stochastic nature of ecological and evolutionary processes \citep{Champagnat2006}, numerical simulations of individual-based model may not provide a general understanding of system investigated \citep{Lyon2016}, and cannot be scaled to simulate large systems involving millions of individuals \cite{deangelis2005individual}. Yet, the individual-based model proposed in \cref{\chapi} is mathematically tractable under simplifying assumptions, and can be efficiently simulation with a deterministic PDE approximation.
+While they can realistically reproduce the discrete and stochastic nature of ecological and evolutionary processes \citep{Champagnat2006}, numerical simulations of individual-based model may not provide a general understanding of system investigated \citep{Lyon2016,Hodgson2019}, and cannot be scaled to simulate large systems involving millions of individuals \citep{deangelis2005individual}. Yet, the individual-based model proposed in \cref{\chapi} is mathematically tractable, and can be approximated with a deterministic PDE approximation under simplifying assumptions.
 % 
-Tractability allows to obtain analytical insights on how structural properties affect macroscopic population under simplifying assumptions (\cref{\chapi}).
+The mathematical tractability allows obtaining analytical insights on how the interplay between the processes acting upon individuals transform into mechanisms affecting the population level (\cref{\chapi}).
 % 
 The PDE approximation, combined with the numerical methods presented in \cref{\chapiv}, further allow efficient simulations. 
 % 
 The numerical methods proposed in \cref{\chapiv} are now implemented in the Julia library \textbf{HighDimPDE.jl} \citep{HighDimPDE}, a registered Julia package belonging to the SciML organisation \citep{SciML}.
 %% 
-The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
+% The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
 %
-The package aims at hosting many more solver algorithms that break down the curse of dimensionality, and has, as of September 2022, already received contributions from 5 independent developers (see \cite{https://github.com/SciML/HighDimPDE.jl/graphs/contributors}). These contributions may greatly enhance \textbf{HighDimPDE.jl} over the years, promising efficient simulations of eco-evolutionary models.
+The package aims at hosting many more solver algorithms that can efficiently simulate high dimensional PDEs, and has, as of September 2022, already received contributions from 5 independent developers (see \cite{https://github.com/SciML/HighDimPDE.jl/graphs/contributors}). These contributions may greatly enhance \textbf{HighDimPDE.jl} over the years, promising efficient simulations of eco-evolutionary models.
 % 
 %% Conclusion
 % The combination of analytical insights and numerical simulations can help to elucidate the links between microscopic processes and macroscopic properties \citep{Levin}.
 % 
-Together, \cref{\chapi,\chapiv} deliver novel tools to advance our understanding on the effect of the complexity of population and phenotypic structures on eco-evolutionary dynamics in complex adaptive systems.
+Together, \cref{\chapi,\chapiv} deliver novel tools to advance our understanding on the effect of the complexity of spatial and phenotypic structures on the eco-evolutionary dynamics of complex adaptive systems.
 
 
 \subsection{Advances in inverse modelling for identifying eco-evolutionary processes in empirical systems}
@@ -218,28 +216,28 @@ Those central issues likely explain the very limited use of inverse modelling to
 % 
 The framework is based on a variational method, but resolves its main shortcomings by heavily relying on automatic differentiation \citep{Rackauckas2020a}, state-of-the-art optimizers \citep{Kingma2014}, and a learning strategy based on a mini-batch method. 
 % 
-The use of automatic differentiation simply eliminates the effort required to obtain the model sensitivity to its parameters, and the state-of-the-art optimizers, together with the mini-batch method, ensure the efficiency and reliably of the method in handling highly nonlinear models.
+The use of automatic differentiation simply eliminates the effort required to obtain the model sensitivity to its parameters, and the state-of-the-art optimizers, together with the mini-batch method, ensure the efficiency and robustness of the method in handling highly nonlinear models.
 % 
 \cref{\chapii} takes part in an ongoing effort to blend ML and traditional models to gain scientific understanding and extrapolability \citep{Karpatne2017,Rackauckas2020a,Schneider2017,Rolnick2023,Kashinath2021,Yazdani2020,Raissi2019}. 
 % 
-In physical systems such as ocean and atmospheric systems, general organizational principles are known and formulated in general models. There, ML is mostly used to improve model forecast skill \citep{Schneider2017}. In contrast, general models of biological and economic systems are yet to be formulated, and methods such as the ML framework presented in \cref{\chapii} can greatly contribute to identify the general organizational principles required to reach this goal \citep{Karpatne2017}. 
+In physical systems such as oceanic and atmospheric systems, general organizational principles are known and formulated in general circulation models, where ML is mostly used to improve model forecast skill \citep{Schneider2017}. In contrast, general models of biological and economic systems are yet to be formulated, and methods such as the ML framework presented in \cref{\chapii} can greatly contribute to identifying the general organizational principles required to reach this goal \citep{Karpatne2017}. 
 % 
-By contrasting competing hypotheses embedded in alternative models, \cref{\chapii,\chapiv} provide concrete examples, both with synthetic and empirical data, that the inverse modelling framework in \cref{\chapii} can successfully elucidate eco-evolutionary mechanistic pathways.
+By contrasting competing hypotheses embedded in alternative models, \cref{\chapii,\chapiv} provide concrete examples, both with synthetic and empirical data, that the inverse modelling framework in \cref{\chapii} can successfully elucidate eco-evolutionary mechanisms.
 %% 
-Integrating the practical constraints of current biological datasets \citep{Dornelas2018}, the inverse modelling framework may also be relevant for providing forecast ability to existing eco-evolutionary model \citep{Norberg2012}, and help to anticipate the response of ecosystems to climate change \citep{Urban2016}.
+Integrating the practical constraints of current ecological datasets \citep{Dornelas2018}, the inverse modelling framework may also be relevant for providing forecast ability to existing eco-evolutionary model \citep{Norberg2012} to anticipate the response of ecosystems to climate change \citep{Urban2016}.
 % 
-Built thanks to the composability of the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}, the inverse modelling framework is implemented in the multi-purpose Julia package \textbf{MiniBatchInference.jl} \citep{MiniBatchInference}, readily available to the scientific community. %\textbf{MiniBatchInference.jl} is built around the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}. As such, the use of \textbf{MiniBatchInference.jl} requires very limited efforts to any user familiar with those libraries.
+Built thanks to the composability of the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}, the inverse modelling framework is implemented in the multi-purpose Julia package \textbf{MiniBatchInference.jl} \citep{MiniBatchInference} and readily available to the scientific community. %\textbf{MiniBatchInference.jl} is built around the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}. As such, the use of \textbf{MiniBatchInference.jl} requires very limited efforts to any user familiar with those libraries.
 % 
-Together, the inverse modelling framework proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concrete case examples in \cref{\chapii, \chapiii} show that it enables the testing of eco-evolutionary theories against data, can potentially help to provide better forecasts of ecosystems states \citep{Urban2016}.
+Together, the inverse modelling framework proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to gain scientific knowledge from observation data. %Concrete case examples in \cref{\chapii, \chapiii} show that it enables the testing of eco-evolutionary theories against data, and can potentially help to provide better forecasts of ecosystems states \citep{Urban2016}.
 
 \section{Limitations}
 
-\subsection{Forward modelling}
+\subsection{Computational complexity for modelling the evolution of full phenotypic densities}
 Alternative methods to those presented in \cref{\chapi,\chapiv} may be more appropriate for the forward modelling of eco-evolutionary dynamics.
 % 
 While individual-based models are interesting tools to investigate stochastic drift in finite size populations, the Gillespie algorithm \citep{Gillespie1976} used to simulate the individual-based model in \cref{\chapi} is computationally intensive, and requires to compute the fitness of all individuals at each birth or death event, which depends on the characteristics of all the other individuals. The resulting computational complexity scales poorly with the number of individuals involved, preventing its use to model large populations. 
 % 
-Individual-based models can be approximated by PDE models under simplifying assumptions \citep{Champagnat2006}, which are computationally more efficient in large populations for low dimensional phenotypic spaces ($\lessapprox 3$-dimensional). 
+PDE approximations are computationally more efficient in large populations for low dimensional phenotypic spaces ($\lessapprox 3$-dimensional). 
 % 
 % The computational complexity of standard approximation methods grows exponentially in the number of dimensions of the phenotypic space, but 
 % 
@@ -247,40 +245,40 @@ The methods presented in \cref{\chapiv} can efficiently simulate PDE models in h
 % 
 First, the MLP method can only provide the population number for one single trait value in one run. Consequently, the MLP method cannot characterize the total population density with a reasonable computational complexity. 
 % 
-In contrast, the ML-based approximation method can provide the full population density, but involves the training of many neural networks (one at each time step). This is worrying, since the training of a neural network is numerically costly, and that long simulation times may be required by practitioners. Another problem with the numerical methods proposed in \cref{\chapiv} is that they involve the tuning of meta parameters, including the choice of a measure for the integration of the non-local term ($\nu_x$ in \cref{frameworkMLP, frameworkDS}). This measure is critical for the success of the numerical simulations, but how to determine it is unclear.
+In contrast, the ML-based approximation method can provide the full population density, but involves the training of many neural networks (one at each time step). This is worrying, since the training of a neural network is numerically costly, and that long simulation times are required by practitioners. Another problem with the numerical methods proposed in \cref{\chapiv} is that they involve the tuning of meta parameters, including the choice of a measure for the integration of the non-local term ($\nu_x$ in \cref{frameworkMLP, frameworkDS}). Though this choice is critical to the success of the numerical simulations, it is unclear how it can be determined.
 % 
-Together, the methods proposed in \cref{\chapiv} may require further development to be used in practice by practictioners. 
+Together, the methods proposed in \cref{\chapiv} are still computationally demanding and require a delicate tuning of the meta-parameters, which may require further development to be used in eco-evolutionary studies. 
 
-Because PDE models track the evolution of the full phenotypic density of populations, PDE models inevitably require a considerable computational effort - irrespective of the numerical method used. 
+Because PDE models track the evolution of the full phenotypic density of populations, PDE models inevitably require a considerable computational effort -- irrespective of the numerical method used. 
 % 
 Nevertheless, only the first three moments of the population density are usually of interest, namely population size, trait mean and trait variance \citep{Nordbotten2020}. 
 % 
-Instead of seeking to numerically approximate the full phenotypic density, moment closure approximation methods \citep{Wickman2021,Lion2022,Nordbotten2020} may be considered. Those approaches consist in approximating the population density with a Gaussian distribution. This, in turn, allows to transform the PDE problem into a system of coupled differential equations involving the time evolution of the population size (1 variable for a single species population), the mean trait values ($d$ scalar variables), and the variance-covariance matrix of the multidimensional trait density ($d^2$ variables). As such, the computational cost of this method only scales polynomially with the number of dimension ($\mathcal{O}(d^2)$), while providing the sufficient information required to investigate eco-evolutionary dynamics in high dimensional phenotypic spaces. 
+Instead of seeking to numerically approximate the full phenotypic density, moment closure approximation methods \citep{Wickman2021,Lion2022,Nordbotten2020} may instead be considered. Those approaches consist in approximating the population density with a Gaussian distribution. This, in turn, allows to transform the PDE problem into a system of coupled differential equations involving the time evolution of the population size (1 variable for a single species population), the mean trait values ($d$ scalar variables), and the variance-covariance matrix of the multidimensional trait density ($d^2$ variables). As such, the computational cost of this method only scales polynomially with the number of dimension ($\mathcal{O}(d^2)$), while providing the sufficient information required to investigate eco-evolutionary dynamics in high dimensional phenotypic spaces. 
 % 
-It is worth noting that instead of using neural networks, Gaussian functions could also be used within the ML-based method for simulating eco-evolutionary models. Equivalent to the simplifying assumption taken with moment closure methods, we expect this approach to greatly improve the computational efficiency of the ML-based method, while solving the problem of the choice of a kernel for the integration of the nonlocal term. Using Gaussian functions may considerably lower the number of iterations required in the training process, while reducing the computational cost, as they involve fewer free parameters ($d(d+1) + 1$) than neural networks ($xx$ in \cref{examplesxxx}).
+It is worth noting that instead of using neural networks, Gaussian functions could also be used within the ML-based method for simulating eco-evolutionary models. Equivalent to the simplifying assumption taken with moment closure methods, we expect this approach to greatly improve the computational efficiency of the ML-based method, while solving the problem of the choice of $\nu_x$. To put in a nutshell, using Gaussian functions may considerably lower the number of iterations required in the training process, while reducing the computational cost, as they involve fewer free parameters ($d(d+1) + 1$) than neural networks ($xx$ in \cref{examplesxxx}).
 
 Together, the proposed methods in \cref{\chapi,\chapiv} suffer from considerable computational cost, because they seek to simulate PDE models which track the evolution of the full phenotypic distribution of populations. Because only the population number, the mean and the variance-covariance matrix of the phenotypic distributions are of interest, closure approximation methods could be considered. Those methods are compatible with the ML-based method proposed in \cref{\chapiv}.
 
 
-\subsection{Inverse modelling}
-The inverse modelling framework proposed in \cref{\chapii} and used in \cref{\chapiii} also present pitfalls, which may favor the use of other methods to infer eco-evolutionary processes from empirical data.
+\subsection{Uncertainty estimation and model selection bias}
+The inverse modelling framework proposed in \cref{\chapii} and used in \cref{\chapiii} also present pitfalls.
 %
 First, the mini-batching learning strategy requires the choice of a minibatch size to ensure the convergence to the maximum likelihood estimate. This choice should be motivated by the roughness of the model likelihood landscape (see \cref{sec:XXX}), but may affect the model selection process:
-a small batch size implies that the model goodness-of-fit is evaluated on the fast dynamics of the data, but the resulting support could differ, were the model fitted with a higher minibatch size. Theoretical developments are required to provide statistically justified guidance for the choice of this meta parameter. 
+a small batch size implies that the model goodness-of-fit is evaluated on the fast dynamics of the data. The resulting support could differ, were the model fitted with a higher minibatch size. Theoretical developments are required to provide statistically justified guidance for the choice of the minibatch size. 
 % 
-Second, the maximum likelihood estimate of models with complex likelihood landscape may be underestimated, because not correctly identified. As a result, the model selection process may be biased towards models with easier to navigate likelihood landscapes. 
+Second, the maximum likelihood estimate of models with complex likelihood landscape may be underestimated, because not correctly identified. As a result, the model selection process may be biased towards models which associated likelihood landscape is easier to navigate. 
 % 
 Third, the information criterion-based model selection procedure used in \cref{\chapii,\chapiii} is uniquely based on a trade-off between the goodness-of-fit and the number of parameters of the model, which may not be satisfactory to characterize process-based model \citep{Clermont2015}. 
 % 
 % For instance, \cite{XXX} shows that the logistic map, which consists of only two parameters, can be fitted to any pattern. 
-Other criterion, involving the complexity of the dynamical behavior of the model (such as, e.g., its Lyapunov exponent), could be developed.
+Other criterion, for instance based on the complexity of the dynamical behavior of the model (such as, e.g., its Lyapunov exponent), could be developed.
 % 
-Fourth, the inverse modelling framework developed in \cref{\chapii} requires a differentiable model, a strong prerequisite that may not be met by stochastic models. 
+Fourth, the inverse modelling framework developed in \cref{\chapii} requires a differentiable model, a strong prerequisite that may not be met by, e.g. stochastic models. 
 % 
-Fifth, the inverse modelling framework only provides the maximum of the posterior distribution, while the posterior distribution may be multimodal. The alternative modes may carry valuable information to consider in the model selection process \citep{Daniels2015}.%, and in this case, the consideration of the full posterior distribution, obtained with fully Bayesian methods, may be more appropriate for model selection.
+Fifth, the inverse modelling framework only provides the maximum of the posterior distribution, while the posterior distribution may be multimodal, with alternative modes carrying valuable information \citep{Daniels2015}.%, and in this case, the consideration of the full posterior distribution, obtained with fully Bayesian methods, may be more appropriate for model selection.
 
 % 
-Alternatively, \cite{Sukumaran2016,Skeels2019,Skeels2022} employ variants of approximate Bayesian computation methods for eco-evolutionary model selection \citep{Csillery2010}. The approach consists in aggregating model simulation outputs into summary statistics, used to train classifier algorithms (e.g., random forests or neural networks) in recognizing the signatures of the competing models. Once trained, the classifier algorithms are used on summary statistics obtained from the empirical data, discriminating between the alternative hypotheses. 
+Alternatively, \cite{Sukumaran2016,Skeels2019,Skeels2022} employ variants of approximate Bayesian computation methods \citep{Csillery2010} for eco-evolutionary model selection. The approach consists in aggregating model simulation outputs into summary statistics, used to train classifier algorithms (e.g., random forests or neural networks) in recognizing the signatures of the competing models. Once trained, the classifier algorithms are used on summary statistics obtained from the empirical data, discriminating between the alternative hypotheses. 
 % 
 This approach does not require model differentiability, and is consequently more flexible than the method proposed in \cref{\chapii}. Also, the use of summary statistics can elucidate which particular feature of the empirical data is better explained by a given model. 
 % 
@@ -294,7 +292,7 @@ Together, the minibatch inverse modelling framework in \cref{\chapii} is sensiti
 
 The mini-batch method presented in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique development opportunities to leverage inverse modelling.
 %%
-The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to considering a plain vanilla likelihood function such as \cref{eq:xxx} for Bayesian inference, the minibatch loglikelihood formulation proposed in \cref{eq:xxx} would result in a smoother posterior distribution, potentially reducing the number of forward model integration.
+The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to considering a standard formulation of the likelihood function such as in \cref{eq:xxx}, using the minibatch loglikelihood formulation proposed in \cref{eq:xxx} results in a smoother posterior distribution, potentially reducing the number of forward model integration for Bayesian inference.
 % 
 While this number could still be prohibitively expensive for Bayesian inference with MCMC chains (see \cref{sec:xxx}), automatic differentiation variational inference (ADVI, \cite{Morningstar2020,Gosh2021}) offers an appealing alternative. In ADVI, the posterior distribution is approximated by a Gaussian distribution \citep{Morningstar2020}, significantly reducing the number of model integration \citep{Morningstar2020}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the robustness of model selection (\cref{sec:limitations}), and provide uncertainties estimations on the parameters.
 % 
@@ -306,7 +304,7 @@ For inverse modelling with PDE models, an extension of the ML-based approximatio
 % 
 In \cref{sec:frameworkML}, the parameters of the PDE model are assumed fixed, but could be set as free parameters, analogously to the parameters of the neural networks used for approximating the solution. The loss function in \cref{eq:xxx} would then take the PDE model parameters as additional arguments, and include an additional term, penalizing the distance between the PDE model solution and the data. This term, analogous to \cref{eq:xxx} in \cref{sec:xxx}, would constrain the PDE parameters, similarly to the training of physics informed neural networks \citep{Raissi2019,Yazdani2020}.
 % 
-Yet in contrast to \cite{Raissi2019,Yazdani2020}, a major advantage of this approach it to efficiently perform inverse modelling with high-dimensional dynamical models. Because Julia is a programming language with pervasive AD (see \cref{sec:xxx}), this development would require little effort with the Julia library \textbf{HighDimPDE.jl}.
+Yet in contrast to \cite{Raissi2019,Yazdani2020}, a major advantage of this approach is to efficiently perform inverse modelling with high-dimensional dynamical models. Because Julia is a programming language with pervasive AD (see \cref{sec:xxx}), this development would require little effort with the Julia library \textbf{HighDimPDE.jl}.
 % 
 Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique opportunities to bring more robustness and efficiency to inverse modelling methods, providing uncertainty estimation and the possibility to handle high dimensional models.
 
@@ -335,7 +333,7 @@ Together, the model developed in \cref{\chapi} and the resulting predictions, to
 % eco-evolutionary model on spatial graphs presented in \chapi, together with its predictions, and inverse modelling methods, could be used to advance our understanding of the processes shaping the distribution of life on Earth, and contribute to a formalization of the theory, to provide forecasts
 
 
-\subsection{Econobiology, a new venue to understand economic systems, and design more appropriate governance}
+\subsection{Econobiology, a new venue to understanding economic systems, and designing more appropriate governance}
 
 The success of the biologically inspired model presented in \cref{\chapiii}  in characterizing the dynamics of aggregate economic activities calls for a deeper investigation of commonalities and differences in organizational principles in biological and economic systems.
 % 
@@ -445,7 +443,7 @@ Machine learning is part of the astonishing technological progress experienced b
 % 
 Realising overlaps and differences in processes shaping economic and biological systems may be extremely beneficial: we could surely take inspiration from organizational principles in biological systems, that have survived major environmental crisis for more than 3.5 billion years.
 % 
-To conclude, let us cite Hölderlin: "\textit{To be but one with all living things, to return, by a radiant self-forgetfulness, to the All of Nature}". 
+To conclude, let me cite Hölderlin: "\textit{To be but one with all living things, to return, by a radiant self-forgetfulness, to the All of Nature}". 
 
 
 
