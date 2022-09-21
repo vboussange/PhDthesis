@@ -39,7 +39,7 @@ In summary, the proposed ML framework can efficiently learn from data and elucid
 
 
 \section{Introduction}
-
+\label{sec:intro-minibatch}
 %%
 Ecosystems are complex systems involving many interacting functional entities which together play a major role in regulating global biogeochemical cycles \citep{Bonan2008} and delivering essential services to humans \citep{Kremen2005}.
 %
@@ -129,7 +129,7 @@ Following a Bayesian approach, the parametrization of the ecosystem model can be
     p(\theta, \M | \by_{1:K}) \propto p(\by_{1:K} | \theta, \M) p(\theta, \M)
 \end{equation}
 where $\by_{1:K} = (y_1,\dots,y_K)$, $p(\by_{1:K} | \theta, \M)$ is the product of the conditional likelihood of each observation $y_k$
-\begin{equation}
+\begin{equation}\label{eq:likelihood-std}
 \begin{split}
     p(\by_{1:K} | \theta, \M) &= \prod_{i=1}^K p(y_{i} | \theta, \M)\\
                         &= \prod_{k=1}^K \frac{1}{\sqrt{(2\pi)^d|\Sigma_y|}} \exp \left(-\frac{1}{2} \epsilon_k^{T} \Sigma_y^{-1} \epsilon_k \right)
@@ -236,7 +236,7 @@ By smoothing the ruggedness of the loss surface (orange curve in \cref{fig:train
 \FloatBarrier
 
 \subsubsection{Numerical implementation of the ML framework}
-
+\label{subsec:minibatch_implementation}
 The choice of the optimizer and the correct calculation of the model sensitivity to the parameters and ICs, upon which the gradient of the loss function $\nabla L^\star_\M(\theta)$ depends, play an essential role in the success of the minimization of the loss function and the subsequent correct estimation of the MAP. 
 % 
 To accelerate the learning process and make it more robust, we propose to combine the mini-batch method with modern optimizers and automatic differentiation.
