@@ -9,7 +9,7 @@
     chapterprefix=true,     % prefix for chapter marks
     11pt,                   % font size
     headings=normal,        % size of headings
-    % bibliography=totoc,     % include bib in toc
+    bibliography=totoc,     % include bib in toc
     listof=totoc,           % include listof entries in toc
     titlepage=on,           % own page for each title page
     captions=tableabove,    % display table captions above the float env
@@ -73,7 +73,7 @@
 \input{content/abstract}		% INCLUDE: the abstracts (english and german)
 % \cleardoublepage
 %
-% \input{content/acknowledgement} % INCLUDE: acknowledgement
+\input{content/acknowledgement} % INCLUDE: acknowledgement
 \cleardoublepage
 %
 \currentpdfbookmark{\contentsname}{toc}
@@ -138,6 +138,9 @@
 % \end{refsection}
 % 
 \input{content/chapter-CV}
+
+\clearpage
+
 % 
 % --------------------------
 % Back matter

@@ -63,13 +63,13 @@
     very thick]
 
 % biological systems
-        \node[node_cust, align=center] (genes) {Genes / genomes};
+        \node[node_cust, align=center] (genes) {Gene / genome};
         \node[node_cust, below=of genes] (phen) {Phenotype};
         \node[node_cust, below=of phen] (pop) {Population};
         \node[node_cust, below=of pop] (com) {Community};
         \node[node_cust, below=of com] (ecos) {Ecosystem};
         % biological systems
-        \node[node_cust,right=6cm of genes] (orga) {Organizational routines};
+        \node[node_cust,right=6cm of genes,align=center] (orga) {Individual\\behavioural\\rule};
         \node[node_cust,below=of orga] (Firms) {Firm};
         \node[node_cust,below=of Firms] (ecoa) {Economic activity};
         \node[node_cust,below=of ecoa] (nateco) {National economy};
@@ -77,6 +77,8 @@
 
         \begin{scope}[connect arrow]
             \draw (genes.west) to [bend right] (phen.west);
+            \draw (genes.west) to [bend right] (pop.west);
+
             \draw (phen.west)  to [bend right] (pop.west);
             \draw (phen.west)  to [bend right] (com.west);
             \draw (phen.west)  to [bend right] (ecos.west);
@@ -91,25 +93,31 @@
             \draw (com.east) to [bend right] (pop.east);
             \draw (com.east) to [bend right] (phen.east);
             \draw (pop.east) to [bend right] (phen.east);
+            \draw (pop.east) to [bend right] (genes.east);
+
         \end{scope}
 
-        % \begin{scope}[connect arrow]
-        %     \draw (orga.west) to [bend right] (Firms.west);
-        %     \draw (Firms.west)  to [bend right] (ecoa.west);
-        %     \draw (Firms.west)  to [bend right] (nateco.west);
-        %     \draw (Firms.west)  to [bend right] (weco.west);
-        %     \draw (ecoa.west)   to [bend right] (nateco.west);
-        %     \draw (ecoa.west)   to [bend right] (weco.west);
-        %     \draw (nateco.west)   to [bend right] (weco.west);
-        %     \draw (Firms.east)  to [bend right] (orga.east);
+        \begin{scope}[connect arrow]
+            \draw (orga.west) to [bend right] (Firms.west);
+            \draw (orga.west) to [bend right] (ecoa.west);
 
-        %     \draw (weco.east) to [bend right] (nateco.east);
-        %     \draw (weco.east) to [bend right] (ecoa.east);
-        %     \draw (weco.east) to [bend right] (Firms.east);
-        %     \draw (nateco.east) to [bend right] (ecoa.east);
-        %     \draw (nateco.east) to [bend right] (Firms.east);
-        %     \draw (ecoa.east) to [bend right] (Firms.east);
-        % \end{scope}
+            \draw (Firms.west)  to [bend right] (ecoa.west);
+            \draw (Firms.west)  to [bend right] (nateco.west);
+            \draw (Firms.west)  to [bend right] (weco.west);
+            \draw (ecoa.west)   to [bend right] (nateco.west);
+            \draw (ecoa.west)   to [bend right] (weco.west);
+            \draw (nateco.west)   to [bend right] (weco.west);
+            \draw (Firms.east)  to [bend right] (orga.east);
+
+            \draw (weco.east) to [bend right] (nateco.east);
+            \draw (weco.east) to [bend right] (ecoa.east);
+            \draw (weco.east) to [bend right] (Firms.east);
+            \draw (nateco.east) to [bend right] (ecoa.east);
+            \draw (nateco.east) to [bend right] (Firms.east);
+            \draw (ecoa.east) to [bend right] (Firms.east);
+            \draw (ecoa.east) to [bend right] (orga.east);
+
+        \end{scope}
 
 
 \end{tikzpicture}

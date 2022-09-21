@@ -62,42 +62,51 @@
     very thick,
     font=\large]
  
-\node[mechanisms, draw=mygreen!30, minimum height = 3.cm, minimum width = 4cm] (model_contour) at (-2.5,-2.5) {};
-\node[above left] at (model_contour.south east) {Model};
+\node[mechanisms, draw=mygreen!30, minimum height = 3.cm, minimum width = 4cm,fill=mygreen!10] (model_contour) at (-2.5,-2.5) {};
+\node[mechanisms, draw=mygreen!30, minimum height = 3.cm, minimum width = 4cm,fill=mygreen!10] (model_contour2) at ([xshift=-0.2cm,yshift=-0.2cm]model_contour.center) {};
+
+\node[above left] at (model_contour2.south east) {Model};
+
 
 \foreach \Z in {1,...,4}{
-    \node[mechanisms, fill=mygreen!20,draw=mygreen] at (-2,-2,\Z/2) (procs\Z) { Processes };
+    \node[mechanisms, fill=mygreen!20,draw=mygreen] at (-2.2,-2.1,\Z/2) (procs\Z) { Process };
 }
 
-\node[mechanisms, fill=myred!30,draw=myred] (mechs2) [right=of procs2] {  };
-\node[mechanisms, fill=myred!30,draw=myred] (mechs) at ([xshift=-0.2cm,yshift=-0.2cm]mechs2.center) {Mechanisms};
+\node[mechanisms, fill=myred!30,draw=myred] (mechs2) [right=4.6cm of procs2] {  };
+\node[mechanisms, fill=myred!30,draw=myred] (mechs) at ([xshift=-0.2cm,yshift=-0.2cm]mechs2.center) {Mechanism};
 
 % \node[mechanisms, fill=mygreen!30, below left =of mechs] (struc) { Structure };
 
 \node[mechanisms, fill=myblue!20,draw=myblue] (patt) [right= of mechs2]{ Pattern };
 
-\node[mechanisms,] (data) [below= 3cm of model_contour]{ Data};
-\node[mechanisms,] (knowledge) [above= 3cm of model_contour]{ Knowledge };
+\node[mechanisms,draw=black] (data) [below= 3cm of model_contour2]{ Data};
+\node[mechanisms,draw=black] (prior_knowledge) [above= 3cm of model_contour]{ Prior knowledge };
+\node[mechanisms,draw=black] (post_knowledge) [above= 2.9cm of mechs2]{ Posterior knowledge };
 
 \begin{scope} [connect arrow]  % now dashed is for the lines inside the scope
     % \draw (procs1) to [bend right] (model_contour.east)  ; 
     % \draw (patt.north) to [bend right] (mechs)  ; 
 
     % \draw (patt.north) to [bend right] (model_contour.east)  ; 
-    \draw ([yshift=-0.7cm]model_contour.east) to [bend right] (mechs.south); 
-    \draw (mechs2.north) to [bend right] ([yshift=0.7cm]model_contour.east);
+    \draw ([yshift=-0.37cm]model_contour.east) to ([yshift=-0.2cm]mechs.west); 
+    \draw ([yshift=0.2cm]mechs.west) to ([yshift=0.03cm]model_contour.east);
 
     \draw (mechs2.east) to (patt.west); 
 
 
-    \draw[myred] (data) to  (model_contour.south)  ; 
-    \draw[myred] ([xshift=0.5cm]model_contour.north) to  ([xshift=0.5cm]knowledge.south)  ; 
-    \draw[myblue] ([xshift=-0.5cm]knowledge.south) to  ([xshift=-0.5cm]model_contour.north)  ; 
+    \draw[myred] (data) to  (model_contour2.south)  ; 
+    % \draw[myred] ([xshift=0.5cm]model_contour.north) to  ([xshift=0.5cm]prior_knowledge.south)  ; 
+    \draw[myblue] ([xshift=-0.5cm]prior_knowledge.south) to  ([xshift=-0.5cm]model_contour.north)  ; 
+    \draw[myred] ([xshift=0.5cm]prior_knowledge.south) to  ([xshift=0.5cm]model_contour.north)  ; 
+    \draw[myred,rounded corners] ([yshift=1.1cm]model_contour.east) -| ([xshift=-0.5cm]post_knowledge.south); 
 
-    \path ([xshift=0cm,yshift=0.5cm]current bounding box.north)
+    \draw[myblue] ([xshift=0.5cm]mechs2.north) to ([xshift=0.5cm]post_knowledge.south); 
+    % \draw[myred] ([xshift=0.5cm]mechs2.north)to ([xshift=0.5cm]post_knowledge.south); 
+
+    \path ([xshift=0cm,yshift=2cm]current bounding box.south)
     node[matrix,anchor=north west,cells={nodes={anchor=west}},thick,inner sep=1ex]{
-     \draw[myblue](0,0) -- ++ (1,0); & \node{Forward modelling};\\
-     \draw[myred](1,0) -- ++ (-1,0); & \node{Inverse modelling};\\
+     \draw[myblue](0,0) -- ++ (1,0); & \node[black]{Forward modelling};\\
+     \draw[myred](1,0) -- ++ (-1,0); & \node[black]{Inverse modelling};\\
     };
 
 \end{scope}
