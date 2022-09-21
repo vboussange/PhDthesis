@@ -56,9 +56,9 @@ Simple mechanisms resulting in neutral and adaptive differentiation are identifi
 
 In \cref{\chapi}, I demonstrate a novel mechanism, involving the process of intra-specific competition, that considerably affects neutral differentiation. Through the creation of unbalanced migration fluxes which increases the intensity of competition in highly connected populations, heterogeneity in connectivity reduces gene flow and reinforces neutral differentiation. %Through the accumulation of incompatibilities over time \citep{Dobhsanski}, this mechanism could lead to speciation over time, and contribute to the high diversification in mountain regions \citep{Rahbek}.
 % 
-I also investigate the mechanism of local adaptation in realistic landscapes where habitat connectivity is irregular \citep{Dale2010,LiebermanHauert2005}. I show that the complexity of habitat spatial distribution can be reduced to a measure of habitat spatial auto-correlation, coined the "habitat assortativity". Landscapes characterised by a high habitat assortativity support populations that are systematically better adapted than in landscape with low assortativity. Specifically, I provide an analytical condition for local adaptation  (\cref{eq:xxx}), that sheds light on how it relates to dispersal intensity, selection strength, habitat heterogneity, and habitat assortativity.
+I also investigate the mechanism of local adaptation in realistic landscapes where habitat connectivity is irregular \citep{Dale2010,LiebermanHauert2005}. I show that the complexity of habitat spatial distribution can be reduced to a measure of habitat spatial auto-correlation, coined the "habitat assortativity". Landscapes characterised by a high habitat assortativity support populations that are systematically better adapted than in landscape with low assortativity. Specifically, I provide an analytical condition for local adaptation  (\cref{eq:m*}), that sheds light on how it relates to dispersal intensity, selection strength, habitat heterogneity, and habitat assortativity.
 
-Because habitat assortativity affects local adaptation, is must also affect neutral differentiation through the mechanism of isolation by adaptation \citep{Orsini2013}. Closing the loop, I demonstrate that habitat assortativity affects neutral differentiation through two antagonistic effects. By favoring local adaptation, it promotes isolation by adaptation, therefore increasing neutral differentiation. In parallel, it favors gene flow within clusters of similar environmental conditions, decreasing isolation by limited dispersal. This results in habitat assortativity decreasing neutral differentiation for low dispersal intensity, and increasing neutral differentiation for high dispersal intensity (\cref{fig:figure5}).
+Because habitat assortativity affects local adaptation, is must also affect neutral differentiation through the mechanism of isolation by adaptation \citep{Orsini2013}. Closing the loop, I demonstrate that habitat assortativity affects neutral differentiation through two antagonistic effects. By favoring local adaptation, it promotes isolation by adaptation, therefore increasing neutral differentiation. In parallel, it favors gene flow within clusters of similar environmental conditions, decreasing isolation by limited dispersal. This results in habitat assortativity decreasing neutral differentiation for low dispersal intensity, and increasing neutral differentiation for high dispersal intensity (\cref{fig:setting2_4plots_M=7}).
 % 
 This complex feedback is essential to understand population differentiation in complex landscapes.
 % 
@@ -101,7 +101,7 @@ Relying on inverse modelling, \cref{\chapiii} combines process-based models and 
 % 
 The approach undertaken relies on deep connections between processes acting upon economic activities and biological populations.
 % 
-Analogously to biological populations that are characterized by genes, economic activities are characterized by organizational routines \citep{NelsonWinter}, which experience evolutionary processes and define how they engage in interactions with other economic activities \citep{NelsonWinter}.
+Analogously to biological populations that are characterized by genes, economic activities are characterized by organizational routines \citep{nelson1985evolutionary}, which experience evolutionary processes and define how they engage in interactions with other economic activities \citep{nelson1985evolutionary}.
 % 
 % This connection is justified by evolutionary economics, which argues that similarly to genes, organizational routines are at the core of economic entities and experience ecological and evolutionary processes.
 % 
@@ -122,7 +122,7 @@ Positive interactions may arise from a variety of processes proposed in the evol
 % 
 Its support implies that the dynamics of economic activities are highly inter-dependent, and suggests that diversity promotes economic development \citep{Hidalgo2018}.
 % 
-Transfers of knowledge and routines (organizational, technological, \cite{XXX}) may be at the origin of spatial dispersal processes \citep{Zahra2000,Zahra2000,RogersEverettM2003DoI,Boschma2008}. Nonetheless, discrepancies in the strength-of-evidence for spatial dispersal were found, highlighting that economic activities are more akin to disperse in some countries than others. As an explanation, we propose that transfers of knowledge and routines may be blocked by barriers due to differences in cognitive, organizational, social, institutional or geographic proximity between countries \citep{Boschma2005}.
+Spatial diffusion of routines \cite{Hodgson2004} and knowledge spillovers \cite{Caragliu2016} may be at the origin of the spatial dispersal processes evidenced \citep{Zahra2000,RogersEverettM2003DoI,Boschma2008}. Nonetheless, discrepancies in the strength-of-evidence for spatial dispersal were found, highlighting that economic activities are more akin to disperse in some countries than others. As an explanation, we propose that transfers of knowledge and routines may be blocked by barriers due to differences in cognitive, organizational, social, institutional or geographic proximity between countries \citep{Boschma2005,Caragliu2016}.
 % 
 I provide a graphical summary of the mechanisms evidenced in economic systems in \cref{\chapiii} in \cref{fig:summary_econobio}. Overall, \cref{\chapiii} evidences that, akin to biological systems, processes of interaction and dispersal shape the dynamics of economic systems at the country scale.
 
@@ -176,7 +176,7 @@ The individual-based model presented in \cref{\chapi} involves the combination o
 As such, the model presented in \cref{\chapi} and the Julia library \textbf{Evoid.jl} may be used to investigate other questions involving complex population structures \citep{LiebermanHauert2005} and the co-evolution of characteristics \citep{Doebeli2011}.
 % 
 %% PDE
-While they can realistically reproduce the discrete and stochastic nature of ecological and evolutionary processes \citep{Champagnat2006}, numerical simulations of individual-based model may not provide a general understanding of system investigated \citep{Lyon2016,Hodgson2019}, and cannot be scaled to simulate large systems involving millions of individuals \citep{deangelis2005individual}. Yet, the individual-based model proposed in \cref{\chapi} is mathematically tractable, and can be approximated with a deterministic PDE approximation under simplifying assumptions.
+While they can realistically reproduce the discrete and stochastic nature of ecological and evolutionary processes \citep{Champagnat2006}, numerical simulations of individual-based model may not provide a general understanding of system investigated \citep{Lion2016,Hodgson2019}, and cannot be scaled to simulate large systems involving millions of individuals \citep{deangelis2005individual}. Yet, the individual-based model proposed in \cref{\chapi} is mathematically tractable, and can be approximated with a deterministic PDE approximation under simplifying assumptions.
 % 
 The mathematical tractability allows obtaining analytical insights on how the interplay between the processes acting upon individuals transform into mechanisms affecting the population level (\cref{\chapi}).
 % 
@@ -275,7 +275,7 @@ Other criterion, for instance based on the complexity of the dynamical behavior 
 % 
 Fourth, the inverse modelling framework developed in \cref{\chapii} requires a differentiable model, a strong prerequisite that may not be met by, e.g. stochastic models. 
 % 
-Fifth, the inverse modelling framework only provides the maximum of the posterior distribution, while the posterior distribution may be multimodal, with alternative modes carrying valuable information \citep{Daniels2015}.%, and in this case, the consideration of the full posterior distribution, obtained with fully Bayesian methods, may be more appropriate for model selection.
+Fifth, the inverse modelling framework only provides the maximum of the posterior distribution, while the posterior distribution may be multimodal, with alternative modes carrying valuable information \citep{Wilson2020}.%, and in this case, the consideration of the full posterior distribution, obtained with fully Bayesian methods, may be more appropriate for model selection.
 
 % 
 Alternatively, \cite{Sukumaran2016,Skeels2019,Skeels2022} employ variants of approximate Bayesian computation methods \citep{Csillery2010} for eco-evolutionary model selection. The approach consists in aggregating model simulation outputs into summary statistics, used to train classifier algorithms (e.g., random forests or neural networks) in recognizing the signatures of the competing models. Once trained, the classifier algorithms are used on summary statistics obtained from the empirical data, discriminating between the alternative hypotheses. 
@@ -324,7 +324,7 @@ As regards to explaining spatial biodiversity patterns, simulations of the eco-e
 % 
 This would allow disentangling, for instance, the role of feedbacks between trait-based competition \citep{Dieckmann1999} - succinctly considered in \cref{\chapi} (see \cref{secSI:xxx}) -, and environmental filtering \citep{Doebeli2003}, in shaping patterns of species distribution in empirical landscapes \cite{Rahbek2019a}. %, and important question on the research agenda is to underpin how competition may mediate environmental filtering and promote and hamper diversification over time. %This fundamental question could be adressed by embedding the competing hypotheses in alternative models, which support could be tested against data.
 % 
-Along shorter time scales, the eco-evolutionary model on spatial graph could be calibrated on empirical data of species distribution \cite{Abegg2020,Gisler2008,GBIF:TheGlobalBiodiversityInformationFacility2022} with the inverse modelling method proposed in \cref{\chapii}, and combined with climate scenarios \citep{Kriticos2012} to better predict how biological populations will adapt to climate change \citep{Norberg2012,Urban2016}.
+Along shorter time scales, the eco-evolutionary model on spatial graph could be calibrated on empirical data of species distribution \cite{Abegg2020,GBIF:TheGlobalBiodiversityInformationFacility2022} with the inverse modelling method proposed in \cref{\chapii}, and combined with climate scenarios \citep{Kriticos2012} to better predict how biological populations will adapt to climate change \citep{Norberg2012,Urban2016}.
 % 
 Together, the model developed in \cref{\chapi} and the resulting predictions, together with the ML framework presented in \cref{\chapii}, could bring insights on the actual mechanisms involved in empirical systems, and help to predict their responses to climate change. 
 % may be used to characterize real landscape properties
@@ -358,7 +358,7 @@ In parallel, an essential research direction is to better understand how capital
 % 
 There may be deep connections between nutrient cycles and capital cycles, where ecological compartments and financial intermediaries develop to improve the efficiency of nutrient flows and capital allocations \citep{Odum1969}.
 % 
-\cite{Veldhuis2018,King1993} show that, in both ecological and economic systems, this efficiency sustains productivity and growth, but that the developmental process may fail. In the latter case, ecosystems may stay in a state of lower maturity \citep{Margalef1963} and economies may be stuck in a technological lock-in \citep{Hidalgo2009}. 
+\cite{Veldhuis2018,King1993} show that, in both ecological and economic systems, this efficiency sustains productivity and growth, but that the developmental process may fail. In the latter case, ecosystems may stay in a state of lower maturity \citep{Margalef1963} and economies may be stuck in a technological lock-in \citep{C.A.HidalgoB.Klinger}. 
 % 
 % What are the links between the evolution of nutrient and capital cycles, and the fundamental processes acting upon lower organization levels?
 % 
