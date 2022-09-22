@@ -8,9 +8,9 @@
 \cleanchapterquote{To be but one with all living things, to return, by a radiant self-forgetfulness, to the All of Nature.}{Friedrich Hölderlin (1770-1843)}{}
 
 
-Understanding biological and economic systems involves the underpinning of general organizational principles at the origin of invariant patterns (\cite{Levin2002}, \cref{fig:forward_inverse_modelling}).
+Understanding ecological and economic systems involves the underpinning of general organizational principles at the origin of invariant patterns (\cite{Levin2002}, \cref{fig:forward_inverse_modelling}).
 % 
-Aiming at advancing our understanding of eco-evolutionary dynamics in biological and economic systems, this thesis contributed to
+Aiming at advancing our understanding of eco-evolutionary dynamics in ecological and economic systems, this thesis contributed to
 % 
 \begin{mylisti}
     \item a general understanding of the role of eco-evolutionary processes in shaping the dynamics of biological populations structured in complex landscapes (\cref{chap:diff-in-graphs}),
@@ -18,11 +18,11 @@ Aiming at advancing our understanding of eco-evolutionary dynamics in biological
     \item methodological advances in the forward and inverse modelling of eco-evolutionary dynamics (\cref{chap:diff-in-graphs,chap:mini-batching,chap:nonlocalPDE}).
 \end{mylisti}
 % 
-In the following, I discuss the chapters of this thesis collectively, highlighting how they contribute to advance our current understanding of the dynamics of biological and economic systems, and how they improve the current eco-evolutionary modelling paradigm. I further highlight current limitations, and propose future research directions.
+In the following, I discuss the chapters of this thesis collectively, highlighting how they contribute to advance our current understanding of the dynamics of ecological and economic systems, and how they improve the current eco-evolutionary modelling paradigm. I further highlight current limitations, and propose future research directions.
 
 \section{Contributions}
 
-% \subsection{Advancing our fundamental understanding of eco-evolutionary processes in biological and eocnomic systems}
+% \subsection{Advancing our fundamental understanding of eco-evolutionary processes in ecological and eocnomic systems}
 
 \subsection{Linking eco-evolutionary processes to patterns of differentiation}
 
@@ -196,7 +196,7 @@ Together, \cref{\chapi,\chapiv} deliver novel tools to advance our understanding
 
 \subsection{Advances in inverse modelling for identifying eco-evolutionary processes in empirical systems}
 
-Our understanding and prediction of eco-evolutionary dynamics in biological and economic systems critically depends on the confrontation of process-based models with empirical data \citep{Pelletier2009,Hidalgo2021}.
+Our understanding and prediction of eco-evolutionary dynamics in ecological and economic systems critically depends on the confrontation of process-based models with empirical data \citep{Pelletier2009,Hidalgo2021}.
 % 
 % \cref{\chapii,\chapiii} develop and test a novel inverse modelling method that allows to estimate parameter values and support of complex eco-evolutionary models from time-series data.
 % 
@@ -208,7 +208,7 @@ Bayesian inference methods require numerous forward model integrations \citep{Sc
 % 
 Variational methods require the model sensitivity to its parameters \citep{Schartau2017} and are prone to converge to local minima, especially with complex models \citep{Gabor2015}.
 % 
-Those central issues likely explain the very limited use of inverse modelling to further our knowledge on eco-evolutionary processes in biological systems (but see \cite{Sukumaran2016,Skeels2019,Skeels2022} that use approximate Bayesian computation methods). 
+Those central issues likely explain the very limited use of inverse modelling to further our knowledge on eco-evolutionary processes in ecological systems (but see \cite{Sukumaran2016,Skeels2019,Skeels2022} that use approximate Bayesian computation methods). 
 
 %
 %% Our method
@@ -220,7 +220,7 @@ The use of automatic differentiation simply eliminates the effort required to ob
 % 
 \cref{\chapii} takes part in an ongoing effort to blend ML and traditional models to gain scientific understanding and extrapolability \citep{Karpatne2017,Rackauckas2020a,Schneider2017,Rolnick2023,Kashinath2021,Yazdani2020,Raissi2019}. 
 % 
-In physical systems such as oceanic and atmospheric systems, general organizational principles are known and formulated in general circulation models, where ML is mostly used to improve model forecast skill \citep{Schneider2017}. In contrast, general models of biological and economic systems are yet to be formulated, and methods such as the ML framework presented in \cref{\chapii} can greatly contribute to identifying the general organizational principles required to reach this goal \citep{Karpatne2017}. 
+In physical systems such as oceanic and atmospheric systems, general organizational principles are known and formulated in general circulation models, where ML is mostly used to improve model forecast skill \citep{Schneider2017}. In contrast, general models of ecological and economic systems are yet to be formulated, and methods such as the ML framework presented in \cref{\chapii} can greatly contribute to identifying the general organizational principles required to reach this goal \citep{Karpatne2017}. 
 % 
 By contrasting competing hypotheses embedded in alternative models, \cref{\chapii,\chapiv} provide concrete examples, both with synthetic and empirical data, that the inverse modelling framework in \cref{\chapii} can successfully elucidate eco-evolutionary mechanisms.
 %% 
@@ -231,7 +231,7 @@ Built thanks to the composability of the celebrated differential equation solver
 Together, the inverse modelling framework proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to gain scientific knowledge from observation data. %Concrete case examples in \cref{\chapii, \chapiii} show that it enables the testing of eco-evolutionary theories against data, and can potentially help to provide better forecasts of ecosystems states \citep{Urban2016}.
 
 \section{Limitations}
-
+\cref{sec:limitations}
 \subsection{Computational complexity for modelling the evolution of full phenotypic densities}
 Alternative methods to those presented in \cref{\chapi,\chapiv} may be more appropriate for the forward modelling of eco-evolutionary dynamics.
 % 
@@ -294,7 +294,7 @@ The mini-batch method presented in \cref{\chapii} and the ML-based approximation
 %%
 The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to considering a standard formulation of the likelihood function such as in \cref{eq:likelihood-std}, using the mini-batch loglikelihood formulation proposed in \cref{eq:ML-framework} results in a smoother posterior distribution, potentially reducing the number of forward model integration for Bayesian inference.
 % 
-While this number could still be prohibitively expensive for Bayesian inference with MCMC chains (see \cref{sec:intro-mini-batch} in \cref{\chapii}), automatic differentiation variational inference (ADVI, \cite{Morningstar2020,Gosh2021}) offers an appealing alternative. In ADVI, the posterior distribution is approximated by a Gaussian distribution \citep{Morningstar2020}, significantly reducing the number of model integration \citep{Morningstar2020}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the robustness of model selection (\cref{sec:limitations}), and provide uncertainties estimations on the parameters.
+While this number could still be prohibitively expensive for Bayesian inference with MCMC chains (see \cref{sec:intro-minibatch} in \cref{\chapii}), automatic differentiation variational inference (ADVI, \cite{Morningstar2020,Gosh2021}) offers an appealing alternative. In ADVI, the posterior distribution is approximated by a Gaussian distribution \citep{Morningstar2020}, significantly reducing the number of model integration \citep{Morningstar2020}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the robustness of model selection (\cref{sec:limitations}), and provide uncertainties estimations on the parameters.
 % 
 Bayesian Learning via Stochastic Gradient Langevin Dynamics \citep{Welling2011BayesianLV} is an alternate solution to ADVI, that could readily be used with the ML framework proposed in \cref{\chapii} instead of the optimization algorithms suggested. This algorithm builds upon recent advances in Bayesian Deep Learning \citep{Wilson2020}, and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, providing uncertainty estimates while ensuring computational efficiency.
 
@@ -318,7 +318,7 @@ Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique opport
 
 The confrontation of the predictions demonstrated in \cref{\chapi} with empirical data, and the use of empirical data to constrain the eco-evolutionary model on spatial graphs, could advance our understanding of eco-evolutionary dynamics in empirical systems.
 % 
-In \cref{\chapi}, we predicted three topology metrics to correlate with standard population differentiation metrics ($Q_{ST}$ metrics). By projecting real landscapes on spatial graphs (see \cite{Dale2010} and \cref{fig:diff-in-graphs}), the topology metrics, together with empirical data on population differentiation (e.g., \citep{Manel2003}), could be used to verify our predictions. Discrepancies may indicate that additional processes are involved in population differentiation in empirical systems. On the other hand, a validation of our predictions could help to predict population differentiation at a global scale. These predictions could, in turn, be linked to patterns of species richness, in order to underpin how population genetics may lead to speciation over time \citep{Templeton1981}.
+In \cref{\chapi}, we predicted three topology metrics to correlate with standard population differentiation metrics ($Q_{ST}$ metrics). By projecting real landscapes on spatial graphs (see \cite{Dale2010} and \cref{fig:graph_real_land}), the topology metrics, together with empirical data on population differentiation (e.g., \citep{Manel2003}), could be used to verify our predictions. Discrepancies may indicate that additional processes are involved in population differentiation in empirical systems. On the other hand, a validation of our predictions could help to predict population differentiation at a global scale. These predictions could, in turn, be linked to patterns of species richness, in order to underpin how population genetics may lead to speciation over time \citep{Templeton1981}.
 % 
 As regards to explaining spatial biodiversity patterns, simulations of the eco-evolutionary model on spatial graphs over geological time, using paleo-climatic data \citep{STRAUME2020126} as environmental condition forcings within, could help to address fundamental questions on the processes involved. In contrast to deep-time spatially explicit eco-evolutionary models (see \cite{Hagen2022} for a review), the model developed in \cref{\chapi} accounts does not assume a time scale separation between ecological and evolutionary processes.
 % 
@@ -335,7 +335,7 @@ Together, the model developed in \cref{\chapi} and the resulting predictions, to
 
 \subsection{Econobiology, a new venue to understanding economic systems, and designing more appropriate governance}
 
-The success of the biologically inspired model presented in \cref{\chapiii}  in characterizing the dynamics of aggregate economic activities calls for a deeper investigation of commonalities and differences in organizational principles in biological and economic systems.
+The success of the biologically inspired model presented in \cref{\chapiii}  in characterizing the dynamics of aggregate economic activities calls for a deeper investigation of commonalities and differences in organizational principles in ecological and economic systems.
 % 
 % The biologically inspired eco-evolutionary model presented in \cref{\chapiii} was successful in characterizing the dynamics of aggregate economic activities, and future directions should
 % 
@@ -412,7 +412,7 @@ Together, future directions should seek to understand similarities and differenc
 \section{Concluding remarks}
 
 
-Bridging biology, mathematical modelling, machine learning and economics, this thesis advances our general understanding of eco-evolutionary processes and feedbacks in biological and economic systems. It also provides novel modelling tools, that are publicly accessible to join efforts and collectively advance this understanding.
+Bridging biology, mathematical modelling, machine learning and economics, this thesis advances our general understanding of eco-evolutionary processes and feedbacks in ecological and economic systems. It also provides novel modelling tools, that are publicly accessible to join efforts and collectively advance this understanding.
 % 
 While we now better understand eco-evolutionary feedbacks in spatially structured populations, we are far from a general understanding of eco-evolutionary feedback mechanisms in ecosystems, and in particular, in communities of species. 
 % 
