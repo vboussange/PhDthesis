@@ -34,17 +34,17 @@ Stories, lessons from the mouths of your fathers, \\
 Laws and customs, names of the ancient Gods, \\
 Forget them with hardiness to raise your eyes \\
 like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of Empedocles (1st version)}{
-  The fundamental processes of ecological interactions, dispersal and mutations shape the dynamics of biological systems, and analogous processes involving economic interactions, spatial transfers and economic transformations have been proposed to explain economic change. This hypothesis is compelling because it explains economic change through endogenous mechanisms, but it has not yet been systematically tested.
+  The fundamental processes of ecological interactions, dispersal and mutations shape the dynamics of biological systems, and analogous processes acting upon economic activities have been proposed to explain economic change. This hypothesis is compelling because it explains economic change through endogenous mechanisms, but it has not yet been systematically tested.
   % 
-  Building upon an analogy between economic activities and biological functional groups, we investigate whether such processes can explain the temporal dynamics of 9 elemental economic activities at the national level.
+  Building upon an analogy between economic activities and biological functional groups, we test this hypothesis in explaining the temporal dynamics of 9 elemental economic activities at the national level.
   %   
-  We rely on an inverse modelling technique together with 59 years of economic data to estimate the statistical support of each process, embedded in population dynamic models. The models couple the dynamics of individual economic activities by accounting, respectively, for processes involving positive and negative interactions between economic activities, spatial transfers, and economic activity transformations, which support we compare against a logistic growth model taken as a null model.
+  We rely on an inverse modelling technique together with 59 years of economic data to estimate the statistical support of alternative population dynamic models. The models couple the dynamics of individual economic activities by accounting, respectively, for positive and negative interactions between themselves, their spatial dispersal, and their transformations into other economic activities, which support we compare against a logistic growth model taken as a null model.
   % 
-  Over 77 countries considered, we find that the null model is rejected in 45 countries against the alternative models, and obtain a strong support for the models capturing positive interactions between national economic activities and spatial transfers across countries. These results 
+  Over 77 countries considered, we find that the null model is rejected in 45 countries against the alternative models, and obtain a strong support for the models capturing positive interactions between national economic activities and spatial dispersal across countries. These results 
   % are in line with mechanisms proposed by the field of evolutionary economics, and 
   suggest that processes akin to those displayed in biological ecosystems play a significant role on the dynamics of economic systems at the national level.
   % 
-  Paralleling variations across different ecosystems types, the strength-of-evidence varies across countries for each model, and might underlie differences in institutional contexts and historical contingencies.
+  Paralleling variations across different ecosystems types, the strength-of-evidence varies across countries for each model, and might underlie differences in proximities between countries, institutional contexts and historical contingencies.
   % 
   Overall, our study provides a new quantitative, biologically inspired framework to study the forces shaping economic change.
 }
@@ -54,7 +54,7 @@ like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%% First paragraph economics / physics / biology %%%%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  The fields of evolutionary biology and economics have mutually exchanged ideas for the past two centuries \citep{Dopfer2007}, and analogies between processes in biology and economics have been increasingly used during the 20th century to explain economic development \citep{Ruth1996}.
+  The fields of evolutionary biology and economics have mutually exchanged ideas for the past two centuries \citep{Dopfer2007}, and analogies between processes in biology and economics have been increasingly used during the 20th century to explain economic change \citep{Ruth1996}.
   % 
   A pioneer was Schumpeter, who notoriously proposed that economic dynamics is driven by innovations that transform the economy -- so called periods of "creative destruction" \citep{schumpeter2017theory}-- similar to the punctuated equilibrium changes observed throughout the development of life on Earth \citep{gould1972}.
   %
@@ -68,32 +68,32 @@ like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of
   % 
   While biological analogies have resulted in useful insights on the plausible drivers of economic growth \citep{Dopfer2007}, the proposed pathways have mostly been qualitatively investigated.
   % 
-  Computational tools have recently allowed to test biological hypotheses against data to gain a quantitative understanding on the ecological and evolutionary processes shaping the dynamics of biological systems \citep{Pontarp2019,Boussange2022,Boussange2022a}. These tools could leverage the qualitative insights gained from biological analogies and provide a quantitative framework to investigate the forces shaping economic development.
+  Computational tools have recently allowed to test biological hypotheses against data to gain a quantitative understanding on the ecological and evolutionary processes shaping the dynamics of biological systems \citep{Pontarp2019,Boussange2022a,Skeels2022}. These tools could leverage the qualitative insights gained from biological analogies and provide a quantitative framework to investigate the forces shaping economic change.
   % \todo[inline]{econobiology discussed in this article \citep{Rosser2010}}
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%%                 processes biology / economics %%%%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  Interactions between biological organisms, movement of individuals across space via dispersal, and mutation of phenotypes, represent fundamental processes that drive the dynamics of ecosystems \citep{Vellend2010}, and similar eco-evolutionary processes may shape the dynamic of economic systems.
+  Interactions between biological organisms, dispersal (movement of individuals across space), and mutation of phenotypes, represent fundamental processes that drive the dynamics of ecosystems \citep{Vellend2010}, and similar eco-evolutionary processes may shape the dynamic of economic systems.
   %
   Analogously to biological organisms, economic entities interact in a mutualistic or competitive fashion \citep{Pistorius1997}. While biological organisms engage in negative interactions when e.g.~competing for similar resources \citep{GRIME1973}, economic entities have negative effects on each other when relying on workforce with similar knowledge or attracting similar potential investors \citep{Wernerfelt1989}.
   % 
-  Positive interactions are observed between biological organisms with e.g the accumulation of nutrients, the provision of shade, or the protection from herbivores \citep{Wernerfelt1989,Callaway2002}. In parallel, positive effects between economic entities appear when they are connected through supply chains \citep{Ozman2009,Saavedra2009a}, or because of agglomeration externalities \cite{VanDerPanne2004}, such as knowledge spillovers \citep{Caragliu2016} and the attraction of elite workers \citep{Cohendet2018}.
+  Positive interactions are observed between biological organisms with e.g the accumulation of nutrients, the provision of shade, or the protection from herbivores \citep{Callaway2002}. In parallel, positive effects between economic entities appear when they are connected through supply chains \citep{Ozman2009,Saavedra2009a}, or when they benefit from positive agglomeration externalities \citep{VanDerPanne2004}, such as knowledge spillovers \citep{Caragliu2016} or the attraction of elite workers \citep{Cohendet2018}.
   %%
-  Colonization and migration processes play a major role in the development of ecosystems, where dispersal mechanisms initiate ecological succession with the settlement and growth of new species \citep{Leibold2004}. Similarly, economic processes contribute to spread knowledge and organizational routines across space. Those processes involve international business expansions \citep{Zahra2000,Zahra2000}, labour mobility \citep{Boschma2008}, and the diffusion of innovations \citep{RogersEverettM2003DoI}.
+  Dispersal processes play a major role in the development of ecosystems, where e.g. colonization initiate ecological succession with the settlement and growth of new species \citep{Leibold2004}. Similarly, socio-economic processes contribute to diffuse knowledge and organizational routines across space. Those processes consist, e.g., in international business expansions \citep{Zahra2000}, labor mobility \citep{Boschma2008}, or innovation diffusion through social networks \citep{RogersEverettM2003DoI}.
   %   
   %   international business expansions are orchestrated by firms to increase profitability \citep{Zahra2000} and reach new markets \citep{Luo2007} and workforce. Other self-organized .
   %%
   Finally, evolutionary processes allow the adaptation of organisms to changing environmental conditions \citep{Bell2017}, while in economic systems, variations in organizational routines allow economic entities to adapt to economic contexts \citep{Cordes2006} and transform into new economic entities \citep{Freeman2002,Hodgson2004,Aldrich2008}. %An example of evolutionary processes is the innovations in the oil, gas and synthetic material industry that lead to the motorization of transport, civil economy and war, and to the mechanisation of agriculture \citep{Freeman2002}. 
   %  
-  While economic interactions, spatial transfers and economic activity transformations are regularly documented in evolutionary economics, the significance of these processes on long-term economic development has been seldom quantified using economic data.%\todo{Talk about diffusion in the product space: \citep{Hidalgo2021}}
+  While processes acting upon economic activities, including their interactions, their spatial dispersal, and their transformations into other economic activities, are regularly documented in evolutionary economics, the significance of these processes on long-term economic change has seldom been quantified.%\todo{Talk about diffusion in the product space: \citep{Hidalgo2021}}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%% Literature review on quantitative models      %%%%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  Focusing on endogenous forces and borrowing concepts and methods from biology, a number of modelling approaches have broken with the tradition of standard economic modelling and approaches to quantitatively investigate the processes driving economic patterns \citep{Tacchella2018}.
+  Focusing on endogenous forces and borrowing concepts and methods from biology, a number of modelling approaches have broken with the traditions of standard economic modelling \citep{10.1093/cje/bet027} to study the processes driving economic patterns \citep{Tacchella2018}.
   % 
-  For instance, \cite{Saavedra2009a} investigated the effect of cooperation within firms with a model of consumer–resource interactions. \cite{Scholl2020} developed a theory of market ecology to interpret market phenomena and predict market behavior, where financial trading strategies are the analogous to biological species.
+  For instance, \cite{Saavedra2009a} investigated the effect of cooperation within firms with a model of consumer-resource interactions. \cite{Scholl2020} developed a theory of market ecology to interpret market phenomena and predict market behavior, where financial trading strategies are the analogous to biological species.
   % 
   Lotka-Volterra models were used in the prediction of technology evolution \citep{Zhang2018}, to evaluate product and firm competition \citep{Modis1997,Saavedra2014}, to understand the drivers of market share dynamics \citep{Farmer1999,Michalakelis2011,Marasco2016,Gatabazi2019} and to estimate the value of firms \citep{Cauwels56}.
   % 
@@ -101,24 +101,24 @@ like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of
   % 
 %   Nonetheless, the confrontation of the model predictions has remained mostly qualitative, in that patterns rather than full model outputs have been compared with observations.
   % 
-  The availability of fine grained datasets of economic activities, together with dimensionality reduction techniques, have provided insights into the endogenous processes shaping economic development \citep{Mealy2019,Hidalgo2021}.
+  The availability of fine-grained datasets of economic activities, together with dimensionality reduction techniques, have provided insights into the endogenous processes shaping economic development \citep{Mealy2019,Hidalgo2021}.
   % 
-  In particular, the detailed global trade data compiled by United Nations statistical Division and cleaned by \cite{Hidalgo2021} consists in a time series of 59 years of economic activity that can be combined with inverse modelling techniques to learn about the processes influencing the long-term dynamics of economic systems.
+  In particular, the detailed global trade data compiled by the United Nations statistical Division and cleaned in \cite{Hidalgo2021} consists in a time series of 59 years of economic activity that can be combined with inverse modelling techniques to learn about the processes influencing the long-term dynamics of economic systems.
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%% 4th paragraph : results                       %%%%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  Here, we investigate whether eco-evolutionary processes can quantitatively explain economic growth using an inverse modelling technique together with 59 years of data on economic activity. Relating the temporal evolution of the capital of economic activities to the temporal evolution of the biomass of functional groups within an ecosystem, we quantitatively assess the effect of eco-evolutionary processes on the long-term development of national economies.
+  Here, we investigate whether eco-evolutionary processes can quantitatively explain economic growth using an inverse modelling technique together with 59 years of data on economic activity. Relating the temporal evolution of the capital of economic activities to the temporal evolution of the biomass of functional groups within an ecosystem, we quantitatively estimate the effect of eco-evolutionary processes on the long-term development of national economies.
   % 
-  Functional groups, as the aggregation of species sharing similar characteristics and having similar functions within the ecosystem, are the required elemental units to model ecosystem dynamics. Analogously, as the aggregation of firms with similar output nature \citep{Applegate2021}, we consider 9 economic activities to form the elemental units of economic systems, and  conduct our investigation by modelling their temporal dynamics.
+  Functional groups, as the aggregation of species sharing similar characteristics and having similar functions within the ecosystem, are the required elemental units to model ecosystem dynamics. Analogously, as the aggregation of firms with similar output nature \citep{Applegate2021}, we consider 9 economic activities to form the elemental units of economic systems, and conduct our investigation by modelling their temporal dynamics.
   % 
-  We consider a null model implementing the fundamental processes of self-replication and self-limitation ($\modnull$), where no couplings between economic activities are captured, which we contrast to alternative dynamic models that capture negative and positive ecological interactions ($\modalphan,\modalphap$), spatial transfers ($\moddelta$), and economic activity transformations ($\modmu$).
+  We consider a null model implementing the fundamental processes of self-replication and self-limitation ($\modnull$), where no couplings between economic activities are captured, which we contrast to alternative dynamic models coupling their dynamics, including negative and positive ecological interactions between themselves ($\modalphan,\modalphap$), their spatial dispersal ($\moddelta$), and their transformations into other economic activities ($\modmu$).
   % 
   We use the mini-batching machine learning technique of \cite{Boussange2022a} to estimate the maximum likelihood of each model for 100 countries, and use a model selection technique to evaluate the statistical support of each alternative model, based on a data set of national exports from 1962 to 2020, taken as a proxy for the temporal development of the capital of economic activities. 
   %
   We first show that the machine learning method, together with the model selection procedure, can provide support for the generating processes in a controlled experiment.
   %   
-  Further applying the model selection procedure to the empirical data, we find evidences for eco-evolutionary processes, and observe differences in model support across countries, which may reflect idiosyncrasies of economic development. 
+  Further, applying the model selection procedure to the empirical data, we find evidences for eco-evolutionary processes, and observe differences in model support across countries, which we relate to socio-economic drivers. 
   %%
   By adopting a biological perspective on economic dynamics, our study sets the basis for an understanding of the endogenous forces determining economic growth, and proposes a complementary perspective to mainstream economic theory \citep{10.1093/cje/bet027} on the drivers of economic dynamics.
 
@@ -127,11 +127,11 @@ like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
 
 \section{Methods}\label{sec:methods_econobio}
-\subsection{Eco-evolutionary model to characterise the dynamics of economic activities}
+\subsection{Eco-evolutionary model to characterize the dynamics of economic activities}
 
-We derive a general population dynamic model where the dynamics of national economic activities is driven self-replication, self-limitation, interactions with other activities, spatial transfers between countries, and activity transformations within the country. We present the general model in the following, which we further split into alternative sub-models to test the support of each process.
+We derive a general population dynamic model where the dynamics of national economic activities is driven by self-replication, self-limitation, interactions between themselves, their spatial dispersal across countries, and their transformations into other economic activities within the country. We present the general model in the following, which we further split into alternative sub-models to test the support of each process.
 
-In the general population dynamic model that includes all the processes investigated, we consider that the rate of change of the size of an economic activity $i$ in the country $c$, denoted as $n_i\hc $, follows
+In the general population dynamic model that includes all the processes investigated, we consider that the rate of change of the size of an economic activity $i$ in the country $c$, denoted as $n_i\hc $, is determined as follows
 %; see \citep{Nordbotten} for a variant model where populations are structured over a continuous space.
 
 \begin{equation}\label{eq:model_general}
@@ -142,23 +142,23 @@ In the general population dynamic model that includes all the processes investig
 \end{equation}
 where $N\hc$ is the number of economic activities considered in country $c$ and $M$ is the number of countries considered.
 % 
-In \cref{eq:model_general}, the first summand corresponds to a Lotka Volterra model for ecological communities (see, e.g., \cite{Bunin2017,Scheffer2006a,Case1990}), where  $r_i\hc $ is the growth rate, involved in the self-replication, and $b_i\hc $ is the self-interaction coefficient, involved in the self-limitation. $b_i\hc $ can also be interpreted as the inverse of the country's carrying capacity for the activity. %\citep{Grimme}
+In \cref{eq:model_general}, the first summand corresponds to a Lotka-Volterra model for ecological communities (see, e.g., \cite{Bunin2017,Scheffer2006a,Case1990}), where  $r_i\hc $ is the growth rate, involved in self-replication, and $b_i\hc $ is the self-interaction coefficient, involved in self-limitation. $b_i\hc $ can also be interpreted as the inverse of the country's carrying capacity for the activity. %\citep{Grimme}
 %
 The individual dynamics of economic activities are altered by interactions, where $\alpha_{i,j}\hc $ captures the interaction between activity $ i $ and activity $ j $ at location $c$. The interaction between $i$ and $j$ is mutualistic if $\alpha_{i,j}\hc  > 0$, and competitive when $\alpha_{i,j}\hc  < 0$, altering positively or negatively the rate of change of the activity $i$ by the presence of other activities.
 %
-The second summand accounts for spatial transfers across locations (see, e.g., \cite{Tilman1994b}), where $\delta^{(l,c)}_{i}$ is the rate of spatial transfer for activity $i$ between locations $l$ and $c$.
+The second summand accounts for spatial dispersal across locations (see, e.g., \cite{Tilman1994b}), where $\delta^{(l,c)}_{i}$ is the rate of spatial dispersal for activity $i$ between locations $l$ and $c$.
 % 
-The last summand corresponds to economic activity transformations within country $c$, where $\mu\hc _{j,i}$ is the rate of transfer dictating how fast activity $j$ transforms into activity $i$. In the sense of the quasi-species model \citep{eigen1988molecular}, this term can be interpreted as accounting for evolutionary processes, and can contribute to the development of an activity in the presence of other activities.
+The last summand corresponds to economic activity transformations within country $c$, where $\mu\hc _{j,i}$ is the rate of transfer dictating how fast activity $j$ transforms into activity $i$. In the sense of the quasi-species model \citep{eigen1988molecular}, this term can be interpreted as accounting for evolutionary processes, and can contribute to the development of an activity in the presence of activity $j$.
 %
 A graphical representation of the model is given in \cref{fig:model}.
 
 %%
-\Cref{eq:model_general} involves a high number of independent parameters to fit (i.e., $N\hc(1 + M + 2N\hc)$ parameters for each country), which can be reduced for the sake of parsimony under mean field assumptions. Specifically, we assume that all economic activities interact similarly, so that $\alpha_{i,j}\hc  = \alpha\hc $. We assume that activity transformations are symmetric and occur at similar rates for all activities, so that $\mu_{i,j}\hc  = \mu\hc $, and we assume that spatial transfers occur at similar rates for all activities and all countries, so that $\delta^{(l,c)} _{i} = \delta^{(c)}$. These mean field assumptions reduce the number of parameters to $2N+3$. 
+\Cref{eq:model_general} involves a high number of independent parameters to fit (i.e., $N\hc(1 + M + 2N\hc)$ parameters for each country), which can be reduced for the sake of parsimony under mean field assumptions. Specifically, we assume that all economic activities interact similarly, so that $\alpha_{i,j}\hc  = \alpha\hc $. We assume that activity transformations are symmetric and occur at similar rates for all activities, so that $\mu_{i,j}\hc  = \mu\hc $, and we assume that spatial dispersal occur at similar rates for all activities and all countries, so that $\delta^{(l,c)} _{i} = \delta^{(c)}$. These mean field assumptions reduce the number of parameters to $2N+3$. 
 % 
-In summary, the parameters $r_i\hc$ and $b_i\hc$ are assumed activity- and country-dependent, and $\alpha\hc$, $\mu\hc$, and $\delta\hc$ are assumed country-dependent. We further assume that the values of these parameters are determined by the activity's characteristics and the country's institutional system (comprising e.g.~the taxation regime, the system of innovation, the legal system, the intellectual property right and the socio-cultural background of the society) and resources (comprising e.g.~labour force, knowledge capital, agricultural resources, mineral resources and energy resources), but that they do not change through time.
+In summary, the parameters $r_i\hc$ and $b_i\hc$ are assumed activity- and country-dependent, and $\alpha\hc$, $\mu\hc$, and $\delta\hc$ are assumed country-dependent. We further assume that the values of these parameters are determined by the activity's characteristics and the country's institutional system (comprising e.g.~the taxation regime, the system of innovation, the legal system, the intellectual property right and the socio-cultural background of the society) and resources (comprising e.g.~labor force, knowledge capital, agricultural resources, mineral resources and energy resources), but that they do not change through time.
 
 %%
-To investigate how the data supports each of the process embedded in \cref{eq:model_general}, we further decompose the model into five different sub-models, denote by $\M_{null}$, $\modalphap$, $\modalphan$, $\moddelta$, and $\modmu$, as follows:
+To investigate how the data supports each of the process embedded in \cref{eq:model_general}, we further decompose the model into five different sub-models, as follows
 
   \begin{align}
   \label{eq:submodels1}
@@ -176,7 +176,7 @@ To investigate how the data supports each of the process embedded in \cref{eq:mo
 % Mathematical properties of equivalent model have theoretically been investigated in 
 % \begin{itemize}
 %     \item 
-%         \citep{Rohr2014}: structural stability = dynamically stable and feasible equilibrium. It is shown that an interaction matrix that is Lyapunov–diagonally stable grants the global stability of any potential feasible equilibrium.
+%         \citep{Rohr2014}: structural stability = dynamically stable and feasible equilibrium. It is shown that an interaction matrix that is Lyapunov-diagonally stable grants the global stability of any potential feasible equilibrium.
 %     \item 
 %         ??
 % \end{itemize}
@@ -184,7 +184,7 @@ where
 \begin{equation}\label{eq:n_overline}
       \overline{n_i\hc } = \frac{1}{M-1} \sum_{l \neq c}^M n_{i}^{(l)}
 \end{equation}
-accounts for the capital of activity $i$ at the global level, excluding country $c$. The term $\overline{n_i\hc }$ appearing in \cref{eq:submodels5,eq:n_overline} arises from the mean field assumption used for spatial transfers, where 
+accounts for the capital of activity $i$ at the global level, excluding country $c$. The term $\overline{n_i\hc }$ appearing in \cref{eq:submodels5,eq:n_overline} arises from the mean field assumption used for spatial dispersal, where 
 
 \begin{equation}
   \begin{split}
@@ -200,9 +200,9 @@ The simplest model $\modnull$ embeds self-replication and self-limitation withou
 % 
 The alternative models $\modalphap$, $\modalphan$, $\moddelta$, and $\modmu$ capture self-replication and self-limitation together with one of the additional eco-evolutionary process investigated.
 % 
-Because we find inconsistent maximum likelihood estimations in the controlled experiment detailed in the \nameref{sec:results} for models incorporating combinations of the processes in \cref{eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5}, we do not test more complex models.
+Because we find inconsistent maximum likelihood estimations in the controlled experiment detailed in the \nameref{sec:results-minibatch} for models incorporating combinations of eco-evolutionary processes, we do not test more complex models.
 % 
-For $\moddelta$, in \cref{eq:submodels4}, we assume that spatial transfers do not do not affect the dynamics of $\overline{n_i\hc}$. As such, the dynamics of $n_i\hc$ and $\overline{n_i\hc}$ is decoupled, and we use linear interpolations of the data to model $\overline{n_i\hc}$. This assumption allows to divide by two the number of state variables to simulate in each country, greatly improving the computational complexity of the maximum likelihood estimation procedure.
+For $\moddelta$, in \cref{eq:submodels4}, we assume that spatial dispersal do not affect the dynamics of $\overline{n_i\hc}$. As such, the dynamics of $\overline{n_i\hc}$ does not depend on $n_i\hc$, and we use linear interpolations of the data to model $\overline{n_i\hc}$. Dividing by two the number of state variables to simulate in each country, this assumption considerably improves the computational complexity of the maximum likelihood estimation procedure.
 % 
 In the following, we designate by $\M(t,\theta\hc )$ the vector of economic activity capitals predicted by model $\M$ at time $t$ for country $c$ with the parameter vector $\theta\hc$, that includes the growth rates $r_i\hc $, the self limitation rates $b_i\hc$, the specific model parameters $\alpha\hc$, $\mu\hc$, $\delta\hc$, and the initial condition vector $n\hc (t_0)$ for country $c$.
 
@@ -214,24 +214,24 @@ In the following, we designate by $\M(t,\theta\hc )$ the vector of economic acti
   \includegraphics[width=0.8\textwidth]{conceptual/model_tikz.pdf}
   \centering
   \caption{\small
-      \textbf{General population dynamic model used to characterise the dynamics of economic activities, capturing ecological interactions, spatial transfers and economic activity transformations.}
+      \textbf{General population dynamic model used to characterize the dynamics of economic activities, capturing interactions between themselves, their spatial dispersal and their transformations into other economic activities.}
       % 
-      For each country $c$, each one of the 9 economic activities considered is assumed to be driven by replication and self limitation processes, characterised respectively by a growth rate $r_i\hc$ and a self-limitation coefficient $b_i\hc$, which values are assumed to be country-dependent and determined by the institutional context and the resources available (in terms of human capital, knowledge capital and natural resources). 
+      For each country $c$, each one of the 9 economic activities considered is assumed to be driven by replication and self limitation processes, characterized respectively by a growth rate $r_i\hc$ and a self-limitation coefficient $b_i\hc$, which values are assumed to be country-dependent and determined by the institutional context and the resources available (in terms of human capital, knowledge capital and natural resources). 
       % 
       In addition, interactions between activities within each country are determined by $\alpha\hc$ and can be mutualistic ($\alpha\hc > 0$) or competitive ($\alpha\hc< 0$).
       % 
-      Due to spatial transfers, the capital of an economic sector can experience positive (resp. negative) fluxes of capital when it is lower (resp. higher) than the average global capital for the economic sector at time $t$, arising at rate $\delta\hc$.
+      Due to spatial dispersal, the capital of an economic activity can experience positive (resp. negative) fluxes of capital when it is lower (resp. higher) than the average global capital for the economic activity at time $t$, arising at rate $\delta\hc$.
       % 
-      Due to economic activity transformations, the capital of an economic sector can experience positive (resp. negative) fluxes of capital when the capital it is lower (resp. higher) than the capital of other economic sectors within the country at time $t$, arising at rate $\mu\hc$.
+      Due to transformations into other economic activities, the capital of an economic activity can experience positive (resp. negative) fluxes of capital when it is lower (resp. higher) than the capital of other economic sectors within the country at time $t$, arising at rate $\mu\hc$.
       % 
-      The parameters $r_i\hc$, $b_i\hc$, $\alpha\hc$, $\delta\hc$ and $\mu\hc$ that best fit the empirical data are estimated in each country for each sub-model in \cref{eq:submodels1,eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5}, to investigate whether the proposed processes have a significant effect on the temporal evolution of the capital of economic activities. This diagram has been designed using resources from Flaticon.com.
+      The parameters $r_i\hc$, $b_i\hc$, $\alpha\hc$, $\delta\hc$ and $\mu\hc$ that best fit the empirical data are estimated in each country for each sub-model in \cref{eq:submodels1,eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5}, to investigate whether the proposed processes have a significant effect on the temporal dynamics of economic activities. This diagram has been designed using resources from Flaticon.com.
       }\label{fig:model}
 \end{figure}
 \FloatBarrier
     
 \subsection{Empirical data and model likelihood}
 
-We consider time series of global trade data as a proxy for the evolution of the capital of economic activities through time. Export data is synthetic of the capital of an economic activity within a country because the more it is exporting, the more it is competing in the global market, and therefore the larger it is in terms of capital \citep{Tacchella2018}. We specifically use the database compiled by the United Nations Statistical Division COMTRADE, categorized in the Standard International Trade Classification (SITC, revision 2) at the 1 digit level, covering 11 categories of economic activities in 249 countries from 1962 to 2020. Because of their low quality \citep{Hidalgo2021}, we discard the "Unspecified" and "Services" category, resulting in 9 economic categories to model (see \cref{fig:fits} for details). As shown in the \nameref{sec:results}, this large number of data points contains the information necessary to recover the plausible generating processes.
+We consider time series of global trade data as a proxy for the evolution of the capital of economic activities through time. Export data is synthetic of the capital of an economic activity within a country because the more it is exporting, the more it is competing in the global market, and therefore the larger it is in terms of capital \citep{Tacchella2018}. We specifically use the database compiled by the United Nations Statistical Division COMTRADE, categorized in the Standard International Trade Classification (SITC, revision 2) at the 1 digit level, covering 11 categories of economic activities in 249 countries from 1962 to 2020. Because of their low quality \citep{Hidalgo2021}, we discard the "Unspecified" and "Services" category, resulting in 9 economic categories to model (see \cref{fig:fits} for details). As shown in the \nameref{sec:results-minibatch}, this large number of data points contains the information necessary to recover the plausible generating processes.
 %%
 Export values for activity $i$ in country $c$, denoted by $X_{i}\hc (t)$, are discounted by the national population at time $t$, denoted by $P\hc (t)$, in order to compare the economic variables across time and across countries. This leads to expressing the observation data for the capital of activity $i$ in country $c$ as 
 % 
@@ -253,25 +253,25 @@ This leads to expressing the likelihood of model $\M$ in country $c$, denoted by
 % 
 where $\theta\hc_\M$ refers to the parameters and the initial conditions for model $\M$, $\by\hc = (y\hc(t_1), \allowbreak \dots, y\hc(t_T))$  designate the $T\hc$ time points of economic data available for country $c$, $ y\hc(t) = (y_1(t), \dots, y\hc_N(t_T))$ is the vector of economic activity capital at time $t$, and $\tilde{d}\hc(t_j) = \ln(y\hc(t_j)) - \ln(\M(t_j,\theta\hc_\M))$. 
 % 
-We detail in the next section how do we obtain the maximum likelihood estimate $\hat\theta\hc_\M$ that maximises \cref{eq:likelihood_lognormal} given $\by\hc$ for each model $\M$ and country $c$, further used for selecting the most probable model given the data \citep{Burnham2002}. In the following, we drop the indices $\hc$ for clarification.
+We detail in the next section how do we obtain the maximum likelihood estimate $\hat\theta\hc_\M$ that maximizes \cref{eq:likelihood_lognormal} given $\by\hc$ for each model $\M$ and country $c$, further used for selecting the most probable model given the data \citep{Burnham2002}. In the following, we drop the indices $\hc$ for clarification.
 
 \subsection{Maximum likelihood estimation}\label{parameter-inference}
 
-In order to obtain the maximum likelihood of each model given the data, we employ the machine learning framework detailed \citep{Boussange2022a}, which is based on a variational optimisation method and a learning strategy coined "mini-batching". The likelihood of model $\M_i$ is maximised by training $\M_i$ against mini-batches of data comprising only $K < T\hc$ data points from the full time series, where both the parameters and initial conditions are estimated.
+In order to obtain the maximum likelihood of each model given the data, we employ the machine learning framework detailed in \cite{Boussange2022a}, which is based on a variational optimization method and a learning strategy coined "mini-batching". The likelihood of model $\M_i$ is maximized by training $\M_i$ against mini-batches of data comprising only $K < T\hc$ data points of the full time series, where the parameters and the initial conditions for each mini-batch are estimated.
 % 
-The mini-batching strategy ensures the convergence of the optimization towards the maximum likelihood estimate, provided that the choice of $K$ is appropriate given the data and the model investigated \citep{Boussange2022a}. 
+The mini-batching strategy ensures the convergence towards the maximum likelihood estimate, provided that the choice of $K$ is appropriate given the data and the model investigated \citep{Boussange2022a}. 
 % 
 A large $K$ might induce convergence towards a local minimum, while a low $K$ might flatten the likelihood landscape, where all models would be provided equal support. 
 % 
-In the controlled experiments in \cref{sec:synthetic}, we find that $K=20$ (models are trained against batches of 20 years) ensures a good convergence, while reasonably discriminating the models (\cref{fig:synthetic_test_all_AIC}). We therefore use $K=20$ throughout all the experiments detailed in the manuscript, and discard countries where data is available for less than $K = 20$ years.
+In the controlled experiments in the \nameref{sec:results-minibatch}, we find that $K=20$ (models are trained against batches of 20 years) ensures a good convergence, while reasonably discriminating the models (\cref{fig:synthetic_test_all_AIC}). We therefore use $K=20$ throughout all the experiments detailed in the manuscript, and discard countries where data is available for less than $K = 20$ years.
 % 
-The library \textbf{MiniBatchInference.jl} \citep{Boussange2022a} is employed for the numerical implementation, with the gradient descent optimisers ADAM \citep{Kingma2014} during the first 800 epochs to converge in the basin of attraction of the of the maximum likelihood estimate, which we substitute for the Broyden–Fletcher–Goldfarb–Shanno optimizer (BFGS) \citep{fletcher2013practical} for the final 800 training epochs to ensure faster and more accurate convergence.
+The library \textbf{MiniBatchInference.jl} \citep{Boussange2022a} is employed for the numerical implementation, and we use the gradient descent optimizer ADAM \citep{Kingma2014} during the first 800 epochs to converge in the basin of attraction of the maximum likelihood estimate, which we substitute for the Broyden-Fletcher-Goldfarb-Shanno optimizer (BFGS) \citep{fletcher2013practical} for the final 800 training epochs to ensure faster and more accurate convergence.
 % 
-As a cross checking procedure, for each country and each model we perform 5 optimization runs with different initial parameters, where $r_i$, $b_i$, $\alpha$, $\mu$, $\delta$ are drawn from the uniform random distribution $\mathcal{U}_{[0.05, 0.15]}$, $\mathcal{U}_{[0.5,1.5]}$, $\mathcal{U}_{[0.5,1.5]}$, $\mathcal{U}_{[0.0005, 0.0015]}$ and $\mathcal{U}_{[0.0005, 0.0015]}$ respectively.
+As a cross-checking procedure, for each country and each model we perform 5 optimization runs with different initial parameter values, where $r_i$, $b_i$, $\alpha$, $\mu$, $\delta$ are drawn from the uniform random distribution $\mathcal{U}_{[0.05, 0.15]}$, $\mathcal{U}_{[0.5,1.5]}$, $\mathcal{U}_{[0.5,1.5]}$, $\mathcal{U}_{[0.0005, 0.0015]}$ and $\mathcal{U}_{[0.0005, 0.0015]}$ respectively.
 % 
-We then take the best run among the 5 optimization runs, making sure that the likelihood estimates of each run are similar in value.
+We then take the best run among the 5 optimization runs, making sure that the likelihood estimates of each run are similar (see \cref{tab:results} for full details of the results).
 % 
-% We used a gradient descent optimisation method to minimise $L(\theta\hc )$. We used the library \textbf{MiniBatchInference.jl} to train the ODE parameters $\theta^{(c)_\M}$ with the gradient descent optimiser ADAM and BFGS. Both the parameters and the intitial conditions for each activities were fitted.
+% We used a gradient descent optimization method to minimise $L(\theta\hc )$. We used the library \textbf{MiniBatchInference.jl} to train the ODE parameters $\theta^{(c)_\M}$ with the gradient descent optimiser ADAM and BFGS. Both the parameters and the intitial conditions for each activities were fitted.
 
 % \todo[inline]{how structural change that leads to increasing output variety was gradually perceived by economists and eventually incorporated into models of economic growth: \citep{Saviotti2020}}    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -280,11 +280,11 @@ We then take the best run among the 5 optimization runs, making sure that the li
 
 
 \section{Results}
-\label{sec:results}
+\label{sec:results-minibatch}
 \subsection{Validation with synthetic data}\label{sec:synthetic}
-We first investigate whether the inverse modelling technique of \cite{Boussange2022a} together with the proposed sub-models in \cref{eq:submodels1,eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5} can detect signatures of eco-evolutionary processes in a controlled experiment, using synthetic datasets.
+We first investigate in a controlled experiment whether the inverse modelling technique of \cite{Boussange2022a}, together with the proposed sub-models in \cref{eq:submodels1,eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5}, can detect signatures of eco-evolutionary processes in a controlled experiment.
 %
-We proceed by generating multiple observation datasets from the models $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ with realistic $r_i$ and $b_i$ parameters and with different values for the parameters $\alpha$, $\mu$, and $\delta$ and with different values for the noise level $\sigma$. We consider $\modnull$, $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ as equally plausible candidate models for each generated datasets, and apply the maximum likelihood estimation method detailed in the \nameref{sec:methods_econobio} to obtain the maximum likelihood $\LL(\hat \theta, \M | \by)$ of each model for each generated dataset. We then use the Bayesian information criterion (BIC) to select the model with the strongest strength-of-evidence in relation to the data \citep{Mangan2017}, calculating the BIC for model $\M_i$ as $\BIC_{\M_i} = -2 \ln(\LL(\hat \theta, \M_i | \by)) + k_{\M} \ln(N T ) $
+We proceed by generating multiple synthetic datasets from the models $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ with realistic $r_i$ and $b_i$ parameters and with different values for the parameters $\alpha$, $\mu$, and $\delta$ and with different values for the noise level $\sigma$. We consider $\modnull$, $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$ as equally plausible candidate models for each generated datasets, and apply the maximum likelihood estimation method detailed in the \nameref{sec:methods_econobio} to obtain the maximum likelihood $\LL(\hat \theta, \M | \by)$ of each model for each generated dataset. We then use the Bayesian information criterion (BIC) to select the model with the strongest strength-of-evidence in relation to the data \citep{Mangan2017}, calculating the BIC for model $\M_i$ as $\BIC_{\M_i} = -2 \ln(\LL(\hat \theta, \M_i | \by)) + k_{\M} \ln(N T ) $
 % 
 where $N$ is the number of activities in country $c$, $T$ is the number of time points in the time series considered ($N T$ therefore being the number of data points for country $c$) and $k_{\M}$ is the number of parameters in the model $\M$ for country $c$.
 % 
@@ -312,13 +312,13 @@ These results hold for varying noise levels (see \cref{figSI:synthetic_test_all_
 %
 Based upon this experiment and classical model selection criterion \citep{Burnham2002}, we decide to accept the hypothesis that the null model is the best model given the data when $\Delta \BIC_{\modnull} \leq 10$. In addition, when $\BIC_{\M_i} - \BIC_{\modnull} < -10$ we conclude that $\M_i$ is supported against $\modnull$, and we conclude that $\M_i$ is the best model given the data if $\Delta \BIC_{\M_i} = 0 $ and if for all other model $\M_{j,j \neq i}$, we have that $\Delta \BIC_{\M_{j,j \neq i}} > 10$.
 %%
-Overall, the proposed eco-evolutionary model together with the maximum likelihood estimation leads to high discrimination ability when combined with the BIC-based model selection procedure, and can provide strength-of-evidence for eco-evolutionary processes that may shape the dynamics of economic systems.
+Overall, the proposed eco-evolutionary model together with the maximum likelihood estimation leads to a good discrimination ability when combined with the BIC-based model selection procedure, and can provide strength-of-evidence for eco-evolutionary processes that may shape the dynamics of economic systems.
 
 \begin{figure}
   \centering
   \includegraphics{synthetic_test_all_AIC.png}
   \caption{\small
-  \textbf{Validation of the model selection procedure.} In \textbf{A} and $\textbf{B}$ we generate data with models $\modalphan$ and $\modalphap$ with varying $\alpha$, in \textbf{C} we generate data with model $\moddelta$ with varying $\delta$ and in \textbf{D} we generate data with model $\modmu$ with varying $\mu$. We then contaminate the generated data with realistic noise ($\sigma = 0.2$), and seek for the maximum likelihood of all models $\modnull$, $\modalphan$, $\modalphap$, $\moddelta$ and $\modmu$. The maximum likelihood of each model is then used to compute difference in Bayesian Information Criterion for each model, $\Delta \BIC$, which comparison provides a strength-of-evidence for each model. 
+  \textbf{Validation of the model selection procedure.} In \textbf{A} and $\textbf{B}$ we generate data with models $\modalphan$ and $\modalphap$ with varying $\alpha$, in \textbf{C} we generate data with model $\moddelta$ with varying $\delta$ and in \textbf{D} we generate data with model $\modmu$ with varying $\mu$. We then contaminate the generated data with realistic noise ($\sigma = 0.2$), and seek for the maximum likelihood of all models $\modnull$, $\modalphan$, $\modalphap$, $\moddelta$ and $\modmu$. The maximum likelihood of each model is then used to compute difference in BIC for each model, $\Delta \BIC$, which comparison provides a strength-of-evidence for each model. 
   %   
   \textbf{A}-\textbf{D} show that the model selection procedure is valid, since only the true models are placed in the "Strong support" category when no other model is given support (equivalently, when all other model are placed in the "No support" category).}
   \label{fig:synthetic_test_all_AIC}
@@ -327,7 +327,7 @@ Overall, the proposed eco-evolutionary model together with the maximum likelihoo
 
 \subsection{Discrepancies in dynamical regime across countries}
 
-We apply the maximum likelihood estimation method detailed in the \nameref{sec:methods_econobio} to obtain the maximum likelihood of each model for the world top 100 countries with the highest GDP per capita, as of 2020 (see list in \cref{tab:country_codes}). 
+We apply the maximum likelihood estimation method detailed in the \nameref{sec:methods_econobio} to obtain the maximum likelihood of each model for the world's richest 100 countries (highest GDP per capita as of 2020, see list in \cref{tab:country_codes}). 
 % 
 We first investigate the quality of best fit, and further detail the results for each model in the following section. %as it is assumed that the corresponding data is less fluctuating \citep{Tacchella2018}.
 % 
@@ -345,7 +345,7 @@ While this demonstrates the relevance of the proposed models, we observe discrep
 % 
 This discrepancy is explained by the number of data points available in each country, as it differs among countries and since more data points yield a higher model loglikelihood ($\beta = 0.928 \pm 0.046$, $p<0.001$, see \cref{table:gdp_loglikelihood}).
 % 
-We additionally observe a positive effect of the GDP on the residuals ($\beta = 0.693 \pm 0.187$, $p<0.001$, see \cref{table:gdp_loglikelihood} and \cref{fig:fits}\textbf{D}), indicating that rich economies have a more deterministic behavior than poorer ones. The residuals are further negatively related to the number of economic activities ($\beta = -0.230 \pm 0.071$, $p<0.01$, see \cref{table:gdp_loglikelihood}), indicating the models investigated might be less appropriate for qualifying the dynamics of diversified economies.
+We additionally observe a positive effect of the GDP on the residuals ($\beta = 0.693 \pm 0.187$, $p<0.001$, see \cref{table:gdp_loglikelihood} and \cref{fig:fits}\textbf{D}), indicating that rich economies have a more deterministic behavior than poorer ones. The residuals are further negatively associated with the number of economic activities ($\beta = -0.230 \pm 0.071$, $p<0.01$, see \cref{table:gdp_loglikelihood}), indicating that the models proposed might be less appropriate for qualifying the dynamics of diversified economies.
 % 
 % Altogether, the dynamics of economic activities is well explained by the proposed models, although after discounting for the total number of data points used, we find that the proposed models better characterise the dynamics of economic activities within less diversified countries with higher GDP .
 % 
@@ -366,9 +366,9 @@ We additionally observe a positive effect of the GDP on the residuals ($\beta = 
 
 Applying the model selection procedure detailed in the controlled experiment, we investigate in details the effect of eco-evolutionary processes on the dynamics of the countries investigated. We find that the null model is rejected in 45 of the 77 countries, in favor of alternative models (\cref{fig:aggregate_countries}\textbf{B}).
 % 
-Among the alternative models, $\modalphap$, capturing positive interactions between economic activities, is the most frequently supported (\cref{fig:aggregate_countries}\textbf{B},\textbf{C}), and is given considerably more support against $\modnull$ than $\modalphap$ and $\modmu$ (\cref{fig:aggregate_countries}\textbf{A},\textbf{D}).
+Among the alternative models, $\modalphap$, capturing positive interactions between economic activities, is the most frequently supported (\cref{fig:aggregate_countries}\textbf{B},\textbf{C}), and is given considerably more support against $\modnull$ than $\modalphan$ and $\modmu$ (\cref{fig:aggregate_countries}\textbf{A},\textbf{D}).
 %
-The model with spatial transfers, $\moddelta$, is the second most supported (\cref{fig:aggregate_countries}\textbf{B},\textbf{C}) and is given the most support against $\modnull$ (\cref{fig:aggregate_countries}\textbf{A},\textbf{D}).
+The model with spatial dispersal, $\moddelta$, is the second most supported (\cref{fig:aggregate_countries}\textbf{B},\textbf{C}) and is given the most support against $\modnull$ (\cref{fig:aggregate_countries}\textbf{A},\textbf{D}).
 % 
 The models capturing negative interactions, $\modalphan$, and capturing economic activity transformations, $\modmu$, are the least supported and given the least strength-of-evidence (\cref{fig:aggregate_countries}\textbf{B},\textbf{D}), but are still ranked as most supported models in some countries (\cref{fig:aggregate_countries}\textbf{A}). 
 
@@ -384,14 +384,15 @@ $\moddelta$ is the only model reproducing the oscillations observed in the empir
 Characteristic trends of $\modmu$ are difficult to observe given the low number of cases where it is given statistical support. 
 
 %%
-Overall, each model is supported against $\modnull$ in some countries, suggesting that interactions between activities, spatial transfers, and economic activity transformations are plausible processes that may considerably affect the development of economic systems. Nonetheless, positive interactions and spatial transfers stand out as the most supported processes, both in term of the number of countries where they are given support, and in term of the strength-of-evidence against $\modnull$.
+% each model is supported against $\modnull$ in some countries, suggesting that interactions between activities, spatial dispersal, and economic activity transformations are plausible processes that may considerably affect the development of economic systems. Nonetheless,
+Overall, positive interactions and spatial dispersal stand out as the most supported processes, both in term of the number of countries where they are given support, and in term of the strength-of-evidence against $\modnull$.
 
 \begin{figure}
   \center
   \includegraphics{figure_aggregate_countriesv2_evidence_for_eco_evo.png}
-  \caption{\small \textbf{Statistical support based on Bayesian Information Criterion for the population dynamic models $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$, implementing eco-evolutionary processes}. 
+  \caption{\small \textbf{Statistical support or the population dynamic models $\modalphan$, $\modalphap$, $\M_\delta$ and $\modmu$, based on Bayesian information criterion f}. 
   % 
-  \textbf{A} Strength-of-evidence comparison for $\modalphan$, $\modalphap$, $\moddelta$ and $\modmu$ for each country, for countries where $\modnull$ is rejected, sorted by maximum strength-of-evidence. 
+  \textbf{A} Strength-of-evidence comparison for $\modalphan$, $\modalphap$, $\moddelta$ and $\modmu$ against $\modnull$, for countries where $\modnull$ is rejected, sorted in decreasing order. 
   %   
   \textbf{B} Number of countries where models $\modnull$, $\modalphap$, $\modalphan$, $\moddelta$, and $\modmu$ are ranked as best models. 
   %
@@ -414,7 +415,7 @@ Overall, each model is supported against $\modnull$ in some countries, suggestin
 \begin{figure}
   \center
   \includegraphics{figure_aggregate_countries_rs_bs.png}
-  \caption{\small \textbf{Differences in growth rates $r_i$ and coefficients of self-limitation $b_i$ between $\modalphan$, $\modalphap$, $\moddelta$, $\modmu$, and $\modnull$,}. In \textbf{A}-\textbf{B}, we aggregate the parameters $r_i$ and $b_i$ across all countries and all economic activities. \textbf{A} shows that $\moddelta$ overestimates $r_i$ against the other models. This is because for dispersal rate $\delta$ > 0, most economic activities experience a negative capital flux, and consequently need to grow more to compensate for the losses. \textbf{B} shows that $\modalphap$ tends to overestimates $b_i$ relative to the other models, which negative effect on growth dynamics compensates the beneficial effect of positive interactions.
+  \caption{\small \textbf{Differences in growth rates $r_i$ and coefficients of self-limitation $b_i$ between $\modalphan$, $\modalphap$, $\moddelta$, $\modmu$, and $\modnull$}. In \textbf{A}-\textbf{B}, we aggregate the parameters $r_i$ and $b_i$ across all economic activities and all countries where models are supported. \textbf{A} shows that $\moddelta$ overestimates $r_i$ against the other models. This is because for a dispersal rate $\delta$ > 0, most economic activities experience a negative capital flux, and consequently need to grow more to compensate for the losses. \textbf{B} shows that $\modalphap$ tends to overestimate $b_i$ relative to the other models, which negative effect on growth dynamics compensates the beneficial effect of positive interactions.
    }\label{fig:r_b}
 \end{figure}
 \FloatBarrier
@@ -426,58 +427,60 @@ Overall, each model is supported against $\modnull$ in some countries, suggestin
 \section{Discussion}
 
 %% recap of the study
-Our results indicate that dynamic models embedding eco-evolutionary processes, commonly used to characterise the dynamics of biological populations \citep{Bunin2017,Scheffer2006a,Case1990,Tilman1994b,eigen1988molecular}, can appropriately characterize the dynamics of economic activities (\cref{fig:fits}). Together with state of the art computational methods and 59 years of economic data, the models provide a framework to assess the effect of eco-evolutionary processes on the long-term development of national economies.
+Our results indicate that dynamic models embedding eco-evolutionary processes, commonly used to characterize the dynamics of biological populations \citep{Bunin2017,Scheffer2006a,Case1990,Tilman1994b,eigen1988molecular}, can appropriately characterize the dynamics of economic activities (\cref{fig:fits}). Together with state of the art computational methods and 59 years of economic data, the models provide a framework to assess the effect of eco-evolutionary processes on the long-term development of national economies.
 % 
-Over the 77 countries investigated, the null model -- embedding replication and self limitation processes only -- was rejected 45 times in favor of alternative eco-evolutionary models (\cref{fig:aggregate_countries}\textbf{B}), and each of the alternative model were supported against the null model in some countries. Hence, eco-evolutionary models, that couple the individual dynamics of economic activities, provide a better fit to the economic dynamics at the country level, suggesting that economic development carries the effect of the inter-dependency between economic activities. The models capturing positive interactions between economic activities ($\modalphap$) and spatial transfers ($\moddelta$) were overall given more strength-of-evidence, providing a quantitative support that these processes are central in the development of economic systems.  Together, our study suggests that dynamic models inspired from biology are well suited to characterise economic dynamics. 
+Over the 77 countries investigated, the null model -- embedding replication and self limitation processes only -- was rejected 45 times in favor of alternative eco-evolutionary models (\cref{fig:aggregate_countries}\textbf{B}), and each of the alternative model were supported against the null model in some countries. Hence, eco-evolutionary models, that couple the growth of economic activities, better characterize their dynamics. This result suggests that economic change carries the effect of the inter-dependency between economic activities. The models capturing positive interactions between economic activities ($\modalphap$) and spatial dispersal ($\moddelta$) were overall given more strength-of-evidence, providing a quantitative support that these processes are central in the development of economic systems.  Together, our study suggests that dynamic models inspired from biology are well suited to characterize economic dynamics. 
 
 %%
-Economic activities sustain the development of each other (\cref{fig:aggregate_countries}\textbf{B}-\textbf{D}), suggesting that economic diversity promotes economic development \citep{Saviotti2020}. In our models, the model with positive interactions between economic activities was the most frequently supported model (\cref{fig:aggregate_countries}\textbf{B}-\textbf{C}), outlining that positive interactions may be ubiquitous in economic systems. Maximum likelihood estimates for $\modalphap$ attribute the growth of economic activities to positive interactions rather than to their endogenous growth, since $\modalphap$ is associated with high self-limitation coefficients (\cref{fig:r_b}\textbf{B}). 
+The statistical support obtained for the model with positive interactions between economic activities and the associated parameter value estimates highlight that economic activities sustain the development of each other, supporting the hypothesis that economic diversity promotes economic growth \citep{Saviotti2020}. $\modalphap$  was the most frequently supported model (\cref{fig:aggregate_countries}\textbf{B}-\textbf{C}), outlining that positive interactions may be ubiquitous in economic systems. We also found that $\modalphap$ was associated with high self-limitation coefficients (\cref{fig:r_b}\textbf{B}). This finding highlights that the growth of economic activities is driven by positive interactions rather than to their endogenous growth. 
 % 
 % Evidence towards $\modalphap$ consequently implies that economic activities could hardly thrive outside of the ecosystem due to a very low endogenous growth \citep{Yukalov2012}. 
 % 
-Positive interactions may arise from a variety of sub-processes acting upon firms, including business interactions through supply chains \cite{Ozman2009,Saavedra2009a} and agglomeration externalities \cite{VanDerPanne2004}. Our results therefore suggest that their effect scales up and at the national level and result in economic activities sustaining each other through positive feedback. 
+Positive interactions may arise from a variety of sub-processes acting upon firms, including business interactions through supply chains \citep{Ozman2009,Saavedra2009a} and firms benefitting from agglomeration externalities \citep{VanDerPanne2004}. Together, our results suggest that the effect of positive interactions scales up and at the national level and result in economic activities sustaining each other through positive feedbacks. 
 
 %%
-The dynamics of economic activities seems also to be greatly affected by spatial dispersal (\cref{fig:aggregate_countries}\textbf{B},\textbf{D}), which may originate from the spatial diffusion of organizational routines \cite{Hodgson2004} and knowledge spillovers \cite{Caragliu2016} across countries through different underlying socio-economic processes. 
+The dynamics of economic activities seem also to be greatly affected by spatial dispersal (\cref{fig:aggregate_countries}\textbf{B},\textbf{D}), which may originate from the spatial diffusion of organizational routines \citep{Hodgson2004} across countries through different socio-economic processes. 
+%  innovation diffusion through social networks \citep{RogersEverettM2003DoI}
+The latter could include international business expansions \citep{Zahra2000}, labor mobility \citep{Boschma2008}, and the diffusion of innovation through social networks \citep{RogersEverettM2003DoI}. However, $\moddelta$ is less frequently supported against $\modnull$ than $\modalphap$ (\cref{fig:aggregate_countries}\textbf{C}). To explain this discrepancy, we hypothesize that transfers of knowledge and routines are blocked by barriers due to differences in cognitive, organizational, social, institutional or geographic proximity between countries \citep{Boschma2005,Caragliu2016}. This hypothesis should be investigated in future work.
 % 
-The latter could include business international expansions \citep{Zahra2000,RogersEverettM2003DoI}, labour mobility \citep{Zahra2000}, and the diffusion of innovations \citep{Boschma2008}. However, $\moddelta$ is less frequently supported against the null model than model $\modalphap$ (\cref{fig:aggregate_countries}\textbf{C}). To explain this discrepancy, we propose that transfers of knowledge and routines may be blocked by barriers due to differences in cognitive, organizational, social, institutional or geographic proximity between countries \citep{Boschma2005,Caragliu2016}. We will investigate this hypothesis in future work.
-% 
-Hence, socio-economic processes involved in the transfer of knowledge and organizational routines have an important effect on economic change at the national level.
+Overall, our results indicate that socio-economic processes involved in the transfer of knowledge and organizational routines have an important effect on economic change at the national level.
 
 %% recap of important mechanisms highlighted
-The strong discrepancies in model supports observed across countries indicate strong idiosyncratic processes, that can relate to the constries' institutional context \citep{Acemoglu2005} or historical contingencies \citep{Silverberg2005a}. 
+The strong discrepancies in model supports observed across countries may indicate strong idiosyncratic processes, that can relate to the countries' institutional context \citep{Acemoglu2005} or to historical contingencies \citep{Silverberg2005a}. 
 % 
 We found that developing economies have a distinct, less predictable dynamical behavior, as the likelihood of the best models showed a negative relationship with country GDP (\cref{fig:fits}\textbf{D} and \cref{table:gdp_loglikelihood}). In line with our findings, \citep{Cristelli2015} also reports a difference in dynamical regime between mature and developing economies, where the GDP dynamics of developing economies is found less predictable than that of rich countries. Those lower model fits indicate that singular processes may importantly influence the dynamics of developing countries.
 % 
 % Ranking the models with respect to their support in each country, we found a statistical advantage for $\modalphap$ and $\moddelta$, while the models $\modalphan$ and $\modmu$, accounting for negative interactions and economic activity transformations, appeared to be the least and less frequently supported.
 % 
-% $\moddelta$, accounting for spatial transfers, was given more strength-of-evidence (\cref{fig:aggregate_countries}\textbf{D}), but $\modalphan$ and $\modalphap$, modelling ecological interactions, were provided statistical support in more countries (\cref{fig:aggregate_countries}\textbf{B}-\textbf{C}). 
+% $\moddelta$, accounting for spatial dispersal, was given more strength-of-evidence (\cref{fig:aggregate_countries}\textbf{D}), but $\modalphan$ and $\modalphap$, modelling ecological interactions, were provided statistical support in more countries (\cref{fig:aggregate_countries}\textbf{B}-\textbf{C}). 
 % 
 % The effect of mutualistic interactions has also been quantitatively resported on the dynamics of financial assets \citep{Gatabazi2019}, and the interdependence of firms has been reported in \citep{}. Spatial trasnfers have been reported in gravity models.
 % 
-Also, while we found a statistical advantage for $\modalphap$ and $\moddelta$ over the alternative models (\cref{fig:aggregate_countries}\textbf{B}-\textbf{D}), the support and strength-of-evidence for each model strongly varied across countries (\cref{fig:aggregate_countries}A), without emergent pattern relating the strength-of-evidence to macroeconomic characteristics such as, e.g., country GDP per capita. This idiosyncrasy may be due to the oversimplicity of the model investigated: for instance, while $\modalphap$ considers equal strength of positive interactions between pairs of economic sectors (\cref{eq:submodels3}), it could be that interaction strength is pair specific, implying that the likelihood for the positive interaction hypothesis is underestimated in countries with many economic activities. An other explanation is that this discrepancy is inherent to the idiosyncrasy of country histories and characteristics.
+Also, while we found a statistical advantage for $\modalphap$ and $\moddelta$ over the alternative models (\cref{fig:aggregate_countries}\textbf{B}-\textbf{D}), the support and strength-of-evidence for each model strongly varied across countries (\cref{fig:aggregate_countries}A), without associations with macroeconomic characteristics such as, e.g., country GDP per capita. This may be due to the noise in the data, or to the specific assumptions considered. For instance, while we assumed equal strength of positive interactions between pairs of economic sectors (\cref{eq:submodels3}), it could be that interaction strength is pair specific, implying that the likelihood estimated for the positive interaction hypothesis is underrated in countries with many economic activities. 
 % 
-Together, the discrepancies in model fits and model supports invite to refine the details of the processes investigated, in order to better link them with macroeconomic patterns.
+Yet, these discrepancies could also originate from the idiosyncrasy of the country histories and characteristics.
+% 
+Together, our results invite to refine the details of the processes investigated, in order to better link them with macroeconomic patterns.
 
 %% Further developments and investigation
-For the sake of parsimony, the population dynamic models proposed in \cref{eq:submodels1,eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5} rely on a set of assumptions, which could be further relaxed (\cref{eq:model_general}) to study eco-evolutionary processes acting upon economic activities in more details. 
+For the sake of parsimony, the population dynamic models proposed in \cref{eq:submodels1,eq:submodels2,eq:submodels3,eq:submodels4,eq:submodels5} rely on a set of assumptions, which could be relaxed to further detail eco-evolutionary processes acting upon economic activities. 
 % 
-The models investigated rely on the mean field assumptions that economic activities interact with equal strengths, and proceed to spatial transfers across countries and capital transfer between each other with equal rates.
+The models investigated rely on the mean field assumptions that economic activities interact with equal strengths, and proceed to spatial dispersal across countries and capital transfer between each other with equal rates.
 % 
 Nonetheless, biological organisms interact through interaction networks \citep{Bascompte2003}, and structured link have been also documented in economic networks  \citep{C.A.HidalgoB.Klinger,Bustos2012,Saavedra2009a,Schweitzer2009,Giuliani2007}. For instance, \cite{C.A.HidalgoB.Klinger} suggests that economic activities are related to one another through a network of relatedness, which could be integrated in $\modalphan$, $\modalphap$ and $\modmu$, weighting the interactions and transfers by the relatedness of two activities. 
 % 
 % We expect that constraining interactions with a known network structure might enhance the support for the process of economic activity transformations.
 % 
-Similarly, spatial transfers are likely to depend on proximity metrics between countries \citep{Boschma2005}. Model developments will be required to assess the importance of economic activity relatedness and country proximity on economic dynamics. Moreover, the strength and directionality of interactions, spatial transfers and economic activity transformations may temporally change throughout the development of economic activities \citep{Pistorius1997}, while we assumed that the parameters are constant through time.
+Similarly, spatial dispersal are likely to depend on proximity metrics between countries \citep{Boschma2005}. The consideration of generalized variants of the models investigated, such as in \cref{eq:model_general}, will be required to assess the importance of economic activity relatedness and country proximity on economic dynamics. Additionally, considering the variation of the parameter values through time may be required, as the strength and directionality of interactions, spatial dispersal and economic activity transformations may temporally change throughout the development of economic activities \citep{Pistorius1997}. 
 % 
-Exploring more complex eco-evolutionary models will demand, however, richer time series, in order to extract the extra information needed to constrain additional parameters.
+Exploring more complex eco-evolutionary models will demand, however, richer time series, in order to extract the extra information needed to constrain the additional parameters.
 
 %% General summary and conclusion
-In conclusion, our results foster a biologically inspired approach to understand the mechanisms shaping the endogenous dynamics of economic systems. Using population dynamic models and temporal economic data, our study demonstrates that positive interactions between economic activities and spatial transfers considerably influence the dynamics of economic activities at the national, and may be fundamental drivers of economic change.
+In conclusion, our results foster a biologically inspired approach to understand the mechanisms shaping the endogenous dynamics of economic systems. Using an inverse modelling approach relying on alternative population dynamic models and temporal economic data, our study demonstrates that positive interactions between economic activities and spatial dispersal considerably influence the dynamics of economic activities at the national, and may be fundamental drivers of economic change.
 % 
 The quantitative paradigm to study economic systems has mainly relied on models inspired from mechanics, which assume a world in equilibrium \citep{sornette2014physics}.
 % 
-Eco-evolutionary biology, focusing on nonlinear dynamical processes and emergence, seems to be a more appropriate paradigm to study the fundamental forces shaping the dynamics of economic systems. It can provide quantitative models to test fundamental hypotheses proposed in the field of evolutionary economics and geography economics, and suggest new ones. We call this promising research venue "econobiology".
+Evolutionary biology, focusing on nonlinear dynamical processes and emergence, seems to be a more appropriate paradigm to study the fundamental forces shaping the dynamics of economic systems. It can provide quantitative models to test general hypotheses on organizational principles in economic systems, and suggest new ones. We call this promising research venue "econobiology".
 
 \section{Code availability}
 The simulation code is available on request.

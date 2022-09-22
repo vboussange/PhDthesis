@@ -67,7 +67,7 @@ I provide a graphical summary of the feedback mechanisms shaping neutral and ada
 \begin{figure}[t]
     \centering
     \includegraphics[width=\textwidth]{diff-in-graph.pdf}
-    \caption{\textbf{Summary of the causal pathways involved in neutral and adaptive differentation, disentangled in \cref{\chapi}}. Ecological processes are displayed in green boxes, evolutionary processes are displayed in red boxes.}
+    \caption{\textbf{Graphical representation of the eco-evolutionary mechanisms underpinned in \cref{\chapi} and involved in neutral and adaptive differentiation}. Ecological processes are displayed in green boxes, evolutionary processes are displayed in red boxes.}
     \label{fig:summary_diff-in-graph}
 \end{figure}
 
@@ -90,7 +90,7 @@ While Neoclassical economics explains economic change by exogenous changes \cite
 % 
 % Exogenous drivers, such as technological change \xxx, economic institutions \xxx, and production costs \citep{Boschma2005a} have been proposed, but 
 % 
-In contrast, complexity economics predicts economic change at the national level \citep{Hidalgo2021} with endogenous predictors, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather, it relies on statistical techniques to process fine-grained economic data \citep{Mitchell}, and a current concern is to unfold the causal processes \citep{Hidalgo2021}.
+In contrast, complexity economics predicts economic change at the national level \citep{Hidalgo2021} with endogenous predictors, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather, it relies on statistical techniques to process fine-grained economic data \citep{Mealy2019}, and a current concern is to unfold the causal processes \citep{Hidalgo2021}.
 % 
 % One of the major contribution of complexity economics is to provide a metric that can predict economic development \citep{Taschella}, and the field is now concerned with understanding the factors underlying this factor.
 %
@@ -129,7 +129,7 @@ I provide a graphical summary of the mechanisms evidenced in economic systems in
 \begin{figure}[t]
     \centering
     \includegraphics[]{econobio.pdf}
-    \caption{\textbf{Summary of the eco-evolutionary processes evidenced in \cref{\chapiv}, and how they affect the different organizational levels in economic systems}.}
+    \caption{\textbf{Graphical representation of the eco-evolutionary processes evidenced in \cref{\chapiv}, and how they affect the different organizational levels in economic systems.} \cref{\chapiv} provides quantitative evidences for the processes of mutualistic interactions (facilitation) and spatial dispersal, respectively coupling the world economy organizational level and the national economy organizational level, to the economic activity level. Directly depending on firms, the economic activity level is also coupled to the firm organizational level. Furthermore, in \cref{\chapiv}, we hypothesize that dispersal processes originate from the diffusion of organizational routines, coupling the organizational routines level to the world economy level.}
     \label{fig:summary_econobio}
 \end{figure}
 
@@ -171,7 +171,7 @@ From first principles, \cref{\chapi} derives a stochastic individual-based model
 % 
 % TODO: this part does not work really well
 %% individual-based model
-The individual-based model presented in \cref{\chapi} involves the combination of graphs and high dimensional phenotypic spaces to model population structures. Naturally capturing eco-evolutionary feedbacks, the model can readily be generalized to include other eco-evolutionary processes (see \cref{secSI:trait-dep-comp} for an extended variant with trait-based competition), and the Julia library \textbf{Evoid.jl} \cite{Evoid.jl}, written for the purpose of the numerical experiments in \cref{\chapi}, implements a generic version of the model. %(), 
+The individual-based model presented in \cref{\chapi} involves the combination of graphs and high dimensional phenotypic spaces to model population structures. Naturally capturing eco-evolutionary feedbacks, the model can readily be generalized to include other eco-evolutionary processes (see \cref{secSI:trait-dep-comp} for an extended variant with trait-based competition), and the Julia library \textbf{Evoid.jl} \cite{Evoid}, written for the purpose of the numerical experiments in \cref{\chapi}, implements a generic version of the model. %(), 
 % 
 As such, the model presented in \cref{\chapi} and the Julia library \textbf{Evoid.jl} may be used to investigate other questions involving complex population structures \citep{LiebermanHauert2005} and the co-evolution of characteristics \citep{Doebeli2011}.
 % 
@@ -182,7 +182,7 @@ The mathematical tractability allows obtaining analytical insights on how the in
 % 
 The PDE approximation, combined with the numerical methods presented in \cref{\chapiv}, further allow efficient simulations. 
 % 
-The numerical methods proposed in \cref{\chapiv} are now implemented in the Julia library \textbf{HighDimPDE.jl} \citep{HighDimPDE}, a registered Julia package belonging to the SciML organisation \citep{SciML}.
+The numerical methods proposed in \cref{\chapiv} are now implemented in the Julia library \textbf{HighDimPDE.jl} \citep{HighDimPDE}, a registered Julia package belonging to the SciML organisation \citep{Rackauckas2020a}.
 %% 
 % The user interface respects standards from the SciML organisation, meaning that Julia users can easily adopt it.
 %
@@ -263,8 +263,8 @@ Together, the proposed methods in \cref{\chapi,\chapiv} suffer from considerable
 \subsection{Uncertainty estimation and model selection bias}
 The inverse modelling framework proposed in \cref{\chapii} and used in \cref{\chapiii} also present pitfalls.
 %
-First, the mini-batching learning strategy requires the choice of a minibatch size to ensure the convergence to the maximum likelihood estimate. This choice should be motivated by the roughness of the model likelihood landscape (see \cref{subsec:minibatch_implementation}), but may affect the model selection process:
-a small batch size implies that the model goodness-of-fit is evaluated on the fast dynamics of the data. The resulting support could differ, were the model fitted with a higher minibatch size. Theoretical developments are required to provide statistically justified guidance for the choice of the minibatch size. 
+First, the mini-batching learning strategy requires the choice of a mini-batch size to ensure the convergence to the maximum likelihood estimate. This choice should be motivated by the roughness of the model likelihood landscape (see \cref{subsec:minibatch_implementation}), but may affect the model selection process:
+a small batch size implies that the model goodness-of-fit is evaluated on the fast dynamics of the data. The resulting support could differ, were the model fitted with a higher mini-batch size. Theoretical developments are required to provide statistically justified guidance for the choice of the mini-batch size. 
 % 
 Second, the maximum likelihood estimate of models with complex likelihood landscape may be underestimated, because not correctly identified. As a result, the model selection process may be biased towards models which associated likelihood landscape is easier to navigate. 
 % 
@@ -284,7 +284,7 @@ This approach does not require model differentiability, and is consequently more
 % 
 Nevertheless, this strength is a pitfall: summary statistics necessarily reduce the information contained in empirical data, which can prevent to correctly discriminate between models \citep{Csillery2010}.
 % 
-Together, the minibatch inverse modelling framework in \cref{\chapii} is sensitive to the minibatch size, requires models to be differentiable, and does not provide uncertainty estimation. While approximate Bayesian computation may be a valuable alternative, it also presents restrictive shortcomings. Still, the minibatch learning strategy extends beyond the framework proposed, and could be used in combination with novel approaches in Bayesian computation to combine the best of both worlds.
+Together, the mini-batch inverse modelling framework in \cref{\chapii} is sensitive to the mini-batch size, requires models to be differentiable, and does not provide uncertainty estimation. While approximate Bayesian computation may be a valuable alternative, it also presents restrictive shortcomings. Still, the mini-batch learning strategy extends beyond the framework proposed, and could be used in combination with novel approaches in Bayesian computation to combine the best of both worlds.
 
 \section{Perspectives}
 
@@ -292,9 +292,9 @@ Together, the minibatch inverse modelling framework in \cref{\chapii} is sensiti
 
 The mini-batch method presented in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique development opportunities to leverage inverse modelling.
 %%
-The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to considering a standard formulation of the likelihood function such as in \cref{eq:likelihood-std}, using the minibatch loglikelihood formulation proposed in \cref{eq:ML-framework} results in a smoother posterior distribution, potentially reducing the number of forward model integration for Bayesian inference.
+The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to considering a standard formulation of the likelihood function such as in \cref{eq:likelihood-std}, using the mini-batch loglikelihood formulation proposed in \cref{eq:ML-framework} results in a smoother posterior distribution, potentially reducing the number of forward model integration for Bayesian inference.
 % 
-While this number could still be prohibitively expensive for Bayesian inference with MCMC chains (see \cref{sec:intro-minibatch} in \cref{\chapii}), automatic differentiation variational inference (ADVI, \cite{Morningstar2020,Gosh2021}) offers an appealing alternative. In ADVI, the posterior distribution is approximated by a Gaussian distribution \citep{Morningstar2020}, significantly reducing the number of model integration \citep{Morningstar2020}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the robustness of model selection (\cref{sec:limitations}), and provide uncertainties estimations on the parameters.
+While this number could still be prohibitively expensive for Bayesian inference with MCMC chains (see \cref{sec:intro-mini-batch} in \cref{\chapii}), automatic differentiation variational inference (ADVI, \cite{Morningstar2020,Gosh2021}) offers an appealing alternative. In ADVI, the posterior distribution is approximated by a Gaussian distribution \citep{Morningstar2020}, significantly reducing the number of model integration \citep{Morningstar2020}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the robustness of model selection (\cref{sec:limitations}), and provide uncertainties estimations on the parameters.
 % 
 Bayesian Learning via Stochastic Gradient Langevin Dynamics \citep{Welling2011BayesianLV} is an alternate solution to ADVI, that could readily be used with the ML framework proposed in \cref{\chapii} instead of the optimization algorithms suggested. This algorithm builds upon recent advances in Bayesian Deep Learning \citep{Wilson2020}, and interprets the iterative gradient-based optimization procedure as a Markov chain with an equilibrium distribution over the posterior distribution of the model parameters. It therefore comes with the scalability of variational methods and the interpretability of Bayesian methods, providing uncertainty estimates while ensuring computational efficiency.
 
@@ -311,7 +311,7 @@ Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique opport
 % Allows to estimate the uncertainty in estimation, and localize different equally likely region in the parameter space that are likely.
 
 
-% The piecewise loglikelihood function presented in \cref{\chapii} (\cref{eq:minibatch}) 
+% The piecewise loglikelihood function presented in \cref{\chapii} (\cref{eq:mini-batch}) 
 
 
 \subsection{Confronting eco-evolutionary model on spatial graphs and empirical data}

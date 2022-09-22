@@ -1,9 +1,14 @@
 \begin{scriptsize}
 \pgfplotstabletypeset[
 columns={Country Code, Country Name, Country Code, Country Name},
-display columns/0/.style={select equal part entry of={0}{2},string type},% first part of ‘A’
-display columns/1/.style={select equal part entry of={0}{2},string type},% first part of ‘B’
-display columns/2/.style={select equal part entry of={1}{2},string type},% second part of ‘A’
-display columns/3/.style={select equal part entry of={1}{2},string type},% second part of ‘B’
+every head row/.style={
+                        before row=\hline,
+                        after row=\hline},
+every last row/.style={after row=\hline},
+every row/.style={after row=\hline},
+display columns/0/.style={select equal part entry of={0}{2},string type, column type={|c}},% first part of ‘A’
+display columns/1/.style={select equal part entry of={0}{2},string type,column type={|c}},% first part of ‘B’
+display columns/2/.style={select equal part entry of={1}{2},string type,column type={|c}},% second part of ‘A’
+display columns/3/.style={select equal part entry of={1}{2},string type,column type={|c|}},% second part of ‘B’
 ]{\datatable}
 \end{scriptsize}

@@ -361,14 +361,15 @@
 % ***** Minibatching **********
 % *****************************
 \DeclareMathOperator*{\argmin}{arg\,min} % Jan Hlavacek
-
+\newcommand{\perr}{|\nicefrac{(\hat p -\Tilde{p})}{\Tilde{p}}|}
+\newcommand{\by}{\textbf{y}}
+\newcommand{\AIC}{\text{AIC}}
+\newcommand{\M}{\mathcal{M}}
 
 % *****************************
 % ***** econobiology **********
 % *****************************
 \usepackage{pgfplotstable}
 \pgfplotstableset{
-every head row/.style={before row=\toprule,after row=\midrule},
-every last row/.style={after row=\bottomrule},
 col sep=semicolon}
 \pgfplotstableread{./content/chap4_econobiology/figures/SI/country_code.csv}\datatable
