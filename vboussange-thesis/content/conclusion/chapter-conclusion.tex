@@ -48,7 +48,7 @@ Because habitat assortativity affects local adaptation, it must also affect neut
 % 
 This complex feedback is essential to understand population differentiation in complex landscapes.
 % 
-\cref{fig:summary_diff-in-graph} summarizes the feedback mechanisms underpinned in \cref{\chapi}. Overall, \cref{\chapi} establishes a comprehensive map of causal pathways involved in the phenotypic differentiation of populations structured in complex landscapes. 
+\Cref{fig:summary_diff-in-graph} summarizes the feedback mechanisms underpinned in \cref{\chapi}. Overall, \cref{\chapi} establishes a comprehensive map of causal pathways involved in the phenotypic differentiation of populations structured in complex landscapes. 
 
 \begin{figure}[t]
     \centering
@@ -64,7 +64,7 @@ Combining fine-grained economic data and process-based models, \cref{\chapiii} b
 % 
 Neoclassical economics and evolutionary economics seek to explain economic change with process-based models.
 % 
-While Neoclassical economics explains economic change by exogenous changes \citep{Boschma2005a}, evolutionary economics rather focuses on endogenous forces, considering interactions between firms and economic activities, and evolutionary processes acting upon them \citep{Metcalfe2006} as fundamental drivers of economic change. Yet, evolutionary economics has up to now restricted its attention to subnational industrial dynamics \citep{Hodgson2019}.
+While Neoclassical economics explains economic change by exogenous changes \citep{Boschma2005a}, evolutionary economics rather focuses on endogenous forces, considering interactions between firms and economic activities, and evolutionary processes acting upon them as fundamental drivers of economic change \citep{Metcalfe2006}. Yet, evolutionary economics has up to now restricted its attention to subnational industrial dynamics \citep{Hodgson2019}.
 % 
 In contrast, complexity economics \citep{Hidalgo2021} predicts economic change at the national level with endogenous predictors, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather, it relies on statistical techniques to process fine-grained economic data \citep{Mealy2019}, and a current concern is to unfold the causal processes \citep{Hidalgo2021}.
 
@@ -122,9 +122,9 @@ Trade-offs in traits are also essential features shaping the evolutionary dynami
 % 
 Yet the simulation of eco-evolutionary models of biological populations structured over high dimensional phenotypic spaces is tremendously difficult, since the numerical cost of traditional methods grows exponentially in the number of dimensions considered \citep{Bellman1957}. 
 
-From first principles, \cref{\chapi} derives a stochastic individual-based model capturing eco-evolutionary feedbacks in populations structured in complex landscapes and high dimensional phenotypic space. \Cref{\chapiv} further provides tools to efficiently simulate a deterministic approximation of the individual-based model in high phenotypic dimensions.
+From first principles, \cref{\chapi} derives a stochastic individual-based model capturing eco-evolutionary feedbacks in populations structured in complex landscapes and high dimensional phenotypic space. \Cref{\chapiv} further provides tools to efficiently simulate a deterministic approximation of the individual-based model in high dimensional phenotypic spaces.
 % 
-The model presented in \cref{\chapi} involves the combination of graphs and high dimensional phenotypic spaces to model realistic population structures. Naturally capturing eco-evolutionary feedbacks, the model can readily be generalized to include other eco-evolutionary processes (see \cref{secSI:trait-dep-comp} for an extended variant with trait-based competition), and the Julia library \textbf{Evoid.jl}, that I have written for the purpose of the numerical experiments in \cref{\chapi} and is publicly available \citep{Evoid}, implements a generic version of the model. %(), 
+The model presented in \cref{\chapi} involves the combination of graphs and high dimensional phenotypic spaces to model realistic population structures. Naturally capturing eco-evolutionary feedbacks, the model can readily be generalized to include other eco-evolutionary processes (see \cref{secSI:trait-dep-comp} for an extended variant with trait-based competition). The Julia library \textbf{Evoid.jl}, that I have written for the purpose of the numerical experiments in \cref{\chapi} and that is publicly available \citep{Evoid}, already implements a generic version of the model. %(), 
 % 
 As such, the model presented in \cref{\chapi} and the Julia library \textbf{Evoid.jl} may be used to investigate other questions involving complex population structures \citep{LiebermanHauert2005} and the co-evolution of characteristics \citep{Doebeli2011}.
 % 
@@ -188,7 +188,7 @@ The methods presented in \cref{\chapiv} can efficiently simulate PDE models in h
 % 
 First, the MLP method can only provide the population number for one single trait value in one run. Consequently, the MLP method cannot characterize the total population density with a reasonable computational complexity. 
 % 
-In contrast, the ML-based approximation method can provide the full population density, but involves the training of many neural networks (one at each time step). This is worrying, since long time horizons are required by practitioners, and that the training of a neural network is numerically costly. Another problem with the numerical methods proposed in \cref{\chapiv} is that they involve the tuning of meta parameters, including the choice of a measure for the integration of the non-local term ($\nu_x$ in \cref{frame:mlpsetting,def:general_algorithm}). Though this choice is critical to the success of the numerical simulations, it is unclear how it can be determined.
+In contrast, the full population density can be obtained with the ML-based approximation method, but the method involves the training of many neural networks (one at each time step). This is worrying, since long time horizons are required by practitioners, and that the training of a neural network is numerically costly. Another problem with the numerical methods proposed in \cref{\chapiv} is that they involve the tuning of meta parameters, including the choice of a measure for the integration of the non-local term ($\nu_x$ in \cref{frame:mlpsetting,def:general_algorithm}). Though this choice is critical to the success of the numerical simulations, it is unclear how it can be determined.
 % 
 While greatly decreasing the computational cost of traditional methods, the novel methods proposed in \cref{\chapiv} are still computationally demanding and require a delicate tuning of the meta-parameters. 
 
@@ -198,7 +198,7 @@ Nevertheless, only the first three moments of the population density are usually
 % 
 Instead of seeking to numerically approximate the full phenotypic density, moment closure approximation methods \citep{Wickman2021,Lion2022,Nordbotten2020} may instead be considered. Those approaches consist in approximating the population density with a multivariate Gaussian distribution. This, in turn, allows to transform the PDE problem into a system of coupled differential equations involving the time evolution of the population size (1 variable for a single species population), the mean trait values ($d$ scalar variables), and the variance-covariance matrix of the multidimensional trait density ($d^2$ variables). As such, the computational cost of this method only scales polynomially with the number of dimension ($\mathcal{O}(d^2)$), while providing the sufficient information required to investigate eco-evolutionary dynamics in high dimensional phenotypic spaces. 
 % 
-It is worth noting that instead of using neural networks, multivariate Gaussian functions could also be used within the ML-based method for simulating eco-evolutionary models. Equivalent to the simplifying assumption taken with moment closure methods, we expect this approach to greatly improve the computational efficiency of the ML-based method, as they involve fewer free parameters ($d(d+1) + 1$, i.e. 111 for $d=10$) than neural networks ($(d+50)(2d+50) + 3(d+50) + 1$ in \cref{subsec:fisherKPP_neumann_r,subsec:nonlocalcompPDE,subsec:sinegordon_nonlocal,subsec:aniso_mutator_selector,subsec:allen_cahn}, i.e. 4381 for $d=10$).
+It is worth noting that instead of using neural networks, multivariate Gaussian functions could also be used within the ML-based method for simulating eco-evolutionary models. Equivalent to the simplifying assumption taken with moment closure methods, we expect this approach to greatly improve the computational efficiency of the ML-based method, as they involve fewer free parameters ($d(d+1) + 1$, i.e. 111 parameters for $d=10$) than neural networks ($(d+50)(2d+50) + 3(d+50) + 1$ parameters used for the examples in \cref{subsec:fisherKPP_neumann_r,subsec:nonlocalcompPDE,subsec:sinegordon_nonlocal,subsec:aniso_mutator_selector,subsec:allen_cahn}, i.e. 4381 parameters for $d=10$).
 % while solving the problem of the choice of $\nu_x$. 
 In summary, using the ML-based approximation presented in \cref{\chapiv} with multivariate Gaussian functions may considerably lower the number of iterations required in the training process, while reducing the computational cost.
 
@@ -258,7 +258,7 @@ Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique opport
 
 The confrontation of the predictions obtained in \cref{\chapi} with empirical data, and the use of empirical data to constrain the eco-evolutionary model on spatial graphs presented in \cref{\chapi}, could advance our understanding of eco-evolutionary dynamics in empirical systems.
 % 
-In \cref{\chapi}, we predicted three topology metrics to correlate with standard population differentiation metrics ($Q_{ST}$ metrics). By projecting real landscapes on spatial graphs (see \cite{Dale2010} and \cref{figSI:graph_real_land}), the topology metrics, together with empirical data on population differentiation, could be used to verify our predictions. Discrepancies may indicate that additional processes are involved in population differentiation in empirical systems. On the other hand, a validation of the predictions from \cref{\chapi} could help to predict population differentiation at a global scale. These predictions could, in turn, be linked to patterns of species richness, in order to underpin how population genetics may lead to speciation over time \citep{Templeton1981}.
+In \cref{\chapi}, we predicted three topology metrics to correlate with standard population differentiation metrics ($Q_{ST}$ metrics). By projecting real landscapes on spatial graphs (see \cite{Dale2010} and \cref{figSI:graph_real_land}), the topology metrics, together with empirical data on population differentiation, could be used to verify our predictions. Discrepancies may indicate that additional processes are involved in population differentiation in empirical systems. On the other hand, a validation of the predictions from \cref{\chapi} could help to predict population differentiation at a global scale. These predictions could, in turn, be linked to patterns of species richness, in order to underpin how population differentiation may lead to speciation over time \citep{Templeton1981}.
 
 Hindcasts with the eco-evolutionary model on spatial graphs over geological time, using paleo-climatic data \citep{STRAUME2020126} as environmental condition forcings, could also help to address fundamental questions on the processes involved in spatial biodiversity patterns. In contrast to deep-time spatially explicit eco-evolutionary models (see \cite{Hagen2022} for a review), the model developed in \cref{\chapi} does not assume a timescale separation between ecological and evolutionary processes.
 % 
@@ -268,9 +268,9 @@ Along shorter time scales, the eco-evolutionary model on spatial graph could be 
 % 
 Last but not least, multiple species or functional groups could also be accounted for in the model proposed in \cref{\chapi}. Tracking suitable environmental conditions, species ranges are expected to shift towards higher elevations and higher latitudes \citep{Chen2011}, but how this will modify trophic interactions and ecosystem dynamics is unclear \citep{Descombes2020}.
 % 
-The model would provide a framework to explore how global warming may generate unexpected feedbacks between the processes of dispersal, species' evolutionary response, and trophic interactions, collectively affecting ecosystem dynamics.
+The model would provide a framework to explore how global warming may generate feedbacks between the processes of dispersal, species' evolutionary response, and trophic interactions, collectively affecting ecosystem dynamics.
 % 
-In summary, confronting the predictions of \cref{\chapi} with empirical data, extensions of the model developed in \cref{\chapi}, together with the ML framework presented in \cref{\chapii}, could bring further insights on the actual mechanisms involved in empirical systems, and help to predict their responses to climate change. 
+In summary, confronting the predictions of \cref{\chapi} with empirical data, extensions of the model developed in \cref{\chapi}, together with the use of the ML framework presented in \cref{\chapii}, could bring further insights on the actual mechanisms involved in empirical systems, and help to predict their responses to climate change. 
 
 
 \subsection{Econobiology, a new venue to understanding economic systems, and designing more appropriate governance}
@@ -283,7 +283,7 @@ Second, the eco-evolutionary models should be complexified, to investigate wheth
 % 
 In parallel, a promising research direction is to better understand how capital fluxes \citep{King1993} compare with fluxes of matter and energy \citep{Veldhuis2018} in ecological systems.
 % 
-\cite{Veldhuis2018} provides a synthesis of our understanding of how ecosystem organization emerges through self-reinforcing eco-evolutionary mechanisms. This synthesis is an interesting roadmap to formulate hypotheses and investigate analogous self-reinforcing mechanisms determining fluxes of capital in economic systems. 
+\cite{Veldhuis2018} provides an excellent synthesis of our understanding of how ecosystem organization emerges through self-reinforcing eco-evolutionary mechanisms. This synthesis is an interesting roadmap to formulate hypotheses and investigate analogous self-reinforcing mechanisms determining fluxes of capital in economic systems. 
 % 
 There may be deep connections between nutrient cycles and capital cycles, where ecological compartments and financial intermediaries develop to improve the efficiency of nutrient flows and capital allocations \citep{Odum1969}.
 % 
@@ -297,7 +297,7 @@ Together, future directions should seek to understand similarities and differenc
 \section{Concluding remarks}
 
 
-Bridging biology, mathematical modelling, machine learning and economics, this thesis advances our general understanding of eco-evolutionary processes and feedbacks in ecological and economic systems. It also provides novel modelling tools, that were publicly released in multipurpose Julia package to join efforts and collectively advance this understanding.
+Bridging biology, mathematical modelling, machine learning and economics, this thesis advances our general understanding of eco-evolutionary processes and feedbacks in ecological and economic systems. It also provides novel modelling tools, that were publicly released in Julia packages to join efforts and collectively advance this understanding.
 % 
 While we now better understand eco-evolutionary feedbacks in spatially structured populations, we are still far from a general understanding of their role at the ecosystem level. 
 % 
@@ -307,8 +307,8 @@ Methods similar to those presented in this thesis, combining machine learning an
 % 
 Machine learning, together with evolutionary biology, can also help us to underpin general principles in economic systems. Paving the way, this thesis demonstrates that analogous processes to those shaping ecosystems have major effects on economic change. Future research will tell whether economic and ecological systems have deeper organizational principles in common.
 % 
-Realizing overlaps and differences can help us design better economic policies. 
+Realizing overlaps and differences can help us to design better economic policies. 
 % 
 Our young economic systems can surely learn from ecological systems, that have survived major crises for more than 3.5 billion years.
 % 
-Philosophically speaking, this realization invites us to demonstrate more humility, and "\textit{[...] to return, by a radiant self-forgetfulness, to the All of Nature}".
+Philosophically speaking, this realization invites us to demonstrate more humility towards ecological systems, and "\textit{[...] to return, by a radiant self-forgetfulness, to the All of Nature}".
