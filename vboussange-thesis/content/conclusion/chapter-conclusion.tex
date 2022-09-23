@@ -28,9 +28,9 @@ Phenotypic differentiation arises from feedbacks between population dynamics, di
 % 
 Mutations act upon individual organisms, and result in genetic drift in populations of finite size, causing stochastic variations in the allelic proportions and phenotypes \citep{Slatkin1987a}. 
 % 
-In geographically structured populations, drift results in patterns of neutral differentiation \citep{Slatkin1987a}.%, where isolated populations are characterized by differentiated allelic proportions and phenotypes. 
+In geographically structured populations, drift results in patterns of neutral differentiation \citep{Slatkin1987a}. 
 % 
-Migration fluxes reduce neutral differentiation by homogeneizing differences in allelic proportions and phenotypes \citep{Slatkin1987a}, and this effect is further increased by landscape connectivity \citep{Wright1943,McRae2006,McRae2007} through the mechanism of "isolation by limited dispersal" \citep{Lande1991,Orsini2013}.
+Migration fluxes reduce neutral differentiation by homogenizing differences in allelic proportions and phenotypes \citep{Slatkin1987a}, and this effect is further increased by landscape connectivity \citep{Wright1943,McRae2006,McRae2007} through the mechanism of "isolation by limited dispersal" \citep{Lande1991,Orsini2013}.
 % 
 When landscapes present heterogeneous habitats, natural selection can supplement the effect of genetic drift and increase the sole effect of stochasticity on differentiation \citep{fisher1958genetical}. Under this scenario, local environmental conditions select individuals with traits that provide them higher fitness \citep{Gaither2018}. At the population level, this results in populations adapting to their local environment, a mechanism coined "local adaptation" \citep{Kawecki2004} and resulting in patterns of "adaptive differentiation". 
 % 
@@ -138,7 +138,7 @@ The numerical methods proposed in \cref{\chapiv} are now implemented in the Juli
 %
 The package aims at hosting many more solver algorithms that can efficiently simulate high dimensional PDEs, and has, as of September 2022, already received contributions from 5 independent developers (see \cite{contribHighDimPDE}). These contributions may greatly enhance \textbf{HighDimPDE.jl} over the years, promising efficient simulations of eco-evolutionary models.
 % 
-Together, \cref{\chapi,\chapiv} deliver novel tools to advance our understanding on the effect of the complexity of spatial and phenotypic structures on eco-evolutionary dynamics.
+Together, \cref{\chapi,\chapiv} deliver novel tools to advance our understanding of the effect of the complexity of spatial and phenotypic structures on eco-evolutionary dynamics.
 
 
 \subsection{Advances in inverse modelling for identifying eco-evolutionary processes in empirical systems}
@@ -169,7 +169,7 @@ By contrasting competing hypotheses embedded in alternative models, \cref{\chapi
 %% 
 Integrating the practical constraints of current ecological datasets \citep{Dornelas2018}, the inverse modelling framework may also be relevant for improving the forecast ability of existing eco-evolutionary model \citep{Norberg2012}.
 % 
-Built thanks to the composability of the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}, the inverse modelling framework is implemented in a new, multi-purpose Julia package readily available to the scientific community, that I released under the name of \textbf{MiniBatchInference.jl} \citep{MiniBatchInference}.
+Built thanks to the composability of the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}, the inverse modelling framework is implemented in a new, multipurpose Julia package readily available to the scientific community, that I released under the name of \textbf{MiniBatchInference.jl} \citep{MiniBatchInference}.
 % 
 Together, the inverse modelling framework proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to gain scientific knowledge from observation data. 
 
@@ -256,19 +256,19 @@ Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique opport
 
 The confrontation of the predictions obtained in \cref{\chapi} with empirical data, and the use of empirical data to constrain the eco-evolutionary model on spatial graphs presented in \cref{\chapi}, could advance our understanding of eco-evolutionary dynamics in empirical systems.
 % 
-In \cref{\chapi}, we predicted three topology metrics to correlate with standard population differentiation metrics ($Q_{ST}$ metrics). By projecting real landscapes on spatial graphs (see \cite{Dale2010} and \cref{figSI:graph_real_land}), the topology metrics, together with empirical data on population differentiation (e.g., \cite{Manel2003}), could be used to verify our predictions. Discrepancies may indicate that additional processes are involved in population differentiation in empirical systems. On the other hand, a validation of the predictions from \cref{\chapi} could help to predict population differentiation at a global scale. These predictions could, in turn, be linked to patterns of species richness, in order to underpin how population genetics may lead to speciation over time \citep{Templeton1981}.
+In \cref{\chapi}, we predicted three topology metrics to correlate with standard population differentiation metrics ($Q_{ST}$ metrics). By projecting real landscapes on spatial graphs (see \cite{Dale2010} and \cref{figSI:graph_real_land}), the topology metrics, together with empirical data on population differentiation (see, e.g., \cite{Manel2003} and references therein), could be used to verify our predictions. Discrepancies may indicate that additional processes are involved in population differentiation in empirical systems. On the other hand, a validation of the predictions from \cref{\chapi} could help to predict population differentiation at a global scale. These predictions could, in turn, be linked to patterns of species richness, in order to underpin how population genetics may lead to speciation over time \citep{Templeton1981}.
+
+Hindcasts with the eco-evolutionary model on spatial graphs over geological time, using paleo-climatic data \citep{STRAUME2020126} as environmental condition forcings, could also help to address fundamental questions on the processes involved in spatial biodiversity patterns. In contrast to deep-time spatially explicit eco-evolutionary models (see \cite{Hagen2022} for a review), the model developed in \cref{\chapi} does not assume a timescale separation between ecological and evolutionary processes.
 % 
-Simulations of the eco-evolutionary model on spatial graphs over geological time, using paleo-climatic data \citep{STRAUME2020126} as environmental condition forcings, could aldo help to address fundamental questions on the processes involved in spatial biodiversity patterns. In contrast to deep-time spatially explicit eco-evolutionary models (see \cite{Hagen2022} for a review), the model developed in \cref{\chapi} does not assume a time scale separation between ecological and evolutionary processes.
+This would allow disentangling, for instance, the role of feedbacks between trait-based competition \citep{Dieckmann1999} -- succinctly considered in \cref{\chapi} (see \cref{secSI:trait-dep-comp}) --, and environmental filtering \citep{Doebeli2003}, in shaping patterns of species distribution \citep{Rahbek2019a}.
+
+Along shorter time scales, the eco-evolutionary model on spatial graph could be calibrated on empirical data of species distribution (see, e.g., \cite{Abegg2020,GBIF:TheGlobalBiodiversityInformationFacility2022}) with the inverse modelling method proposed in \cref{\chapii}, to better predict how biological populations will adapt to climate change \citep{Norberg2012,Urban2016}. Using climate projections \citep{Kriticos2012} as environmental forcings, the model could capture the processes of spatial dispersal and adaptation, that are fundamental but neglected in models currently used for biodiversity forecasts \citep{Pearson2003}.
 % 
-This would allow disentangling, for instance, the role of feedbacks between trait-based competition \citep{Dieckmann1999} -- succinctly considered in \cref{\chapi} (see \cref{secSI:trait-dep-comp}) --, and environmental filtering \citep{Doebeli2003}, in shaping patterns of species distribution in empirical landscapes \citep{Rahbek2019a}.
+Last but not least, multiple species or functional groups could be accounted for in the model proposed in \cref{\chapi}. Tracking suitable environmental conditions, species ranges are expected to shift towards higher elevations and higher latitudes \citep{Chen2011}, and how this will modify trophic interactions and ecosystem dynamics is unclear \citep{Descombes2020}.
 % 
-Along shorter time scales, the eco-evolutionary model on spatial graph could be calibrated on empirical data of species distribution \citep{Abegg2020,GBIF:TheGlobalBiodiversityInformationFacility2022} with the inverse modelling method proposed in \cref{\chapii}, to better predict how biological populations will adapt to climate change \citep{Norberg2012,Urban2016}. Using climate projections \citep{Kriticos2012} as environmental forcings, to model could better capture realistic spatial dispersal and phenotypic change, compared to models currently used for biodiversity forecast \citep{Pearson2003}.
+The model would provide a framework to explore how global warming may generate unexpected feedbacks between the processes of dispersal, species' evolutionary response, and trophic interactions, collectively affecting ecosystem dynamics.
 % 
-Tracking suitable environmental conditions, species ranges are expected to shift towards higher elevations and higher latitudes \citep{Chen2011}, which will, in turn, modify the current organization of trophic interactions \citep{Descombes2020}.
-% 
-Multiple species or functional groups could be accounted for in the model proposed in \cref{\chapi}, providing a framework to explore how global warming may generate unexpected feedbacks between the processes of dispersal, ecological interactions, and evolutionary response, and affect ecosystem dynamics.
-% 
-Together, the model developed in \cref{\chapi} and the resulting predictions, together with the ML framework presented in \cref{\chapii}, could bring insights on the actual mechanisms involved in empirical systems, and help to predict their responses to climate change. 
+In summary, the model developed in \cref{\chapi} and the resulting predictions, together with the ML framework presented in \cref{\chapii}, could bring insights on the actual mechanisms involved in empirical systems, and help to predict their responses to climate change. 
 
 
 \subsection{Econobiology, a new venue to understanding economic systems, and designing more appropriate governance}
@@ -343,21 +343,21 @@ Together, future directions should seek to understand similarities and differenc
 \section{Concluding remarks}
 
 
-Bridging biology, mathematical modelling, machine learning and economics, this thesis advances our general understanding of eco-evolutionary processes and feedbacks in ecological and economic systems. It also provides novel modelling tools, that are publicly accessible to join efforts and collectively advance this understanding.
+Bridging biology, mathematical modelling, machine learning and economics, this thesis advances our general understanding of eco-evolutionary processes and feedbacks in ecological and economic systems. It also provides novel modelling tools, that were publicly released to join efforts and collectively advance this understanding.
 % 
-While we now better understand eco-evolutionary feedbacks in spatially structured populations, we are still far from a general understanding of eco-evolutionary feedback mechanisms in ecosystems. 
+While we now better understand eco-evolutionary feedbacks in spatially structured populations, we are still far from a general understanding of their role at the ecosystem level. 
 % 
 The challenge is enormous, because anthropogenic pressure and climate change are rapidly affecting ecosystems.
 % 
 Methods similar to those presented in this thesis, combining machine learning and process-based models, can massively accelerate the underpinning of general principles at the ecosystem level, and provide reliable forecasts. This, in turn, will help designing adequate management of ecosystem services to mitigate the consequences of human development.
 % 
-Machine learning, together with evolutionary biology, can also help us to underpin general principles in economic systems. Showing the path, this thesis demonstrates that analogous processes to those shaping ecosystems have a major effect on economic change. Future research will tell whether economic and ecological systems have deeper organizational principles in common.
+Machine learning, together with evolutionary biology, can also help us to underpin general principles in economic systems. Paving the way, this thesis demonstrates that analogous processes to those shaping ecosystems have a major effect on economic change. Future research will tell whether economic and ecological systems have deeper organizational principles in common.
 % 
 Realizing overlaps and differences can help us design better economic policies. 
 % 
 Our young economic systems can surely learn from ecological systems, that have survived major crises for more than 3.5 billion years.
-
-
+% 
+Philosophically speaking, this realization invites us to demonstrate more humility, and "\textit{[...] to return, by a radiant self-forgetfulness, to the All of Nature}". 
 
 % we could surely take inspiration from organizational principles in biological systems, that have survived major environmental crises for more than 3.5 billion years.
 % % 

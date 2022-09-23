@@ -61,17 +61,17 @@
 % --------------------------
 % Front matter
 % --------------------------
-\input{content/ETHfrontpage}		% INCLUDE: all titlepages
-% \makefrontpageETH
+\input{content/ETHfrontpage}
 
 \pagenumbering{roman}			% roman page numbing (invisible for empty page style)
 \pagestyle{empty}				% no header or footers
-% \input{content/titlepages}		% INCLUDE: all titlepages
+\input{content/titlepages}		% INCLUDE: all titlepages
+\makefrontpageETH
 \cleardoublepage
 
 \pagestyle{plain}				% display just page numbers
 \input{content/abstract}		% INCLUDE: the abstracts (english and german)
-% \cleardoublepage
+\cleardoublepage
 %
 \input{content/acknowledgement} % INCLUDE: acknowledgement
 \cleardoublepage
@@ -95,48 +95,33 @@
 %% to add part sections
 % ********************************
 
-% % \begin{refsection}
-%     \input{content/introduction/chapter-introduction}
-% % \end{refsection}
-% % 
-% % \begin{refsection}
-%     \input{content/chap1_diff_in_graphs/chapter-differentiation-in-graphs}   % INCLUDE: related work
-% % \end{refsection}
-% % 
-% \begin{SI}
-%     \begin{subappendices}
-%         \input{content/chap1_diff_in_graphs/SI}   % INCLUDE: related work
-%     \end{subappendices}
-% \end{SI}
-% % 
-% % \begin{refsection}
-%     \input{content/chap3_mini-batching/chapter-mini-batching_ecological_data}
-% % \end{refsection}
-% % 
-% \begin{SI}
-%     \begin{subappendices}
-%         \input{content/chap3_mini-batching/chapter-mini-batching_ecological_data_SI}   % INCLUDE: related work
-%     \end{subappendices}
-% \end{SI}
-% % 
-% % \begin{refsection}
-%     \input{content/chap4_econobiology/chapter-econobiology}
-% % \end{refsection}
-% % 
-% \begin{SI}
-%     \begin{subappendices}
-%         \input{content/chap4_econobiology/chapter-econobiology_SI}   % INCLUDE: related work
-%     \end{subappendices}
-% \end{SI}
-% % 
-% % \begin{refsection}
-%     \input{content/chap2_NonlocalPDE/chapter-nonlocalPDE}
-% % \end{refsection}
-% % 
-% % \begin{refsection}
-    \input{content/conclusion/chapter-conclusion}  
-% \end{refsection}
-% 
+\input{content/introduction/chapter-introduction}
+
+\input{content/chap1_diff_in_graphs/chapter-differentiation-in-graphs}   % INCLUDE: related work
+\begin{SI}
+    \begin{subappendices}
+        \input{content/chap1_diff_in_graphs/SI}   % INCLUDE: related work
+    \end{subappendices}
+\end{SI}
+
+\input{content/chap3_mini-batching/chapter-mini-batching_ecological_data}
+\begin{SI}
+    \begin{subappendices}
+        \input{content/chap3_mini-batching/chapter-mini-batching_ecological_data_SI}   % INCLUDE: related work
+    \end{subappendices}
+\end{SI}
+
+\input{content/chap4_econobiology/chapter-econobiology}
+\begin{SI}
+    \begin{subappendices}
+        \input{content/chap4_econobiology/chapter-econobiology_SI}   % INCLUDE: related work
+    \end{subappendices}
+\end{SI}
+
+\input{content/chap2_NonlocalPDE/chapter-nonlocalPDE}
+    
+\input{content/conclusion/chapter-conclusion}  
+
 \input{content/chapter-CV}
 
 \clearpage
@@ -155,11 +140,9 @@
 \newrefcontext[labelprefix={@}]
 \printbibliography[heading=subbibliography,title={Webpages},type=online]
 }
-
 \cleardoublepage
 
 \listoffigures
-
 \cleardoublepage
 
 % \listoftables
@@ -167,9 +150,6 @@
 
 % \lstlistoflistings
 % \cleardoublepage
-
-% \appendix\cleardoublepage
-% \input{content/chapter-appendix}       % INCLUDE: appendix
 
 % \input{content/colophon}
 
