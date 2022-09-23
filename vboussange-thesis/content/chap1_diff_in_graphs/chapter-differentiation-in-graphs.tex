@@ -134,9 +134,9 @@ Under the setting with heterogeneous selection, each vertex of the graph $v_i$ i
  b^{(i)}(x_k) \equiv b^{(i)}(s_k) = b(1 - p(s_k - \Theta_i)^2)
 \end{equation}
 %
-where $p$ is the selection strength \citep{Mirrahimi2020}. This ensures that the maximum birth rate on $v_i$ is attained for $s_k = \Theta_i$, which results in a differential advantage that acts as an evolutionary stabilising force. In the following we consider two habitat types denoted by $\bcirc$ and $\rcirc$ with symmetric environmental conditions $\theta_\bcirc$ and $\theta_\rcirc$, so that $\Theta_i \in \{\theta_{\bcirc},\theta_{\rcirc}\}$ and $\theta_{\rcirc} = -\theta_{\bcirc} = \theta$, where $\theta$ can be viewed as the habitat heterogeneity \citep{Mirrahimi2020}.
+where $p$ is the selection strength \citep{Mirrahimi2020}. This ensures that the maximum birth rate on $v_i$ is attained for $s_k = \Theta_i$, which results in a differential advantage that acts as an evolutionary stabilising force. In the following we consider two habitat types denoted by $\bcirc$ and $\rcirc$ with symmetric environmental conditions $\theta_{\bcirc}$ and $\theta_{\rcirc}$, so that $\Theta_i \in \{\theta_{\bcirc},\theta_{\rcirc}\}$ and $\theta_{\rcirc} = -\theta_{\bcirc} = \theta$, where $\theta$ can be viewed as the habitat heterogeneity \citep{Mirrahimi2020}.
 
-\begin{figure}[t]%[\sidecaptionrelwidth][t]
+\begin{figure}[ht]%[\sidecaptionrelwidth][t]
   \centering
   \includegraphics{main/conceptual_v3.pdf}
   \caption{\textbf{Graphical representation of the structure of individuals in the eco-evolutionary model. (a) Setting with no selection, where individuals are characterized by a set of neutral traits $u \in \mathcal{U}$}. The scatter plots represent a projection of the first two components of $u$ for the individuals present on the designated vertices at time $t=1000$, obtained from one simulation of the IBM.\\
@@ -144,7 +144,6 @@ where $p$ is the selection strength \citep{Mirrahimi2020}. This ensures that the
   (b) Setting with heterogeneous selection. In this setting, individuals are additionally characterized by adaptive traits $s \in \mathcal{S}$. Blue vertices favour the optimal adaptive trait value $\theta_{\bcirc}$, while red vertices favour $\theta_{\rcirc}$. The scatter plots represent a projection of the first component of $u$ and $s$ for the individuals present on the designated vertices at time $t = 1000$, obtained from one simulation. The majority of individuals are locally well-adapted and have an adaptive trait close to the optimal value, but some maladaptive individuals originating from neighbouring vertices are also present. $m = 0.05$.}
   \label{fig:conceptual}
 \end{figure}
-\FloatBarrier
 
 \subsection{Deterministic approximation of the population dynamics under no selection}\label{sec:212}
 
@@ -197,7 +196,7 @@ In the absence of selection and with competitive interactions, graphs with a hig
 
 \begin{figure}[ht]
     \centering
-      \includegraphics[width=0.8\textwidth]{main/setting1_neutr_M=7.pdf}
+      \includegraphics[width=\textwidth]{main/setting1_neutr_M=7.pdf}
       \caption{ 
       \textbf{Effect of $\l$ and $h_d$ on average population size $\bar{N}$ and neutral differentiation $Q_{ST,u}$ in the setting with no selection.}
       %
@@ -238,7 +237,7 @@ Heterogeneous selection, captured by the dependence of the birth rate on $\Theta
 %
 We show how \cref{eq:PDE_adapt} can be reduced to an equivalent two-habitat model under mean field assumption. 
 %
-The mean field approach differs slightly from the setting with no selection because vertices are labelled with $\Theta_i$. Here we assume that vertices with similar habitat types have an equivalent position on the graph (see \cref{figSI:graph_rtheta} for a graphical representation), so that all vertices with habitat type $\bcirc$ are characterized by the identical adaptive trait distribution that we denote by $\bar{n}^{{\bcirc}}$, and are associated with the birth rate $b^\bcirc(s) = b(1 - p(s - \theta_\bcirc)^2)$. Let $P({\bcirc},{\rcirc})$ denote the proportion of edges connecting a vertex $v_i$ of type $\rcirc$ to a vertex $v_j$ of type $\bcirc$, and let $P(\bcirc)$ denote the proportion of vertices $v_i$ of type $\bcirc$. 
+The mean field approach differs slightly from the setting with no selection because vertices are labelled with $\Theta_i$. Here we assume that vertices with similar habitat types have an equivalent position on the graph (see \cref{figSI:graph_rtheta} for a graphical representation), so that all vertices with habitat type $\bcirc$ are characterized by the identical adaptive trait distribution that we denote by $\bar{n}^{{\bcirc}}$, and are associated with the birth rate $b^{\bcirc}(s) = b(1 - p(s - \theta_{\bcirc})^2)$. Let $P({\bcirc},{\rcirc})$ denote the proportion of edges connecting a vertex $v_i$ of type $\rcirc$ to a vertex $v_j$ of type $\bcirc$, and let $P(\bcirc)$ denote the proportion of vertices $v_i$ of type $\bcirc$. 
 %
 By further assuming that habitats are homogeneously distributed on the graph so that $P({\bcirc}) = P({\rcirc}) = \tfrac{1}{2}$, \cref{eq:PDE_adapt} transforms into
 \begin{equation}\label{eq:PDE_adapt_rtheta}
@@ -272,7 +271,7 @@ As a consequence, the habitat assortativity $r_\Theta$ increases the differentia
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.8\textwidth]{main/pde_v3_horizontal.pdf}
+  \includegraphics[width=\textwidth]{main/pde_v3_horizontal.pdf}
     \caption{\textbf{Effect of habitat assortativity $r_\Theta$ and migration $m$ on the local adaptive trait distribution $\bar{n}^{\bcirc}$ and on the adaptive differentiation level $Q_{ST,s}$ under the mean field, deterministic approximation \cref{eq:PDE_adapt_rtheta}.} (a) Effect of $m$ and $r_\Theta$ on $\bar{n}^{\bcirc}$. Migration induces the apparition of maladaptive individuals (centred around $\theta_{\rcirc} = 0.5$), which destabilize local adaptation by displacing the mean value of the well-adapted individuals (centred around $\theta_{\bcirc} = -0.5$). Together with the decrease in local adaptation, migration causes a displacement of the mean value of the local trait distribution (represented by the vertical dashed lines), which decreases local population size and adaptive differentiation $Q_{ST,s}$. (b) Similar data for higher $r_\Theta$. Increasing $r_\Theta$ increases population size and $Q_{ST,s}$. (c) Effect of $r_\Theta$ on $Q_{ST,s}$. The red line indicates the critical migration threshold $m^\star$ predicted by \cref{eq:m*}; $Q_{ST,s}$ vanishes when $m > m^\star$.}\label{fig:heatmap_betas_m_rtheta}
 \end{figure}
 \FloatBarrier
@@ -300,12 +299,11 @@ Nonetheless, local adaptation is lost in disassortative graphs when $m > m^*$, s
 
 \begin{figure}[ht]
   \centering
-    \includegraphics[width=0.8\textwidth]{main/sett2_adapt_IBM_horizontal_0.1.pdf}
+    \includegraphics[width=\textwidth]{main/sett2_adapt_IBM_horizontal_0.1.pdf}
     \caption{{\textbf{Effect of habitat heterogeneity $r_\Theta$ on $Q_{ST,s}$ and average population size $\bar{N}$ for general graph ensembles.} (a) Effect of $r_\Theta$ on $Q_{ST,s}$ for all undirected connected graphs with $M = 7$ vertices and varying $r_\Theta$, for $m = 0.1$. (b) Effect of $r_\Theta$ on average population size $\bar{N}$ for the same simulations. In (a) and (b), each dot represents average results from 5 replicate simulations of the IBM, the colour scale corresponds to the proportion of the graphs with similar $x$ and $y$ axis values (graph density), and the blue lines correspond to results obtained from the mean field approximation \cref{eq:PDE_adapt_rtheta}. Insights from \cref{eq:PDE_adapt_rtheta} are congruent with the IBM simulations for complex habitat connectivity patterns at low $m$. Similar results with $m=0.5$ are presented in \cref{figSI:sett2_adapt_IBM_horizontal_0.5}.}}
     %
     \label{fig:sett2_adapt_IBM_horizontal_0.1}
 \end{figure}
-\FloatBarrier
 
 \subsection{Effect of habitat assortativity on neutral differentiation under heterogeneous selection}
 %
@@ -346,7 +344,7 @@ $\l$ and $h_d$ therefore drive neutral differentiation with and without heteroge
 
 \begin{figure}[ht] 
     \centering
-      \includegraphics[width=0.8\textwidth]{main/setting2_4plots_M=7_v4.pdf}
+      \includegraphics[width=\textwidth]{main/setting2_4plots_M=7_v4.pdf}
     \caption{\textbf{Effect of $r_\Theta$, $\l$ and $h_d$ on $Q_{ST,s}$ and $Q_{ST,u}$ in the setting with heterogeneous selection.}
     %
     (a) Comparison of the response of $Q_{ST,u}$ to migration with the response of $Q_{ST,u}$ in the setting with no selection for the complete graph. The dashed vertical blue line corresponds to the critical migration regime $m^\star$ predicted by \cref{eq:m*}. Heterogeneous selection increases $Q_{ST,u}$ when $m < m^\star$, but local adaptation is lost when $m > m^\star$, and in this case $Q_{ST,u}$ reaches similar levels as $Q_{ST,u}$ in the setting with no selection. 
@@ -365,9 +363,7 @@ $\l$ and $h_d$ therefore drive neutral differentiation with and without heteroge
     }
     \label{fig:setting2_4plots_M=7}
 \end{figure}
-
-\clearpage
-
+\FloatBarrier
 \section{Discussion}
 
 Using analytical tools and simulations, we have built upon a graph representation of landscapes and a stochastic individual-based model to investigate how landscape features drive phenotypic differentiation.
