@@ -84,7 +84,7 @@ like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of
   %%
   Finally, evolutionary processes allow the adaptation of organisms to changing environmental conditions \citep{Bell2017}, while in economic systems, variations in organizational routines allow economic entities to adapt to economic contexts \citep{Cordes2006} and transform into new economic entities \citep{Freeman2002,Hodgson2004,Aldrich2008}. %An example of evolutionary processes is the innovations in the oil, gas and synthetic material industry that lead to the motorization of transport, civil economy and war, and to the mechanisation of agriculture \citep{Freeman2002}. 
   %  
-  While processes acting upon economic activities, including their interactions, their spatial dispersal, and their transformations into other economic activities, are regularly documented in evolutionary economics, the significance of these processes on long-term economic change has seldom been quantified.%\todo{Talk about diffusion in the product space: \citep{Hidalgo2021}}
+  While processes acting upon economic activities, including their interactions, their spatial dispersal, and their transformations into other economic activities, are regularly documented in evolutionary economics, the significance of these processes on long-run economic change has seldom been quantified.%\todo{Talk about diffusion in the product space: \citep{Hidalgo2021}}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%% Literature review on quantitative models      %%%%%%
@@ -101,12 +101,12 @@ like newborns, on divine nature.}{Friedrich Hölderlin (1770-1843)}{The Death of
   % 
   The availability of fine-grained datasets of economic activities, together with dimensionality reduction techniques, have provided insights into the endogenous processes shaping economic development \citep{Mealy2019,Hidalgo2021}.
   % 
-  In particular, the detailed global trade data compiled by the United Nations statistical Division and cleaned in \cite{Hidalgo2021} consists in a time series of 59 years of economic activity that can be combined with inverse modelling techniques to learn about the processes influencing the long-term dynamics of economic systems.
+  In particular, the detailed global trade data compiled by the United Nations statistical Division and cleaned in \cite{Hidalgo2021} consists in a time series of 59 years of economic activity that can be combined with inverse modelling techniques to learn about the processes influencing the long-run dynamics of economic systems.
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%% 4th paragraph : results                       %%%%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  Here, we investigate whether eco-evolutionary processes can quantitatively explain economic growth using an inverse modelling technique together with 59 years of data on economic activity. Relating the temporal evolution of the capital of economic activities to the temporal evolution of the biomass of functional groups within an ecosystem, we quantitatively estimate the effect of eco-evolutionary processes on the long-term development of national economies.
+  Here, we investigate whether eco-evolutionary processes can quantitatively explain economic growth using an inverse modelling technique together with 59 years of data on economic activity. Relating the temporal evolution of the capital of economic activities to the temporal evolution of the biomass of functional groups within an ecosystem, we quantitatively estimate the effect of eco-evolutionary processes on the long-run development of national economies.
   % 
   Functional groups, as the aggregation of species sharing similar characteristics and having similar functions within the ecosystem, are the required elemental units to model ecosystem dynamics. Analogously, as the aggregation of firms with similar output nature \citep{Applegate2021}, we consider 9 economic activities to form the elemental units of economic systems, and conduct our investigation by modelling their temporal dynamics.
   % 
@@ -335,7 +335,7 @@ Details of the numerical simulations are provided in \cref{tab:results}.
 %
 Over the 100 countries investigated, only 78 countries have sufficiently long time series to be included in the analyses (countries with at least 20 years of data, see \nameref{sec:methods_econobio}), while 77 countries show consistent maximum likelihood estimates (best model coefficient of determination $R^2$ > 0).
 % 
-Among the 77 countries, we find that the best models have a good fit to the data, and capture well the long term growth of economic activities (median explained variance $R^2 = 0.940$, see \cref{fig:fits} and \cref{figSI:fit_alphan,figSI:fit_alphap,figSI:fit_delta,figSI:fit_mu} for graphical illustrations of the fit).
+Among the 77 countries, we find that the best models have a good fit to the data, and capture well the long-run growth of economic activities (median explained variance $R^2 = 0.940$, see \cref{fig:fits} and \cref{figSI:fit_alphan,figSI:fit_alphap,figSI:fit_delta,figSI:fit_mu} for graphical illustrations of the fit).
 % 
 While this demonstrates the relevance of the proposed models, we observe discrepancies across countries in how well the best models perform (standard deviation of explained variance std$(R^2)= 0.074$, see \cref{fig:fits}\textbf{D} for a graphical illustration of the variance in terms of the model loglikelihoods).
 % 
@@ -425,7 +425,7 @@ Overall, positive interactions and spatial dispersal stand out as the most suppo
 \section{Discussion}
 
 %% recap of the study
-Our results indicate that dynamic models embedding eco-evolutionary processes, commonly used to characterize the dynamics of biological populations \citep{Bunin2017,Scheffer2006a,Case1990,Tilman1994b,eigen1988molecular}, can appropriately characterize the dynamics of economic activities (\cref{fig:fits}). Together with state of the art computational methods and 59 years of economic data, the models provide a framework to assess the effect of eco-evolutionary processes on the long-term development of national economies.
+Our results indicate that dynamic models embedding eco-evolutionary processes, commonly used to characterize the dynamics of biological populations \citep{Bunin2017,Scheffer2006a,Case1990,Tilman1994b,eigen1988molecular}, can appropriately characterize the dynamics of economic activities (\cref{fig:fits}). Together with state of the art computational methods and 59 years of economic data, the models provide a framework to assess the effect of eco-evolutionary processes on the long-run development of national economies.
 % 
 Over the 77 countries investigated, the null model -- embedding replication and self limitation processes only -- was rejected 45 times in favor of alternative eco-evolutionary models (\cref{fig:aggregate_countries}\textbf{B}), and each of the alternative model was supported against the null model in some countries. Hence, eco-evolutionary models, that couple the growth of economic activities, better characterize their dynamics. This result suggests that economic change carries the effect of the inter-dependency between economic activities. The models capturing positive interactions between economic activities ($\modalphap$) and spatial dispersal ($\moddelta$) were overall given more strength-of-evidence, providing evidences that these processes are central in the development of economic systems.  Together, our study suggests that biologically inspired dynamic models are well suited to characterize economic dynamics. 
 

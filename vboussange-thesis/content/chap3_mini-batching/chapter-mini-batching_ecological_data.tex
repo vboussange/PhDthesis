@@ -346,7 +346,7 @@ Given that the food-web dynamics are chaotic (\cref{secSI:models}), excellent pe
 \subsubsection{Capability of the ML framework to harness multiple time series}
 We further investigate the ability of the ML framework to process and combine information from independent datasets. 
 %
-We reduce the time horizon of the observation data by setting the time series length to $K = 12$, generate two datasets comprising $S = 1$ and $S=6$ independent time series, respectively, -- obtained from independent ICs -- and set the number of batches for each time series $s$ to $M^{(s)} = 2$. In both the complete and partial observation settings, we find that the relative parameter error $\perr$ is consistently lower in the simulations with a larger number of time series (\cref{fig:perfect_setting_multiple_TS}\textbf{A}). The forecast skill is also consistently improved as more independent time series are processed (\cref{fig:perfect_setting_multiple_TS}\textbf{B}), and the forecast skill for long-term predictions considerably increases.
+We reduce the time horizon of the observation data by setting the time series length to $K = 12$, generate two datasets comprising $S = 1$ and $S=6$ independent time series, respectively, -- obtained from independent ICs -- and set the number of batches for each time series $s$ to $M^{(s)} = 2$. In both the complete and partial observation settings, we find that the relative parameter error $\perr$ is consistently lower in the simulations with a larger number of time series (\cref{fig:perfect_setting_multiple_TS}\textbf{A}). The forecast skill is also consistently improved as more independent time series are processed (\cref{fig:perfect_setting_multiple_TS}\textbf{B}), and the forecast skill for long-run predictions considerably increases.
 These results confirm the robustness of the ML framework against noise and partial observations, and show that the ML framework can efficiently harness the information from disparate observation datasets.
 %
 
@@ -438,7 +438,7 @@ In contrast, the ML framework proposed here trains the model directly against da
 %%
 By integrating the practical constraints imposed by ecological datasets, the ML framework can learn from short time series with partial and noisy observations (\cref{fig:perfect_setting_noise,fig:perfect_setting_multiple_TS}). 
 % 
-Local ecosystem surveys, such as marine trawling surveys or local terrestrial surveys (see \cite{Pinsky2013,Dornelas2018,Burrows2019} and references therein), provide time series that are generally shallow in time but composed of many replicates \citep{Hsieh2008,Clark2015}, in part due to the practical difficulties of long-term monitoring \citep{Ye2016}. 
+Local ecosystem surveys, such as marine trawling surveys or local terrestrial surveys (see \cite{Pinsky2013,Dornelas2018,Burrows2019} and references therein), provide time series that are generally shallow in time but composed of many replicates \citep{Hsieh2008,Clark2015}, in part due to the practical difficulties of long-run monitoring \citep{Ye2016}. 
 % 
 Our results show that the inclusion of multiple independent time series in the training dataset reduces the error in the parameter estimates and increases the forecast skill (\cref{fig:perfect_setting_multiple_TS}). This indicates that the proposed ML framework could, in practice, efficiently harness the information available in current ecological datasets.
 % 
