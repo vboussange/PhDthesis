@@ -60,16 +60,17 @@ This complex feedback is essential to understand population differentiation in c
 
 \subsection{Linking economic patterns to eco-evolutionary processes}
 
-Combining economic data and process-based models, \cref{\chapiii} bridges evolutionary economics, complexity economics and biology, advancing our general understanding of the endogenous forces driving the dynamics of economic systems.
+Combining economic data and process-based models, \cref{\chapiii} bridges evolutionary economics, complexity economics and biology, advancing our general understanding of the forces driving the dynamics of economic systems.
 % 
-Neoclassical economics and evolutionary economics seek to explain economic change with process-based models.
+Neoclassical economics and evolutionary economics seek to explain economic change with a forward modelling approach, using mechanistic models.
 % 
-While Neoclassical economics emphasizes on technological innovations to explain economic change \citep{Romer1986}, evolutionary economics considers the processes of interactions between firms and economic activities, and evolutionary processes acting upon them, as the elemental forces underlying economic dynamics \citep{Metcalfe2006}. Yet, evolutionary economics has up to now restricted its attention to subnational industrial dynamics \citep{Hodgson2019}.
+Neoclassical economics models are derived from the assumption that firms maximize profits \citep{Romer1986}, while the processes of interactions between firms and economic activities, and evolutionary processes acting upon them, are the elemental forces represented in evolutionary economics models \citep{Metcalfe2006}. Both approaches have yielded important insights, but whether the underlying assumptions can accurately characterize the long-run economic dynamics of countries remains to be demonstrated \citep{Hodgson2019}.
+%Yet, evolutionary economics has up to now restricted its attention to subnational industrial dynamics \citep{Hodgson2019}.
 % 
-In contrast, complexity economics \citep{Hidalgo2021} predicts economic change at the national level, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather, it relies on world-wide economic data, processed with statistical techniques \citep{Mealy2019}, to measure differences in the structure of economic outputs across countries. The metrics used to assess the differences are good predictors of economic growth \citep{Tacchella2018}, but a current concern is to unfold the causal processes \citep{Hidalgo2021}.
+In contrast, complexity economics succeeds in predicting the economic dynamics of countries \citep{Hidalgo2021}, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather than using a forward modelling approach, it relies on world-wide economic data, processed with statistical techniques \citep{Mealy2019}, to measure differences in the structure of economic outputs across countries. The metrics used to assess the differences are good predictors of economic growth \citep{Tacchella2018}, but a current concern is to unfold the causal processes \citep{Hidalgo2021}.
 
 %%
-Relying on inverse modelling, \cref{\chapiii} combines process-based models and data to underpin the processes responsible for economic change.
+Relying on inverse modelling, \cref{\chapiii} combines process-based models and data to deduct the main processes responsible for economic change.
 % 
 The approach undertaken relies on deep connections between processes acting upon economic activities and biological populations.
 % 
@@ -156,9 +157,9 @@ Those central issues likely explain the very limited use of inverse modelling to
 %% Our method
 \cref{\chapii} presents a novel inverse modelling framework that allows to estimate the parameter values and the support of complex eco-evolutionary models from temporal data.
 % 
-The framework is based on a variational method, but resolves its main shortcomings by heavily relying on automatic differentiation \citep{Rackauckas2020a}, state-of-the-art optimizers \citep{Kingma2014}, and a learning strategy based on a mini-batch method. 
+The framework is based on a variational method, but resolves its main shortcomings by heavily relying on automatic differentiation \citep{Rackauckas2020a}, state-of-the-art optimizers \citep{Kingma2014}, and a learning strategy based on a segmentation method. 
 % 
-The use of automatic differentiation simply eliminates the effort required to obtain the model sensitivity to its parameters, and the state-of-the-art optimizers, together with the mini-batch method, ensure the efficiency and robustness of the method in handling highly nonlinear models.
+The use of automatic differentiation simply eliminates the effort required to obtain the model sensitivity to its parameters, and the state-of-the-art optimizers, together with the segmentation method, ensure the efficiency and robustness of the method in handling highly nonlinear models.
 % 
 \cref{\chapii} takes part in an ongoing effort to blend machine learning (ML) and traditional models to gain scientific understanding and extrapolability \citep{Karpatne2017,Rackauckas2020a,Schneider2017,Rolnick2023,Kashinath2021,Yazdani2020,Raissi2019}. 
 % 
@@ -207,9 +208,9 @@ The proposed methods in \cref{\chapi,\chapiv} suffer from considerable computati
 \subsection{Uncertainty estimation and model selection bias}
 The inverse modelling framework proposed in \cref{\chapii} and used in \cref{\chapiii} also presents pitfalls.
 %
-First, the mini-batching learning strategy requires the choice of a mini-batch size to ensure the convergence to the maximum likelihood estimate. This choice should be motivated by the roughness of the model likelihood landscape (see \cref{subsec:minibatch_implementation}), but may affect the model selection process:
+First, the mini-batching learning strategy requires the choice of a segmentation size to ensure the convergence to the maximum likelihood estimate. This choice should be motivated by the roughness of the model likelihood landscape (see \cref{subsec:minibatch_implementation}), but may affect the model selection process:
 % 
-a small batch size implies that the model goodness-of-fit is evaluated on the fast dynamics of the data, while the resulting support could differ, were the model fitted with a higher mini-batch size. Theoretical developments are required to provide statistically justified guidance for the choice of the mini-batch size. 
+a small batch size implies that the model goodness-of-fit is evaluated on the fast dynamics of the data, while the resulting support could differ, were the model fitted with a higher segmentation size. Theoretical developments are required to provide statistically justified guidance for the choice of the segmentation size. 
 % 
 Second, the maximum likelihood estimate of models with complex likelihood landscape may be underestimated, because not correctly identified. As a result, the model selection process may be biased towards models which associated likelihood landscape is easier to navigate. 
 % 
@@ -228,15 +229,15 @@ This approach does not require model differentiability, and is consequently more
 % 
 Nevertheless, this strength is a pitfall: summary statistics necessarily reduce the information contained in empirical data, which can prevent to correctly discriminate between models \citep{Csillery2010}.
 % 
-Together, the mini-batch inverse modelling framework in \cref{\chapii} is sensitive to the mini-batch size, requires models to be differentiable, and does not provide uncertainty estimation. While approximate Bayesian computation may be a valuable alternative, it also presents restrictive shortcomings. Still, the mini-batch learning strategy extends beyond the framework proposed, and could be used in combination with novel approaches in Bayesian computation to combine the best of both worlds.
+Together, the segmentation inverse modelling framework in \cref{\chapii} is sensitive to the segmentation size, requires models to be differentiable, and does not provide uncertainty estimation. While approximate Bayesian computation may be a valuable alternative, it also presents restrictive shortcomings. Still, the segmentation learning strategy extends beyond the framework proposed, and could be used in combination with novel approaches in Bayesian computation to combine the best of both worlds.
 
 \section{Perspectives}
 
 \subsection{Development opportunities in inverse modelling}
 
-The mini-batch method presented in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique development opportunities to leverage inverse modelling.
+The segmentation method presented in \cref{\chapii} and the ML-based approximation method developed in \cref{\chapiv} offer unique development opportunities to leverage inverse modelling.
 %
-The mini-batch method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to considering a standard formulation of the likelihood function such as in \cref{eq:likelihood-std}, using the mini-batch loglikelihood formulation proposed in \cref{eq:ML-framework} results in a smoother posterior distribution, which should reduce the large number of forward model integration required by Bayesian inference.
+The segmentation method is relevant beyond the ML framework presented in \cref{\chapii}, and could be used within a fully Bayesian framework, where the full posterior distribution of the model is estimated. Compared to considering a standard formulation of the likelihood function such as in \cref{eq:likelihood-std}, using the segmentation loglikelihood formulation proposed in \cref{eq:ML-framework} results in a smoother posterior distribution, which should reduce the large number of forward model integration required by Bayesian inference.
 % 
 While this number could still be prohibitively expensive for Bayesian inference with MCMC chains, automatic differentiation variational inference (ADVI, \cite{Morningstar2020,Gosh2021}) offers an appealing alternative. In ADVI, the posterior distribution is approximated by a Gaussian distribution \citep{Morningstar2020}, significantly reducing the number of model integration \citep{Morningstar2020}. Improving the ML framework presented in \cref{\chapii}, ADVI could capture multimodality in the model posterior distribution (by approximating the multimodal distribution with a gaussian distribution with large variance). This, in turn, could improve the robustness of model selection (\cref{sec:limitations}), and provide uncertainties estimations on the parameters.
 % 

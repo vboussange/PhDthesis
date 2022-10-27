@@ -255,7 +255,7 @@ We detail in the next section how do we obtain the maximum likelihood estimate $
 
 \subsection{Maximum likelihood estimation}\label{parameter-inference}
 
-In order to obtain the maximum likelihood of each model given the data, we employ the machine learning framework detailed in \cite{Boussange2022a}, which is based on a variational optimization method and a learning strategy coined "mini-batching". The likelihood of model $\M_i$ is maximized by training $\M_i$ against mini-batches of data comprising only $K < T\hc$ data points of the full time series, where the parameters and the initial conditions for each mini-batch are estimated.
+In order to obtain the maximum likelihood of each model given the data, we employ the machine learning framework detailed in \cite{Boussange2022a}, which is based on a variational optimization method and a learning strategy coined "mini-batching". The likelihood of model $\M_i$ is maximized by training $\M_i$ against mini-batches of data comprising only $K < T\hc$ data points of the full time series, where the parameters and the initial conditions for each segment are estimated.
 % 
 The mini-batching strategy ensures the convergence towards the maximum likelihood estimate, provided that the choice of $K$ is appropriate given the data and the model investigated \citep{Boussange2022a}. 
 % 

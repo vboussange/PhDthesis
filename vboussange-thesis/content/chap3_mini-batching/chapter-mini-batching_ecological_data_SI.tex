@@ -19,7 +19,7 @@
 \section{Supplementary Information}
 \label{secSI:mini-batching}
 
-We show that the loss function $L_\M(\theta)$ in the main manuscript in \cref{eq:loss_fn} is ill-behaved for models with complex dynamics when the time horizon is large. We proceed by first analysing the dynamics of models with complex dynamics showing chaotic behaviour or limit cycles, and approximate the divergence of perturbed dynamical trajectories. We then show that the divergence in dynamics translates into a loss function whose surface is rugged in most of the parameter space, and that the gradient of the loss function around the true parameters becomes exponentially steeper with time. We conclude by formally discussing how the proposed mini-batch method regularizes the ill-behaviour of the loss function.
+We show that the loss function $L_\M(\theta)$ in the main manuscript in \cref{eq:loss_fn} is ill-behaved for models with complex dynamics when the time horizon is large. We proceed by first analysing the dynamics of models with complex dynamics showing chaotic behaviour or limit cycles, and approximate the divergence of perturbed dynamical trajectories. We then show that the divergence in dynamics translates into a loss function whose surface is rugged in most of the parameter space, and that the gradient of the loss function around the true parameters becomes exponentially steeper with time. We conclude by formally discussing how the proposed segmentation method regularizes the ill-behaviour of the loss function.
 
 \subsection{Dynamics under perturbations}
 % For the sake of clarity and without loss of generalization, we assume in this section that the map $h$ is identity function and therefore omit it.
@@ -188,30 +188,30 @@ As shown by the green dotted curve in \cref{fig:training_on_mini-batches}B, this
 % 
 \cref{eqSI:transitionBoundary} further indicates that the volume of the region in the parameter space where the loss is informative shrinks exponentially as the time horizon increases, implying that for large time horizons, the uninformative region is predominant.
 
-\subsection{Regularizing the loss surface with mini-batches}
+\subsection{Regularizing the loss surface with segments}
 % 
-To prevent the situation with a mixed divergence regime and to decrease the gradient in a vicinity of the true parameters, we reformulate the loss function as the average of loss functions defined over mini-batches of short time horizons. In the following section, we compare the properties of the naive loss function $L_\M$ in \cref{eqSI:split_loss} with the mini-batch loss function $L^\star_\M$ proposed in \cref{eq:ML-framework} in the main manuscript, and further discuss the limitations of the method in the presence of noise.
+To prevent the situation with a mixed divergence regime and to decrease the gradient in a vicinity of the true parameters, we reformulate the loss function as the average of loss functions defined over segments of short time horizons. In the following section, we compare the properties of the naive loss function $L_\M$ in \cref{eqSI:split_loss} with the segmented loss function $L^\star_\M$ proposed in \cref{eq:ML-framework} in the main manuscript, and further discuss the limitations of the method in the presence of noise.
 
 Omitting the term corresponding to the priors and ICs and the noise shape $\Sigma_y$, and assuming a single time series for simplicity, 
 % and assuming that the time steps are regularly spaced for simplicity, i.e. $t_{k+1} - t_k = T$, 
-the mini-batch loss function presented in the main text can be expressed as
+the segmented loss function presented in the main text can be expressed as
 \begin{equation}\label{eqSI:mini-batch_loss_fn}
         L_\M^\star(\theta) = \frac{1}{M} \sum_{m=0}^{M-1} \frac{1}{K} \sum_{k=1}^{K^{(m)}} \|y_{k + m K/M } - h\left(\M(t_{k + m K/M}, p, x_{0}^{(m)})\right)\|^2
 \end{equation}
 %
-where $M$ is the number of mini-batches, $x_0^{(m)}$ corresponds to the ICs for mini-batch $m$ inferred at time $t_{m K/M}$, and
+where $M$ is the number of segments, $x_0^{(m)}$ corresponds to the ICs for segment $m$ inferred at time $t_{m K/M}$, and
 $K^{(m)} = \begin{cases} K / M + 1 &\quad \colon m < M \\ 
                     K / M &\quad \colon m = M
-        \end{cases}$ is the number of data points in the $m$th batch.
+        \end{cases}$ is the number of data points in the $m$th segment.
 %
 The loss function can be split in expectation as
 \begin{equation}\label{eqSI:split_mini-batch_loss}
 		\E \left[L_{\M}^{\star}(\theta) \right] = \frac{1}{M} \sum_{m=0}^{M-1} \frac{1}{K} \sum_{k=1}^{K^{(m)}} \| h(\Tilde x(t_{k + m K/M})) - \M(t_{k + m K/M},p, x_0^{(m)})\|^2 + \Var\left[\epsilon\right]
 \end{equation}
 % 
-Assuming that $x_0^{(m)} = \Tilde x (t_{m K/M}) + \delta x_0^{(m)} $ when $\delta x_0^{(m)}$ is small, and assuming that the observation times are regularly spaced so that $t_{k+1} - t_{k} = \Delta t$, the time length of simulated trajectories (i.e. the time elapsed between the time when the perturbation is applied and the end time of the simulated trajectory) is divided by the number of mini-batches, in comparison to the time length of the simulated trajectory in \cref{eqSI:split_loss}  ($t = t_{K/M + 1} - t_{0} = K/M \Delta t$ in \cref{eqSI:split_mini-batch_loss}, in comparison to $t = K \Delta t$ in \cref{eqSI:split_loss}).
+Assuming that $x_0^{(m)} = \Tilde x (t_{m K/M}) + \delta x_0^{(m)} $ when $\delta x_0^{(m)}$ is small, and assuming that the observation times are regularly spaced so that $t_{k+1} - t_{k} = \Delta t$, the time length of simulated trajectories (i.e. the time elapsed between the time when the perturbation is applied and the end time of the simulated trajectory) is divided by the number of segments, in comparison to the time length of the simulated trajectory in \cref{eqSI:split_loss}  ($t = t_{K/M + 1} - t_{0} = K/M \Delta t$ in \cref{eqSI:split_mini-batch_loss}, in comparison to $t = K \Delta t$ in \cref{eqSI:split_loss}).
 % 
-Further assuming that $K \Delta t >> \frac{\log(|\delta \theta|)}{\lambda}$ and choosing the number of mini-batches $M$ so that $K / M \Delta t << \frac{\log(|\delta \theta|)}{\lambda}$, we apply the approximation \cref{eqSI:lossApprox}, which leads to
+Further assuming that $K \Delta t >> \frac{\log(|\delta \theta|)}{\lambda}$ and choosing the number of segments $M$ so that $K / M \Delta t << \frac{\log(|\delta \theta|)}{\lambda}$, we apply the approximation \cref{eqSI:lossApprox}, which leads to
 \begin{equation}\label{eqSI:comparision_losses}
 	\begin{aligned}
 		&L_{\M}(\theta) \sim \Var\left[\epsilon\right] + 
@@ -223,9 +223,9 @@ Further assuming that $K \Delta t >> \frac{\log(|\delta \theta|)}{\lambda}$ and 
 While $L_{\M}$ is dominated by the mixed regime, $L_\M^\star$ is dominated by the informative regime because the simulation time remains small, permitting the successful use of variational optimizers.
 
 %%
-The number of mini-batches $M$ should be determined by considering the dynamical behaviour of the system and the level of noise in the observation, because a large number of mini-batches $M$ smooths out the loss surface but also entails more sensitivity to the level of noise. Indeed, in $L_\M(\theta)^\star$ the relative effect of the second term corresponding to the observational noise $\epsilon$ increases when the number of mini-batches $M$ increases.
+The number of segments $M$ should be determined by considering the dynamical behaviour of the system and the level of noise in the observation, because a large number of segments $M$ smooths out the loss surface but also entails more sensitivity to the level of noise. Indeed, in $L_\M(\theta)^\star$ the relative effect of the second term corresponding to the observational noise $\epsilon$ increases when the number of segments $M$ increases.
 %
-The value of $M$ should therefore be chosen wisely to balance the benefits of mini-batches, i.e. widening the region of the parameter space where $L_\M$ is well behaved and reducing the overshooting problem, and their cons, i.e. their tendency to increase the importance of noise. 
+The value of $M$ should therefore be chosen wisely to balance the benefits of segments, i.e. widening the region of the parameter space where $L_\M$ is well behaved and reducing the overshooting problem, and their cons, i.e. their tendency to increase the importance of noise. 
 
 \section{Three-compartment food-web models}
 \label{secSI:models}
