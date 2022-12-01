@@ -263,13 +263,13 @@ A large $K$ might induce convergence towards a local minimum, while a low $K$ mi
 % 
 In the controlled experiments in the \nameref{sec:results-minibatch}, we find that $K=20$ (models are trained against batches of 20 years) ensures a good convergence, while reasonably discriminating the models (\cref{fig:synthetic_test_all_AIC}). We therefore use $K=20$ throughout all the experiments detailed in the manuscript, and discard countries where data is available for less than $K = 20$ years.
 % 
-The library \textbf{MiniBatchInference.jl} \citep{Boussange2022a} is employed for the numerical implementation, and we use the gradient descent optimizer ADAM \citep{Kingma2014} during the first 800 epochs to converge in the basin of attraction of the maximum likelihood estimate, which we substitute for the Broyden-Fletcher-Goldfarb-Shanno optimizer (BFGS) \citep{fletcher2013practical} for the final 800 training epochs to ensure faster and more accurate convergence.
+The library \textbf{PiecewiseInference.jl} \citep{Boussange2022a} is employed for the numerical implementation, and we use the gradient descent optimizer ADAM \citep{Kingma2014} during the first 800 epochs to converge in the basin of attraction of the maximum likelihood estimate, which we substitute for the Broyden-Fletcher-Goldfarb-Shanno optimizer (BFGS) \citep{fletcher2013practical} for the final 800 training epochs to ensure faster and more accurate convergence.
 % 
 As a cross-checking procedure, for each country and each model we perform 5 optimization runs with different initial parameter values, where $r_i$, $b_i$, $\alpha$, $\mu$, $\delta$ are drawn from the uniform random distribution $\mathcal{U}_{[0.05, 0.15]}$, $\mathcal{U}_{[0.5,1.5]}$, $\mathcal{U}_{[0.5,1.5]}$, $\mathcal{U}_{[0.0005, 0.0015]}$ and $\mathcal{U}_{[0.0005, 0.0015]}$ respectively.
 % 
 We then take the best run among the 5 optimization runs, making sure that the likelihood estimates of each run are similar (see \cref{tab:results} for full details of the results).
 % 
-% We used a gradient descent optimization method to minimise $L(\theta\hc )$. We used the library \textbf{MiniBatchInference.jl} to train the ODE parameters $\theta^{(c)_\M}$ with the gradient descent optimiser ADAM and BFGS. Both the parameters and the intitial conditions for each activities were fitted.
+% We used a gradient descent optimization method to minimise $L(\theta\hc )$. We used the library \textbf{PiecewiseInference.jl} to train the ODE parameters $\theta^{(c)_\M}$ with the gradient descent optimiser ADAM and BFGS. Both the parameters and the intitial conditions for each activities were fitted.
 
 % \todo[inline]{how structural change that leads to increasing output variety was gradually perceived by economists and eventually incorporated into models of economic growth: \citep{Saviotti2020}}    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -423,7 +423,7 @@ Overall, positive interactions and spatial dispersal stand out as the most suppo
 %%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
-
+\label{sec:discussion-econobio}
 %% recap of the study
 Our results indicate that dynamic models embedding eco-evolutionary processes, commonly used to characterize the dynamics of biological populations \citep{Bunin2017,Scheffer2006a,Case1990,Tilman1994b,eigen1988molecular}, can appropriately characterize the dynamics of economic activities (\cref{fig:fits}). Together with state of the art computational methods and 59 years of economic data, the models provide a framework to assess the effect of eco-evolutionary processes on the long-run development of national economies.
 % 

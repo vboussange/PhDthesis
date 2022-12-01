@@ -62,12 +62,12 @@ This complex feedback is essential to understand population differentiation in c
 
 Combining economic data and process-based models, \cref{\chapiii} bridges evolutionary economics, complexity economics and biology, advancing our general understanding of the forces driving the dynamics of economic systems.
 % 
-Neoclassical economics and evolutionary economics seek to explain economic change with a forward modelling approach, using mechanistic models.
+Evolutionary economics seeks to explain economic change with a forward modelling approach, using mechanistic models \citep{nelson1985evolutionary}.
 % 
-Neoclassical economics models are derived from the assumption that firms maximize profits \citep{Romer1986}, while the processes of interactions between firms and economic activities, and evolutionary processes acting upon them, are the elemental forces represented in evolutionary economics models \citep{Metcalfe2006}. Both approaches have yielded important insights, but whether the underlying assumptions can accurately characterize the long-run economic dynamics of countries remains to be demonstrated \citep{Hodgson2019}.
+The processes of interactions between firms and economic activities, and evolutionary processes acting upon them, are the elemental forces accounted for \citep{Metcalfe2006}, but whether these eco-evolutionary processes can accurately characterize the long-run economic dynamics of countries remains to be demonstrated \citep{Hodgson2019}.
 %Yet, evolutionary economics has up to now restricted its attention to subnational industrial dynamics \citep{Hodgson2019}.
 % 
-In contrast, complexity economics succeeds in predicting the economic dynamics of countries \citep{Hidalgo2021}, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather than using a forward modelling approach, it relies on world-wide economic data, processed with statistical techniques \citep{Mealy2019}, to measure differences in the structure of economic outputs across countries. The metrics used to assess the differences are good predictors of economic growth \citep{Tacchella2018}, but a current concern is to unfold the causal processes \citep{Hidalgo2021}.
+In contrast, complexity economics succeeds in predicting the economic dynamics of countries \citep{Hidalgo2021}, but is agnostic to the underlying processes \citep{Hidalgo2021}. Rather than using a forward modelling approach, it relies on world-wide economic data, processed with statistical techniques \citep{Mealy2019}, to measure differences in the structure of economic outputs across countries. The measurements are good predictors of economic growth \citep{Tacchella2018}, but a current concern is to unfold the causal processes \citep{Hidalgo2021}.
 
 %%
 Relying on inverse modelling, \cref{\chapiii} combines process-based models and data to deduct the main processes responsible for economic change.
@@ -91,7 +91,7 @@ Positive interactions may arise from a variety of processes operating on firms, 
 % 
 Its support implies that the dynamics of economic activities are highly inter-dependent, and suggests that diversity promotes economic development \citep{Hidalgo2018}.
 % 
-Spatial diffusion of routines \citep{Hodgson2004} and knowledge spillovers \citep{Caragliu2016} may be at the origin of the spatial dispersal of economic activities \citep{Zahra2000,RogersEverettM2003DoI,Boschma2008}. We found discrepancies across countries in the strength-of-evidence for spatial dispersal, suggesting that economic activities are more akin to disperse in some countries than others. As an explanation, we propose that transfers of knowledge and routines may be blocked by barriers due to differences in cognitive, organizational, social, institutional or geographic proximity between countries \citep{Boschma2005,Caragliu2016}.
+The spatial dispersal of economic activities may originate from the spatial diffusion of routines \citep{Hodgson2004} and knowledge spillovers \citep{Caragliu2016}. The discrepancies observed across countries in the strength-of-evidence for spatial dispersal suggest that economic activities are more akin to disperse in some countries than others. As an explanation, we propose that transfers of knowledge and routines may be blocked by barriers due to differences in cognitive, organizational, social, institutional or geographic proximity between countries \citep{Boschma2005,Caragliu2016}.
 % 
 \Cref{fig:summary_econobio} summarizes the ecological mechanisms evidenced in \cref{\chapiii}. Overall, \cref{\chapiii} provides quantitative evidences that, akin to biological systems, processes of interaction and dispersal shape the dynamics of economic systems at the country scale.
 
@@ -120,7 +120,7 @@ For instance, \cite{Doebeli2011} shows that the consideration of multiple traits
 % 
 Trade-offs in traits are also essential features shaping the evolutionary dynamics of biological populations, with consequences on the dynamics of e.g. cancer cell evolution \citep{Fiandaca2021} and plankton dynamics \citep{LeGland2020}.
 % 
-Yet the simulation of eco-evolutionary models of biological populations structured over high dimensional phenotypic spaces is tremendously difficult, since the numerical cost of traditional methods grows exponentially in the number of dimensions considered \citep{Bellman1957}. 
+Yet the simulation of eco-evolutionary models of biological populations structured over high dimensional phenotypic spaces is tremendously difficult, since the numerical cost of traditional simulation methods grows exponentially in the number of dimensions considered \citep{Bellman1957}. 
 
 From first principles, \cref{\chapi} derives a stochastic individual-based model capturing eco-evolutionary feedbacks in populations structured in complex landscapes and high dimensional phenotypic space. \Cref{\chapiv} further provides tools to efficiently simulate a deterministic approximation of the individual-based model in high dimensional phenotypic spaces.
 % 
@@ -134,7 +134,7 @@ The mathematical tractability allows obtaining analytical insights on how the in
 % 
 The PDE approximation, combined with the numerical methods presented in \cref{\chapiv}, further allow efficient simulations. 
 % 
-The numerical methods proposed in \cref{\chapiv} are now implemented in a new registered Julia package that I released under the name of \textbf{HighDimPDE.jl} \citep{HighDimPDE}, now belonging to the SciML organisation \citep{Rackauckas2020a}.
+The numerical methods proposed in \cref{\chapiv} are now implemented in a new registered Julia package that I have released under the name of \textbf{HighDimPDE.jl} \citep{HighDimPDE}, now belonging to the SciML organisation \citep{Rackauckas2020a}.
 %
 The package aims at hosting many more solver algorithms that can efficiently simulate high dimensional PDEs, and has, as of September 2022, already received contributions from 5 independent developers (see \cite{contribHighDimPDE}). These contributions may greatly enhance \textbf{HighDimPDE.jl} over the years, promising efficient simulations of eco-evolutionary models.
 % 
@@ -169,7 +169,7 @@ By contrasting competing hypotheses embedded in alternative models, \cref{\chapi
 %% 
 Integrating the practical constraints of current ecological datasets \citep{Dornelas2018}, the inverse modelling framework may also be relevant for improving the forecast ability of existing eco-evolutionary model \citep{Norberg2012}.
 % 
-Built thanks to the composability of the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}, the inverse modelling framework is implemented in a new, multipurpose Julia package readily available to the scientific community, that I released under the name of \textbf{MiniBatchInference.jl} \citep{MiniBatchInference}.
+Built thanks to the composability of the celebrated differential equation solver \textbf{DifferentialEquations.jl} and the deep learning library \textbf{Flux.jl}, the inverse modelling framework is implemented in a new, multipurpose Julia package readily available to the scientific community, that I have released under the name of \textbf{PiecewiseInference.jl} \citep{PiecewiseInference}.
 % 
 Together, the inverse modelling framework proposed in \cref{\chapii} successfully blends ML methods with mechanistic ecosystem models to gain scientific knowledge from observation data. 
 
@@ -229,7 +229,7 @@ This approach does not require model differentiability, and is consequently more
 % 
 Nevertheless, this strength is a pitfall: summary statistics necessarily reduce the information contained in empirical data, which can prevent to correctly discriminate between models \citep{Csillery2010}.
 % 
-Together, the segmentation inverse modelling framework in \cref{\chapii} is sensitive to the segmentation size, requires models to be differentiable, and does not provide uncertainty estimation. While approximate Bayesian computation may be a valuable alternative, it also presents restrictive shortcomings. Still, the segmentation learning strategy extends beyond the framework proposed, and could be used in combination with novel approaches in Bayesian computation to combine the best of both worlds.
+Altogether, the segmentation inverse modelling framework in \cref{\chapii} is sensitive to the segmentation size, requires models to be differentiable, and does not provide uncertainty estimation. While approximate Bayesian computation may be a valuable alternative, it also presents restrictive shortcomings. Still, the segmentation learning strategy extends beyond the framework proposed, and could be used in combination with novel approaches in Bayesian computation to combine the best of both worlds.
 
 \section{Perspectives}
 
@@ -251,7 +251,7 @@ In \cref{def:general_algorithm}, the parameters of the PDE model are assumed fix
 % 
 Yet in contrast to \cite{Raissi2019,Yazdani2020}, a major advantage of this approach is to efficiently perform inverse modelling with high-dimensional dynamical models. Because Julia is a programming language with pervasive automatic differentiation (see \cref{subsec:Julia} in \cref{chap:intro}), this development would require little effort with the Julia library \textbf{HighDimPDE.jl}.
 % 
-Together, the ML methods developed in \cref{\chapii,\chapiv} offer unique opportunities to grant more robustness and efficiency to inverse modelling methods, providing uncertainty estimation and the possibility to handle high dimensional models.
+Altogether, the ML methods developed in \cref{\chapii,\chapiv} offer unique opportunities to grant more robustness and efficiency to inverse modelling methods, providing uncertainty estimation and the possibility to handle high dimensional models.
 
 
 \subsection{Confronting eco-evolutionary model on spatial graphs and empirical data}
@@ -279,7 +279,7 @@ The success of the biologically inspired model presented in \cref{\chapiii}  in 
 % 
 As a first step, I suggest investigating whether the results of \cref{\chapiii} hold for finer levels of economic activity aggregation, as more detailed data on economic activities is available \citep{Hausmann2011}. 
 % 
-Second, the eco-evolutionary models should be complexified, to investigate whether it can capture more detailed aspects of the dynamics.
+Second, the eco-evolutionary models should be complexified, to investigate whether it can capture more detailed aspects of the dynamics (see \cref{sec:discussion-econobio} in \cref{\chapiii}).
 % 
 In parallel, a promising research direction is to better understand how capital fluxes \citep{King1993} compare with fluxes of matter and energy \citep{Veldhuis2018} in ecological systems.
 % 

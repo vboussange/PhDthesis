@@ -134,7 +134,7 @@ The investigation of the interplay between ecological and evolutionary processes
 <!-- - in contrast, the proposed method involves only a few meta parameters (including minibatch size and learning parameter) and provide  -->
 - We showed that the efficiency of the method allows to recover mechanisms from noisy \cref{chapii,chapiv} and incomplete \cref{chapiii} datasets, adapting the reality of datasets and succesfully elucidating mechanistic pathways by contrasting complex hypotheses embedded in model variants
 - other scientific fields have benefitted a lot from ML, such as climate modelling \citep{XXX}, but biological and economic system may have even more to gain, since in contrast to such fields, much of the mathematical formulation of the processes in yet to be formulated.
-- The ML framework is implemented in the multi-purpose Julia package **MiniBatchInference.jl**, readily available to the scientific community. It builds upon the differential equation solver **DiffenretialEqautiosn.jl** and the deep learning library **Flux.jl**, requiring little effort to efficiently use it.
+- The ML framework is implemented in the multi-purpose Julia package **PiecewiseInference.jl**, readily available to the scientific community. It builds upon the differential equation solver **DiffenretialEqautiosn.jl** and the deep learning library **Flux.jl**, requiring little effort to efficiently use it.
 - \citep{Frank2022} provides an interesting analogy between the evolution of life and the evolution of a theory, through the use of AD.
 **Overall, the method in proposed \cref{chapii} successfully blends ML methods with mechanistic ecosystem models to improve our gain scientific knowledge from observation data. Concret case examples in \cref{chapii, chapiii} show that it enables the testing of eco-evolutionary theories against data, advancing our understanding and the improvement of current mechanistic models, with the potential to provide better forecasts of ecosystems states \citep{Urban2016}.**
 
@@ -306,7 +306,7 @@ game theory is formulated in terms of phe- notypes, thereby ignoring the complex
       - consider different species affected by eco-evolutionary processes and understand consequences at the ecosystem scale. A possible venue for that is the framework of Nordbotten with gaussian approximations.
   - usage of PDE approximation to understand 
     - deep time dynamics 
-      - Apply MiniBatchInference.jl to the eco-evolutionary model on graphs to understand the cause of biodiversity on earth.
+      - Apply PiecewiseInference.jl to the eco-evolutionary model on graphs to understand the cause of biodiversity on earth.
       - relate to the work of skeels, and hagen
     - predict outcomes of climate change
   - of use for inference methods which try to estimate ecological (population size), spatial and evolutionary processes of real populations from genetic observation data, from e.g. measures of differentiation (\citep{Lepers2021}, ask Theophile?) 

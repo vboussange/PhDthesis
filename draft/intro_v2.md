@@ -248,8 +248,8 @@ Together with numerical simulations, I show that three main graph properties sha
 ### Chapter 2
 In chapter 2, I develop an inverse modelling method, where observation data is used to recover the most probable dynamical model describing the system under consideration.
 I propose a machine learning framework relying on a singular learning strategy, where the maximum likelihood of a model is obtained by training the model against mini-batches of data with short time horizon. I show that this strategy, when combined with the proposed numerical implementation, results in a ML framework that can provide statistical support for the true generating model among several candidates.
-The ML framework is implemented in the Julia library MiniBatchInference.jl, and can to elucidate mechanistic pathways to improve our undersanding and predictions of ecosystem dynamics.
+The ML framework is implemented in the Julia library PiecewiseInference.jl, and can to elucidate mechanistic pathways to improve our undersanding and predictions of ecosystem dynamics.
 
 ### Chapter 3
 In chapter 3, I investigate whether the biological process of ecological interactions spatial transfers and mutations.
-I use MiniBatchInference.jl to test 
+I use PiecewiseInference.jl to test 

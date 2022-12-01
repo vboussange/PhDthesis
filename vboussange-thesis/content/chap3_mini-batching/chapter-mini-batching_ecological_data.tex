@@ -16,8 +16,7 @@ $^2$ \small{Landscape Ecology, Institute of Terrestrial Ecosystems, Department o
 $^3$ \small{Institute of Neuroinformatics, ETH Zürich and University of Zürich, Zürich, Switzerland}\smallskip
 
 \begin{center}
-    \href{https://www.biorxiv.org/content/10.1101/2022.07.25.501365v1}{bioRxiv:2022.07.25.501365}\\
-    In review at PLOS Computational Biology
+    \href{https://www.biorxiv.org/content/10.1101/2022.07.25.501365v1}{bioRxiv:2022.07.25.501365}\\ 
 \end{center}
 
 \fancyabstractQuote{Les données pertinentes détiennent les réponses.}{French anagram}{}{
@@ -27,7 +26,7 @@ Mechanistic models are required to describe ecosystem dynamics and anticipate th
 %
 While observations could be used to directly estimate parameters and improve models, model nonlinearities as well as shallow, incomplete and noisy datasets complicate this process. 
 %
-Here, we propose a machine learning (ML) framework relying on a segmentation method combined with automatic differentiation and state-of-the-art optimizers. By partitioning the data into segments with a short time horizon, we show both analytically and numerically that the segmentation method regularizes the learning problem. When combined with the proposed numerical implementation, the resulting ML framework can efficiently learn the parameters of complex dynamical models and is a workhorse for model selection. 
+Here, we propose a machine learning (ML) framework relying on a segmentation method combined with automatic differentiation and state-of-the-art optimizers. By partitioning the data into time series with a short time horizon, we show both analytically and numerically that the segmentation method regularizes the learning problem. When combined with the proposed numerical implementation, the resulting ML framework can efficiently learn the parameters of complex dynamical models and is a workhorse for model selection. 
 %
 We evaluate the performance of the ML framework in recovering the dynamics of simulated food-webs. We show that it can efficiently learn from noisy, incomplete and independent time series, accurately estimating the model parameters and providing reliable short-term forecasts. We further show that the ML framework can provide statistical support for the true generating model among several candidates. 
 %
@@ -81,12 +80,12 @@ Novel methods for model parametrization are emerging, thanks to advances in the 
     
 %%
 % 4th paragraph    
-Here, we propose a ML framework relying on a segmentation method and on automatic differentiation and state-of-the-art optimizers to efficiently learn the parametrization of ecosystem models from observation data. 
+Here, we propose a ML framework relying on a segmentation method inspired by \cite{Pisarenko2004} and on state-of-the-art optimizers and automatic differentiation to efficiently learn the parametrization of ecosystem models from observation data. 
 %
 % The segmentation method divides the training problem into segments with a short time horizon, similarly to the method proposed by \cite{Pisarenko2004}. The loss function is constructed by averaging the segments, and we show analytically how this learning strategy regularizes the ill-behaviour of the loss function arising from the strong nonlinearities of ecosystem models. All the segments at once or only subsets of the segments may be considered, and can consequently be minimized with stochastic gradient descent methods.
-The segmentation method partitions the data into segments, each matched against simulations of the model considered. ICs are estimated for each segment, and we show analytically how this learning strategy regularizes the ill-behaviour of the loss function arising from the strong nonlinearities of ecosystem models. 
+The segmentation method partitions the data into short time series (segments), each treated independently and matched against simulations of the model considered. We show analytically how this learning strategy regularizes the ill-behaviour of the loss function arising from the strong nonlinearities of ecosystem models, allowing the use of variational optimizers. 
 % 
-ICs are nuisance parameters that increase the number of dimensions of the optimization problem, but the efficiency of variational optimizers compensate for this additional complexity. Since segments are treated independently, independent time series can be collectively used to improve the learning. %The combination of the segmentation method, together with state-of-the-art optimizers, yield excellent calibration performance. 
+The efficiency of deep learning variational optimizers allow calibrating highly parametrized models, and since segments are treated independently, independent time series can be collectively used to improve the learning. %The combination of the segmentation method, together with state-of-the-art optimizers, yield excellent calibration performance. 
 % 
 By automatically generating the gradient of the loss function required by variational optimizers, automatic differentiation further facilitates the application of the method, making it possible to compare the goodness-of-fit of many models with little effort. As a result, the ML framework is a workhorse for model selection.
 % 
@@ -173,9 +172,9 @@ Such surfaces are hardly navigable with gradient descent methods, but since the 
 
 \subsubsection{Description of the segmentation method}
 
-We use a segmentation method that partitions the data into segments with short time horizon. Under perturbed parameters and ICs, chaotic or limit cycle dynamics only diverge after some characteristic simulation time; by matching the model simulations against segments of data with short time horizons, discontinuities that cause the poor navigability of the landscape are therefore avoided. The segmentation method consequently regularizes the loss function, and since segments of data are treated independently, the method allows to combine the information contained in independent time series.
+We use a segmentation method inspired by \cite{Pisarenko2004} that partitions the data into segments with short time horizon. Under perturbed parameters and ICs, chaotic or limit cycle dynamics only diverge after some characteristic simulation time; by matching the model simulations against segments of data with short time horizons, discontinuities that cause the poor navigability of the landscape are therefore avoided. The segmentation method consequently regularizes the loss function, and since segments of data are treated independently, the method allows to combine the information contained in independent time series.
 
-We assume the availability of $S$ independent time series, where each time series $s \in \{1,\dots,S\}$ contains $K^{(s)}$ observations $\by_{1:K^{(s)}}^{(s)}$ (note that this case also covers the case where only a single time series is available). To improve the ill-behaviour of \cref{eq:loss_fn}, we partition each time series into $M^{(s)}$ segments, each of which is associated to a segmented loss denoted by $L_\M^{(s,m)}$.
+We assume the availability of $S$ independent time series, where each time series $s \in \{1,\dots,S\}$ contains $K^{(s)}$ observations $\by_{1:K^{(s)}}^{(s)}$ (note that this case also covers the case where only a single time series is available). To improve the ill-behaviour of \cref{eq:loss_fn}, we partition each time series into $M^{(s)}$ segments, each of which is associated to a "piecewise loss" denoted by $L_\M^{(s,m)}$.
 %
 Batching the segments leads to a reformulation of the loss function in \cref{eq:loss_fn} that yields
 %
@@ -461,7 +460,7 @@ The ML framework can therefore lead to the improvement of current ecosystem mode
 % 
 AIC can also be used to ensure the interpretability of the model parameters, and should be preferred to estimating the parameter uncertainty through e.g. the Cramer Rao inqequality \citep{Burnham2002}: by favouring models with less complexity, model selection techniques disqualify uninformative parameters to ensure interpretability \citep{Burnham2002}. This has the extra benefit of reducing the dimensionality of the parameter space, hence improving the estimation of other parameters. 
 %
-Together, our work should contribute to the development of a process understanding of ecosystem functions. Providing a robust and user-friendly method to better link ecological theory and data, the proposed ML framework would greatly benefit studies seeking to investigate ecological hypotheses with empirical data and mechanistic models (see, e.g., \cite{Curtsdotter2019,becks2010}).
+Alogether, our work should contribute to the development of a process understanding of ecosystem functions. Providing a robust and user-friendly method to better link ecological theory and data, the proposed ML framework would greatly benefit studies seeking to investigate ecological hypotheses with empirical data and mechanistic models (see, e.g., \cite{Curtsdotter2019,becks2010}).
 
 %%
 The proposed approach still presents a set of limitations, which might hamper its success under specific situations. 
@@ -479,14 +478,14 @@ Third, while in \cref{eq:ML-framework} it is assumed that the parameter values a
 Finally, while the proposed ML framework greatly improves convergence, it could still be that -- even with a large amount of data -- poor initial parameter estimates, a large number of free parameters, or high noise levels prevent convergence to the true minimum. Performing multiple runs with varying initial parameter estimates can ensure that the maximum a priori estimate is reliable. Stochasticity could further be introduced within the ML framework to prevent the convergence to local minima, where mini-batches, i.e. random subsets of segments, are fitted at each epoch \citep{bottou2012stochastic}.
 
 \section{Conclusion}
-We proposed a ML framework based on a segmentation method combined with automatic differentiation and state-of-the-art optimizers to estimate the parameters and improve the forecast skill of complex ecosystem models from observation data.
+We proposed an ML framework based on a segmentation method combined with automatic differentiation and state-of-the-art optimizers to estimate the parameters and improve the forecast skill of complex ecosystem models from observation data.
 % 
 The ML framework was benchmarked with a realistic ecosystem model characterized by strong nonlinearities and delivered excellent performance, accommodating the practical constraints imposed by the quality and availability of ecological datasets. Our experiments have further illustrated the ability of the ML framework to discriminate between several candidate models, enabling the testing of ecological theories against data and the improvement of current mechanistic models.
 % 
 Given the increasing number of ecological datasets following the development of monitoring technologies such as environmental DNA \citep{Ruppert2019}, remote sensing \citep{Jetz2019}, bioaccoustics \citep{Aide2013}, and citizen observations \citep{GBIF}, the proposed ML framework opens up new opportunities for the quantitative investigation of current ecosystem functions \citep{Curtsdotter2019} and the prediction of ecosystem responses to increasing disruptions \citep{Urban2016}.
 
 \section{Code availability}
-The ML framework is implemented in the multi-purpose Julia package \textbf{MiniBatchInference.jl} available at \href{https://github.com/vboussange/MiniBatchInference.jl}{https://github.com/vboussange/MiniBatchInference.jl}, and the simulation code is available at \href{https://github.com/vboussange/mini-batching-ecological-data}{https://github.com/vboussange/mini-batching-ecological-data}.
+The ML framework is implemented in the multi-purpose Julia package \textbf{PiecewiseInference.jl} available at \href{https://github.com/vboussange/PiecewiseInference.jl}{https://github.com/vboussange/PiecewiseInference.jl}, and the simulation code is available at \href{https://github.com/vboussange/mini-batching-ecological-data}{https://github.com/vboussange/mini-batching-ecological-data}.
 
 
 \section{Acknowledgements}
